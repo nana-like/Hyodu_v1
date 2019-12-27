@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+// **** variables
+
+// -------------------------
+// [ 1. color pallete ]
+// -------------------------
+$color-black: #323b45; //기본 검정
+$color-blue: #30b9d3; //밝은 파랑
+$color-darkblue: #11adca; //짙은 파랑
+$color-navy: #17365b;
+$color-lightgray: #d3d3d3; //연한 회색
+$color-lightblue: #b1c0cf;
+$color-disable: #a7b5c8;
+
+$color-input: rgba(168, 182, 200, 0.15); //인풋 필드용 색상
+$color-input-text: #17365b; //인풋 필드 텍스트 색상
+$color-placeholder: #a8b6c8; //
+$color-placeholder2: #8592a2;
+$color-error: #ee6262;
+
+// -------------------------
+// z-index
+// -------------------------
+$z-page-header: 100;
+$z-modal: 200;
+
+// -------------------------
+// path
+// -------------------------
+$path-image: "../images/";
+
+// -------------------------
+// font weight
+// -------------------------
+$fw-m: 500;
+$fw-r: 400;
+
+// -------------------------
+// [ 5. style ]
+// -------------------------
+$radio-button: (style01: (normal: 25% -1px,
+    active: 50% -1px));

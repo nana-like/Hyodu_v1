@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+/*! style.css */
+
+//Font
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500&display=swap');
+
+@import "helpers/variables";
+@import "helpers/mixins";
+
+@import "base/reset";
+
+@import "layout/header";
+@import "layout/footer";

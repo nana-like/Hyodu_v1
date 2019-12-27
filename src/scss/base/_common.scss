@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+// common all (블캠, 고보트 공용)
+
+.body-guide {
+  // background-color: #f2f4f7;
+  background-color: #fff;
+
+  #wrapper {
+    width: 100%;
+    height: 100%;
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+
+    [class$=-container] {
+      // width: 36rem;
+      // height: 64rem;
+      width: 360px;
+      height: 100vh;
+      min-height: 560px;
+      max-height: 640px;
+      border-radius: 8px;
+      background-color: #fff;
+
+      .description {
+        display: block;
+        font-weight: $fw-m;
+        font-size: 14px;
+        color: #17365b;
+
+        @media only screen and (min-width: 920px) {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+
+  .button-back {
+    z-index: 1000;
+    position: fixed;
+    top: 1.2rem;
+    left: 1.2rem;
+    width: 4rem;
+    height: 4rem;
+    // width: 45px;
+    // height: 45px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background-image: icon(back, "2c496a");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+
+
+.error-container {
+  @include flexbox;
+  @include align-items(center);
+  @include flex-direction(column);
+  @include justify-content(center);
+  text-align: center;
+  @include bgi("logo-error");
+  background-position: 50% 60px;
+  background-size: 120px 138px;
+
+  @media only screen and (min-width: 920px) {
+    background-position: 50% 0px;
+    background-size: 160px 180px;
+  }
+
+  .title {
+    display: block;
+    line-height: 1;
+    margin-top: -20px;
+    font-size: 140px;
+    font-weight: $fw-r;
+    color: #30b9d3;
+
+    @media only screen and (min-width: 920px) {
+      font-size: 165px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+.emailAuth-container {
+  position: relative;
+  @include flexbox;
+  @include align-items(center);
+  @include flex-direction(column);
+  // @include justify-content(center);
+  text-align: center;
+  @include bgi("deco-emailAuth");
+  background-position: 50% 100px;
+  background-size: 104px 117px;
+
+  @media only screen and (min-width: 920px) {
+    background-position: 50% 0px;
+    background-size: 130px 147px;
+  }
+
+  .title {
+    display: block;
+    margin-top: 250px;
+    font-size: 30px;
+    font-weight: $fw-m;
+    color: #30b9d3;
+
+    @media only screen and (min-width: 920px) {
+      margin-top: 200px;
+      font-size: 45px;
+    }
+
+    &:after {
+      position: absolute;
+      left: 50%;
+      bottom: 47px;
+      @include bgi("logo-title");
+      background-size: 100%;
+      width: 80px;
+      height: 33px;
+      display: block;
+      content: '';
+      @include transform(translateX(-50%));
+
+      @media only screen and (min-width: 920px) {
+        width: 100px;
+        height: 41px;
+      }
+    }
+  }
+}

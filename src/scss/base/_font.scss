@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+// **** Font
+
+// 노토산스
+$NotoSansBold: "NotoSansKR-Bold"; //900
+// $NotoSansBlack: "NotoSansKR-Black"; //700
+$NotoSansMedium: "NotoSansKR-Medium"; //500
+$NotoSansRegular: "NotoSansKR-Regular"; //400
+$NotoSansDemiLight: "NotoSansKR-DemiLight"; //300
+$NotoSansLight: "NotoSansKR-Light"; //200
+// $NotoSansThin: "NotoSansKR-Thin"; //100
+// 180928 - black과 thin 미사용 확정
+
+@font-face {
+  font-family: "NotoSans";
+  font-weight: 900;
+  src: url(#{$path-font}#{$NotoSansBold}.woff2) format("woff2"),
+    url(#{$path-font}#{$NotoSansBold}.woff) format("woff");
+}
+
+// @font-face {
+//   font-family: "NotoSans";
+//   font-weight: 700;
+//   src: url(#{$path-font}#{$NotoSansBlack}.woff2) format("woff2"),
+//     url(#{$path-font}#{$NotoSansBlack}.woff) format("woff");
+// }
+
+@font-face {
+  font-family: "NotoSans";
+  font-weight: 500;
+  src: url(#{$path-font}#{$NotoSansMedium}.woff2) format("woff2"),
+    url(#{$path-font}#{$NotoSansMedium}.woff) format("woff");
+}
+
+@font-face {
+  font-family: "NotoSans";
+  font-weight: 400;
+  src: url(#{$path-font}#{$NotoSansRegular}.woff2) format("woff2"),
+    url(#{$path-font}#{$NotoSansRegular}.woff) format("woff");
+}
+
+@font-face {
+  font-family: "NotoSans";
+  font-weight: 300;
+  src: url(#{$path-font}#{$NotoSansDemiLight}.woff) format("woff"),
+    url(#{$path-font}#{$NotoSansDemiLight}.woff) format("woff");
+}
+
+@font-face {
+  font-family: "NotoSans";
+  font-weight: 200;
+  src: url(#{$path-font}#{$NotoSansLight}.woff2) format("woff2"),
+    url(#{$path-font}#{$NotoSansLight}.woff) format("woff");
+}
+
+// @font-face {
+//   font-family: "NotoSans";
+//   font-weight: 100;
+//   src: url(#{$path-font}#{$NotoSansThin}.woff2) format("woff2"),
+//     url(#{$path-font}#{$NotoSansThin}.woff) format("woff");
+// }

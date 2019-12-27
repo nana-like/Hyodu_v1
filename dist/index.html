@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta name="description" content="File List | BC WebApp">
+  <meta name="author" content="NY KIM">
+
+  <title>효두 퍼블리싱 파일 목록</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-size: 100%;
+      box-sizing: border-box;
+      font-family: 'Inconsolata', 'Noto Sans KR', monospace;
+    }
+
+    html {
+      font-size: 62.5%
+    }
+
+    body {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: #f2f2f2;
+    }
+
+    #wrap {
+      position: relative;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 20px;
+      min-width: 800px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    hr {
+      width: 90%;
+      margin: 110px auto 80px;
+      border: 0;
+      border-bottom: 2px solid #666;
+    }
+
+    caption {
+      display: none;
+    }
+
+    table {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto 60px;
+      font-size: 1.5rem;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 50px 80px -50px rgba(50, 50, 50, 0.12), 0 50px 50px -30px rgba(20, 20, 20, 0.1);
+      color: #555;
+    }
+
+    th {
+      padding: 12px;
+      font-size: 1.6rem;
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      border: 0;
+      background-color: #ff7473;
+    }
+
+    table.first th {
+      background-color: #ff7473;
+    }
+
+    td {
+      padding: 14px 20px;
+      font-size: 1.4rem;
+      font-weight: 600;
+      border-top: 1px solid #ededed;
+      background-color: #fff;
+      border: 1px solid #ededed;
+      border-right: 0;
+    }
+
+    tr>td:first-child {
+      font-weight: 500;
+      color: #000;
+      border-left: 0;
+      letter-spacing: -0.03em;
+    }
+
+    td[rowspan] {
+      /* font-size: 15px; */
+      letter-spacing: 1.5px;
+      text-align: center;
+    }
+
+    .link {
+      letter-spacing: 0.03em;
+      font-weight: 600;
+    }
+
+    a {
+      color: #333;
+    }
+
+    a:hover,
+    a:focus {
+      color: #ff7473;
+      outline: 0;
+    }
+
+    .first a:hover {
+      color: #ff7473;
+    }
+
+    .first a:hover {
+      color: #ff7473;
+    }
+
+    h1 {
+      display: none;
+    }
+
+    h2 {
+      margin: 30px 0;
+      text-align: center;
+      font-size: 2.8rem;
+      letter-spacing: -0.06rem;
+      color: #a6cebf;
+      font-weight: bold;
+    }
+
+    .horizon {
+      width: 80%;
+      height: 1px;
+      margin: 40px auto;
+      background-color: #aaa;
+    }
+
+    .update {
+      display: inline-block;
+      margin: 18px 0 30px 0;
+      padding: 18px 26px;
+      text-align: left;
+      font-weight: bold;
+      font-size: 1.9rem;
+      border: 1px solid #888;
+      background: #fff;
+    }
+
+    .update small {
+      display: block;
+      margin-top: 4px;
+      font-size: 70%;
+      color: #666;
+      font-weight: 400;
+    }
+
+    .update .version1 {
+      display: inline-block;
+      width: 20px;
+      height: 10px;
+      background-color: rgba(255, 180, 182, 0.4);
+    }
+
+    .rmks {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    .borderTop {
+      border-top: 2px solid #e4e4e4;
+    }
+
+    .borderTop2 {
+      border-top: 2px solid #d3d3d3;
+    }
+
+    @media screen and (max-width: 800px) {
+      html {
+        font-size: 55%;
+      }
+
+      #wrap {
+        min-width: 320px;
+      }
+
+      thead>tr>th:first-child,
+      thead>tr>th:nth-child(4),
+      thead>tr>th:nth-child(5) {
+        display: none;
+      }
+
+      td[rowspan] {
+        display: none;
+      }
+
+      .desc,
+      .rmks {
+        display: none;
+      }
+
+    }
+
+    .new td {
+      background-color: rgba(214, 255, 180, 0.2);
+    }
+
+    .new td[rowspan] {
+      background-color: #fff;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>nykim@nykim.net</h1>
+    <p class="update">Hyodu Website<br><small>Last Update: 19-12-26</small></p>
+
+    <table>
+      <colgroup>
+        <col width="110px" />
+        <col width="270px" />
+        <col width="310px" />
+        <col />
+      </colgroup>
+      <thead>
+
+        <tr>
+          <th>그룹</th>
+          <th>파일명(LINK)</th>
+          <th>화면 내용</th>
+          <th>비고</th>
+        </tr>
+
+      </thead>
+      <tbody>
+
+        <tr>
+          <td rowspan="2">
+            <strong>Join</strong>
+          </td>
+          <td>
+            <a class="link" href="./html/join/join-01.html" target="_blank">join-01</a>
+          </td>
+          <td>회원가입 1단계 - 이메일 입력</td>
+          <td class="rmks"></td>
+        </tr>
+
+        <tr>
+          <td>
+            <a class="link" href="./html/join/join-02.html" target="_blank">join-02</a>
+          </td>
+          <td>회원가입 2단계 - 메일 발송</td>
+          <td class="rmks"></td>
+        </tr>
+
+        <tr>
+          <td>
+            <a class="link" href="./html/join/join-02-1.html" target="_blank">join-02</a>
+          </td>
+          <td>회원가입 2단계 - 메일 재발송</td>
+          <td class="rmks"></td>
+        </tr>
+
+
+        <tr>
+          <td rowspan="3" class="borderTop2">
+            <strong>Search</strong>
+          </td>
+          <td class="borderTop2">
+            <a class="link" href="html_gs/(02-01)search.html" target="_blank">search</a>
+          </td>
+          <td class="borderTop2">투표 검색 - 기본</td>
+          <td class="borderTop2 rmks"></td>
+        </tr>
+
+        <tr>
+          <td>
+            <a class="link" href="html_gs/(02-02)search_with_results.html" target="_blank">search_with_results</a>
+          </td>
+          <td>투표 검색 - 검색 결과 있음</td>
+          <td class="rmks">.pollSearch.search-result</td>
+        </tr>
+
+        <tr>
+          <td>
+            <a class="link" href="html_gs/(02-03)search_no_results.html" target="_blank">search_no_results</a>
+          </td>
+          <td>투표 검색 - 검색 결과 없음</td>
+          <td class="rmks">.pollSearch.search-null</td>
+        </tr>
+
+        <tr class="new">
+          <td rowspan="9" class="borderTop2">
+            <strong>Create</strong>
+          </td>
+          <td class="borderTop2">
+            <a class="link" href="html_gs/(03-01)create_step1.html" target="_blank">create_step1</a>
+          </td>
+          <td class="borderTop2">설문생성 1단계 - 정보입력</td>
+          <td class="borderTop2 rmks">19.03.19 수정</td>
+        </tr>
+
+        <tr class="new">
+          <td class="">
+            <a class="link" href="html_gs/(03-02)create_step2.html" target="_blank">create_step2</a>
+          </td>
+          <td class="">설문생성 2단계 - 항목입력</td>
+          <td class="rmks">19.03.19 수정</td>
+        </tr>
+        <tr class="new">
+          <td class="">
+            <a class="link" href="html_gs/(03-03-01)create_step3_group(1).html"
+              target="_blank">create_step3_group(1)</a>
+          </td>
+          <td class="">설문생성 3단계 - 대상설정 (대학)</td>
+          <td class="rmks ">19.03.19 수정</td>
+        </tr>
+        <tr class="new">
+          <td class="">
+            <a class="link" href="html_gs/(03-03-02)create_step3_group(2).html"
+              target="_blank">create_step3_group(2)</a>
+          </td>
+          <td class="">설문생성 3단계 - 대상설정 (대학원)</td>
+          <td class="rmks ">19.03.19 수정</td>
+        </tr>
+        <tr class="new">
+          <td class="">
+            <a class="link" href="html_gs/(03-03-03)create_step3_group(3).html"
+              target="_blank">create_step3_group(3)</a>
+          </td>
+          <td class="">설문생성 3단계 - 대상설정 (교직원)</td>
+          <td class="rmks ">19.03.19 수정</td>
+        </tr>
+        <tr class="new">
+          <td class="">
+            <a class="link" href="html_gs/(03-03-04)create_step3_group(4).html"
+              target="_blank">create_step3_group(4)</a>
+          </td>
+          <td class="">설문생성 3단계 - 대상설정 (기타)</td>
+          <td class="rmks ">19.03.19 수정</td>
+        </tr>
+
+        <tr class="new">
+          <td class="">
+            <a class="link" href="html_gs/(03-04)create_step3_group_selected.html"
+              target="_blank">create_step3_group_selected</a>
+          </td>
+          <td class="">설문생성 3단계 - 대상설정 (그룹 선택됨)</td>
+          <td class="rmks">19.03.19 수정</td>
+        </tr>
+
+        <tr class="new">
+          <td>
+            <a class="link" href="html_gs/(03-05)create_step3_individual.html"
+              target="_blank">create_step3_individual</a>
+          </td>
+          <td class="">설문생성 3단계 - 대상설정 (개별검색)</td>
+          <td class="rmks">19.03.19 수정</td>
+        </tr>
+
+        <tr class="new">
+          <td>
+            <a class="link" href="html_gs/(03-06)create_step4.html" target="_blank">create_step4</a>
+          </td>
+          <td class="">설문생성 4단계 - 정보확인</td>
+          <td class="rmks">19.03.19 수정</td>
+        </tr>
+
+        <tr class="">
+          <td rowspan="4" class="borderTop2">
+            <strong>Participate</strong>
+          </td>
+          <td class="borderTop2">
+            <a class="link" href="html_gs/(04-01)participate_cover.html" target="_blank">participate_cover</a>
+          </td>
+          <td class="borderTop2">설문참여 - 시작 전</td>
+          <td class="borderTop2 rmks"></td>
+        </tr>
+
+        <tr class="new">
+          <td class="">
+            <a class="link" href="html_gs/(04-02)participate_(1).html" target="_blank">participate_(1)</a>
+          </td>
+          <td class="">설문참여 - 객관식(복수선택)</td>
+          <td class="rmks">19.03.19 수정</td>
+        </tr>
+
+        <tr class="new">
+          <td class="">
+            <a class="link" href="html_gs/(04-03)participate_(2).html" target="_blank">participate_(2)</a>
+          </td>
+          <td class="">설문참여 - 주관식</td>
+          <td class="rmks">19.03.19 수정</td>
+        </tr>
+
+        <tr class="new">
+          <td class="">
+            <a class="link" href="html_gs/(04-04)participate_(3).html" target="_blank">participate_(3)</a>
+          </td>
+          <td class="">설문참여 - 객관식(단일선택)</td>
+          <td class="rmks">19.03.19 수정</td>
+        </tr>
+
+
+        <tr class="new">
+          <td rowspan="2" class="borderTop2">
+            <strong>Details</strong>
+          </td>
+          <td class="borderTop2">
+            <a class="link" href="html_gs/(05-01)details_summary.html" target="_blank">details_summary</a>
+          </td>
+          <td class="borderTop2">설문 자세히 (요약)</td>
+          <td class="borderTop2 rmks">19.03.19 수정</td>
+        </tr>
+
+        <tr class="new">
+          <td class="">
+            <a class="link" href="html_gs/(05-02)details.html" target="_blank">details</a>
+          </td>
+          <td class="">설문 자세히 (응답)</td>
+          <td class=" rmks">19.03.19 수정</td>
+        </tr>
+
+        <tr class="">
+          <td rowspan="1" class="borderTop2">
+            <strong>Splash</strong>
+          </td>
+          <td class="borderTop2">
+            <a class="link" href="html_gs/(06-01)splash_goSurvey.html" target="_blank">splash_goSurvey</a>
+          </td>
+          <td class="borderTop2">스플래시(Go Survey)</td>
+          <td class="borderTop2 rmks"></td>
+        </tr>
+
+
+      </tbody>
+    </table>
+
+
+    <hr>
+
+    <p class="update">Go Vote<br><small>
+        Last
+        Update:19-03-19</small></p>
+
+
+    <table>
+      <colgroup>
+        <col width="110px" />
+        <col width="270px" />
+        <col width="310px" />
+        <col />
+      </colgroup>
+      <thead>
+
+        <tr>
+          <th style="background-color:#ffd33f;">그룹</th>
+          <th style="background-color:#ffd33f;">파일명(LINK)</th>
+          <th style="background-color:#ffd33f;">화면 내용</th>
+          <th style="background-color:#ffd33f;">비고</th>
+        </tr>
+
+      </thead>
+      <tbody>
+        <tr class="new">
+          <td class="" rowspan="2">
+            <strong>Create</strong>
+          </td>
+          <td class="">
+            <a class="link" href="html_goVote/create-01.html" target="_blank">create-01</a>
+          </td>
+          <td class="">생성 1단계</td>
+          <td class=" rmks">19.03.19 수정(결과 숨김 마크업 추가)</td>
+        </tr>
+        <tr class="new">
+          <td class="">
+            <a class="link" href="html_goVote/create-05.html" target="_blank">create-05</a>
+          </td>
+          <td class="">생성 4단계</td>
+          <td class=" rmks">19.03.19 수정(결과 숨김 마크업 추가)</td>
+        </tr>
+
+
+
+
+      </tbody>
+    </table>
+
+
+
+
+  </div>
+</body>
