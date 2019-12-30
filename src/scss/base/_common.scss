@@ -14,10 +14,18 @@
   background-size: 100%;
 }
 
-.wrap {
-  // padding-top: 54px;
+.page-top {
+  padding-top: 54px;
+
+  @include res--laptop {
+    padding-top: 80px;
+  }
 }
 
 .scroll-container {
   overflow-y: auto;
+}
+
+.-scroll-disabled {
+  overflow-y: hidden;
 }

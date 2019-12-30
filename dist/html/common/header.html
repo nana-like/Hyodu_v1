@@ -6,19 +6,20 @@
     로그인 전이거나 로그아웃 시에는 .-login을 제거해주세요.
 
     (2)
-    .burger 클릭 이벤트로 버거메뉴를 여닫을 경우 .header에 .-opend를 토글해주세요.
+    모바일에서 .burger 클릭 이벤트로 버거메뉴를 여닫을 경우 .header에 .-opend를 토글해주세요.
+    모바일에서 버거메뉴를 여닫을 때, body에 .-scroll-disabled를 토글해주세요.
 
     (3)
-    .btn-mail 클릭 이벤트로 작은 메뉴를 여닫을 경우 .header에 .-user-opened를 토글해주세요.
+    데스크탑에서 .btn-mail 클릭 이벤트로 작은 메뉴를 여닫을 경우 .header에 .-user-opened를 토글해주세요.
+
 
   -->
 <header class="header -login">
   <div class="header-container">
-    <h1 class="header-logo logo">
+    <h1 class="logo header-logo">
       <a href="" class="logo-link"><span class="blind">효두</span></a>
     </h1>
   </div>
-  <!-- TODO:.burger는 모바일에서만 표시 -->
   <a aria-label="메뉴 여닫기 버튼" class="burger">
     <div aria-label="hidden" class="burger-line-wrap">
       <span class="burger-line"></span>
@@ -28,7 +29,7 @@
   </a>
   <nav class="nav">
     <h2 class="nav-title">
-      <div class="nav-logo logo" aria-label="hidden"></div>
+      <div class="logo nav-logo" aria-label="hidden"></div>
       <span class="blind">네비게이션</span>
     </h2>
     <div class="scroll-container">
@@ -44,7 +45,7 @@
             레벨 4 = .-lv4
             레벨 5 = .-lv5
           -->
-          <button href="" class="btn-level -lv3">Lv.3</button>
+          <button href="" class="btn-level -lv4">Lv.4</button>
         </div>
       </div>
       <ul class="nav-menu">

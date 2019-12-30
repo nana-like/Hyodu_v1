@@ -1,0 +1,73 @@
+.page-title {
+  outline: 3px solid red;
+  text-align: center;
+  padding-top: 66px;
+  padding-bottom: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+
+  //laptop
+  @include res--laptop {
+    padding-top: 92px;
+    padding-bottom: 64px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .title {
+    font-size: 26px;
+    color: $c-black;
+    font-weight: $fw-m;
+
+    &:before {
+      display: block;
+      background-size: contain;
+      @include bgi("title-deco-top");
+      content: '';
+      margin: 0 auto;
+      margin-bottom: 2px;
+      width: 24px;
+      height: 14px;
+    }
+
+    //laptop
+    @include res--laptop {
+      font-size: 38px;
+
+      &:before {
+        width: 28px;
+        height: 17px;
+      }
+    }
+  }
+
+  .title-small {
+    display: block;
+    margin-top: 2px;
+    font-size: 13px;
+    font-weight: $fw-m;
+    line-height: 1.46;
+    letter-spacing: -0.26px;
+    color: #848484;
+
+    //laptop
+    @include res--laptop {
+      font-size: 14px;
+      margin-top: 4px;
+    }
+  }
+
+
+
+  &:after {
+    display: block;
+    background-size: contain;
+    @include bgi("title-deco-top");
+    content: '';
+    margin: 40px auto 0;
+    width: 45px;
+    height: 9px;
+    @include bgi("title-deco-bottom", "svg");
+  }
+}
