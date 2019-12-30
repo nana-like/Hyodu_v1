@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 .blind {
+  // 👆 SEO용 텍스트 숨기기
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -15,17 +16,47 @@
 }
 
 .page-top {
+  // 👆 페이지 최상단에 헤더만큼의 padding 확보
   padding-top: 54px;
 
+  //laptop
   @include res--laptop {
     padding-top: 80px;
   }
 }
 
+
+.page-container {
+  // 👆 헤더, 푸터를 제외하고 페이지 전체를 감싸는 요소
+  padding: 0 20px;
+
+  //laptop
+  @include res--laptop {
+    padding: 0 40px;
+  }
+}
+
+.page-guide {
+  // 👆 일부 페이지에서 보여지는 안내문구
+  font-size: 15px;
+  line-height: 1.67;
+  color: $c-black;
+  text-align: center;
+  font-weight: $fw-r;
+  margin-bottom: 55px;
+
+  //laptop
+  @include res--laptop {
+    font-size: 17px;
+  }
+}
+
 .scroll-container {
+  // 👆 스크롤 영역 지정할 때 사용
   overflow-y: auto;
 }
 
 .-scroll-disabled {
+  // 👆 스크롤 막을 때 사용
   overflow-y: hidden;
 }

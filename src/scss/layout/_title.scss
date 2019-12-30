@@ -1,5 +1,4 @@
 .page-title {
-  outline: 3px solid red;
   text-align: center;
   padding-top: 66px;
   padding-bottom: 45px;
@@ -16,7 +15,7 @@
   }
 
   .title {
-    font-size: 26px;
+    font-size: 27px;
     color: $c-black;
     font-weight: $fw-m;
 
@@ -26,14 +25,14 @@
       @include bgi("title-deco-top");
       content: '';
       margin: 0 auto;
-      margin-bottom: 2px;
+      margin-bottom: 4px;
       width: 24px;
       height: 14px;
     }
 
     //laptop
     @include res--laptop {
-      font-size: 38px;
+      font-size: 40px;
 
       &:before {
         width: 28px;
@@ -44,7 +43,7 @@
 
   .title-small {
     display: block;
-    margin-top: 2px;
+    margin-top: 4px;
     font-size: 13px;
     font-weight: $fw-m;
     line-height: 1.46;
