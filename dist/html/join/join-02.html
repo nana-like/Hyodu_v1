@@ -40,14 +40,85 @@
 
 <body>
   <div class="wrap">
-    <header class="header">
-  <h1 class="logo">효두</h1>
+    <!-- 
+    [전달사항]
+
+    (1)
+    로그인했을 때는 .header에 .-login를 붙여주세요. 
+    로그인 전이거나 로그아웃 시에는 .-login을 제거해주세요.
+
+    (2)
+    .burger 클릭 이벤트로 버거메뉴를 여닫을 경우 .header에 .-opend를 토글해주세요.
+
+    (3)
+    .btn-mail 클릭 이벤트로 작은 메뉴를 여닫을 경우 .header에 .-user-opened를 토글해주세요.
+
+  -->
+<header class="header -login">
+  <div class="header-container">
+    <h1 class="header-logo logo">
+      <a href="" class="logo-link"><span class="blind">효두</span></a>
+    </h1>
+  </div>
+  <!-- TODO:.burger는 모바일에서만 표시 -->
+  <a aria-label="메뉴 여닫기 버튼" class="burger">
+    <div aria-label="hidden" class="burger-line-wrap">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </div>
+  </a>
+  <nav class="nav">
+    <h2 class="nav-title">
+      <div class="nav-logo logo" aria-label="hidden"></div>
+      <span class="blind">네비게이션</span>
+    </h2>
+    <div class="scroll-container">
+      <div class="nav-account">
+        <div class="nav-account-container">
+          <button class="btn-mail">nana@thevitolabs.com</button>
+          <!-- 
+            [전달사항]
+            사용자 레벨에 따라 .btn-level에 고유의 클래스 네임을 붙여주세요.
+            레벨 1 = .-lv1
+            레벨 2 = .-lv2
+            레벨 3 = .-lv3
+            레벨 4 = .-lv4
+            레벨 5 = .-lv5
+          -->
+          <button href="" class="btn-level -lv3">Lv.3</button>
+        </div>
+      </div>
+      <ul class="nav-menu">
+        <li class="menu-item"><a href="" class="menu-link">스토어</a></li>
+        <li class="menu-item"><a href="" class="menu-link">서비스 소개</a></li>
+      </ul>
+      <ul class="nav-user">
+        <li class="user-item"><a href="" class="user-link">회원정보 수정</a></li>
+        <li class="user-item"><a href="" class="user-link">배송지 관리</a></li>
+        <li class="user-item"><a href="" class="user-link">구매 내역</a></li>
+        <li class="user-item"><a href="" class="user-link">쿠폰사용 내역</a></li>
+        <li class="user-item"><a href="" class="user-link">포인트 내역</a></li>
+        <li class="user-item"><a href="" class="user-link">문의하기</a></li>
+        <li class="user-item item-logout"><a href="" class="user-link">로그아웃</a></li>
+      </ul>
+      <div class="nav-btn-wrap">
+        <button class="nav-btn btn-line">회원가입</button>
+        <button class="nav-btn btn-line-on">로그인</button>
+      </div>
+    </div>
+  </nav>
+  <div class="dim header-dim"></div>
 </header>
     <h2 class="title">간편 회원가입 222</h2>
 <small class="small">딸두 아들도 모두 효두로 두잇!</small>
     <footer class="footer">
   푸터푸터
 </footer>
+
+
+
+<script src="./../../js/ui.js"></script>
   </div>
 </body>
 

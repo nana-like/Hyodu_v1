@@ -5,8 +5,28 @@
 // -------------------------
 // [ 1. color pallete ]
 // -------------------------
-$color-black: #323b45; //기본 검정
-$color-blue: #30b9d3; //밝은 파랑
+$c-black: #101010; //기본 검정
+$c-gray-dark: #343434; //어두운 회색
+$c-gray: #4b4b4b; //회색
+
+$c-gray-light: #909090;
+
+$c-line: #e6e6e6;
+
+// $c-pink: #FF5461;
+$c-pink: #FA6B76;
+
+//각 레벨별 컬러
+$c-lv: (1 : #909090,
+    2: #e8ae00,
+    3: #47787A,
+    4: #ff8132,
+    5: #FF5461);
+
+
+$c-white-dark: #f6f6f6;
+$c-white-light: #fcfcfc;
+
 $color-darkblue: #11adca; //짙은 파랑
 $color-navy: #17365b;
 $color-lightgray: #d3d3d3; //연한 회색
@@ -22,17 +42,23 @@ $color-error: #ee6262;
 // -------------------------
 // z-index
 // -------------------------
-$z-page-header: 100;
-$z-modal: 200;
+$z-header: 200;
+$z-header-dim: 210;
+$z-header-nav: 220;
+$z-burger: 300;
+
+$z-header-account-lt: 100;
+$z-header-user-lt: 200;
 
 // -------------------------
 // path
 // -------------------------
-$path-image: "../images/";
+$path-image: "../../../images/";
 
 // -------------------------
 // font weight
 // -------------------------
+$fw-b: 700;
 $fw-m: 500;
 $fw-r: 400;
 
@@ -40,4 +66,4 @@ $fw-r: 400;
 // [ 5. style ]
 // -------------------------
 $radio-button: (style01: (normal: 25% -1px,
-    active: 50% -1px));
+        active: 50% -1px));

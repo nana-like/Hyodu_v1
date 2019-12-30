@@ -4,9 +4,9 @@
 // **** Last Modified : 2018-09-05
 
 // 폰트
-@mixin font-main($weight: 500) {
+@mixin font-main {
   font-family: "Noto Sans KR", AppleGothic, sans-serif, Helvetica;
-  font-weight: $weight;
+
 }
 
 
@@ -40,7 +40,7 @@
 
 // 백그라운드 이미지 삽입
 @mixin bgi($imageName, $type: "png") {
-  background-image: url(#{$path-image-bc}#{$imageName}.#{$type});
+  background-image: url(#{$path-image}#{$imageName}.#{$type});
   background-repeat: no-repeat;
 }
 
@@ -245,6 +245,15 @@
   align-self: $align;
 }
 
+// pointer-events:auto 처리
+@mixin pointer-auto {
+  -moz-pointer-events: auto;
+  -webkit-pointer-events: auto;
+  -o-pointer-events: auto;
+  -ms-pointer-events: auto;
+  pointer-events: auto;
+}
+
 // pointer-events:none 처리
 @mixin pointer-none {
   -moz-pointer-events: none;
@@ -324,4 +333,11 @@
   -moz-transform-origin: $origin;
   -ms-transform-origin: $origin;
   transform-origin: $origin;
+}
+
+
+@mixin center() {
+  @include flexbox;
+  @include justify-content(center);
+  @include align-items(center);
 }

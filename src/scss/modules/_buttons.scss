@@ -1,0 +1,30 @@
+.btn-line {
+  display: block;
+  min-width: 104px;
+  height: 34px;
+  color: $c-pink;
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: $fw-m;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.13px;
+  border: 1px solid $c-pink;
+  background-color: #fff;
+  transition: all 0.25s;
+
+  &:hover {
+    color: #fff;
+    background-color: $c-pink;
+  }
+}
+
+.btn-line-on {
+  @extend .btn-line;
+  color: #fff;
+  background-color: $c-pink;
+
+  &:hover {
+    transform: scale(1.1) translateZ(0);
+  }
+}
