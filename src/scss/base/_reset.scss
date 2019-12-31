@@ -9,7 +9,6 @@
   box-sizing: border-box;
 }
 
-
 html,
 body,
 div,
@@ -158,16 +157,31 @@ input {
   -webkit-border-radius: 0;
   background-color: transparent;
   border: 1px solid transparent;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active,
+  &:-internal-autofill-selected {
+    // background-color: #fff;
+    transition: background-color 5000s 0s;
+    -webkit-text-fill-color: #101010 !important;
+    // -webkit-transition: background-color 9999s ease-out;
+    // -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  }
 }
 
-//비밀번호인 경우 sans-serif로 글씨체 강제 지정
+//비밀번호인 경우
 input[type="password"] {
-  font-family: sans-serif, Helvetica;
-  letter-spacing: 1px;
+  letter-spacing: 4px;
+  // font-size: 150%;
 
   @include placeholder {
     @include font-main;
-    letter-spacing: 0;
   }
 }
 
@@ -184,6 +198,17 @@ input[readonly] {
   //iOS에서 disabled처리한 input에 기본적으로 적용되는 스타일 제거
   opacity: 1;
   -webkit-text-fill-color: inherit;
+}
+
+input[readonly] {
+  color: $c-gray-normal;
+  background-color: #efefef;
+  border-color: #efefef;
+
+  &:hover,
+  &:focus {
+    border-color: #efefef;
+  }
 }
 
 html {
@@ -222,5 +247,4 @@ body {
 a:focus {
   opacity: 1;
   outline: 0;
-  -webkit-tap-highlight-color: rgba(252, 21, 21, 1);
 }

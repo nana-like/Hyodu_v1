@@ -1,0 +1,129 @@
+// ---
+// page
+// ---
+
+// >> 공통 <<
+
+.page-top {
+  // 👆 페이지 최상단에 헤더만큼의 padding 확보
+  padding-top: 54px;
+
+  //laptop
+  @include res--laptop {
+    padding-top: 80px;
+  }
+}
+
+.page-body {
+  // 👆 헤더, 푸터를 제외하고 페이지 전체를 감싸는 요소
+  padding: 0 20px;
+
+  //laptop
+  @include res--laptop {
+    padding: 0 40px;
+  }
+}
+
+.page-guide {
+  // 👆 일부 페이지에서 보여지는 안내문구
+  font-size: 15px;
+  line-height: 1.67;
+  color: $c-black;
+  text-align: center;
+  font-weight: $fw-r;
+  margin-bottom: 55px;
+
+  //laptop
+  @include res--laptop {
+    font-size: 17px;
+  }
+
+
+  .page-guide-btn {
+    margin: 15px auto 0;
+  }
+
+
+  .user-mail {
+    // 👆 유저 메일정보
+    display: inline-block;
+    position: relative;
+    margin-bottom: 11px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $c-black;
+    font-weight: $fw-m;
+
+    &:after {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #d5d5d5;
+      content: "";
+    }
+
+    //laptop
+    @include res--laptop {
+      margin-bottom: 15px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  }
+}
+
+// ===================
+// >> 특정 페이지 <<
+// ===================
+
+.page-user-forms {
+  // 👆 회원가입, 임시 비밀번호 발급, 회원정보 수정 등
+
+  .page-guide {
+    margin-bottom: 55px;
+
+    //laptop
+    @include res--laptop {
+      margin-bottom: 60px;
+    }
+  }
+
+  .btn-full:last-child {
+    margin-top: 55px;
+
+    //laptop
+    @include res--laptop {
+      margin-top: 60px;
+    }
+  }
+}
+
+.page-inform {
+  // 👆 발급 완료, 신청 완료 등
+
+  .page-sub {
+    margin: 80px auto 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.57;
+    color: $c-gray-normal;
+    font-weight: $fw-r;
+
+    //laptop
+    @include res--laptop {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+  }
+
+  .page-sub-mail {
+    display: block;
+    margin-top: 6px;
+    font-weight: $fw-m;
+  }
+
+  .page-sub-btn {
+    // 👆 홈 화면으로 돌아가기 버튼 등
+    margin: 15px auto 0;
+  }
+}

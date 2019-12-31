@@ -7,6 +7,7 @@
   display: block;
   min-width: 104px;
   height: 34px;
+  padding: 0 15px;
   color: $c-pink;
   border-radius: 2px;
   font-size: 13px;
@@ -21,6 +22,14 @@
   &:hover {
     color: #fff;
     background-color: $c-pink;
+  }
+
+  //laptop
+  @include res--laptop {
+    min-width: 120px;
+    height: 40px;
+    font-size: 15px;
+    padding: 0 20px;
   }
 }
 
@@ -51,7 +60,8 @@
   border: 2px solid transparent;
   @include horizontal-gradient(#f48d6c, #f47271);
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $c-pink;
     border-color: $c-pink;
     background: #fff;

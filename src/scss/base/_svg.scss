@@ -1,0 +1,59 @@
+// ---
+// SVG
+// ---
+
+@function _buildIcon($icon) {
+  $icon: "#{$icon}";
+  @return $icon;
+}
+
+@function icon($icon-name,
+  $color,
+  $stroke-color: transparent,
+  $stroke-width: 0,
+  $css: ""
+
+) {
+  $icons: ( //SVG 아이콘 목록
+    // > 체크 모양
+    // check: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 10"><path d="M1.7 4.2l3.1 4.5 4.9-6.8" fill="none" stroke="%2377c950" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"/></svg>',
+    check: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 9"><path fill="none" stroke="%23#{$color}" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M1.5 3.6l3.2 4.3 4.8-6.4"/></svg>',
+    // 셀렉트 화살표(활성화 시)
+    select-active: '<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34"><path fill="%23#{$color}" d="M18.6 12.3l5.6 8.2c.6.9.4 2.1-.5 2.7-.3.2-.7.3-1.1.3H11.4c-1.1 0-1.9-.9-1.9-1.9 0-.4.1-.8.3-1.1l5.6-8.2c.6-.9 1.8-1.1 2.7-.5.2.2.4.3.5.5z"/></svg>',
+    // 가로 ... 아이콘
+    drawer: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.3 20"><path d="M2.8 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2c-.1 1.1-.9 2-2 2zm0 5.9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2c-.1 1.1-.9 2-2 2zm0 5.9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2c-.1 1.2-.9 2-2 2z" fill="%23#{$color}"/></svg>',
+    checkmark: '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path fill="%23#{$color}" fill-rule="evenodd" d="M4.414 8.485l-.171.172L0 4.414 1.414 3l2.829 2.828L10.07 0l1.414 1.414-7.07 7.071z"/></svg>',
+    // 지갑 내역에서 - 아이콘
+    wallet-details-out: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><g fill="none" fill-rule="evenodd"><path fill="%23A7B5C8" d="M4.5 9h12a1.5 1.5 0 0 1 0 3h-12a1.5 1.5 0 0 1 0-3z"/><ellipse cx="14" cy="10.218" fill="%237F8FA5" opacity=".8" rx="4" ry="1"/></g></svg>',
+    // 지갑 내역에서 + 아이콘
+    wallet-details-in: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><g fill="none" fill-rule="evenodd"><path fill="%2366DDF4" d="M4.5 8.94h12c.828 0 1.5.666 1.5 1.486s-.672 1.485-1.5 1.485h-12c-.828 0-1.5-.665-1.5-1.485 0-.82.672-1.485 1.5-1.485z"/><path fill="%2330B9D3" d="M12 4.485v11.881c0 .82-.672 1.485-1.5 1.485S9 17.187 9 16.366V4.486C9 3.664 9.672 3 10.5 3s1.5.665 1.5 1.485z"/></g></svg>',
+    // close 버튼
+    close: '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><path fill="%23#{$color}" fill-rule="evenodd" d="M20.5 19.086l6.718-6.718a1 1 0 0 1 1.414 1.414L21.914 20.5l6.718 6.718a1 1 0 0 1-1.414 1.414L20.5 21.914l-6.718 6.718a1 1 0 0 1-1.414-1.414l6.718-6.718-6.718-6.718a1 1 0 0 1 1.414-1.414l6.718 6.718z"/></svg>',
+    // 백업 페이지 내 버튼
+    backup-arrow: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><g fill="%23FFF" fill-rule="evenodd"><path d="M7.421 15.078l5.657-5.657c.39-.39.995-.419 1.35-.064.355.355.326.96-.064 1.35l-5.657 5.657c-.39.39-.995.42-1.35.064-.355-.355-.326-.96.064-1.35z"/><path d="M8.707 3.636l5.657 5.657c.39.39.42.995.064 1.35-.355.355-.96.326-1.35-.064L7.421 4.922c-.39-.39-.419-.995-.064-1.35.355-.355.96-.326 1.35.064z"/></g></svg>',
+    // 지갑 새로고침 버튼
+    wallet-reload: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path fill="%23212121" fill-rule="evenodd" d="M4.665 3.904a7.844 7.844 0 0 0-2.36 7.666.544.544 0 0 1-.526.672.54.54 0 0 1-.527-.414A8.93 8.93 0 0 1 3.937 3.1 8.852 8.852 0 0 1 10.37.804a8.832 8.832 0 0 1 5.178 1.982L15.463.563a.543.543 0 0 1 1.085-.04l.133 3.546v.064c0 .294-.229.53-.522.543l-3.586.133h-.02c-.29 0-.53-.23-.543-.523a.54.54 0 0 1 .523-.563l2.335-.088c-2.946-2.4-7.296-2.36-10.203.269zM18.748 7.86a8.927 8.927 0 0 1-2.686 8.728 8.873 8.873 0 0 1-6.432 2.295 8.868 8.868 0 0 1-5.158-1.966l.193 2.175a.542.542 0 0 1-.49.591c-.016.004-.032.004-.048.004a.542.542 0 0 1-.54-.494l-.32-3.574a.542.542 0 0 1 .49-.591l3.574-.322a.54.54 0 0 1 .59.49.542.542 0 0 1-.49.592L5.067 16a7.83 7.83 0 0 0 5.013 1.805 7.835 7.835 0 0 0 7.614-9.689.543.543 0 0 1 .399-.655.544.544 0 0 1 .655.398z"/></svg>',
+    //검색 아이콘
+    search: '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><path fill="%232C496A" fill-rule="evenodd" d="M11.193 18.53c0-4.046 3.291-7.332 7.332-7.332 4.045 0 7.332 3.29 7.332 7.332 0 4.04-3.287 7.336-7.332 7.336-4.04 0-7.332-3.291-7.332-7.336m18.634 10.454l-4.861-4.861a8.495 8.495 0 0 0 2.093-5.593c0-4.707-3.828-8.53-8.53-8.53C13.824 10 10 13.828 10 18.53c0 4.701 3.828 8.53 8.53 8.53 2.137 0 4.094-.79 5.593-2.094l4.861 4.861c.115.115.27.177.422.177a.6.6 0 0 0 .421-1.02"/></svg>',
+    //myDapp 아이콘
+    myDApp: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><path stroke="%232C496A" d="M18.852 15.34l1.342 7.554c.132.74-.354 1.45-1.089 1.584a1.34 1.34 0 0 1-.925-.165l-6.011-3.556-6.012 3.556a1.34 1.34 0 0 1-.924.165 1.364 1.364 0 0 1-1.09-1.584l1.359-7.647-5.518-4.663a1.368 1.368 0 0 1-.464-.816 1.364 1.364 0 0 1 1.1-1.576L7.8 6.937 10.82.296a1.346 1.346 0 0 1 2.456 0L16.3 6.95h.506v.485l6.573 1.15a1.364 1.364 0 0 1 1.101 1.575 1.368 1.368 0 0 1-.464.816l-5.164 4.364z"/><path stroke="%233F5978" d="M9.992 14.044c1.218.645 2.057.964 2.517.956 1.666-.03 2.482-1.044 2.482-1.044"/><rect width="1" height="2" x="9" y="10" fill="%232E4B6B" rx=".5"/><rect width="1" height="2" x="14" y="10" fill="%232E4B6B" rx=".5"/></g></svg>',
+    //myDApp 아이콘(on)
+    myDApp-on: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"><path fill="%233F5978" fill-rule="evenodd" stroke="%232C496A" d="M19.784 16.882l1.276 7.184a.792.792 0 0 1-.63.921.77.77 0 0 1-.531-.095l-5.744-3.397-5.744 3.397a.77.77 0 0 1-.532.095.792.792 0 0 1-.63-.92l1.292-7.27-5.26-4.445a.796.796 0 0 1-.27-.475.792.792 0 0 1 .637-.916l6.819-1.193 2.867-6.307a.776.776 0 0 1 1.418 0l2.895 6.368h.3v.372l6.405 1.12c.425.074.71.484.637.916a.796.796 0 0 1-.27.474l-4.935 4.171z" opacity=".5"/></svg>',
+    //myDapp 작은 아이콘
+    myDApp-small: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><path stroke="%232C496A" d="M12.75 10.16l.877 4.87a1.069 1.069 0 0 1-1.59 1.113l-3.924-2.291-3.926 2.291a1.067 1.067 0 0 1-1.589-1.113l.888-4.93-3.602-3.005a1.07 1.07 0 0 1 .503-1.874l4.7-.812L7.06.121a1.067 1.067 0 0 1 1.94 0l1.971 4.28h.399v.345l4.242.733a1.069 1.069 0 0 1 .503 1.875L12.75 10.16z"/><path stroke="%233F5978" d="M6.179 9.518c.956.71 1.613 1.062 1.973 1.055 1.303-.022 1.935-1.123 1.935-1.123"/><rect width="1" height="1.457" x="5.818" y="6.558" fill="%232E4B6B" rx=".5"/><rect width="1" height="1.457" x="9.455" y="6.558" fill="%232E4B6B" rx=".5"/></g></svg>',
+    
+    //filter 아이콘(active)
+    filter-on: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10.5 7.5l4.5 6.6H6l4.5-6.6z" fill="%23070707" stroke="%23000" stroke-miterlimit="10"/><path d="M-26-3.5h38c7.5 0 13.5 6 13.5 13.5s-6 13.5-13.5 13.5h-38c-7.5 0-13.5-6-13.5-13.5s6-13.5 13.5-13.5z" fill="none" stroke="%23d2d2d2"/></svg>',
+    //filter 아이콘
+    filter: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10.5 14.1L6 7.5h9.1l-4.6 6.6z" fill="%23070707" stroke="%23000" stroke-miterlimit="10"/><path d="M-26-3.5h38c7.5 0 13.5 6 13.5 13.5s-6 13.5-13.5 13.5h-38c-7.5 0-13.5-6-13.5-13.5s6-13.5 13.5-13.5z" fill="none" stroke="%23d2d2d2"/></svg>',
+    // 검색 삭제 아이콘
+    delete: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 10"><path fill="none" stroke="#f41666" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M1.5 4.5l3 4 5-6"/></svg>',
+    // 캘린더 아이콘
+    calendar: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><g fill="none" fill-rule="evenodd"><g transform="translate(2 1)"><rect width="13.28" height="11.263" x=".5" y="3.225" stroke="%23324E6E" rx="2"/><path fill="%23324E6E" d="M3.74 6.813a.34.34 0 1 1 0-.68.34.34 0 0 1 0 .68zm3.4 0a.34.34 0 1 1 0-.68.34.34 0 0 1 0 .68zm3.4 0a.34.34 0 1 1 0-.68.34.34 0 0 1 0 .68zm-6.8 2.725a.34.34 0 1 1 0-.68.34.34 0 0 1 0 .68zm3.4 0a.34.34 0 1 1 0-.68.34.34 0 0 1 0 .68zm3.4 0a.34.34 0 1 1 0-.68.34.34 0 0 1 0 .68z"/><path stroke="%23324E6E" stroke-linecap="square" d="M2.38 3.066V.256m9.52 2.81V.256"/></g><g stroke="%23324E6E" transform="translate(12.2 11.22)"><ellipse cx="3.4" cy="3.406" fill="%23F2F4F7" rx="3.4" ry="3.406"/><path stroke-linecap="square" d="M3.06 1.703v2.044m2.04.01H3.06"/></g></g></svg>',
+    // 뒤로가기 아이콘
+    back: '<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"> <path fill="%232C496A" fill-rule="evenodd" d="M12.963 19.275l9.783 9.783a1 1 0 1 1-1.414 1.414l-9.9-9.9a.995.995 0 0 1-.27-.491 1 1 0 0 1-.24-1.593l9.899-9.9a1 1 0 0 1 1.414 1.415l-9.272 9.272z"/></svg>
+'
+);
+  $icon: _buildIcon(map-get($icons, $icon-name));
+  @return url("data:image/svg+xml;utf8,#{$icon}");
+}

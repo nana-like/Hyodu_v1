@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include("../common/document-head.html")
+
+<body>
+  <div class="wrap">
+    @@include('../common/header.html')
+    <!--
+      [전달사항]
+      페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
+    -->
+    <div class="page-body page-user-forms">
+      @@include('../common/page-top.html')
+      @@include('../common/page-title.html', {
+      "title": "회원정보 입력",
+      "small": "회원가입이 거의 끝나가요! (쿠폰발사 대기 중)"
+      })
+      <div class="page-guide">
+        <p class="user-mail">vito@thevitolabs.com</p>
+        <p>위의 메일주소로 계정을 생성합니다.<br />
+          비밀번호와 간단한 정보를 입력해 주세요.</p>
+      </div>
+      <div class="page-content">
+        <form>
+          <div class="form-container">
+            <!-- 
+              [전달사항] 
+              (1) 필수 폼일 때는 .form-item에 .form-req 클래스가 추가로 붙습니다.
+              (2) 비밀번호 설정 폼에는 .form-item에 .form-user-password 클래스가 추가로 붙습니다. 모든 오류 메시지는 위아래 구분 없이 .form-error에 표시해 주세요.
+            -->
+            <div class="form-item form-req form-set-password">
+              <label for="form-password" class="form-label">
+                <span class="form-label-text">비밀번호</span>
+                <span class="form-label-guide">(알파벳과 숫자를 조합하여 8~20자)</span>
+              </label>
+              <input id="form-password" name="form-password" type="password" minlength="" maxlength=""
+                placeholder="비밀번호를 입력해 주세요." value="asdfasdf" class="form-input" />
+              <input id="form-password-2" name="form-password" type="password" minlength="" maxlength=""
+                placeholder="비밀번호를 한 번 더 입력해 주세요." value="asdfsdfasdfasdfdsdsfsd" class="form-input -error" />
+              <p class="form-error">비밀번호 관련 에러 메시지는 위아래 구분 없이 모두 여기에 표시합니다.</p>
+            </div>
+            @@include("../common/form-item.html", {
+            "label" : "이름/닉네임",
+            "guide" : "(띄어쓰기와 특수문자 없이 2~10자)",
+            "required" : "required",
+            "inputID" : "form-name",
+            "type" : "text",
+            "value" : "비토랩스",
+            "placeholder" : "이름을 입력해 주세요.",
+            "length" : {
+            "min": "2",
+            "max": "10"
+            },
+            "error" : "",
+            "errorMsg" : ""
+            })
+            @@include("../common/form-item.html", {
+            "label" : "휴대전화 번호",
+            "guide" : "(숫자만 입력)",
+            "required" : "",
+            "inputID" : "form-tel",
+            "type" : "tel",
+            "value" : "01012",
+            "placeholder" : "하이픈(-) 없이 번호 전체를 입력해 주세요.",
+            "length" : {
+            "min": "",
+            "max": ""
+            },
+            "error" : "error",
+            "errorMsg" : "휴대전화 번호 10~11자리를 전체 입력해 주세요."
+            })
+            <div class="checkbox-item">
+              <input type="checkbox" id="test" class="checkbox-input" checked />
+              <label for="test">효두의 알뜰살뜰 메일 서비스도 받아볼래요 (선택사항)</label>
+            </div>
+            <p class="text-small">
+              아래 완료 버튼을 누르면 효두의 <a href="" class="link">서비스 이용약관</a>과 <a href="" class="link">개인정보 처리방침</a>에 동의한 후 회원가입을
+              완료합니다.
+            </p>
+            <!--
+              [전달사항]
+              필수 폼이 모두 입력되면 버튼에서 disabled 속성을 제거해주세요.
+            -->
+            <button class="btn-full">가입 완료</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    @@include('../common/footer.html')
+  </div>
+</body>
+
+</html>
