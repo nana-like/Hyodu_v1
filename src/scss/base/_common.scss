@@ -1,4 +1,6 @@
-@charset "utf-8";
+// ---
+// common
+// ---
 
 .blind {
   // 👆 SEO용 텍스트 숨기기
@@ -11,6 +13,7 @@
 }
 
 .logo {
+  // 👆 범용 로고
   @include bgi("logo");
   background-size: 100%;
 }
@@ -26,7 +29,7 @@
 }
 
 
-.page-container {
+.page-body {
   // 👆 헤더, 푸터를 제외하고 페이지 전체를 감싸는 요소
   padding: 0 20px;
 
