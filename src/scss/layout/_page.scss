@@ -114,7 +114,21 @@
 
   }
 
+}
 
+.page-sub-details {
+  // 👆 회원탈퇴 등 상세내역을 보여줘야하는 경우 (임시)
+  font-size: 14px;
+  font-weight: $fw-r;
+  line-height: 1.57;
+  color: #5f5f5f;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  &+.btn-line {
+    margin-top: 0;
+  }
 }
 
 // ===================
@@ -179,7 +193,7 @@
     }
   }
 
-  .page-sub-text {
+  .page-sub {
     // 👆 회원가입 유도 텍스트
     font-size: 13px;
 
@@ -205,7 +219,7 @@
     }
   }
 
-  .btn-full:last-child {
+  .btn-full {
     margin-top: 55px;
 
     //laptop

@@ -17,7 +17,7 @@
   letter-spacing: -0.13px;
   border: 1px solid $c-pink;
   background-color: #fff;
-  transition: all 0.25s;
+  transition: color 0.25s, border 0.25s;
 
   &:hover {
     color: #fff;
@@ -44,6 +44,7 @@
 }
 
 .btn-modal-okay {
+  // 👆 모달 내 확인 버튼
   @extend .btn-line;
   min-width: 90px;
   color: #898989;
@@ -63,6 +64,31 @@
     padding: 0 15px;
   }
 }
+
+.btn-line-small {
+  // 👆 비밀번호 찾기처럼 작은 라인 버튼
+  @extend .btn-modal-okay;
+  min-width: 85px;
+  height: 30px;
+  font-size: 11px;
+  padding: 0 10px;
+  cursor: pointer;
+
+  //laptop
+  @include res--laptop {
+    min-width: 95px;
+    height: 32px;
+    font-size: 12px;
+    padding: 0 10px;
+  }
+
+  &:disabled {
+    color: #d5d5d5;
+    border-color: #d5d5d5;
+    cursor: default;
+  }
+}
+
 
 .btn-full {
   // 👆 전체를 차지하는 그라데이션 버튼
@@ -130,5 +156,24 @@
   //laptop
   @include res--laptop {
     font-size: 16px;
+  }
+}
+
+
+
+.btn-account-withdraw {
+  // 👆 회원탈퇴 전용 버튼
+  margin-top: 55px;
+  position: relative;
+  color: #bebebe;
+  font-size: 13px;
+  font-weight: $fw-m;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #bebebe;
+
+  //laptop
+  @include res--laptop {
+    margin-top: 70px;
+    font-size: 14px;
   }
 }

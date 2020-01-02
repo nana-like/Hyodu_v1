@@ -56,10 +56,25 @@
 }
 
 .hide-laptop {
+  // 👆 랩탑에서 숨기는 요소
   display: block;
 
   //laptop
   @include res--laptop {
     display: none;
+  }
+}
+
+.get-exp {
+  // 👆 리뷰 등록 완료 화면에서 경험치 보여줌
+  color: $c-pink-hot;
+  font-size: 15px;
+  font-weight: $fw-m;
+  text-align: center;
+  line-height: 1.47;
+  margin-top: 15px;
+
+  @include res--laptop {
+    font-size: 17px;
   }
 }

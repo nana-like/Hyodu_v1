@@ -249,24 +249,25 @@
 }
 
 
-.form-user-mail {
-  // 👆 유저 이메일을 나타내는 폼일 경우
-
-  .form-alert {
-    margin-top: -10px;
-    margin-bottom: 30px;
-    font-size: 11px;
-    color: $c-gray-light;
-    line-height: 1.45;
-  }
+.form-email-notice {
+  margin-top: -10px;
+  margin-bottom: 30px;
+  font-size: 11px;
+  color: $c-gray-light;
+  line-height: 1.45;
 }
 
 
-.form-set-password {
+.form-user-password {
   // 👆 비밀번호 설정 폼일 경우
 
   .form-input+.form-input {
     margin-top: 6px;
+  }
+
+  .btn-change-password {
+    margin-left: auto;
+    margin-bottom: 25px;
   }
 }
 
