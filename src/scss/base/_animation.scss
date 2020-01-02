@@ -22,3 +22,50 @@
     transform: translate3d(#{$_shake_size}px, 0, 0);
   }
 }
+
+
+@keyframes show-skew {
+
+  $_skew_size: 10;
+
+  0% {
+    transform: skewY(#{$_skew_size}deg) translateY(110%) translateZ(0);
+    transform-origin: left center;
+  }
+
+  30% {
+    transform: skewY(0) translateY(0) translateZ(0);
+    transform-origin: left center;
+  }
+
+  70% {
+    transform: skewY(0) translateY(0) translateZ(0);
+    transform-origin: left center;
+  }
+
+  100% {
+    transform: skewY(#{$_skew_size}deg) translateY(-200%) translateZ(0);
+    transform-origin: left center;
+  }
+}
+
+
+@keyframes show-copied {
+
+
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

@@ -43,6 +43,27 @@
   }
 }
 
+.btn-modal-okay {
+  @extend .btn-line;
+  min-width: 90px;
+  color: #898989;
+  border-color: #898989;
+
+  &:hover {
+    background-color: #fff;
+    color: $c-black;
+    border-color: $c-black;
+  }
+
+  //laptop
+  @include res--laptop {
+    min-width: 90px;
+    height: 34px;
+    font-size: 13px;
+    padding: 0 15px;
+  }
+}
+
 .btn-full {
   // 👆 전체를 차지하는 그라데이션 버튼
   display: block;
@@ -60,8 +81,7 @@
   border: 2px solid transparent;
   @include horizontal-gradient(#f48d6c, #f47271);
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: $c-pink;
     border-color: $c-pink;
     background: #fff;

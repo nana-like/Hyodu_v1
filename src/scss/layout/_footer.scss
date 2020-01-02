@@ -10,13 +10,16 @@
   line-height: 1.64;
   border-top: 1px solid #ccc;
 
-  //laptop
-  @include res--laptop {
-    margin-top: 100px;
+  //tablet
+  @include res--tablet {
     padding: 50px 40px 40px;
     @include flexbox;
     @include justify-content(center);
     @include align-items(flex-start);
+  }
+
+  @include res--laptop {
+    margin-top: 100px;
   }
 
   a:hover {
@@ -25,8 +28,8 @@
 
   .footer-content {
 
-    //laptop
-    @include res--laptop {
+    //tablet
+    @include res--tablet {
       margin-right: 70px;
     }
   }
@@ -63,6 +66,11 @@
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 
+    //tablet
+    @include res--tablet {
+      margin-right: 100px;
+    }
+
     //laptop
     @include res--laptop {
       margin-right: 140px;
@@ -81,8 +89,8 @@
     margin-top: 30px;
     margin-bottom: 8px;
 
-    //laptop
-    @include res--laptop {
+    //tablet
+    @include res--tablet {
       margin-top: 0;
     }
 

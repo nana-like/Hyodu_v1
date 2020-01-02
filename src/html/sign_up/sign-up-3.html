@@ -25,9 +25,7 @@
         <form>
           <div class="form-container">
             <!-- 
-              [전달사항] 
-              (1) 필수 폼일 때는 .form-item에 .form-req 클래스가 추가로 붙습니다.
-              (2) 비밀번호 설정 폼에는 .form-item에 .form-user-password 클래스가 추가로 붙습니다. 모든 오류 메시지는 위아래 구분 없이 .form-error에 표시해 주세요.
+              [전달사항] 비밀번호 설정 폼은 .form-user-password 클래스가 추가로 붙습니다. 비밀번호 설정에 따른 모든 오류 메시지는 위아래 구분 없이 .form-error에 표시해 주세요.
             -->
             <div class="form-item form-req form-set-password">
               <label for="form-password" class="form-label">
@@ -101,6 +99,7 @@
         </form>
       </div>
     </div>
+    @@include('../common/modal-large.html')
     @@include('../common/footer.html')
   </div>
 </body>

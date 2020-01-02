@@ -88,8 +88,8 @@
       position: relative;
       background-repeat: no-repeat;
       background-position: 50% 0;
-      width: 26px;
-      height: 26px;
+      width: 20px;
+      height: 20px;
       margin-top: 25px;
 
       @include res--laptop {
@@ -99,7 +99,7 @@
       }
 
       &.page-back {
-        background-size: 26px 24px;
+        background-size: 22px 20px;
         background-image: icon(arrow-back, "909090");
 
         @include res--laptop {
@@ -108,7 +108,7 @@
       }
 
       &.page-cancle {
-        background-size: 24px 24px;
+        background-size: 20px 20px;
         background-image: icon(cancle, "909090");
 
         @include res--laptop {
