@@ -3,6 +3,7 @@
 // ---
 
 .page-title {
+  // 👆 대부분의 페이지에서 보여지는 페이지 타이틀
   position: relative;
   width: 100%;
   text-align: center;
@@ -10,7 +11,6 @@
   padding-bottom: 45px;
   padding-left: 20px;
   padding-right: 20px;
-
 
   //laptop
   @include res--laptop {
@@ -29,7 +29,7 @@
       display: block;
       background-size: contain;
       @include bgi("title-deco-top");
-      content: '';
+      content: "";
       margin: 0 auto;
       margin-bottom: 4px;
       width: 24px;
@@ -63,13 +63,11 @@
     }
   }
 
-
-
   &:after {
     display: block;
     background-size: contain;
     @include bgi("title-deco-top");
-    content: '';
+    content: "";
     margin: 40px auto 0;
     width: 45px;
     height: 9px;
@@ -77,10 +75,71 @@
   }
 
   .button-page-wrap {
+    // 👆 뒤로가기나 결제취소 등의 버튼
     position: absolute;
     top: 0;
     left: 0;
-    outline: 4px solid red;
     width: 100%;
+    @include flexbox();
+    @include justify-content(space-between);
+    // outline: 3px solid red;
+
+    .button-page {
+      position: relative;
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      width: 26px;
+      height: 26px;
+      margin-top: 25px;
+
+      @include res--laptop {
+        margin-top: 50px;
+        width: 42px;
+        height: 28px;
+      }
+
+      &.page-back {
+        background-size: 26px 24px;
+        background-image: icon(arrow-back, "909090");
+
+        @include res--laptop {
+          background-size: 28px 26px;
+        }
+      }
+
+      &.page-cancle {
+        background-size: 24px 24px;
+        background-image: icon(cancle, "909090");
+
+        @include res--laptop {
+          background-size: 26px 26px;
+        }
+      }
+
+      &:hover {
+        .button-page-text {
+          opacity: 1;
+          // transform: translateY(0);
+        }
+      }
+    }
+
+    .button-page-text {
+      // 👆 "뒤로가기" 등의 텍스트 부분
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      margin-top: 22px;
+      padding-top: 10px;
+      font-size: 11px;
+      // transform: translateY(-20px);
+      transition: opacity 0.2s;
+
+      @include res--laptop {
+        display: block;
+      }
+    }
   }
 }

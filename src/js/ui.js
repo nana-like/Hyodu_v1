@@ -42,6 +42,7 @@ var changeHeight = function () {
     return false;
   } else if (winW < 1060) {
     nav.classList.add("trans");
+    document.body.classList.toggle("-is-mobile");
     var headerH = header.children[0].clientHeight;
     var winH = window.innerHeight;
     navScrollCont.style.height = winH - headerH + "px";

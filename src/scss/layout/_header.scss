@@ -154,7 +154,6 @@
 
     //laptop
     @include res--laptop {
-      display: block;
       z-index: $z-header-account-lt;
       position: absolute;
       top: 0;
@@ -359,12 +358,33 @@
 
   .nav-btn-wrap {
     // 👆 로그인 시에는 비표시
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
 
     .nav-btn {
       margin: 15px auto 0;
 
       &:first-child {
         margin-top: 0;
+      }
+    }
+
+
+    //laptop
+    @include res--laptop {
+      position: absolute;
+      top: 18px;
+      right: 40px;
+      @include flex-direction(row);
+
+      .nav-btn {
+        margin-left: 20px;
+        margin-top: 0;
+
+        &:first-child {
+          margin-left: 0;
+        }
       }
     }
   }
