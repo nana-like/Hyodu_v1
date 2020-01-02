@@ -103,9 +103,7 @@
   // 👆 모달의 실질 콘텐츠 영역
   overflow-y: auto;
   padding-right: 4px;
-  min-height: 120px;
   max-height: calc(100vh - 400px);
-  // max-height: 300px;
 
   //laptop
   @include res--laptop {

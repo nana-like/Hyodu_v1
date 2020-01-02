@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include("../common/document-head.html")
+
+<body>
+  <div class="wrap">
+    @@include('../common/header.html')
+    <!--
+      [전달사항]
+      페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
+    -->
+    <div class="page-body page-inform">
+      @@include('../common/page-top.html')
+      @@include('../common/page-title.html', {
+      "title": "간편 회원가입",
+      "small": "딸두 아들두 모두 효두로 두잇!"
+      })
+      <div class="page-guide">
+        <p class="user-mail">nana@thevitolabs.com</p>
+        <p>위의 주소로 메일을 보내드렸어요.<br />
+          메일을 열어 인증 링크를 눌러 주세요.</p>
+      </div>
+      <div class="page-content">
+        <div class="page-sub">
+          <p class="page-sub-text">메일을 아직 못 받으셨나요?</p>
+          <button class="btn-sub-retry btn-text">메일 다시 받기</button>
+        </div>
+      </div>
+    </div>
+    @@include('../common/footer.html')
+  </div>
+</body>
+
+</html>

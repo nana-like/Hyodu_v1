@@ -219,6 +219,12 @@
     .new td[rowspan] {
       background-color: #fff;
     }
+
+    .notyet {
+      color: gray;
+      text-decoration: line-through;
+      pointer-events: none;
+    }
   </style>
 
 
@@ -249,7 +255,7 @@
       <tbody>
 
         <tr>
-          <td rowspan="3">
+          <td rowspan="7">
             <strong>Sign Up</strong>
           </td>
           <td>
@@ -269,7 +275,7 @@
 
         <tr>
           <td>
-            <a class="link" href="./html/join/join-02.html" target="_blank">join-02</a>
+            <a class="link" href="./html/sign_up/sign-up-2.html" target="_blank">sign-up-2</a>
           </td>
           <td>회원가입 2단계 - 메일 발송</td>
           <td class="rmks"></td>
@@ -277,41 +283,85 @@
 
         <tr>
           <td>
-            <a class="link" href="./html/join/join-02-1.html" target="_blank">join-02</a>
+            <a class="link" href="./html/sign_up/sign-up-2-retry.html" target="_blank">sign-up-2-retry</a>
           </td>
           <td>회원가입 2단계 - 메일 재발송</td>
           <td class="rmks"></td>
         </tr>
 
-
         <tr>
-          <td rowspan="2" class="borderTop2">
-            <strong>Sign In</strong>
-          </td>
-          <td class="borderTop2">
-            <a class="link" href="./html/sign_in/reset-pw-1.html" target="_blank">reset-pw-1</a>
-          </td>
-          <td class="borderTop2">임시 비밀번호 발급</td>
-          <td class="borderTop2 rmks"></td>
-        </tr>
-
-        <tr>
-          <td class="borderTop2">
-            <a class="link" href="./html/sign_in/reset-pw-2.html" target="_blank">reset-pw-2</a>
-          </td>
-          <td class="borderTop2">임시 비밀번호 발급 완료</td>
-          <td class="borderTop2 rmks"></td>
-        </tr>
-
-        <tr>
-          <td rowspan="2" class="borderTop2">
-            <strong>Sign In</strong>
-          </td>
           <td>
             <a class="link" href="./html/sign_up/sign-up-3.html" target="_blank">sign-up-3</a>
           </td>
-          <td>회원정보 입력 3단계</td>
+          <td>회원가입 3단계 - 회원정보 입력</td>
           <td class="rmks"></td>
+        </tr>
+
+
+        <tr>
+          <td>
+            <a class="link" href="./html/sign_up/sign-up-3-filled.html" target="_blank">sign-up-3-filled</a>
+          </td>
+          <td>회원가입 3단계 - 회원정보 입력 (값이 있을 때)</td>
+          <td class="rmks"></td>
+        </tr>
+
+        <tr>
+          <td>
+            <a class="link notyet" href="" target="_blank">(작업 중)</a>
+          </td>
+          <td class="notyet">회원가입 완료(축하)</td>
+          <td class="rmks"></td>
+        </tr>
+
+
+        <tr>
+          <td rowspan="4" class="borderTop2">
+            <strong>Login</strong>
+          </td>
+          <td class="borderTop2">
+            <a class="link" href="./html/login/login-1.html" target="_blank">login-1</a>
+          </td>
+          <td class="borderTop2">로그인</td>
+          <td class="borderTop2 rmks"></td>
+        </tr>
+
+        <tr>
+          <td>
+            <a class="link" href="./html/login/reset-pw-1.html" target="_blank">reset-pw-1</a>
+          </td>
+          <td>임시 비밀번호 발급 1단계</td>
+          <td class="rmks"></td>ㄷ
+        </tr>
+
+        <tr>
+          <td>
+            <a class="link" href="./html/login/reset-pw-2.html" target="_blank">reset-pw-2</a>
+          </td>
+          <td>임시 비밀번호 발급 (메일 발송 완료)</td>
+          <td class="rmks"></td>
+        </tr>
+
+        <tr>
+          <td>
+            <a class="link" href="./html/login/forgot-id.html" target="_blank">forgot-id</a>
+          </td>
+          <td>아이디 찾기 클릭 시</td>
+          <td class="rmks"></td>
+        </tr>
+
+
+
+
+        <tr>
+          <td rowspan="2" class="borderTop2">
+            <strong>User</strong>
+          </td>
+          <td class="borderTop2">
+            <a class="link" href="./html/user/account-mgmt.html" target="_blank">account-mgmt</a>
+          </td>
+          <td class="borderTop2">회원정보 수정</td>
+          <td class="borderTop2 rmks"></td>
         </tr>
 
         <tr>
@@ -321,6 +371,7 @@
           <td>회원정보 입력 3단계</td>
           <td class="rmks"></td>
         </tr>
+
         <tr>
           <td>
             <a class="link" href="./html/sign_up/test.html" target="_blank">test</a>

@@ -5,7 +5,7 @@
 .btn-line {
   // 👆 라인형태로 된 버튼
   display: block;
-  min-width: 104px;
+  min-width: 90px;
   height: 34px;
   padding: 0 15px;
   color: $c-pink;
@@ -78,12 +78,13 @@
   line-height: 1.33;
   letter-spacing: -0.15px;
   // transition: color 0.25s;
-  border: 2px solid transparent;
+  // border: 2px solid transparent;
   @include horizontal-gradient(#f48d6c, #f47271);
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $c-pink;
-    border-color: $c-pink;
+    border: 2px solid $c-pink;
     background: #fff;
   }
 
@@ -105,5 +106,29 @@
     width: 460px;
     height: 54px;
     font-size: 17px;
+  }
+}
+
+.btn-text {
+  // 👆 텍스트에 > 가 붙은 버튼
+  display: block;
+  font-size: 15px;
+  font-weight: $fw-m;
+  color: $c-gray-normal;
+  line-height: 1.47;
+  padding-right: 18px;
+  background-size: 10px 12px;
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-image: icon(arrow-right, "5f5f5f");
+
+  &:hover {
+    color: $c-black;
+    background-image: icon(arrow-right, "101010");
+  }
+
+  //laptop
+  @include res--laptop {
+    font-size: 16px;
   }
 }
