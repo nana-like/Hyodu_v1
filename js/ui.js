@@ -1,21 +1,30 @@
-var shareContainer = document.querySelector(".share-container"),
-  btnCopy = shareContainer.querySelector(".btn-copy-link");
-
-if (shareContainer != null) {
-  var showCopyAniEvt = function () {
-    if (shareContainer.classList.contains("-copied")) {
-      return false;
-    }
-    shareContainer.classList.add("-copied");
-    setTimeout(function () {
-      shareContainer.classList.remove("-copied");
-    }, 1800);
-  }
-  btnCopy.addEventListener("click", showCopyAniEvt);
-}
+var wrap = document.querySelector(".wrap");
 var header = document.querySelector(".header"),
-  burgerMenu = header.querySelector(".burger"),
-  nav = header.querySelector(".nav"),
+  headerContainer = header.querySelector(".header-container");
+burgerMenu = header.querySelector(".burger");
+var getScrollBarWidth = function () {
+  document.body.style.overflow = "hidden";
+  var width = document.body.clientWidth;
+  document.body.style.overflow = "scroll";
+  width -= document.body.clientWidth;
+  if (!width) width = document.body.offsetWidth - document.body.clientWidth;
+  document.body.style.overflow = "";
+  return width;
+};
+
+var preventScroll = function () {
+  var paddingR = getScrollBarWidth();
+  wrap.style.paddingRight = paddingR + "px";
+  headerContainer.style.paddingRight = paddingR + "px";
+  document.body.classList.add("-scroll-disabled");
+}
+
+var allowScroll = function () {
+  wrap.style.paddingRight = 0;
+  headerContainer.style.paddingRight = 0;
+  document.body.classList.remove("-scroll-disabled");
+}
+var nav = header.querySelector(".nav"),
   navScrollCont = header.querySelector(".scroll-container"),
   headerDim = header.querySelector(".header-dim"),
   btnMail = document.querySelector(".btn-mail");
@@ -25,15 +34,11 @@ var breakPoint = 1060;
 var burgerEvt = {
   open: function () {
     header.classList.add("-opened"); //헤더를 엽니다.
-    document.body.classList.add("-scroll-disabled"); //스크롤을 막습니다.
+    preventScroll(); //스크롤을 막습니다.
   },
   close: function () {
     header.classList.remove("-opened"); //헤더를 닫습니다.
-    document.body.classList.remove("-scroll-disabled"); //스크롤을 허용합니다.
-  },
-  toggle: function () {
-    header.classList.toggle("-opened");
-    document.body.classList.toggle("-scroll-disabled"); //스크롤을 막습니다.
+    allowScroll(); //스크롤을 허용합니다.
   }
 }
 
@@ -72,7 +77,13 @@ var loadHandler = function () {
   mobileEvt();
 }
 
-burgerMenu.addEventListener("click", burgerEvt.toggle);
+burgerMenu.addEventListener("click", function () {
+  if (header.classList.contains("-opened")) {
+    burgerEvt.close();
+  } else {
+    burgerEvt.open()
+  }
+});
 headerDim.addEventListener("click", burgerEvt.close);
 btnMail.addEventListener("click", userMenuEvt.toggle);
 window.addEventListener("resize", resizeHandler);
@@ -87,11 +98,11 @@ if (modal != null) {
     open: function (e) {
       e.preventDefault();
       modal.classList.add("-opened");
-      document.body.classList.add("-scroll-disabled");
+      preventScroll();
     },
     close: function () {
       modal.classList.remove("-opened");
-      document.body.classList.remove("-scroll-disabled");
+      allowScroll();
     }
   }
   if (btnModalOkay != null) {
@@ -99,120 +110,27 @@ if (modal != null) {
   }
   btnModalClose.addEventListener("click", modalEvt.close);
   modalDim.addEventListener("click", modalEvt.close);
-  document.getElementById("ui-testor-open-modal").addEventListener("click", modalEvt.open);
+
+
+  // TEST
+  var modalTestor = document.getElementById("ui-testor-open-modal");
+  if (modalTestor != null) {
+    modalTestor.addEventListener("click", modalEvt.open);
+  }
 
 }
-// var btnMenu = document.querySelector(".burger");
-// var header = document.querySelector(".header");
-// var nav = document.querySelector(".nav");
-// var btnMail = document.querySelector(".btn-mail");
-// var navScrollCont = header.querySelector(".scroll-container");
-// var dim = document.querySelector(".dim");
+var shareContainer = document.querySelector(".share-container");
 
-// var testor = document.querySelector(".testor");
-// var modal = document.querySelector(".modal");
-// var modalDim = document.querySelector(".modal-dim");
-// var btnCopy = document.querySelector(".btn-copy-link");
-// var shareContainer = document.querySelector(".share-container");
-// var btnModalClose = document.querySelector(".btn-modal-close");
-// var btnModalOkay = document.querySelector(".btn-modal-okay");
-
-
-
-
-// var changeHeight = function () {
-//   var winW = window.innerWidth;
-
-//   if (winW >= 1060) {
-//     navScrollCont.style.height = "80px";
-//     header.classList.remove("-opened");
-//     nav.classList.remove("trans");
-//     // document.body.classList.remove("-scroll-disabled");
-//     return false;
-//   } else if (winW < 1060) {
-//     nav.classList.add("trans");
-//     document.body.classList.toggle("-is-mobile");
-//     var headerH = header.children[0].clientHeight;
-//     var winH = window.innerHeight;
-//     navScrollCont.style.height = winH - headerH + "px";
-//     modal.style.height = winH + "px";
-//     testor.innerHTML = winH;
-//   }
-
-// }
-
-// window.addEventListener("load", function () {
-//   changeHeight();
-// });
-
-// window.addEventListener("resize", function () {
-//   changeHeight();
-// });
-
-// //TODO:모달열렸을때도 바디스크롤막기
-
-// if (btnCopy == null) {
-//   console.dir("?")
-// } else {
-//   //카피이벵
-//   btnCopy.addEventListener("click", function () {
-//     //이미 붙어있는 경우는 리턴false
-//     if (shareContainer.classList.contains("-copied")) {
-//       return false;
-//     }
-//     shareContainer.classList.add("-copied");
-//     setTimeout(function () {
-//       shareContainer.classList.remove("-copied");
-//     }, 1800);
-//   });
-
-// }
-
-
-
-
-// var menuClickHandler = function (e) {
-//   header.classList.toggle("-opened");
-//   document.body.classList.toggle("-scroll-disabled");
-
-//   var winW = window.innerWidth;
-//   // if (winW < 1060) {
-//   //   document.body.classList.toggle("-scroll-disabled");
-//   // }
-
-// }
-
-// btnMail.addEventListener("click", function () {
-//   console.log("!")
-//   header.classList.toggle("-user-opened");
-// });
-
-
-// btnMenu.addEventListener("click", menuClickHandler);
-// // dim.addEventListener("click", menuClickHandler);
-
-
-
-
-
-// // //모달 이벤트~~~
-// // var modal = document.querySelector(".modal");
-// // var modalClose = function () {
-// //   modal.classList.remove("-opened");
-// //   document.body.classList.remove("-scroll-disabled");
-// // }
-// // var modalOpen = function () {
-// //   modal.classList.add("-opened");
-// //   document.body.classList.add("-scroll-disabled");
-// // }
-
-// // //모달이벤트
-// // btnModalClose.addEventListener("click", function () {
-// //   modalClose();
-// // });
-// // modalDim.addEventListener("click", function () {
-// //   modalClose();
-// // });
-// // btnModalOkay.addEventListener("click", function () {
-// //   modalClose();
-// // });
+if (shareContainer != null) {
+  var btnCopy = shareContainer.querySelector(".btn-copy-link");
+  var showCopyAniEvt = function () {
+    if (shareContainer.classList.contains("-copied")) {
+      return false;
+    }
+    shareContainer.classList.add("-copied");
+    setTimeout(function () {
+      shareContainer.classList.remove("-copied");
+    }, 1800);
+  }
+  btnCopy.addEventListener("click", showCopyAniEvt);
+}
