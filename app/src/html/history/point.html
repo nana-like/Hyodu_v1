@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include("../common/document-head.html")
+
+<body>
+  <div class="wrap">
+    @@include('../common/header.html', {
+    "status": "login"
+    })
+    <!--
+      [전달사항]
+      페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
+    -->
+    <div class="page-body page-history">
+      @@include('../common/page-top.html')
+      @@include('../common/page-title.html', {
+      "title": "포인트 내역",
+      "small": "사용 내역을 확인하세요."
+      })
+      <div class="page-content">
+        <div class="my-point">
+          현재 나의 포인트 : <span>0</span>
+        </div>
+        <!--
+          [전달사항]
+          내역이 없는 경우 .list-empty를 보여주세요.
+        -->
+        <div class="list-empty">
+          포인트는 효두에서 활동하면서 쌓을 수 있어요.<br />
+          결제나 리뷰 등록, 이벤트를 통해 포인트를 모아 상품을 할인 받으세요!
+        </div>
+        <!-- <ul class="history">
+          <li class="history-item">
+            <p class="datetime history-datetime">2020.03.16 10:00</p>
+            <strong class="history-title">결제 완료</strong>
+            <div class="history-bottom">
+              <p class="history-name">동글동글 미니도넛 만들기</p>
+              <p class="history-status -point">+ 123,456</p>
+            </div>
+          </li>
+          <li class="history-item">
+            <p class="datetime history-datetime">2020.03.16 10:00</p>
+            <strong class="history-title">결제 완료</strong>
+            <div class="history-bottom">
+              <p class="history-name">동글동글 미니도넛 만들기</p>
+              <p class="history-status -point">- 456</p>
+            </div>
+          </li>
+        </ul> -->
+        <!-- <button class="btn-load-more btn-text-bottom -load-all">
+          <span class="btn-load-text">더 불러오기</span>
+        </button> -->
+      </div>
+    </div>
+    @@include('../common/footer.html')
+  </div>
+</body>
+
+</html>

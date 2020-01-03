@@ -238,3 +238,23 @@
 
 
 }
+
+
+// ----
+// 🤟 내역 전용
+// ----
+.page-history {
+  padding: 0;
+  max-width: 640px;
+  margin: 0 auto;
+
+  //laptop
+  @include res--laptop {
+    max-width: 980px;
+  }
+
+
+  .btn-load-more {
+    margin: 55px auto;
+  }
+}

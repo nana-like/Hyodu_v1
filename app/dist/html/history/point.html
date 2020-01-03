@@ -61,7 +61,7 @@
 
 
   -->
-<header class="header ">
+<header class="header -login">
   <div class="header-container">
     <h1 class="logo header-logo">
       <a href="/" class="logo-link"><span class="blind">효두</span></a>
@@ -118,27 +118,54 @@
   </nav>
   <div class="dim header-dim"></div>
 </header>
-    <div class="page-body">
+    <!--
+      [전달사항]
+      페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
+    -->
+    <div class="page-body page-history">
       <div class="page-top"></div>
       <div class="page-title">
-  <h2 class="title">간편 회원가입</h2>
-  <small class="title-small">딸두 아들두 모두 효두로 두잇!</small>
+  <h2 class="title">포인트 내역</h2>
+  <small class="title-small">사용 내역을 확인하세요.</small>
   <div class="button-page-wrap">
     
     
     
   </div>
 </div>
-      <div class="page-guide">
-        <p class="user-mail">nana@thevitolabs.com</p>
-        <p>위의 주소로 메일을 보내드렸어요.<br />
-          메일을 열어 인증 링크를 눌러 주세요.</p>
-      </div>
       <div class="page-content">
-        <div class="page-sub">
-          <p class="page-sub-text">메일을 아직 못 받으셨나요?</p>
-          <button class="btn-sub-retry btn-text">메일 다시 받기</button>
+        <div class="my-point">
+          현재 나의 포인트 : <span>0</span>
         </div>
+        <!--
+          [전달사항]
+          내역이 없는 경우 .list-empty를 보여주세요.
+        -->
+        <div class="list-empty">
+          포인트는 효두에서 활동하면서 쌓을 수 있어요.<br />
+          결제나 리뷰 등록, 이벤트를 통해 포인트를 모아 상품을 할인 받으세요!
+        </div>
+        <!-- <ul class="history">
+          <li class="history-item">
+            <p class="datetime history-datetime">2020.03.16 10:00</p>
+            <strong class="history-title">결제 완료</strong>
+            <div class="history-bottom">
+              <p class="history-name">동글동글 미니도넛 만들기</p>
+              <p class="history-status -point">+ 123,456</p>
+            </div>
+          </li>
+          <li class="history-item">
+            <p class="datetime history-datetime">2020.03.16 10:00</p>
+            <strong class="history-title">결제 완료</strong>
+            <div class="history-bottom">
+              <p class="history-name">동글동글 미니도넛 만들기</p>
+              <p class="history-status -point">- 456</p>
+            </div>
+          </li>
+        </ul> -->
+        <!-- <button class="btn-load-more btn-text-bottom -load-all">
+          <span class="btn-load-text">더 불러오기</span>
+        </button> -->
       </div>
     </div>
     <footer class="footer">

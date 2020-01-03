@@ -10,8 +10,8 @@
 @import "helpers/mediaqueries";
 
 @import "base/reset";
-@import "base/common";
 @import "base/svg";
+@import "base/common";
 @import "base/animation";
 
 @import "modules/buttons";
@@ -22,3 +22,4 @@
 @import "layout/title";
 @import "layout/footer";
 @import "layout/modal";
+@import "layout/history";

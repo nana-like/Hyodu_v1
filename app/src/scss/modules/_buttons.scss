@@ -145,7 +145,6 @@
   padding-right: 18px;
   background-size: 10px 12px;
   background-repeat: no-repeat;
-  background-position: 100% 50%;
   background-image: icon(arrow-right, "5f5f5f");
 
   &:hover {
@@ -159,7 +158,86 @@
   }
 }
 
+.btn-text-bottom {
+  // 👆 텍스트에 ⌄ 가 붙은 버튼
+  @extend .btn-text;
+  background-size: 12px 8px;
+  background-position: 100% 50%;
+  background-image: icon(arrow-bottom, "5f5f5f");
 
+  &:hover {
+    background-image: icon(arrow-bottom, "101010");
+
+  }
+}
+
+.btn-load-more {
+  // 👆 더 불러오기 버튼
+  @include pointer-auto;
+  padding-right: 20px;
+
+  //laptop
+  @include res--laptop {
+    padding-right: 22px;
+  }
+
+  &.-load-all {
+    position: relative;
+    font-size: 0;
+    padding: 0;
+    width: auto;
+    background: none;
+    @include pointer-none;
+
+    .btn-load-text {
+      font-size: 0;
+
+      &:after {
+        position: absolute;
+        top: 1px;
+        right: 10px;
+        display: block;
+        font-size: 14px;
+        content: '';
+        background-image: icon(check, "afafaf");
+        width: 19px;
+        height: 19px;
+        background-size: 11px;
+        background-position: 49% 50%;
+        background-repeat: no-repeat;
+        border: 1px solid #afafaf;
+        border-radius: 50%;
+      }
+    }
+
+    &:before,
+    &:after {
+      display: inline-block;
+      font-size: 14px;
+      color: #afafaf;
+    }
+
+    &:before {
+      content: '( 모든 정보를 다 불러왔어요';
+    }
+
+    &:after {
+      content: ')';
+      margin-left: 28px;
+    }
+
+
+    //laptop
+    @include res--laptop {
+
+      &:before,
+      &:after {
+        font-size: 15px;
+      }
+    }
+
+  }
+}
 
 .btn-account-withdraw {
   // 👆 회원탈퇴 전용 버튼
