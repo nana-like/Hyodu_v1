@@ -5,11 +5,7 @@
 <body>
   <div class="wrap">
     @@include('../common/header.html')
-    <!--
-      [전달사항]
-      페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
-    -->
-    <div class="page-body page-user-forms">
+    <div class="page-body">
       @@include('../common/page-top.html')
       @@include('../common/page-title.html', {
       "title": "회원정보 입력",
@@ -26,7 +22,7 @@
             <!-- 
               [전달사항] 비밀번호 설정 폼은 .form-user-password 클래스가 추가로 붙습니다. 비밀번호 설정에 따른 모든 오류 메시지는 위아래 구분 없이 .form-error에 표시해 주세요.
             -->
-            <div class="form-item form-req form-set-password">
+            <div class="form-item form-req form-user-password">
               <label for="form-password" class="form-label">
                 <span class="form-label-text">비밀번호</span>
                 <span class="form-label-guide">(알파벳과 숫자를 조합하여 8~20자)</span>
@@ -79,7 +75,7 @@
               [전달사항]
               필수 폼이 모두 입력되면 버튼에서 disabled 속성을 제거해주세요.
             -->
-            <button class="btn-full">가입 완료</button>
+            <button class="btn-full btn-page-request">가입 완료</button>
           </div>
         </form>
       </div>

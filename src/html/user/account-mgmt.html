@@ -7,11 +7,7 @@
     @@include('../common/header.html', {
     "status": "login"
     })
-    <!--
-      [전달사항]
-      페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
-    -->
-    <div class="page-body page-user-forms">
+    <div class="page-body">
       @@include('../common/page-top.html')
       @@include('../common/page-title.html', {
       "title": "회원정보 수정",
@@ -83,7 +79,7 @@
               <input type="checkbox" id="checkbox" class="checkbox-input" />
               <label for="checkbox">효두의 알뜰살뜰 메일 서비스도 받아볼래요 (선택사항)</label>
             </div>
-            <button class="btn-full" disabled>수정 완료</button>
+            <button class="btn-full btn-page-request" disabled>수정 완료</button>
             <button class="btn-account-withdraw">회원탈퇴 신청</button>
           </div>
         </form>

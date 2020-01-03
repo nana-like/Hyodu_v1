@@ -1,0 +1,12 @@
+<div class="form-item @@if (context.required==='required' ) {form-req}">
+  <label for="@@inputID" class="form-label">
+    <span class="form-label-text">@@label</span>
+    <span class="form-label-guide">@@guide</span>
+  </label>
+  @@if (context.error==='error' ) {
+  <!-- [전달사항] 오류 발생 시 .form-input에 .-error 클래스를 붙여주세요. -->}
+  <textarea id="@@inputID" name="@@inputID" minlength="@@length.min" maxlength="@@length.max"
+    placeholder="@@placeholder" class="form-input input-textarea @@if (context.error==='error' ) {-error}"
+    value="@@value" @@required></textarea>
+  <p class="form-error">@@errorMsg</p>
+</div>

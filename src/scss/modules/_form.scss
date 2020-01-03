@@ -9,13 +9,19 @@
 
   &.-large {
     // 👆 .-large 클래스가 추가로 붙는 경우 max-width 값 변경
-    max-width: 980px;
+    max-width: 640px;
+
+    //laptop
+    @include res--laptop {
+      max-width: 980px;
+    }
   }
 
   .form-item:first-child {
     margin-top: 0;
   }
 }
+
 
 .form-item {
   // 👆 폼 아이템 영역
@@ -99,6 +105,7 @@
   @include placeholder {
     color: #bebebe;
     letter-spacing: -0.2px;
+    line-height: 1.5;
   }
 
 
@@ -119,6 +126,11 @@
     border-color: #898989;
   }
 
+}
+
+.input-textarea {
+  min-height: 300px;
+  resize: none;
 }
 
 
@@ -250,6 +262,7 @@
 
 
 .form-email-notice {
+  // 👆 유저 이메일 보여줄 때 아래 안내 메시지
   margin-top: -10px;
   margin-bottom: 30px;
   font-size: 11px;
@@ -272,6 +285,81 @@
 }
 
 
+
+.form-radio-wrap {
+  // 👆 라디오(옵션) 영역
+  margin-bottom: 35px;
+
+  .form-radio {
+    // 👆 개별 라디오(옵션) 영역
+    margin-bottom: 10px;
+    width: 100%;
+    vertical-align: top;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .radio-input {
+    // 👆 <input type="radio"/>
+    position: absolute;
+    left: -9999px;
+    z-index: -1;
+    vertical-align: middle;
+    opacity: 0;
+  }
+
+  .radio-item {
+    // 👆 실질적인 라디오 UI
+    display: block;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: $fw-m;
+    line-height: 1.43;
+    letter-spacing: -0.2px;
+    color: $c-black;
+    background-color: #f0f0f0;
+    border: 2px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e6e6e6;
+    }
+  }
+
+  .radio-input:checked+.radio-item {
+    // 👆 활성화됐을 경우
+    color: #ff5461;
+    background-color: #fffcfa;
+    border: 2px solid #FF5461;
+  }
+
+  .form-radio.-small {
+    // 👆 두 개씩 표현되는 인라인 블럭일 때
+    display: inline-block;
+    margin-right: 11px;
+    margin-left: 0;
+    width: calc(50% - 7px);
+
+    @include res--laptop {
+      max-width: 230px;
+    }
+
+    &:nth-child(even) {
+      margin-right: 0;
+
+      @include res--laptop {
+        margin-right: 11px;
+      }
+    }
+
+  }
+
+}
+
+
 .form-req {
   //👆 필수 폼일 때
 
@@ -279,5 +367,4 @@
     opacity: 1;
     visibility: visible;
   }
-
 }

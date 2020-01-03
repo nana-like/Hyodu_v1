@@ -56,7 +56,7 @@
 
 
   -->
-<header class="header ">
+<header class="header -login">
   <div class="header-container">
     <h1 class="logo header-logo">
       <a href="/" class="logo-link"><span class="blind">효두</span></a>
@@ -111,11 +111,11 @@
   </nav>
   <div class="dim header-dim"></div>
 </header>
-    <div class="page-body">
+    <div class="page-body page-user-form">
       <div class="page-top"></div>
       <div class="page-title">
-  <h2 class="title">임시 비밀번호 발급</h2>
-  <small class="title-small">비밀번호를 잊으셨나요?</small>
+  <h2 class="title">취소/환불 신청</h2>
+  <small class="title-small">취소나 환불을 원하시나요?</small>
   <div class="button-page-wrap">
     
     
@@ -123,19 +123,73 @@
   </div>
 </div>
       <div class="page-guide">
-        <p class="user-mail">nana@thevitolabs.com</p>
-        <p>위의 메일로 임시 비밀번호를 보내드렸어요.<br />
-          메일을 열어 확인해 주세요.</p>
-        <button class="page-guide-btn btn-line">로그인 화면으로</button>
+        <p>취소 및 환불과 관련된 내용이 들어갑니다.<br />
+          세부적인 내용은 나중에 추가할 예정입니다.</p>
       </div>
       <div class="page-content">
-        <div class="page-sub">
-          <p class="page-sub-text">메일이 보이지 않는다면 스팸함을 확인해 보세요.<br /> 그래도 정상적으로 보이지 않는다면 아래 주소로 문의해 주세요. <br
-              class="hide-laptop" />바로 처리해
-            드리겠습니다.
-          </p>
-          <a class="page-sub-mail" href="mailto:hyodu@hyodu.com">hyodu@hyodu.com</a>
-        </div>
+        <form>
+          <div class="form-container -large">
+            <div class="form-item form-req">
+              <label class="form-label">
+                <span class="form-label-text">취소/환불 이유</span>
+                <span class="form-label-guide"></span>
+              </label>
+              <div class="form-radio-wrap">
+
+                <!-- <div class="form-radio -small">
+  <input type="radio" id="id1" name="radioname" value="radio1" class="radio-input">
+  <label for="id1" class="radio-item">
+    <span class="radio-text">별 하나에 추억과</span>
+  </label>
+</div><div class="form-radio -small">
+  <input type="radio" id="id2" name="radioname" value="radio2" class="radio-input">
+  <label for="id2" class="radio-item">
+    <span class="radio-text">별 하나에 사랑과</span>
+  </label>
+</div><div class="form-radio -small">
+  <input type="radio" id="id3" name="radioname" value="radio3" class="radio-input">
+  <label for="id3" class="radio-item">
+    <span class="radio-text">별 하나에 쓸쓸함과</span>
+  </label>
+</div><div class="form-radio -small">
+  <input type="radio" id="id3" name="radioname" value="radio3" class="radio-input">
+  <label for="id3" class="radio-item">
+    <span class="radio-text">별 하나에 동경과</span>
+  </label>
+</div> -->
+
+                <div class="form-radio ">
+  <input type="radio" id="id1" name="radioname" value="radio1" class="radio-input">
+  <label for="id1" class="radio-item">
+    <span class="radio-text">내 마음이 살 때랑 지금이랑 다르네요.</span>
+  </label>
+</div><div class="form-radio ">
+  <input type="radio" id="id2" name="radioname" value="radio2" class="radio-input">
+  <label for="id2" class="radio-item">
+    <span class="radio-text">호스트분이 너무 눈부셔서 눈이 멀까봐 취소하고 싶어요.</span>
+  </label>
+</div><div class="form-radio ">
+  <input type="radio" id="id3" name="radioname" value="radio3" class="radio-input">
+  <label for="id3" class="radio-item">
+    <span class="radio-text">이유는 없고요 그냥 취소하고 싶어요.</span>
+  </label>
+</div>
+              </div>
+            </div>
+            <div class="form-item form-req">
+  <label for="form-refund-request" class="form-label">
+    <span class="form-label-text">상세 메시지</span>
+    <span class="form-label-guide">(최대 1000자)</span>
+  </label>
+  
+  <textarea id="form-refund-request" name="form-refund-request" minlength="" maxlength="1000"
+    placeholder="취소나 환불을 원하시는 이유를 자세하게 적어 주세요.&#13;&#10;상세 메시지를 적을 경우 더 정확한 답변을 받을 수 있습니다." class="form-input input-textarea "
+    value="" required></textarea>
+  <p class="form-error"></p>
+</div>
+            <button class="btn-full btn-page-request">취소/환불 신청</button>
+          </div>
+        </form>
       </div>
     </div>
     <footer class="footer">

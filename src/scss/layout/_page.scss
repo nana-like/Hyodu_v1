@@ -36,6 +36,7 @@
   //laptop
   @include res--laptop {
     font-size: 17px;
+    margin-bottom: 60px;
   }
 
 
@@ -131,6 +132,17 @@
   }
 }
 
+
+.btn-page-request {
+  // 👆 신청 같이 한 페이지 내 유일한 버튼인 경우
+  margin-top: 55px;
+
+  //laptop
+  @include res--laptop {
+    margin-top: 60px;
+  }
+}
+
 // ===================
 // >> 특정 페이지 <<
 // ===================
@@ -206,38 +218,10 @@
 
 }
 
-// ----
-// 🤟 회원가입, 임시 비밀번호 발급, 회원정보 수정 등
-// ----
-.page-user-forms {
-  .page-guide {
-    margin-bottom: 55px;
-
-    //laptop
-    @include res--laptop {
-      margin-bottom: 60px;
-    }
-  }
-
-  .btn-full {
-    margin-top: 55px;
-
-    //laptop
-    @include res--laptop {
-      margin-top: 60px;
-    }
-  }
-}
-
-// ----
-// 🤟 발급 완료, 신청 완료 등
-// ----
-.page-inform {
 
 
-  .page-sub {
-    margin: 80px auto 0;
-  }
+.page-sub {
+  margin: 80px auto 0;
 
   .page-sub-mail {
     display: block;
