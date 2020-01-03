@@ -25,10 +25,8 @@
 
 .-scroll-disabled {
   // 👆 스크롤 막을 때 사용
-  // overflow-y: hidden;
-  position: fixed;
-  width: 100%;
-  overflow-y: scroll;
+  height: 100%;
+  overflow: hidden;
 }
 
 
@@ -80,4 +78,9 @@
   @include res--laptop {
     font-size: 17px;
   }
+}
+
+
+.headerPedding {
+  // 👆 헤더 오픈 시 자리를 옮길 애들
 }

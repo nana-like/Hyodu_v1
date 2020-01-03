@@ -132,7 +132,12 @@ gulp.task("browserSync", function () {
 
 // js 파일 난독화
 gulp.task('combine:js', function () {
-  return gulp.src(paths.js)
+  return gulp.src([
+      src + "/js/common.js",
+      src + "/js/header.js",
+      src + "/js/modal.js",
+      src + "/js/animation.js"
+    ])
     .pipe(concat('ui.js')) //하나로 합치기
     .pipe(gulp.dest(dist + "/js"))
     .pipe(uglify())

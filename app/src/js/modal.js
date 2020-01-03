@@ -8,11 +8,11 @@ if (modal != null) {
     open: function (e) {
       e.preventDefault();
       modal.classList.add("-opened");
-      document.body.classList.add("-scroll-disabled");
+      preventScroll();
     },
     close: function () {
       modal.classList.remove("-opened");
-      document.body.classList.remove("-scroll-disabled");
+      allowScroll();
     }
   }
   if (btnModalOkay != null) {
@@ -20,6 +20,12 @@ if (modal != null) {
   }
   btnModalClose.addEventListener("click", modalEvt.close);
   modalDim.addEventListener("click", modalEvt.close);
-  document.getElementById("ui-testor-open-modal").addEventListener("click", modalEvt.open);
+
+
+  // TEST
+  var modalTestor = document.getElementById("ui-testor-open-modal");
+  if (modalTestor != null) {
+    modalTestor.addEventListener("click", modalEvt.open);
+  }
 
 }

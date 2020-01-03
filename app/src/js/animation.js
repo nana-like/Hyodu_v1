@@ -1,7 +1,7 @@
-var shareContainer = document.querySelector(".share-container"),
-  btnCopy = shareContainer.querySelector(".btn-copy-link");
+var shareContainer = document.querySelector(".share-container");
 
 if (shareContainer != null) {
+  var btnCopy = shareContainer.querySelector(".btn-copy-link");
   var showCopyAniEvt = function () {
     if (shareContainer.classList.contains("-copied")) {
       return false;

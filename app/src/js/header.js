@@ -1,6 +1,4 @@
-var header = document.querySelector(".header"),
-  burgerMenu = header.querySelector(".burger"),
-  nav = header.querySelector(".nav"),
+var nav = header.querySelector(".nav"),
   navScrollCont = header.querySelector(".scroll-container"),
   headerDim = header.querySelector(".header-dim"),
   btnMail = document.querySelector(".btn-mail");
@@ -10,15 +8,11 @@ var breakPoint = 1060;
 var burgerEvt = {
   open: function () {
     header.classList.add("-opened"); //헤더를 엽니다.
-    document.body.classList.add("-scroll-disabled"); //스크롤을 막습니다.
+    preventScroll(); //스크롤을 막습니다.
   },
   close: function () {
     header.classList.remove("-opened"); //헤더를 닫습니다.
-    document.body.classList.remove("-scroll-disabled"); //스크롤을 허용합니다.
-  },
-  toggle: function () {
-    header.classList.toggle("-opened");
-    document.body.classList.toggle("-scroll-disabled"); //스크롤을 막습니다.
+    allowScroll(); //스크롤을 허용합니다.
   }
 }
 
@@ -57,7 +51,13 @@ var loadHandler = function () {
   mobileEvt();
 }
 
-burgerMenu.addEventListener("click", burgerEvt.toggle);
+burgerMenu.addEventListener("click", function () {
+  if (header.classList.contains("-opened")) {
+    burgerEvt.close();
+  } else {
+    burgerEvt.open()
+  }
+});
 headerDim.addEventListener("click", burgerEvt.close);
 btnMail.addEventListener("click", userMenuEvt.toggle);
 window.addEventListener("resize", resizeHandler);
