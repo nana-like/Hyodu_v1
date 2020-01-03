@@ -1,7 +1,10 @@
 var wrap = document.querySelector(".wrap");
 var header = document.querySelector(".header"),
-  headerContainer = header.querySelector(".header-container");
-burgerMenu = header.querySelector(".burger");
+  headerContainer = header.querySelector(".header-container"),
+  burgerMenu = header.querySelector(".burger"),
+  navScrollCont = header.querySelector(".scroll-container");
+var nav = header.querySelector(".nav"),
+  navBtns = nav.querySelector(".nav-btn-wrap");
 var getScrollBarWidth = function () {
   document.body.style.overflow = "hidden";
   var width = document.body.clientWidth;
@@ -16,17 +19,17 @@ var preventScroll = function () {
   var paddingR = getScrollBarWidth();
   wrap.style.paddingRight = paddingR + "px";
   headerContainer.style.paddingRight = paddingR + "px";
+  navScrollCont.style.right = paddingR + "px";
   document.body.classList.add("-scroll-disabled");
 }
 
 var allowScroll = function () {
   wrap.style.paddingRight = 0;
   headerContainer.style.paddingRight = 0;
+  navScrollCont.style.right = 0;
   document.body.classList.remove("-scroll-disabled");
 }
-var nav = header.querySelector(".nav"),
-  navScrollCont = header.querySelector(".scroll-container"),
-  headerDim = header.querySelector(".header-dim"),
+var headerDim = header.querySelector(".header-dim"),
   btnMail = document.querySelector(".btn-mail");
 var breakPoint = 1060;
 
