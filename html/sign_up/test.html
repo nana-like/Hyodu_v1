@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>(작업중) 효두 | 효두를 두잇하다</title>
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- 
+  <meta name="description" content="효두 - 효도를 두잇하다." />
+  <meta name="keywords" content="효두, 효도, Hyodu, hyodu, hyo du, 비토랩스, 비토 랩스, vitolabs, vito labs" />
+  <meta name="Reply-To" content="contact@thevitolabs.com" />
+  <meta name="Location" content="서울특별시 중구 삼일대로 343, 16층" />
+
+  <meta property="og:title" content="효두" />
+  <meta property="og:description" content="효도를 두잇하다." />
+
+  <meta property="og:image" content="images/ogImage.png" />
+
+  <meta name="theme-color" content="#f6cef9" />
+  <meta name="msapplication-navbutton-color" content="#f6cef9" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#f6cef9" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./images/favicon/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png" />
+  <meta name="msapplication-TileImage" content="./images/favicon/ms-icon-144x144.png" /> -->
+
+  <link rel="stylesheet" href="./../../css/style.css" />
+
+  <!--[if lt IE 9]>
+      <script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"
+      ></script>
+    <![endif]-->
+</head>
+
+<body>
+  <div class="wrap">
+    <!-- 
+    [전달사항]
+
+    (1)
+    로그인했을 때는 .header에 .-login를 붙여주세요. 
+    로그인 전이거나 로그아웃 시에는 .-login을 제거해주세요.
+
+    (2)
+    모바일에서 .burger 클릭 이벤트로 버거메뉴를 여닫을 경우 .header에 .-opend를 토글해주세요.
+    모바일에서 버거메뉴를 여닫을 때, body에 .-scroll-disabled를 토글해주세요.
+
+    (3)
+    데스크탑에서 .btn-mail 클릭 이벤트로 작은 메뉴를 여닫을 경우 .header에 .-user-opened를 토글해주세요.
+
+
+  -->
+<header class="header ">
+  <div class="header-container">
+    <h1 class="logo header-logo">
+      <a href="/" class="logo-link"><span class="blind">효두</span></a>
+    </h1>
+  </div>
+  <a aria-label="메뉴 여닫기 버튼" class="burger">
+    <div aria-label="hidden" class="burger-line-wrap">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </div>
+  </a>
+  <nav class="nav">
+    <h2 class="nav-title">
+      <div class="logo nav-logo" aria-label="hidden"></div>
+      <span class="blind">네비게이션</span>
+    </h2>
+    <div class="scroll-container">
+      <div class="nav-account">
+        <div class="nav-account-container">
+          <button class="btn-mail">nana@thevitolabs.com</button>
+          <!-- 
+            [전달사항]
+            사용자 레벨에 따라 .btn-level에 고유의 클래스 네임을 붙여주세요.
+            레벨 1 = .-lv1
+            레벨 2 = .-lv2
+            레벨 3 = .-lv3
+            레벨 4 = .-lv4
+            레벨 5 = .-lv5
+          -->
+          <button href="" class="btn-level -lv4">Lv.4</button>
+        </div>
+      </div>
+      <ul class="nav-menu">
+        <li class="menu-item"><a href="" class="menu-link">스토어</a></li>
+        <li class="menu-item"><a href="" class="menu-link">서비스 소개</a></li>
+      </ul>
+      <ul class="nav-user">
+        <li class="user-item"><a href="" class="user-link">회원정보 수정</a></li>
+        <li class="user-item"><a href="" class="user-link">배송지 관리</a></li>
+        <li class="user-item"><a href="" class="user-link">구매 내역</a></li>
+        <li class="user-item"><a href="" class="user-link">쿠폰사용 내역</a></li>
+        <li class="user-item"><a href="" class="user-link">포인트 내역</a></li>
+        <li class="user-item"><a href="" class="user-link">문의하기</a></li>
+        <li class="user-item item-logout"><a href="" class="user-link">로그아웃</a></li>
+      </ul>
+      <div class="nav-btn-wrap">
+        <button class="nav-btn btn-line">회원가입</button>
+        <button class="nav-btn btn-line-on">로그인</button>
+      </div>
+    </div>
+  </nav>
+  <div class="dim header-dim"></div>
+</header>
+    <!--
+      [전달사항]
+      페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
+    -->
+    <div class="page-body page-user-forms">
+      <div class="page-top"></div>
+      <div class="page-title">
+  <h2 class="title">TEST</h2>
+  <small class="title-small">회원가입이 거의 끝나가요! (쿠폰발사 대기 중)</small>
+  <div class="button-page-wrap">
+    
+    
+    
+    <button class="button-page page-back">
+      <span class="button-page-text">뒤로가기</span>
+    </button>
+    <button class="button-page page-cancle">
+      <span class="button-page-text">결제취소</span>
+    </button>
+    
+  </div>
+</div>
+      <div class="page-guide">
+        <p class="user-mail">vito@thevitolabs.com</p>
+        <p>위의 메일주소로 계정을 생성합니다.<br />
+          비밀번호와 간단한 정보를 입력해 주세요.</p>
+      </div>
+      <p>Culpa ad ipsum in nostrud sit qui excepteur est sunt exercitation. Aliqua esse voluptate dolore ad ea quis
+        ipsum minim fugiat in. Ea minim sint tempor est tempor voluptate proident veniam est qui quis sint. Minim
+        consequat nostrud aliqua proident ex officia. Sunt cupidatat minim Lorem mollit ex sunt eu non commodo occaecat
+        anim proident nisi ea. Do eu occaecat sit aliqua non. Minim ipsum deserunt laborum eiusmod quis irure aliquip
+        pariatur fugiat culpa exercitation magna cupidatat.
+
+        Veniam do ipsum velit eiusmod id reprehenderit enim est sunt deserunt aute sit excepteur dolore. Sint pariatur
+        non exercitation aliqua consequat eiusmod mollit quis consectetur pariatur. Anim ullamco officia excepteur magna
+        sunt reprehenderit cupidatat. Exercitation eiusmod qui consectetur velit sit duis irure. Reprehenderit cupidatat
+        sit ad sint qui labore veniam excepteur do excepteur ex sit veniam exercitation.
+
+        Dolore sunt deserunt proident mollit veniam occaecat duis Lorem occaecat. Nulla nisi irure do dolor minim amet
+        occaecat. Ex consequat amet elit ea labore et. Mollit anim dolor commodo sit. Voluptate commodo adipisicing
+        nostrud dolore est ex adipisicing consectetur cillum exercitation. Nulla nulla eu eiusmod consectetur ut id enim
+        qui qui.
+
+        Fugiat velit officia ea enim incididunt elit ea ea sunt adipisicing proident. Pariatur nostrud voluptate mollit
+        incididunt Lorem reprehenderit in id fugiat excepteur tempor officia. Dolor nisi adipisicing excepteur ullamco
+        dolor ea eiusmod magna laboris cupidatat. Adipisicing velit pariatur irure incididunt. Ullamco cillum ad qui
+        aute.
+
+        Non velit laborum velit minim culpa consequat occaecat ea ad est. Elit cupidatat sit enim excepteur. Laboris
+        ullamco reprehenderit adipisicing non aliqua dolor ipsum ipsum. Amet et fugiat ut non aliquip voluptate
+        voluptate velit consequat proident. Mollit sint nulla quis consequat minim reprehenderit elit consectetur est
+        aliqua consectetur. Incididunt sunt eiusmod minim aute deserunt.
+
+        Aliqua occaecat consequat laboris enim aliqua minim ut consectetur esse dolor. Aliquip est anim ex ipsum Lorem
+        ad tempor tempor deserunt adipisicing tempor. Reprehenderit proident adipisicing et magna adipisicing pariatur
+        adipisicing labore proident ipsum occaecat ad anim. In sint velit labore ea qui occaecat commodo eu incididunt
+        ipsum exercitation. Et ipsum tempor Lorem duis pariatur cillum ex esse eu nisi aute consequat. In pariatur nulla
+        et ipsum qui cillum do. Lorem excepteur sunt laborum id id officia aute et.
+
+        Eiusmod reprehenderit ea culpa aliquip commodo. Dolor irure anim non enim occaecat in eu dolore qui voluptate.
+        Quis anim deserunt nisi nulla ipsum et duis non id tempor in. Non et dolore aliqua esse cillum consectetur dolor
+        mollit aliquip. Excepteur ipsum ullamco laboris enim minim incididunt qui excepteur sunt aliquip. Aliqua ullamco
+        eu amet amet in eiusmod minim Lorem.</p>
+    </div>
+    <!-- [전달사항] 큰 모달은 .modal에 .moda-large가 붙습니다. -->
+<div class="modal modal-large -opened">
+  <div class="modal-dim"></div>
+  <div class="modal-container">
+    <div class="modal-body">
+      <div class="modal-title">서비스 이용약관</div>
+      <div class="modal-content">
+        <p class="modal-text-small">
+          내 생활은 무척 단조로워. 나는 닭을 쫓고, 사람들은 나를 쫓지. 닭들은 모두 비슷비슷하고 사람들도 크게 다르지 않아. 그래서 나는 늘 지루해.<br />
+          하지만 네가 나를 길들인다면 내 생활은 많이 달라질 거야. 그러면 수많은 발소리 중에 네 발소리를 구별하게 될 거야. 다른 소리는 나를 땅속 깊이 숨게 하지만, 네 발소리는 마치 음악 소리처럼 나를
+          밖으로 불러낼 거야.<br />
+          그리고 저기 밀밭이 보이지? 난 빵을 좋아하지 않아. 밀은 나에게 아무 필요가 없거든. 그래서 밀밭을 바라봐도 나는 아무 생각도 느낌도 없어. 그건 슬픈 일이지. 하지만 아름다운 황금빛 머리카락을
+          지닌 네가 나를 길들인다면 밀밭은 내게 아주 근사한 광경으로 보일 거야.
+          밀밭이 황금물결을 이룰 때 네가 기억날 테니까. 그러면 나는 밀밭을 스쳐 지나는 바람 소리마저도 사랑하게 될 것이야.<br />
+          부탁인데…… 나를 길들여 주겠니?<br />
+          내 생활은 무척 단조로워. 나는 닭을 쫓고, 사람들은 나를 쫓지. 닭들은 모두 비슷비슷하고 사람들도 크게 다르지 않아. 그래서 나는 늘 지루해.<br />
+          하지만 네가 나를 길들인다면 내 생활은 많이 달라질 거야. 그러면 수많은 발소리 중에 네 발소리를 구별하게 될 거야. 다른 소리는 나를 땅속 깊이 숨게 하지만, 네 발소리는 마치 음악 소리처럼 나를
+          밖으로 불러낼 거야.<br />
+          그리고 저기 밀밭이 보이지? 난 빵을 좋아하지 않아. 밀은 나에게 아무 필요가 없거든. 그래서 밀밭을 바라봐도 나는 아무 생각도 느낌도 없어. 그건 슬픈 일이지. 하지만 아름다운 황금빛 머리카락을
+          지닌 네가 나를 길들인다면 밀밭은 내게 아주 근사한 광경으로 보일 거야.
+          밀밭이 황금물결을 이룰 때 네가 기억날 테니까. 그러면 나는 밀밭을 스쳐 지나는 바람 소리마저도 사랑하게 될 것이야.<br />
+          부탁인데…… 나를 길들여 주겠니?<br />
+        </p>
+      </div>
+      <button class="btn-modal-okay">확인</button>
+      <button class="btn-modal-close"><span class="blind">닫기</span></button>
+    </div>
+  </div>
+</div>
+  </div>
+  <footer class="footer">
+  <div class="footer-container">
+    <strong class="logo footer-logo">
+      <span class="blind">Hyodu</span>
+    </strong>
+    <div class="footer-content">
+      <div class="footer-link-wrap">
+        <a href="" class="footer-link">이용약관</a>
+        <a href="" class="footer-link">개인정보처리방침</a>
+      </div>
+      <div class="footer-text-container">
+        <p>
+          대표이사: 손성우</br>
+          개인정보책임자: 손성우</br>
+          사업자등록번호 123-12-12345 <a href="">[사업자정보확인]</a></br>
+          통신판매업신고 1234-서울중구-12345
+        </p>
+      </div>
+      <div class="footer-mail-wrap">
+        <li class="footer-mail">
+          <span>일반문의 : </span><a href="" class="mail-link">customer@hyodu.com</a>
+        </li>
+        <li class="footer-mail">
+          <span>제휴문의 : </span><a href="" class="mail-link">mkt@hyodu.com</a>
+        </li>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-social-wrap">
+        <a href="" class="footer-social -instagram">
+          <span class="blind">효두 인스타그램</span>
+        </a>
+        <a href="" class="footer-social -notion">
+          <span class="blind">효두 노션</span>
+        </a>
+      </div>
+      <p class="copyright">© 2019 Hyodu, Inc. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- TODO: 테스트용 -->
+<script src="./../../js/ui.js"></script>
+</body>
+
+</html>
