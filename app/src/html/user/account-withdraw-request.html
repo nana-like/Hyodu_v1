@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include("../common/document-head.html")
+
+<body>
+  <div class="wrap">
+    @@include('../common/header.html', {
+    "status": "login"
+    })
+    <div class="page-body page-user-form">
+      @@include('../common/page-top.html')
+      @@include('../common/page-title.html', {
+      "title": "회원탈퇴 신청",
+      "small": "정말이신가요? (ㅠ.ㅠ)"
+      })
+      <div class="page-guide">
+        <p>회원탈퇴와 관련된 내용이 들어갑니다.<br />
+          세부적인 내용은 나중에 추가할 예정입니다.</p>
+      </div>
+      <div class="page-content">
+        <form>
+          <div class="form-container -large">
+            <div class="form-item form-req">
+              <label class="form-label">
+                <span class="form-label-text">탈퇴 이유</span>
+                <span class="form-label-guide"></span>
+              </label>
+              <div class="form-radio-wrap">
+                @@loop('../common/form-radio-item.html', [{
+                "inputId" : "id1",
+                "value" : "radio1",
+                "radioName" : "radioname",
+                "radioText" : "서비스가 생각했던 것과 달라요."
+                },{
+                "label": "취소/환불 신청",
+                "inputId" : "id2",
+                "value" : "radio2",
+                "radioName" : "radioname",
+                "radioText" : "효두 사용자가 아니라 관리자가 되고 싶어요!"
+                },{
+                "label": "취소/환불 신청",
+                "inputId" : "id3",
+                "value" : "radio3",
+                "radioName" : "radioname",
+                "radioText" : "일신 상의 사유로 인해 탈퇴를 희망하고 있으니 자세한 건 묻지 말아주세요. 일신 상의 사유로 인해 탈퇴를 희망하고 있으니 자세한 건 묻지 말아주세요."
+                }])
+              </div>
+            </div>
+            @@include("../common/form-textarea-item.html", {
+            "label" : "효두에게 남기고 싶은 메시지",
+            "guide" : "(최대 1000자)",
+            "required" : "",
+            "inputID" : "form-withdraw-request",
+            "value" : "",
+            "placeholder" : "효두에게 남기고 싶은 메세지를 입력해 주세요.",
+            "length" : {
+            "max": "1000"
+            },
+            "error" : "",
+            "errorMsg" : ""
+            })
+            <button class="btn-full btn-page-request" disabled>탈퇴 신청</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    @@include('../common/footer.html')
+  </div>
+</body>
+
+</html>

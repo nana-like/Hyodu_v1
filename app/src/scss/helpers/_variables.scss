@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+// **** variables
+
+// -------------------------
+// [ 1. color pallete ]
+// -------------------------
+$c-black: #101010; //기본 검정
+$c-gray-dark: #343434; //어두운 회색
+$c-gray: #4b4b4b; //회색
+$c-gray-normal: #5f5f5f;
+
+$c-gray-light: #909090;
+
+$c-line: #e6e6e6;
+
+$c-pink-hot: #FF5461;
+$c-pink: #FA6B76;
+$c-error: #ff1515;
+
+//각 레벨별 컬러
+$c-lv: (1 : #909090,
+    2: #e8ae00,
+    3: #47787A,
+    4: #ff8132,
+    5: #FF5461);
+
+
+$c-white-dark: #f6f6f6;
+$c-white-light: #fcfcfc;
+
+$color-darkblue: #11adca; //짙은 파랑
+$color-navy: #17365b;
+$color-lightgray: #d3d3d3; //연한 회색
+$color-lightblue: #b1c0cf;
+$color-disable: #a7b5c8;
+
+$color-input: rgba(168, 182, 200, 0.15); //인풋 필드용 색상
+$color-input-text: #17365b; //인풋 필드 텍스트 색상
+$color-placeholder: #a8b6c8; //
+$color-placeholder2: #8592a2;
+$color-error: #ee6262;
+
+// -------------------------
+// z-index
+// -------------------------
+$z-header: 200;
+$z-header-dim: 210;
+$z-header-nav: 220;
+$z-burger: 300;
+// $z-modal-dim: 310;
+$z-modal: 320;
+
+$z-header-account-lt: 100;
+$z-header-user-lt: 200;
+
+// -------------------------
+// path
+// -------------------------
+// $path-image: "../../../images/";
+$path-image: "../images/";
+
+// -------------------------
+// font weight
+// -------------------------
+$fw-b: 700;
+$fw-m: 500;
+$fw-r: 400;
+
+// -------------------------
+// [ 5. style ]
+// -------------------------
+$radio-button: (style01: (normal: 25% -1px,
+        active: 50% -1px));

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include("../common/document-head.html")
+
+<body>
+  <div class="wrap">
+    @@include('../common/header.html', {
+    "status": "login"
+    })
+    <div class="page-body page-user-form">
+      @@include('../common/page-top.html')
+      @@include('../common/page-title.html', {
+      "title": "취소/환불 신청",
+      "small": "취소나 환불을 원하시나요?"
+      })
+      <div class="page-guide">
+        <p>취소 및 환불과 관련된 내용이 들어갑니다.<br />
+          세부적인 내용은 나중에 추가할 예정입니다.</p>
+      </div>
+      <div class="page-content">
+        <form>
+          <div class="form-container -large">
+            <div class="form-item form-req">
+              <label class="form-label">
+                <span class="form-label-text">취소/환불 이유</span>
+                <span class="form-label-guide"></span>
+              </label>
+              <div class="form-radio-wrap">
+
+                <!-- @@loop('../common/form-radio-item.html', [{
+                "inputId" : "id1",
+                "value" : "radio1",
+                "status" : "small",
+                "radioName" : "radioname",
+                "radioText" : "별 하나에 추억과"
+                },{
+                "label": "취소/환불 신청",
+                "inputId" : "id2",
+                "value" : "radio2",
+                "status" : "small",
+                "radioName" : "radioname",
+                "radioText" : "별 하나에 사랑과"
+                },{
+                "label": "취소/환불 신청",
+                "inputId" : "id3",
+                "value" : "radio3",
+                "status" : "small",
+                "radioName" : "radioname",
+                "radioText" : "별 하나에 쓸쓸함과"
+                },{
+                "label": "취소/환불 신청",
+                "inputId" : "id3",
+                "value" : "radio3",
+                "status" : "small",
+                "radioName" : "radioname",
+                "radioText" : "별 하나에 동경과"
+                }]) -->
+
+                @@loop('../common/form-radio-item.html', [{
+                "inputId" : "id1",
+                "value" : "radio1",
+                "radioName" : "radioname",
+                "radioText" : "내 마음이 살 때랑 지금이랑 다르네요."
+                },{
+                "label": "취소/환불 신청",
+                "inputId" : "id2",
+                "value" : "radio2",
+                "radioName" : "radioname",
+                "radioText" : "호스트분이 너무 눈부셔서 눈이 멀까봐 취소하고 싶어요."
+                },{
+                "label": "취소/환불 신청",
+                "inputId" : "id3",
+                "value" : "radio3",
+                "radioName" : "radioname",
+                "radioText" : "이유는 없고요 그냥 취소하고 싶어요."
+                }])
+              </div>
+            </div>
+            @@include("../common/form-textarea-item.html", {
+            "label" : "상세 메시지",
+            "guide" : "(최대 1000자)",
+            "required" : "required",
+            "inputID" : "form-refund-request",
+            "value" : "",
+            "placeholder" : "취소나 환불을 원하시는 이유를 자세하게 적어 주세요.&#13;&#10;내용이 상세할 수록 더 정확한 답변을 받을 수 있습니다.",
+            "length" : {
+            "min": "",
+            "max": "1000"
+            },
+            "error" : "error",
+            "errorMsg" : "만약 에러가 있을 경우 메시지를 표시합니다."
+            })
+            <button class="btn-full btn-page-request">취소/환불 신청</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    @@include('../common/footer.html')
+  </div>
+</body>
+
+</html>
