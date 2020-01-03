@@ -25,7 +25,10 @@
 
 .-scroll-disabled {
   // 👆 스크롤 막을 때 사용
-  overflow-y: hidden;
+  // overflow-y: hidden;
+  position: fixed;
+  width: 100%;
+  overflow-y: scroll;
 }
 
 

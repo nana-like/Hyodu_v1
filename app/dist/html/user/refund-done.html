@@ -74,11 +74,13 @@
       <span class="burger-line"></span>
     </div>
   </a>
+  <!-- [전달사항] 윈도너비가 1060 미만(=모바일 사이즈)일 때, nav에게 .-trans 클래스가 붙어야 합니다. 1060 이상이면 .-trans를 제거해 주세요. (header.js 참고) -->
   <nav class="nav">
     <h2 class="nav-title">
       <div class="logo nav-logo" aria-label="hidden"></div>
       <span class="blind">네비게이션</span>
     </h2>
+    <!-- [전달사항] .scroll-container 값은 윈도너비가 1060 미만(=모바일 사이즈)일 때 유동적으로 값이 바뀝니다. (header.js 참고) -->
     <div class="scroll-container">
       <div class="nav-account">
         <div class="nav-account-container">
@@ -181,7 +183,7 @@
 
 
 <!-- TODO: 테스트용 -->
-<script src="./../../js/ui.js"></script>
+<script src="./../../js/ui.min.js"></script>
   </div>
 </body>
 

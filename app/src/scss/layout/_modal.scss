@@ -148,17 +148,10 @@
   // 👆 큰~ 모달
   .modal-body {
 
-    // max-height: calc(100% - 40px);
-    // max-height: 700px;
-
     //laptop
     @include res--laptop {
       max-width: 640px;
       // padding: 60px 35px 25px;
-    }
-
-    .modal-content {
-      // max-height: calc(100% - 40px - 84px);
     }
 
   }
@@ -216,9 +209,6 @@
       }
     }
 
-    .modal-text-small {
-      text-align: center;
-    }
 
     .btn-full {
       width: 100%;
@@ -239,5 +229,9 @@
         transition: opacity 0.4s;
       }
     }
+  }
+
+  .modal-text-small {
+    text-align: center;
   }
 }

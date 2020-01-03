@@ -1,8 +1,64 @@
 var header = document.querySelector(".header"),
-    burgerMenu = document.querySelector(".burger");
+  burgerMenu = header.querySelector(".burger"),
+  nav = header.querySelector(".nav"),
+  navScrollCont = header.querySelector(".scroll-container"),
+  headerDim = header.querySelector(".header-dim"),
+  btnMail = document.querySelector(".btn-mail");
+var breakPoint = 1060;
 
-var menuClickHandler = function(){
-  console.log("!");
+
+var burgerEvt = {
+  open: function () {
+    header.classList.add("-opened"); //헤더를 엽니다.
+    document.body.classList.add("-scroll-disabled"); //스크롤을 막습니다.
+  },
+  close: function () {
+    header.classList.remove("-opened"); //헤더를 닫습니다.
+    document.body.classList.remove("-scroll-disabled"); //스크롤을 허용합니다.
+  },
+  toggle: function () {
+    header.classList.toggle("-opened");
+    document.body.classList.toggle("-scroll-disabled"); //스크롤을 막습니다.
+  }
+}
+
+var userMenuEvt = {
+  toggle: function () {
+    header.classList.toggle("-user-opened"); //데스크탑에서 보여지는 작은 메뉴를 열고 닫습니다.
+  }
+}
+
+var headerSizeEvt = function () {
+  //모바일에서 헤더 높이를 구해 유동적으로 바꾸는 이벤트
+  //(모바일에서는 주소창 때문에 CSS만으로 브라우저 높이를 정확하게 구하기 어려워서, 따로 스크립트로 작성했습니다. 버거메뉴를 열었을 때 내부 스크롤이 생기지 않는다면 크게 의미있는 이벤트는 아닙니다.)
+  var headerH = header.children[0].clientHeight; //헤더의 높이
+  var winH = window.innerHeight; //윈도 높이
+  navScrollCont.style.height = winH - headerH + "px"; //네비게이션 내 스크롤 가능한 높이값 변경
+}
+
+
+var mobileEvt = function () {
+  var winW = window.innerWidth;
+  // console.dir(winW);
+  if (winW < breakPoint) { //윈도가 모바일 크기라면
+    nav.classList.add("-trans"); //버거 메뉴를 여는 애니메이션을 보여주도록 설정합니다.
+    headerSizeEvt(); //헤더높이를 유동적으로 구합니다.
+  } else { //윈도가 모바일 크기보다 커진다면
+    nav.classList.remove("-trans"); //버거 메뉴 애니메이션을 숨깁니다.
+    burgerEvt.close(); //메뉴를 닫습니다.
+    navScrollCont.style.height = "80px"; //스크롤 가능 높이값은 80px로 고정합니다.
+  }
 };
 
-burgerMenu.addEventListener("click", menuClickHandler);
+var resizeHandler = function () {
+  mobileEvt();
+}
+var loadHandler = function () {
+  mobileEvt();
+}
+
+burgerMenu.addEventListener("click", burgerEvt.toggle);
+headerDim.addEventListener("click", burgerEvt.close);
+btnMail.addEventListener("click", userMenuEvt.toggle);
+window.addEventListener("resize", resizeHandler);
+window.addEventListener("load", loadHandler);

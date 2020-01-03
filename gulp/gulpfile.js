@@ -9,7 +9,10 @@ sourcemaps = require("gulp-sourcemaps"),
   fileinclude = require("gulp-file-include"),
   autoprefixer = require('gulp-autoprefixer'),
   imagemin = require('gulp-imagemin'),
-  beautify = require('gulp-beautify');
+  uglify = require('gulp-uglify'),
+  beautify = require('gulp-beautify'),
+  rename = require('gulp-rename'),
+  concat = require('gulp-concat');
 
 // 경로 변수
 var title = "Hyodu";
@@ -127,14 +130,19 @@ gulp.task("browserSync", function () {
 });
 
 
-//js 파일 복사
-gulp.task('move:js', function () {
+// js 파일 난독화
+gulp.task('combine:js', function () {
   return gulp.src(paths.js)
+    .pipe(concat('ui.js')) //하나로 합치기
     .pipe(gulp.dest(dist + "/js"))
+    .pipe(uglify())
+    .pipe(rename('ui.min.js'))
+    .pipe(gulp.dest(dist + "/js"));
 });
 
+
 // html 예쁘게 정리
-gulp.task('beautify-html', function () {
+gulp.task('beautify:html', function () {
   return gulp
     .src(dist + "/html/**/*.html")
     .pipe(beautify.html({
@@ -164,11 +172,11 @@ gulp.task("watch", function () {
     paths.js, {
       interval: 800
     },
-    ["move:js"]
+    ["combine:js"]
   );
 });
 
 
-gulp.task("default", ["fileinclude", "imagemin", "sass", "move:js", "browserSync", "watch"], function () {
+gulp.task("default", ["fileinclude", "imagemin", "sass", "combine:js", "browserSync", "watch"], function () {
   console.log(" === 👩‍🔧 걸프가 열심히 일하고 있습니다 👨‍🔧 ===");
 });
