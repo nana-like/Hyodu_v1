@@ -65,6 +65,7 @@
   }
 
   .scroll-container {
+    position: relative;
     width: 100%;
     margin: 0 auto;
 
@@ -341,7 +342,7 @@
       opacity: 0;
       visibility: hidden;
       z-index: $z-header-user-lt;
-      position: absolute;
+      position: fixed;
       border: solid 1px #cecece;
       background-color: #ffffff;
       border-radius: 4px;

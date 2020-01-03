@@ -1,6 +1,4 @@
-var nav = header.querySelector(".nav"),
-  navScrollCont = header.querySelector(".scroll-container"),
-  headerDim = header.querySelector(".header-dim"),
+var headerDim = header.querySelector(".header-dim"),
   btnMail = document.querySelector(".btn-mail");
 var breakPoint = 1060;
 
