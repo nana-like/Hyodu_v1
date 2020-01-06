@@ -1,0 +1,21 @@
+<li class="history-item">
+  <p class="datetime history-datetime">@@datetime</p>
+  <strong class="history-title">@@title@@if(context.type === "cupon"){<span class="history-small">@@small</span>}
+  </strong>
+  @@if(context.type === "cupon"){
+  <small class="history-cupon-number">@@number</small>
+  }
+  <div class="history-bottom">
+    <p class="history-name">@@name</p>
+    @@if(context.type === 'cupon' && context.status === "cancled"){
+    <p class="history-status -cupon -cancled">취소</p>
+    }
+    @@if(context.type === 'cupon' && context.status === "used"){
+    <p class="history-status -cupon -used">사용완료</p>
+    }
+    @@if(context.type === 'point'){
+    <p class="history-status -point">@@point</p>
+    }
+
+  </div>
+</li>

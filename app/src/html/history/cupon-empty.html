@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include("../common/document-head.html")
+
+<body>
+  <div class="wrap">
+    @@include('../common/header.html', {
+    "status": "login"
+    })
+    <!--
+      [전달사항]
+      페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
+    -->
+    <div class="page-body page-history">
+      @@include('../common/page-top.html')
+      @@include('../common/page-title.html', {
+      "title": "쿠폰 사용 내역",
+      "small": "사용 내역을 확인하세요."
+      })
+      <div class="page-content">
+        <!--
+          [전달사항]
+          내역이 없는 경우 .list-empty를 보여주세요.
+        -->
+        <div class="list-empty">
+          쿠폰을 쓰면 여기에 기록이 남아요.<br />
+          회원가입할 때 받은 쿠폰을 써보면 어떨까요?
+        </div>
+      </div>
+    </div>
+    @@include('../common/footer.html')
+  </div>
+</body>
+
+</html>

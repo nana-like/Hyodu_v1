@@ -175,6 +175,7 @@
   // 👆 더 불러오기 버튼
   @include pointer-auto;
   padding-right: 20px;
+  min-height: 22px;
 
   //laptop
   @include res--laptop {
@@ -182,6 +183,7 @@
   }
 
   &.-load-all {
+    // 🙌 모든 정보를 다 불러왔을 때
     position: relative;
     font-size: 0;
     padding: 0;

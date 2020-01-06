@@ -99,7 +99,8 @@ gulp.task("fileinclude", function () {
         error: "",
         login: "",
         status: "",
-        btnPage: ""
+        btnPage: "",
+        type: ""
       },
     }))
     .pipe(gulp.dest(dist))
