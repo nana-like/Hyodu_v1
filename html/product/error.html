@@ -118,11 +118,16 @@
   </nav>
   <div class="dim header-dim"></div>
 </header>
-    <div class="page-body">
+    <!--
+      [전달사항]
+      페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
+      (에러 화면일 때 ⇒ .page-error)
+    -->
+    <div class="page-body page-error">
       <div class="page-top"></div>
       <div class="page-title">
-  <h2 class="title">취소/환불 신청 완료</h2>
-  <small class="title-small">곧 연락 드리겠습니다.</small>
+  <h2 class="title">결제오류 안내</h2>
+  <small class="title-small">결제가 이뤄지지 않았습니다.</small>
   <div class="button-page-wrap">
     
     
@@ -130,17 +135,22 @@
   </div>
 </div>
       <div class="page-guide">
-        <p>취소/환불 신청을 완료했습니다.<br />
-          처리를 위해 곧 연락 드리겠습니다.</p>
+        <p>결제가 완료되지 않았습니다.<br />
+          잠시 후 다시 시도해 주세요.</p>
+        <button class="page-guide-btn btn-line">홈 화면으로</button>
       </div>
       <div class="page-content">
         <div class="page-sub">
-          <div class="page-sub-details">(상세 내역)</div>
-          <button class="page-sub-btn btn-line">홈 화면으로</button>
+          <p class="page-sub-text">계속해서 문제가 발생하는 경우,<br class="hide-laptop" />
+            문의 메뉴에서 문의를 등록해 주세요.<br />
+            바로 처리해 드리겠습니다.</p>
+          <button class="btn-sub-retry btn-text">문의 화면으로</button>
         </div>
+
       </div>
     </div>
-    <footer class="footer">
+  </div>
+  <footer class="footer">
   <div class="footer-container">
     <strong class="logo footer-logo">
       <span class="blind">Hyodu</span>
