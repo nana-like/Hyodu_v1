@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include("../common/document-head.html")
+
+<body>
+  <div class="wrap">
+    @@include('../common/header.html', {
+    "status": "login"
+    })
+    <!--
+      [전달사항]
+      페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
+      (에러 화면일 때 ⇒ .page-error)
+    -->
+    <div class="page-body page-error">
+      @@include('../common/page-top.html')
+      @@include('../common/page-title.html', {
+      "title": "결제오류 안내",
+      "small": "결제가 이뤄지지 않았습니다."
+      })
+      <div class="page-guide">
+        <p>결제가 완료되지 않았습니다.<br />
+          잠시 후 다시 시도해 주세요.</p>
+        <button class="page-guide-btn btn-line">홈 화면으로</button>
+      </div>
+      <div class="page-content">
+        <div class="page-sub">
+          <p class="page-sub-text">계속해서 문제가 발생하는 경우,<br class="hide-laptop" />
+            문의 메뉴에서 문의를 등록해 주세요.<br />
+            바로 처리해 드리겠습니다.</p>
+          <button class="btn-sub-retry btn-text">문의 화면으로</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  @@include('../common/footer.html')
+  </div>
+</body>
+
+</html>

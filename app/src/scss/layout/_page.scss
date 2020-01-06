@@ -154,6 +154,7 @@
 
   .btn-sub-retry {
     // 👆 메일 다시받기 버튼 등
+    display: inline-block;
     margin: 5px auto 0;
 
     //laptop
@@ -297,7 +298,7 @@
     }
 
     &:before {
-      // 👆 엄빠 이미지
+      // 👆 효둥이 이미지
       opacity: 0.75;
       display: block;
       content: '';
@@ -312,5 +313,36 @@
         height: 170px;
       }
     }
+  }
+}
+
+
+
+// ----
+// 🤟 에러 전용
+// ----
+.page-error {
+  .page-title .title {
+    color: $c-error;
+
+    &:before {
+      width: 24px;
+      height: 24px;
+      border: 2px solid #ff1515;
+      border-radius: 50%;
+      background-size: 4px;
+      background-position: 50%;
+      background-image: icon(warning, "ff1515");
+
+      @include res--laptop {
+        width: 28px;
+        height: 28px;
+        background-size: 5px;
+      }
+    }
+  }
+
+  .page-title .title-small {
+    color: $c-black;
   }
 }

@@ -4,8 +4,8 @@
 
 //Font
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap");
-
 @import "helpers/variables";
+
 @import "helpers/mixins";
 @import "helpers/mediaqueries";
 
@@ -22,5 +22,5 @@
 @import "layout/title";
 @import "layout/footer";
 @import "layout/modal";
-@import "layout/history";
 @import "layout/listcard";
+@import "layout/history";

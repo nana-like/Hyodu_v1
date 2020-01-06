@@ -5,9 +5,9 @@
 .listcard {
   // 👆 문의 목록 등 리스트 카드 UI
   margin-top: 30px;
-  font-weight: $fw-r;
+  font-weight: 500;
   padding: 30px 20px 75px;
-  background-color: $c-white-dark;
+  background-color: #f6f6f6;
 
   //laptop
   @include res--laptop {
@@ -29,7 +29,6 @@
     &:first-child {
       margin-top: 0;
     }
-
   }
 
   &-item {
@@ -64,7 +63,7 @@
     &.-answered {
       // 🙌 답변이 달렸을 때
 
-      $_pink: #FF5461;
+      $_pink: #ff5461;
 
       position: relative;
       color: $_pink;
@@ -75,7 +74,7 @@
         right: -22px;
         display: block;
         font-size: 14px;
-        content: '';
+        content: "";
         background-image: icon(check, "FF5461");
         width: 17px;
         height: 17px;
@@ -95,7 +94,6 @@
         }
       }
     }
-
   }
 
   &-title {
@@ -171,9 +169,7 @@
       top: 44px;
       right: 40px;
     }
-
   }
-
 }
 
 .listcard-answer {
@@ -204,7 +200,7 @@
   &-item {
     padding: 20px 20px 20px 23px;
     background-color: #fff;
-    border: 1px solid #FF5461;
+    border: 1px solid #ff5461;
     border-left-width: 5px;
     border-radius: 3px;
 
@@ -212,7 +208,6 @@
     @include res--laptop {
       padding: 40px 40px 40px 35px;
     }
-
   }
 
   &-text {
@@ -227,7 +222,6 @@
   }
 }
 
-
 .listcard-item:hover {
   // 🙌 hover 시 모습
   border-color: #bebebe;
@@ -237,7 +231,6 @@
     opacity: 1;
   }
 }
-
 
 .listcard-container.-opened {
   // 🙌 아이템이 열려있을 때
@@ -249,7 +242,6 @@
   .listcard-item {
     border-color: #bebebe;
     color: $c-black;
-
   }
 
   .listcard-title {
@@ -275,5 +267,4 @@
   .listcard-answer {
     @include flexbox();
   }
-
 }
