@@ -5,9 +5,9 @@
 .listcard {
   // 👆 문의 목록 등 리스트 카드 UI
   margin-top: 30px;
+  font-weight: $fw-r;
   padding: 30px 20px 75px;
   background-color: $c-white-dark;
-  font-weight: $fw-r;
 
   //laptop
   @include res--laptop {
@@ -17,8 +17,7 @@
 
   &-container {
     // 👆 질문과 답변을 묶는 요소
-    margin-top: 34px;
-    margin: 0 auto;
+    margin: 34px auto 0;
     max-width: 640px;
 
     //laptop

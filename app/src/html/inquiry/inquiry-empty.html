@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include("../common/document-head.html")
+
+<body>
+  <div class="wrap">
+    @@include('../common/header.html', {
+    "status": "login"
+    })
+    <!--
+      [전달사항]
+      페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
+      (문의 목록일 때 ⇒ .page-inquiry)
+    -->
+    <div class="page-body page-inquiry">
+      @@include('../common/page-top.html')
+      @@include('../common/page-title.html', {
+      "title": "문의 목록",
+      "small": "도움이 필요하신가요?"
+      })
+      <div class="page-content">
+        <button class="btn-full">문의 등록</button>
+        <!--
+          [전달사항]
+          내역이 없는 경우 .list-empty를 보여주세요.
+        -->
+        <div class="list-empty">
+          효두에서 도움이 필요한 일이 생기면<br class="hide-laptop" />
+          언제든 등록 버튼을 눌러 물어보세요.<br />
+          이곳에서 질문과 답변을 확인할 수 있습니다.
+        </div>
+      </div>
+    </div>
+    @@include('../common/footer.html')
+  </div>
+</body>
+
+</html>

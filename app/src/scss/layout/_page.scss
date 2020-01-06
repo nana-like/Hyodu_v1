@@ -273,6 +273,10 @@
     margin-bottom: -100px;
   }
 
+  .btn-load-more {
+    margin: 55px auto 0;
+  }
+
   .btn-full {
     width: calc(100% - 40px);
     max-width: 640px;
@@ -280,6 +284,33 @@
     //laptop
     @include res--laptop {
       max-width: 460px;
+    }
+  }
+
+
+  .list-empty {
+    // 👆 내역이 없을 때
+    margin: 90px auto 200px;
+
+    @include res--laptop {
+      font-size: 14px;
+    }
+
+    &:before {
+      // 👆 엄빠 이미지
+      opacity: 0.75;
+      display: block;
+      content: '';
+      width: 73px;
+      height: 147px;
+      @include bgi("char-dog");
+      background-size: 100%;
+      margin: 0 auto 30px;
+
+      @include res--laptop {
+        width: 84px;
+        height: 170px;
+      }
     }
   }
 }

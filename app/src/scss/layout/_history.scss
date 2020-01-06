@@ -126,6 +126,39 @@
     }
   }
 
+
+  .list-empty {
+    // 👆 내역이 없을 때
+    margin: 40px auto 150px;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.6;
+    font-weight: $fw-r;
+    color: #5f5f5f;
+
+    @include res--laptop {
+      font-size: 14px;
+    }
+
+    &:before {
+      // 👆 엄빠 이미지
+      opacity: 0.75;
+      display: block;
+      content: '';
+      width: 130px;
+      height: 210px;
+      @include bgi("char-momdad");
+      background-size: 100%;
+      margin: 0 auto 35px;
+
+      @include res--laptop {
+        width: 170px;
+        height: 275px;
+      }
+    }
+  }
+
 }
 
 
@@ -141,38 +174,5 @@
   @include res--laptop {
     font-size: 17px;
     padding: 25px 30px;
-  }
-}
-
-
-.list-empty {
-  // 👆 내역이 없을 때
-  margin: 40px auto 150px;
-  padding: 0 20px;
-  text-align: center;
-  font-size: 13px;
-  line-height: 1.6;
-  font-weight: $fw-r;
-  color: #5f5f5f;
-
-  @include res--laptop {
-    font-size: 14px;
-  }
-
-  &:before {
-    // 👆 엄빠 이미지
-    opacity: 0.75;
-    display: block;
-    content: '';
-    width: 130px;
-    height: 210px;
-    @include bgi("char-momdad");
-    background-size: 100%;
-    margin: 0 auto 35px;
-
-    @include res--laptop {
-      width: 170px;
-      height: 275px;
-    }
   }
 }
