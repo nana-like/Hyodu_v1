@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include("../common/document-head.html")
+
+<body>
+  <div class="wrap">
+    @@include('../common/header.html', {
+    "status": "login"
+    })
+    <div class="page-body">
+      @@include('../common/page-top.html')
+      @@include('../common/page-title.html', {
+      "title": "문의 등록",
+      "small": "무엇을 도와드릴까요?"
+      })
+      <div class="page-guide">
+        <p>어떤 도움이 필요하신가요?<br />
+          질문 종류를 선택 후 내용을 작성해 주세요.<br />
+          평일 기준 4일 내로 답변을 받을 수 있어요.</p>
+      </div>
+      <div class="page-content">
+        <form>
+          <div class="form-container -large">
+            <div class="form-item form-req">
+              <label class="form-label">
+                <span class="form-label-text">질문 종류</span>
+                <span class="form-label-guide"></span>
+              </label>
+              <div class="form-radio-wrap">
+                @@loop('../common/form-radio-item.html', [{
+                "inputId" : "id1",
+                "value" : "radio1",
+                "status" : "small",
+                "radioName" : "radioname",
+                "radioText" : "결제/주문문의"
+                },{
+                "inputId" : "id2",
+                "value" : "radio2",
+                "status" : "small",
+                "radioName" : "radioname",
+                "radioText" : "배송문의"
+                },{
+                "inputId" : "id3",
+                "value" : "radio3",
+                "status" : "small",
+                "radioName" : "radioname",
+                "radioText" : "교환/환불/취소문의"
+                },{
+                "inputId" : "id4",
+                "value" : "radio4",
+                "status" : "small",
+                "radioName" : "radioname",
+                "radioText" : "계정문의"
+                },{
+                "inputId" : "id5",
+                "value" : "radio5",
+                "status" : "small",
+                "radioName" : "radioname",
+                "radioText" : "상품문의"
+                },{
+                "inputId" : "id6",
+                "value" : "radio6",
+                "status" : "small",
+                "radioName" : "radioname",
+                "radioText" : "기타"
+                }])
+              </div>
+            </div>
+            @@include("../common/form-textarea-item.html", {
+            "label" : "질문 내용",
+            "guide" : "(최대 2000자)",
+            "required" : "required",
+            "inputID" : "form-inquiry",
+            "value" : "",
+            "placeholder" : "도움이 필요하신 내용을 적어 주세요.&#13;&#10;내용이 상세할수록 더 정확한 답변을 받을 수 있습니다.",
+            "length" : {
+            "max": "1000"
+            },
+            "error" : "",
+            "errorMsg" : ""
+            })
+            <button class="btn-full btn-page-request" disabled>문의 등록</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    @@include('../common/footer.html')
+  </div>
+</body>
+
+</html>
