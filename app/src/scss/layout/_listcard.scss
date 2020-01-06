@@ -125,6 +125,7 @@
     // max-height: 80px;
     font-size: 13px;
     line-height: 1.54;
+    font-weight: $fw-r;
     @include ellipsis(4);
 
     //laptop
@@ -214,6 +215,7 @@
     font-size: 13px;
     line-height: 1.53;
     color: #4b4b4b;
+    font-weight: $fw-r;
 
     //laptop
     @include res--laptop {

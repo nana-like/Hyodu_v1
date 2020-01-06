@@ -346,3 +346,35 @@
     color: $c-black;
   }
 }
+
+
+// ----
+// 🤟 리뷰 페이지 전용
+// ----
+.page-review {
+  padding: 0;
+
+  .page-title {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+
+    &:after {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .title {
+      color: #fff;
+
+      &:before {
+        @include bgi("title-deco-top-white");
+      }
+    }
+
+    .title-small {
+      color: #e0e0e0;
+    }
+  }
+
+}

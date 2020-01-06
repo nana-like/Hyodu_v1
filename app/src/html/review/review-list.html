@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include("../common/document-head.html")
+
+<body>
+  <div class="wrap">
+    @@include('../common/header.html', {
+    "status": "login"
+    })
+    <!--
+      [전달사항]
+      페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
+      (리뷰 목록 화면일 때 ⇒ .page-review)
+    -->
+    <div class="page-body page-review">
+      @@include('../common/page-top.html')
+      @@include('../common/page-title.html', {
+      "title": "리뷰 목록",
+      "small": "다른 효두러들이 남긴 리뷰를 살펴보세요."
+      })
+      <div class="page-content">
+        <div class="review">
+          <!-- [전달사항] 해당 상품의 이미지를 아래와 같이 배경이미지로 넣어주세요. -->
+          <div class="product-image" style="background-image:url('../../images/temp-img1.jpg')"></div>
+          <div class="product-info">
+            <div class="product-info-container">
+              <strong class="product-info-title">소곤소곤 모녀의 밤</strong>
+              <!-- TODO: 클래스별로 별 개수 다르게 보여주기 -->
+              <div class="product-info-rating">
+                <div class="rating">
+                  <div class="rating-star">
+                    <span class="rating-star-icon"></span>
+                    <span class="rating-star-icon"></span>
+                    <span class="rating-star-icon"></span>
+                    <span class="rating-star-icon"></span>
+                    <span class="rating-star-icon"></span>
+                  </div>
+                  <p class="rating-num"><span>4.7</span> / 5</p>
+                </div>
+              </div>
+              <p class="product-info-count">
+                123,456명의 효두러가 구매 후 평가했습니다.
+              </p>
+            </div>
+          </div>
+          <div class="review-filter">
+            <div class="form-radio form-radio-filter">
+              <input type="radio" id="@@inputId" name="@@radioName" value="@@value" class="radio-input">
+              <label for="@@inputId" class="radio-item">
+                <span class="radio-text">최근등록순</span>
+              </label>
+            </div>
+            <div class="form-radio form-radio-filter">
+              <input type="radio" id="@@inputId" name="@@radioName" value="@@value" class="radio-input">
+              <label for="@@inputId" class="radio-item">
+                <span class="radio-text">최근등록순</span>
+              </label>
+            </div>
+          </div>
+          <div class="review-list">
+            asdf
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include('../common/footer.html')
+  </div>
+</body>
+
+</html>
