@@ -1,6 +1,6 @@
-@charset "utf-8";
-
-// **** MIXIN SCSS (nykim@nykim.net)
+// ---
+// mixin
+// ---
 // **** Last Modified : 2018-09-05
 
 // 폰트
@@ -8,7 +8,6 @@
   font-family: "Noto Sans KR", AppleGothic, sans-serif, Helvetica;
 
 }
-
 
 // 글자 줄임 표시
 @mixin ellipsis($lines: 1) {

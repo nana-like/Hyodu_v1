@@ -1,0 +1,280 @@
+// ---
+// layout - listcard
+// ---
+
+.listcard {
+  // 👆 문의 목록 등 리스트 카드 UI
+  margin-top: 30px;
+  padding: 30px 20px 75px;
+  background-color: $c-white-dark;
+  font-weight: $fw-r;
+
+  //laptop
+  @include res--laptop {
+    margin-top: 40px;
+    padding: 40px 40px 85px;
+  }
+
+  &-container {
+    // 👆 질문과 답변을 묶는 요소
+    margin-top: 34px;
+    margin: 0 auto;
+    max-width: 640px;
+
+    //laptop
+    @include res--laptop {
+      margin-top: 25px;
+      max-width: 980px;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+  }
+
+  &-item {
+    position: relative;
+    padding: 25px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid $c-line;
+    border-radius: 3px;
+    color: $c-gray-normal;
+    cursor: pointer;
+    @include select-none;
+
+    //laptop
+    @include res--laptop {
+      padding: 40px;
+    }
+  }
+
+  &-status {
+    display: inline-block;
+    color: $c-gray-light;
+    font-weight: $fw-m;
+    font-size: 14px;
+    margin-bottom: 20px;
+
+    //laptop
+    @include res--laptop {
+      font-size: 17px;
+    }
+
+    &.-answered {
+      // 🙌 답변이 달렸을 때
+
+      $_pink: #FF5461;
+
+      position: relative;
+      color: $_pink;
+
+      &:after {
+        position: absolute;
+        top: 1px;
+        right: -22px;
+        display: block;
+        font-size: 14px;
+        content: '';
+        background-image: icon(check, "FF5461");
+        width: 17px;
+        height: 17px;
+        background-size: 9px;
+        background-position: 49.5% 50%;
+        background-repeat: no-repeat;
+        border: 1px solid $_pink;
+        border-radius: 50%;
+
+        //laptop
+        @include res--laptop {
+          width: 18px;
+          height: 18px;
+          background-size: 10px;
+          top: 4px;
+          right: -24px;
+        }
+      }
+    }
+
+  }
+
+  &-title {
+    display: block;
+    font-size: 15px;
+    font-weight: $fw-m;
+    letter-spacing: -0.15px;
+    color: $c-black;
+    @include ellipsis();
+
+    //laptop
+    @include res--laptop {
+      font-size: 16px;
+    }
+  }
+
+  &-content {
+    margin: 8px auto 10px;
+
+    //laptop
+    @include res--laptop {
+      margin: 9px auto 0;
+    }
+  }
+
+  &-text {
+    position: relative;
+    display: inline-block;
+    // max-height: 80px;
+    font-size: 13px;
+    line-height: 1.54;
+    @include ellipsis(4);
+
+    //laptop
+    @include res--laptop {
+      font-size: 15px;
+      display: block;
+      text-overflow: initial;
+      -webkit-line-clamp: initial;
+      -webkit-box-orient: initial;
+
+      min-height: 44px;
+      max-height: 66px;
+      background-color: #fff;
+    }
+
+    .ellipsis {
+      display: none;
+      width: 100%;
+      position: absolute;
+      top: 44px;
+      background-color: #fff;
+
+      //laptop
+      @include res--laptop {
+        display: block;
+      }
+    }
+  }
+
+  .datetime {
+    text-align: right;
+  }
+
+  .btn-accordion {
+    position: absolute;
+    top: 24px;
+    right: 20px;
+    opacity: 0.6;
+
+    //laptop
+    @include res--laptop {
+      top: 44px;
+      right: 40px;
+    }
+
+  }
+
+}
+
+.listcard-answer {
+  display: none;
+  max-width: 980px;
+  margin: 10px auto 0;
+
+  @include justify-content(flex-start);
+  @include align-items(flex-start);
+
+  &-mark {
+    display: block;
+    @include flex-shrink(0);
+    @include bgi("logo-circle");
+    background-size: 100%;
+    width: 43px;
+    height: 46px;
+    margin-right: 10px;
+
+    //laptop
+    @include res--laptop {
+      width: 90px;
+      height: 96px;
+      margin-right: 24px;
+    }
+  }
+
+  &-item {
+    padding: 20px 20px 20px 23px;
+    background-color: #fff;
+    border: 1px solid #FF5461;
+    border-left-width: 5px;
+    border-radius: 3px;
+
+    //laptop
+    @include res--laptop {
+      padding: 40px 40px 40px 35px;
+    }
+
+  }
+
+  &-text {
+    font-size: 13px;
+    line-height: 1.53;
+    color: #4b4b4b;
+
+    //laptop
+    @include res--laptop {
+      font-size: 15px;
+    }
+  }
+}
+
+
+.listcard-item:hover {
+  // 🙌 hover 시 모습
+  border-color: #bebebe;
+  color: $c-black;
+
+  .btn-accordion {
+    opacity: 1;
+  }
+}
+
+
+.listcard-container.-opened {
+  // 🙌 아이템이 열려있을 때
+
+  .btn-accordion {
+    transform: rotate(180deg);
+  }
+
+  .listcard-item {
+    border-color: #bebebe;
+    color: $c-black;
+
+  }
+
+  .listcard-title {
+    overflow: auto;
+    white-space: initial;
+    text-overflow: initial;
+    -webkit-line-clamp: initial;
+    -webkit-box-orient: initial;
+  }
+
+  .listcard-text {
+    max-height: 100%;
+    white-space: initial;
+    text-overflow: initial;
+    -webkit-line-clamp: initial;
+    -webkit-box-orient: initial;
+  }
+
+  .ellipsis {
+    display: none;
+  }
+
+  .listcard-answer {
+    @include flexbox();
+  }
+
+}

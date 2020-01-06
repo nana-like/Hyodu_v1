@@ -258,3 +258,28 @@
     margin: 30px auto 55px;
   }
 }
+
+
+
+// ----
+// 🤟 문의 전용
+// ----
+.page-inquiry {
+  padding: 0;
+  margin-bottom: -75px;
+
+  //laptop
+  @include res--laptop {
+    margin-bottom: -100px;
+  }
+
+  .btn-full {
+    width: calc(100% - 40px);
+    max-width: 640px;
+
+    //laptop
+    @include res--laptop {
+      max-width: 460px;
+    }
+  }
+}

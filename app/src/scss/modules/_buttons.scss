@@ -1,5 +1,5 @@
 // ---
-// buttons
+// modules - buttons
 // ---
 
 .btn-line {
@@ -255,5 +255,22 @@
   @include res--laptop {
     margin-top: 70px;
     font-size: 14px;
+  }
+}
+
+.btn-accordion {
+  // 👆 아코디언 버튼 (문의 목록용)
+  width: 16px;
+  height: 16px;
+  background-size: 16px 10px;
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  background-image: icon(arrow-bottom, "4b4b4b");
+
+  //laptop
+  @include res--laptop {
+    width: 18px;
+    height: 18px;
+    background-size: 18px 14px;
   }
 }

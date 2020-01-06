@@ -7,21 +7,57 @@
     @@include('../common/header.html', {
     "status": "login"
     })
-    <div class="page-body">
+    <!--
+      [전달사항]
+      페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
+      (문의 목록일 때 ⇒ .page-inquiry)
+    -->
+    <div class="page-body page-inquiry">
       @@include('../common/page-top.html')
       @@include('../common/page-title.html', {
       "title": "문의 목록",
       "small": "도움이 필요하신가요?"
       })
-      <div class="page-guide">
-        <p>문의를 성공적으로 등록했습니다.<br />
-          답변이 달리면 목록에서 확인할 수 있습니다.</p>
-      </div>
       <div class="page-content">
-        <div class="page-sub">
-          <p class="page-sub-text">기다리는 동안 효두를 좀 더 탐방해보세요!
-          </p>
-          <button class="page-sub-btn btn-line">홈 화면으로</button>
+        <button class="btn-full">문의 등록</button>
+        <div class="listcard">
+          <div class="listcard-container">
+            <div class="listcard-item">
+              <button class="btn-accordion"><span class="blind">카드 펼치기/접기</span></button>
+              @@if(context.status != "answered"){
+              <div class="listcard-status">답변 대기</div>
+              }
+
+              <strong class="listcard-title">[카테고리] 타이틀</strong>
+              <div class="listcard-content">
+                <p class="listcard-text">
+                  <span class="ellipsis">...</span>
+                  내용이 2줄 미만인 경우입니다.
+                </p>
+              </div>
+              <p class="datetime">2000.01.01 09:00</p>
+            </div>
+          </div>
+          @@loop('../common/listcard-container.html', [{
+          "category": "일반문의",
+          "title" : "타이틀입니당",
+          "datetime" : "2020.06.16 10:00"
+          },{
+          "category": "계정문의",
+          "title" : "타이틀",
+          "datetime" : "2020.05.16 10:00"
+          },{
+          "status": "answered",
+          "category": "티켓문의",
+          "title" : "타이틀은 여기에 들어갑니다~! ",
+          "datetime" : "2020.04.16 10:00"
+          },{
+          "status": "answered",
+          "category": "티켓문의",
+          "title" : "타이틀은 여기에 들어갑니다~! 부분 취소 가능한가요? 얼른 알려주시면 감사합니다.",
+          "datetime" : "2020.03.16 10:00"
+          }])
+
         </div>
       </div>
     </div>

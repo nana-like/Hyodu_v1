@@ -1,6 +1,7 @@
-@charset "utf-8";
+// ---
+// reset
+// ---
 
-// **** Reset CSS
 
 *,
 *::before,
@@ -175,17 +176,17 @@ input {
   }
 }
 
- textarea {
+textarea {
   @include font-main;
   width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+
   &:focus {
     outline: 0;
   }
- }
+}
 
 //비밀번호인 경우
 input[type="password"] {

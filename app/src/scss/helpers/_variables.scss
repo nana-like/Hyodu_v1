@@ -1,10 +1,11 @@
-@charset "utf-8";
+// ---
+// variables (global)
+// ---
 
-// **** variables
 
-// -------------------------
-// [ 1. color pallete ]
-// -------------------------
+// -------
+// color
+// -------
 $c-black: #101010; //기본 검정
 $c-gray-dark: #343434; //어두운 회색
 $c-gray: #4b4b4b; //회색
@@ -29,46 +30,28 @@ $c-lv: (1 : #909090,
 $c-white-dark: #f6f6f6;
 $c-white-light: #fcfcfc;
 
-$color-darkblue: #11adca; //짙은 파랑
-$color-navy: #17365b;
-$color-lightgray: #d3d3d3; //연한 회색
-$color-lightblue: #b1c0cf;
-$color-disable: #a7b5c8;
 
-$color-input: rgba(168, 182, 200, 0.15); //인풋 필드용 색상
-$color-input-text: #17365b; //인풋 필드 텍스트 색상
-$color-placeholder: #a8b6c8; //
-$color-placeholder2: #8592a2;
-$color-error: #ee6262;
-
-// -------------------------
-// z-index
-// -------------------------
+// -------
+// * z-index
+// -------
 $z-header: 200;
 $z-header-dim: 210;
 $z-header-nav: 220;
 $z-burger: 300;
-// $z-modal-dim: 310;
 $z-modal: 500;
 
 $z-header-account-lt: 100;
 $z-header-user-lt: 200;
 
-// -------------------------
-// path
-// -------------------------
-// $path-image: "../../../images/";
+
+// -------
+// * path
+// -------
 $path-image: "../images/";
 
-// -------------------------
-// font weight
-// -------------------------
-$fw-b: 700;
+
+// -------
+// * font-weight
+// -------
 $fw-m: 500;
 $fw-r: 400;
-
-// -------------------------
-// [ 5. style ]
-// -------------------------
-$radio-button: (style01: (normal: 25% -1px,
-        active: 50% -1px));
