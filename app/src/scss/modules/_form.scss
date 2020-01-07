@@ -300,7 +300,7 @@
   .radio-item {
     // 👆 실질적인 라디오 UI
     display: block;
-    padding: 10px 15px;
+    padding: 10px 40px 10px 15px;
     font-size: 14px;
     font-weight: $fw-m;
     line-height: 1.43;
@@ -310,6 +310,10 @@
     border: 2px solid transparent;
     border-radius: 2px;
     cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: right 16px top 50%;
+    background-size: 14px 12px;
+
 
     &:hover {
       background-color: #e6e6e6;
@@ -318,7 +322,9 @@
     //laptop
     @include res--laptop {
       font-size: 15px;
-      padding: 15px 18px;
+      padding: 15px 45px 15px 18px;
+      background-position: right 18px top 50%;
+      background-size: 16px 14px;
     }
   }
 
@@ -327,6 +333,7 @@
     color: #ff5461;
     background-color: #fffcfa;
     border: 2px solid #ff5461;
+    background-image: icon("check", "ff5461");
   }
 
   .form-radio.-small {
