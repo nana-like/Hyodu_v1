@@ -107,7 +107,7 @@
 
       @each $value in $_sns {
         &.-#{$value} {
-          @include bgi("sns-#{$value}");
+          @include bgi("sns/sns-#{$value}");
           background-size: 16px;
           background-position: 50%;
         }

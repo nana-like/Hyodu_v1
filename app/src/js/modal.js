@@ -8,7 +8,7 @@ if (modal != null) {
     open: function (e) {
       e.preventDefault();
       modal.classList.add("-opened");
-      preventScroll();
+      preventScroll("modal");
     },
     close: function () {
       modal.classList.remove("-opened");

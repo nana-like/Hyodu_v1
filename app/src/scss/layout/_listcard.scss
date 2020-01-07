@@ -184,7 +184,7 @@
   &-mark {
     display: block;
     @include flex-shrink(0);
-    @include bgi("logo-circle");
+    @include bgi("logo/logo-circle");
     background-size: 100%;
     width: 43px;
     height: 46px;

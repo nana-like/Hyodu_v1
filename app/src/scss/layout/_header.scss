@@ -27,7 +27,7 @@
   &-container {
     position: relative;
     width: 100%;
-    max-width: 1420px;
+    max-width: 1920px;
     @include flexbox;
     @include justify-content(space-between);
     @include align-items(center);
@@ -130,10 +130,11 @@
   position: fixed;
   top: 0;
   right: 0;
+  min-width: 200px;
   width: calc(100vw - 90px);
+  max-width: 500px;
   height: 100vh;
   overflow-y: hidden;
-  min-width: 75%;
   background-color: #fff;
 
   &.-trans {
@@ -147,7 +148,7 @@
     // width: calc(100% - 170px);
     left: 0;
     width: 100%;
-    max-width: 1420px;
+    max-width: 1920px;
     display: block;
     opacity: 1;
     height: 80px;
@@ -211,6 +212,8 @@
     color: $c-black;
     font-weight: $fw-m;
     @include pointer-none;
+    @include ellipsis();
+    width: 95%;
 
     &:after {
       display: none;
@@ -227,6 +230,7 @@
     //laptop
     @include res--laptop {
       opacity: 0.8;
+      width: 100%;
       color: #000;
       order: 1;
       margin-left: 30px;
@@ -255,6 +259,7 @@
     font-size: 13px;
     font-weight: $fw-m;
     background-color: #fff;
+    @include flex-shrink(0);
 
     @each $key,
     $value in $c-lv {

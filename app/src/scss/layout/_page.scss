@@ -304,7 +304,7 @@
       content: '';
       width: 73px;
       height: 147px;
-      @include bgi("char-dog");
+      @include bgi("char/char-dog");
       background-size: 100%;
       margin: 0 auto 30px;
 
@@ -368,7 +368,7 @@
       color: #fff;
 
       &:before {
-        @include bgi("title-deco-top-white");
+        @include bgi("deco/title-deco-top-white");
       }
     }
 

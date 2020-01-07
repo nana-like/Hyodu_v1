@@ -14,7 +14,7 @@
 
 .logo {
   // 👆 범용 로고
-  @include bgi("logo");
+  @include bgi("logo/logo");
   background-size: 100%;
 }
 

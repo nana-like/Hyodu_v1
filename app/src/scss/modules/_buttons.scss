@@ -135,6 +135,7 @@
   }
 }
 
+
 .btn-text {
   // 👆 텍스트에 > 가 붙은 버튼
   display: block;
@@ -274,4 +275,59 @@
     height: 18px;
     background-size: 18px 14px;
   }
+}
+
+.btn-icon {
+  // 👆 아이콘으로 된 버튼 (좋아요, 공유하기 등)
+  width: 28px;
+  height: 28px;
+  background-repeat: no-repeat;
+  background-size: 22px;
+  background-position: 50%;
+
+  &.-heart {
+    background-image: icon(heart, "555555", "ffffff");
+
+    &:hover {
+      background-image: icon(heart, "101010", "fafafa");
+    }
+
+    &.-loveit {
+      background-image: icon(heart, "ff5461", "ff5461");
+    }
+
+  }
+
+  &.-share {
+    background-image: icon(share, "555555");
+
+    &:hover {
+      background-image: icon(share, "101010");
+    }
+  }
+
+
+  @include res--laptop {
+    width: 34px;
+    height: 34px;
+    background-size: 28px;
+  }
+}
+
+.btn-purchase {
+  // 👆 구매하기 전용 버튼!!
+  font-size: 13px;
+  width: 66%;
+  height: 36px;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: -0.13px;
+  font-weight: $fw-m;
+  border-radius: 3px;
+  background-color: $c-pink;
+
+  @include res--laptop {
+    font-size: 15px;
+  }
+
 }

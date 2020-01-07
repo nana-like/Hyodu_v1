@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include("../common/document-head.html")
+
+<body>
+  <div class="wrap">
+    @@include('../common/header.html', {
+    "status": "login"
+    })
+    <div class="page-body page-details">
+      @@include('../common/page-top.html')
+      <div class="page-content">
+        <div class="temp">
+          <h2>상품 상세화면 (임시)</h2>
+          <img src="../../images/temp/temp-img3.jpg" />
+          <img src="../../images/temp/temp-img2.jpg" />
+          <p>와, 이건 아주 멋진
+            상품이군요.<br />
+            당장 구입해야겠어요!</p>
+        </div>
+      </div>
+    </div>
+    <div class="fixed-bar">
+      <div class="fixed-bar-container">
+        <div class="fixed-bar-utils">
+          <button class="btn-icon -heart -loveit"><span class="blind">좋아요</span></button>
+          <button class="btn-icon -share"><span class="blind">공유하기</span></button>
+        </div>
+        <button class="btn-purchase">구매하기</button>
+      </div>
+    </div>
+  </div>
+  @@include('../common/footer.html')
+  </div>
+</body>
+
+</html>
