@@ -281,11 +281,11 @@
   }
 }
 
-.form-radio-wrap {
+.radio-box-wrap {
   // 👆 라디오(옵션) 영역
   margin-bottom: 35px;
 
-  .form-radio {
+  .radio-box {
     // 👆 개별 라디오(옵션) 영역
     margin-bottom: 10px;
     width: 100%;
@@ -348,7 +348,7 @@
     background-image: icon("check", "ff5461");
   }
 
-  .form-radio.-small {
+  .radio-box.-small {
     // 👆 두 개씩 표현되는 인라인 블럭일 때
     display: inline-block;
     margin-right: 11px;
@@ -531,13 +531,4 @@
     margin-bottom: 7px;
   }
 
-}
-
-
-.radio-circle {
-  //👆 둥근 모양의 라디오
-}
-
-.radio-circle-wrap {
-  //👆 둥근 모양의 라디오를 감싸는 요소
 }
