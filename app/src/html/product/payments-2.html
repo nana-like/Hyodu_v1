@@ -7,12 +7,7 @@
     @@include('../common/header.html', {
     "status": "login"
     })
-    <!--
-      [전달사항]
-      페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
-      (결제 진행 화면일 때 ⇒ .page-payments)
-    -->
-    <div class="page-body page-payments">
+    <div class="page-body">
       @@include('../common/page-top.html')
       @@include('../common/page-title.html', {
       "title": "배송 정보",
@@ -30,73 +25,82 @@
             "radioName" : "radioname",
             "radioText" : "집"
             },{
-            "label": "취소/환불 신청",
             "inputId" : "id2",
             "value" : "radio2",
             "radioName" : "radioname",
-            "radioText" : "효두 사용자가 아니라 관리자가 되고 싶어요!"
+            "radioText" : "회사"
             },{
-            "label": "취소/환불 신청",
             "inputId" : "id3",
             "value" : "radio3",
             "radioName" : "radioname",
-            "radioText" : "일신 상의 사유로 인해 탈퇴를 희망하고 있으니 자세한 건 묻지 말아주세요. 일신 상의 사유로 인해 탈퇴를 희망하고 있으니 자세한 건 묻지 말아주세요."
+            "radioText" : "16층 비토랩스"
+            },{
+            "inputId" : "id4",
+            "value" : "radio4",
+            "radioName" : "radioname",
+            "radioText" : "열글자로된배송지이름"
             }])
+            <!-- [전달사항] 라디오 checked 여부로 판단하시면 좋을 것 같아서, 라디오로 마크업했지만 button.btn-circle로 바꿔 사용하셔도 무방합니다. -->
+            <!-- <button class="btn-circle">주석을 해제해보세요.</button> -->
+            <!-- <button class="btn-circle -active">활성화 시 .-active 추가</button> -->
+            <button class="btn-circle btn-add-address">새로 입력</button>
           </div>
         </div>
-        <div class="form-container -medium">
-          <form>
-            @@include("../common/form-item.html", {
-            "label" : "받는 사람",
-            "guide" : "(최대 20자)",
-            "required" : "required",
-            "inputID" : "form-to",
-            "type" : "text",
-            "value" : "",
-            "placeholder" : "받는 사람 이름을 입력해주세요.",
-            "length" : {
-            "min": "",
-            "max": ""
-            },
-            "error" : "",
-            "errorMsg" : ""
-            })
-            @@include("../common/form-item.html", {
-            "label" : "휴대전화 번호",
-            "guide" : "(숫자만 입력)",
-            "required" : "required",
-            "inputID" : "form-tel",
-            "type" : "tel",
-            "value" : "",
-            "placeholder" : "하이픈(-) 없이 번호 전체를 입력해 주세요.",
-            "length" : {
-            "min": "",
-            "max": ""
-            },
-            "error" : "",
-            "errorMsg" : ""
-            })
-          </form>
-          <form>
-            @@include("../common/form-address.html", {
-            "error" : "error",
-            "errorMsg" : "aa"
-            })
-            @@include("../common/form-textarea-item.html", {
-            "type" : "short",
-            "label" : "배송 요청사항 ",
-            "guide" : "(최대 50자)",
-            "inputID" : "temp-id-msg",
-            "value" : "",
-            "placeholder" : "상품 배송 시 신경써야 할 점이 있으면 적어주세요.",
-            "length" : {
-            "min": "",
-            "max": "50"
-            },
-            "error" : "error",
-            "errorMsg" : "만약 에러가 있을 경우 메시지를 표시합니다."
-            })
-          </form>
+        <div class="page-layout">
+          <div class="form-container -medium">
+            <form>
+              @@include("../common/form-item.html", {
+              "label" : "받는 사람",
+              "guide" : "(최대 20자)",
+              "required" : "required",
+              "inputID" : "form-to",
+              "type" : "text",
+              "value" : "",
+              "placeholder" : "받는 사람 이름을 입력해주세요.",
+              "length" : {
+              "min": "",
+              "max": ""
+              },
+              "error" : "",
+              "errorMsg" : ""
+              })
+              @@include("../common/form-item.html", {
+              "label" : "휴대전화 번호",
+              "guide" : "(숫자만 입력)",
+              "required" : "required",
+              "inputID" : "form-tel",
+              "type" : "tel",
+              "value" : "",
+              "placeholder" : "하이픈(-) 없이 번호 전체를 입력해 주세요.",
+              "length" : {
+              "min": "",
+              "max": ""
+              },
+              "error" : "",
+              "errorMsg" : ""
+              })
+            </form>
+            <form>
+              @@include("../common/form-address.html", {
+              "error" : "error",
+              "errorMsg" : "aa"
+              })
+              @@include("../common/form-textarea-item.html", {
+              "type" : "short",
+              "label" : "배송 요청사항 ",
+              "guide" : "(최대 50자)",
+              "inputID" : "temp-id-msg",
+              "value" : "",
+              "placeholder" : "상품 배송 시 신경써야 할 점이 있으면 적어주세요.",
+              "length" : {
+              "min": "",
+              "max": "50"
+              },
+              "error" : "error",
+              "errorMsg" : "만약 에러가 있을 경우 메시지를 표시합니다."
+              })
+            </form>
+          </div>
         </div>
       </div>
     </div>
