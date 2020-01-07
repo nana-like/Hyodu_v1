@@ -90,7 +90,8 @@
   }
 
   .btn-purchase-next {
-    max-width: 640px;
+
+    max-width: 460px;
 
     @include res--laptop {
       margin-left: auto;

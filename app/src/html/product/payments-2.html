@@ -7,7 +7,12 @@
     @@include('../common/header.html', {
     "status": "login"
     })
-    <div class="page-body">
+    <!--
+      [전달사항]
+      페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
+      (배송지 선택 화면일 때 ⇒ .page-address)
+    -->
+    <div class="page-body page-address">
       @@include('../common/page-top.html')
       @@include('../common/page-title.html', {
       "title": "배송 정보",
@@ -16,34 +21,31 @@
       })
       <div class="page-content">
         <div class="address-list">
-          <strong class="address-list-title">배송지 선택</strong>
-          <div class="radio-circle-wrap">
-            @@loop('../common/radio-circle-item.html', [{
-            "inputId" : "id1",
-            "value" : "radio1",
-            "type" : "circle",
-            "radioName" : "radioname",
-            "radioText" : "집"
-            },{
-            "inputId" : "id2",
-            "value" : "radio2",
-            "radioName" : "radioname",
-            "radioText" : "회사"
-            },{
-            "inputId" : "id3",
-            "value" : "radio3",
-            "radioName" : "radioname",
-            "radioText" : "16층 비토랩스"
-            },{
-            "inputId" : "id4",
-            "value" : "radio4",
-            "radioName" : "radioname",
-            "radioText" : "열글자로된배송지이름"
-            }])
-            <!-- [전달사항] 라디오 checked 여부로 판단하시면 좋을 것 같아서, 라디오로 마크업했지만 button.btn-circle로 바꿔 사용하셔도 무방합니다. -->
-            <!-- <button class="btn-circle">주석을 해제해보세요.</button> -->
-            <!-- <button class="btn-circle -active">활성화 시 .-active 추가</button> -->
-            <button class="btn-circle btn-add-address">새로 입력</button>
+          <div class="address-list-container">
+            <strong class="address-list-title">배송지 선택</strong>
+            <div class="radio-circle-wrap">
+              @@loop('../common/radio-circle-item.html', [{
+              "inputId" : "id1",
+              "value" : "radio1",
+              "type" : "circle",
+              "radioName" : "radioname",
+              "radioText" : "집"
+              },{
+              "inputId" : "id3",
+              "value" : "radio3",
+              "radioName" : "radioname",
+              "radioText" : "16층 비토랩스"
+              },{
+              "inputId" : "id4",
+              "value" : "radio4",
+              "radioName" : "radioname",
+              "radioText" : "열글자로된배송지이름"
+              }])
+              <!-- [전달사항] 라디오 checked 여부로 판단하시면 좋을 것 같아서, 라디오로 마크업했지만 button.btn-circle로 바꿔 사용하셔도 무방합니다. -->
+              <!-- <button class="btn-circle">주석을 해제해보세요.</button> -->
+              <!-- <button class="btn-circle -active">활성화 시 .-active 추가</button> -->
+              <button class="btn-circle btn-add-address">새로 입력</button>
+            </div>
           </div>
         </div>
         <div class="page-layout">

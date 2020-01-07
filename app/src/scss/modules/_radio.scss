@@ -67,7 +67,7 @@
     background-image: icon("check", "ff5461");
   }
 
-  .radio-box.-small {
+  &.-small {
     // 👆 두 개씩 표현되는 인라인 블럭일 때
     display: inline-block;
     margin-right: 11px;
@@ -93,9 +93,64 @@
 
 .radio-circle-wrap {
   //👆 둥근 모양의 라디오를 감싸는 요소
+  @include flexbox();
+  @include flex-wrap(wrap);
+  vertical-align: middle;
 }
 
 .radio-circle {
   //👆 둥근 모양의 라디오 (주소 선택 등에 사용)
+  margin-right: 10px;
+  margin-bottom: 6px;
+
+  &:last-child {
+    margin-left: 0;
+  }
+
+  .radio-input {
+    // 👆 <input type="radio"/>
+    position: absolute;
+    left: -9999px;
+    z-index: -1;
+    vertical-align: middle;
+    opacity: 0;
+  }
+
+  .radio-item {
+    // 👆 실질적인 라디오 UI
+    display: inline-block;
+    min-width: 80px;
+    height: 32px;
+    padding: 6px 16px 7px 16px;
+    text-align: center;
+    font-size: 13px;
+    color: #5f5f5f;
+    font-weight: $fw-m;
+    background-color: #fff;
+    border: 1px solid #bebebe;
+    border-radius: 16px;
+    cursor: pointer;
+    @include ellipsis();
+
+    &:hover {
+      color: $c-black;
+      border-color: #909090;
+    }
+
+    //laptop
+    @include res--laptop {
+      min-width: 104px;
+      height: 34px;
+      padding: 6px 20px 7px 20px;
+      font-size: 14px;
+      border-radius: 18px;
+    }
+  }
+
+  .radio-input:checked+.radio-item {
+    // 👆 활성화됐을 경우
+    color: $c-pink-hot;
+    border-color: $c-pink-hot;
+  }
 
 }

@@ -15,12 +15,6 @@
 
 .page-body {
   // 👆 헤더, 푸터를 제외하고 페이지 전체를 감싸는 요소
-  padding: 0 20px;
-
-  //laptop
-  @include res--laptop {
-    padding: 0 40px;
-  }
 }
 
 .page-guide {
@@ -71,6 +65,25 @@
   }
 }
 
+.page-content {
+  // 👆 패딩 잡는 실질적 영역
+  padding: 0 20px;
+
+  //laptop
+  @include res--laptop {
+    padding: 0 40px;
+  }
+}
+
+.page-layout {
+  // 👆 패딩 영역 필요한 곳에 삽입
+  padding: 0 20px;
+
+  //laptop
+  @include res--laptop {
+    padding: 0 40px;
+  }
+}
 
 .page-sub {
   // 👆 작은 회색 글자
@@ -245,9 +258,12 @@
 // 🤟 내역 전용
 // ----
 .page-history {
-  padding: 0;
   max-width: 640px;
   margin: 0 auto;
+
+  .page-content {
+    padding: 0;
+  }
 
   //laptop
   @include res--laptop {
@@ -266,8 +282,11 @@
 // 🤟 문의 전용
 // ----
 .page-inquiry {
-  padding: 0;
   margin-bottom: -75px;
+
+  .page-content {
+    padding: 0;
+  }
 
   //laptop
   @include res--laptop {
@@ -352,7 +371,10 @@
 // 🤟 리뷰 페이지 전용
 // ----
 .page-review {
-  padding: 0;
+
+  .page-content {
+    padding: 0;
+  }
 
   .page-title {
     position: relative;
@@ -381,11 +403,20 @@
 
 
 // ----
-// 🤟 결제 페이지 전용
+// 🤟 옵션 선택 페이지 전용
 // ----
-.page-payments {
+.page-option {
   .form-number-item {
     margin-top: 40px;
     margin-bottom: 40px;
+  }
+}
+
+// ----
+// 🤟 배송지 선택 페이지 전용
+// ----
+.page-address {
+  .page-content {
+    padding: 0;
   }
 }

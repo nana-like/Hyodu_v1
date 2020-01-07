@@ -78,11 +78,15 @@
     // 👆 뒤로가기나 결제취소 등의 버튼
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 20px;
+    width: calc(100% - 40px);
     @include flexbox();
     @include justify-content(space-between);
-    // outline: 3px solid red;
+
+    @include res--laptop {
+      left: 40px;
+      width: calc(100% - 80px);
+    }
 
     .button-page {
       position: relative;
