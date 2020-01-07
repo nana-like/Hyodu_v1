@@ -126,8 +126,8 @@
     <div class="page-body page-payments">
       <div class="page-top"></div>
       <div class="page-title">
-  <h2 class="title">옵션 선택</h2>
-  <small class="title-small">상품의 옵션과 수량을 선택해 주세요.</small>
+  <h2 class="title">배송 정보</h2>
+  <small class="title-small">어떤 분이 상품을 받아보시나요?</small>
   <div class="button-page-wrap">
     
     
@@ -142,65 +142,99 @@
   </div>
 </div>
       <div class="page-content">
-        <form>
-          <div class="form-container -large">
-            <div class="form-item form-req">
-              <label class="form-label">
-                <span class="form-label-text">옵션 선택</span>
-                <span class="form-label-guide"></span>
-              </label>
-              <div class="form-radio-wrap">
-                <div class="form-radio ">
+        <div class="address-list">
+          <strong class="address-list-title">배송지 선택</strong>
+          <div class="radio-circle-wrap">
+            <div class="radio-circle">
   <input type="radio" id="id1" name="radioname" value="radio1" class="radio-input">
   <label for="id1" class="radio-item">
-    <span class="radio-text">2020년 3월 16일 월요일 오전 10시 (라라 강사)</span>
+    <span class="radio-text">집</span>
   </label>
-</div><div class="form-radio ">
+</div><div class="radio-circle">
   <input type="radio" id="id2" name="radioname" value="radio2" class="radio-input">
   <label for="id2" class="radio-item">
-    <span class="radio-text">2020년 3월 17일 화요일 오전 11시 (조이 강사)</span>
+    <span class="radio-text">효두 사용자가 아니라 관리자가 되고 싶어요!</span>
   </label>
-</div><div class="form-radio ">
+</div><div class="radio-circle">
   <input type="radio" id="id3" name="radioname" value="radio3" class="radio-input">
   <label for="id3" class="radio-item">
-    <span class="radio-text">2020년 3월 18일 수요일 오후 12시 (비토 강사)</span>
+    <span class="radio-text">일신 상의 사유로 인해 탈퇴를 희망하고 있으니 자세한 건 묻지 말아주세요. 일신 상의 사유로 인해 탈퇴를 희망하고 있으니 자세한 건 묻지 말아주세요.</span>
   </label>
-</div><div class="form-radio ">
-  <input type="radio" id="id4" name="radioname" value="radio4" class="radio-input">
-  <label for="id4" class="radio-item">
-    <span class="radio-text">2020년 3월 19일 목요일 오후 1시 (키키 강사)</span>
-  </label>
-</div><div class="form-radio ">
-  <input type="radio" id="id5" name="radioname" value="radio5" class="radio-input">
-  <label for="id5" class="radio-item">
-    <span class="radio-text">2020년 3월 20일 금요일 오후 2시 (하하 강사)</span>
-  </label>
-</div>
-              </div>
-            </div>
-            <div class="form-number-item">
-  <label for="tempID" class="form-label">
-    <span class="form-label-text">수량 선택</span>
-    <span class="form-label-guide"></span>
-  </label>
-  <!-- [전달사항] 여기에서도 .form-input에 .-error를 붙일 수 있습니다. 필요하신 경우 사용하시면 될 것 같습니다. -->
-  <div class="number-control">
-    <button class="btn-number-control -down"><span class="blind">수량 줄이기</span></button>
-    <input id="tempID" name="tempID" type="number" minlength="1" maxlength="999"
-      placeholder="@@placeholder" class="form-input " value="1"
-      readonly />
-    <button class="btn-number-control -up"><span class="blind">수량 늘리기</span></button>
-  </div>
-  <p class="form-error"></p>
-  <small class="form-number-info">한 번에 최대 999개까지 구매할 수 있어요.</small>
 </div>
           </div>
-        </form>
+        </div>
+        <div class="form-container -medium">
+          <form>
+            <div class="form-item form-req">
+  <label for="form-to" class="form-label">
+    <span class="form-label-text">받는 사람</span>
+    <span class="form-label-guide">(최대 20자)</span>
+  </label>
+  
+  
+  <input id="form-to" name="form-to" type="text" minlength="" maxlength=""
+    placeholder="받는 사람 이름을 입력해주세요." class="form-input " value=""
+    required />
+  
+  <p class="form-error"></p>
+  
+</div>
+            <div class="form-item form-req">
+  <label for="form-tel" class="form-label">
+    <span class="form-label-text">휴대전화 번호</span>
+    <span class="form-label-guide">(숫자만 입력)</span>
+  </label>
+  
+  
+  <input id="form-tel" name="form-tel" type="tel" minlength="" maxlength=""
+    placeholder="하이픈(-) 없이 번호 전체를 입력해 주세요." class="form-input " value=""
+    required />
+  
+  <p class="form-error"></p>
+  
+</div>
+          </form>
+          <form>
+            <div class="form-address form-req">
+  <label for="input-temp-id-1" class="form-label">
+    <span class="form-label-text">배송 주소</span>
+    <span class="form-label-guide"></span>
+  </label>
+  <div class="address-search">
+    <input id="input-temp-id-1" name="input-temp-name-1" type="text" placeholder="우편번호"
+      class="form-input form-input-address-search" value="" aria-label="우측의 우편번호 찾기를 눌러주세요." readonly />
+    <button class="btn-address-search">우편번호 찾기</button>
+  </div>
+  <div class="address-popup">
+    <!-- [전달사항] 이 위치에 우편번호 찾기를 넣어주세요! -->
+  </div>
+  <input id="input-temp-id-2" name="input-temp-name-2" type="text" placeholder="주소"
+    class="form-input form-input-address-result" value="" readonly />
+  <input id="input-temp-id-3" name="input-temp-name-3" type="text" placeholder="상세 주소"
+    class="form-input -error" value="" />
+  <p class="form-error">aa</p>
+</div>
+            <div class="form-item ">
+  <label for="temp-id-msg" class="form-label">
+    <span class="form-label-text">배송 요청사항 </span>
+    <span class="form-label-guide">(최대 50자)</span>
+  </label>
+  
+  <!-- [전달사항] 오류 발생 시 .form-input에 .-error 클래스를 붙여주세요. -->
+  <textarea id="temp-id-msg" name="temp-id-msg" minlength="" maxlength="50"
+    placeholder="상품 배송 시 신경써야 할 점이 있으면 적어주세요."
+    class="form-input input-textarea -error -short-textarea"
+    value="" ></textarea>
+  <p class="form-error">만약 에러가 있을 경우 메시지를 표시합니다.</p>
+</div>
+          </form>
+        </div>
       </div>
     </div>
     <div class="fixed-bar">
   <div class="fixed-bar-container">
-    <button class="btn-purchase-next">다음</button>
+    <!-- [전달사항] 필수 폼 모두 입력 시 disabled 제거해 주세요.-->
+    <button class="btn-purchase-next" disabled>다음</button>
   </div>
 </div>
     <footer class="footer">
