@@ -118,12 +118,7 @@
   </nav>
   <div class="dim header-dim"></div>
 </header>
-    <!--
-      [전달사항]
-      페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
-      (결제 진행 화면일 때 ⇒ .page-payments)
-    -->
-    <div class="page-body page-payments">
+    <div class="page-body">
       <div class="page-top"></div>
       <div class="page-title">
   <h2 class="title">배송 정보</h2>
@@ -153,19 +148,29 @@
 </div><div class="radio-circle">
   <input type="radio" id="id2" name="radioname" value="radio2" class="radio-input">
   <label for="id2" class="radio-item">
-    <span class="radio-text">효두 사용자가 아니라 관리자가 되고 싶어요!</span>
+    <span class="radio-text">회사</span>
   </label>
 </div><div class="radio-circle">
   <input type="radio" id="id3" name="radioname" value="radio3" class="radio-input">
   <label for="id3" class="radio-item">
-    <span class="radio-text">일신 상의 사유로 인해 탈퇴를 희망하고 있으니 자세한 건 묻지 말아주세요. 일신 상의 사유로 인해 탈퇴를 희망하고 있으니 자세한 건 묻지 말아주세요.</span>
+    <span class="radio-text">16층 비토랩스</span>
+  </label>
+</div><div class="radio-circle">
+  <input type="radio" id="id4" name="radioname" value="radio4" class="radio-input">
+  <label for="id4" class="radio-item">
+    <span class="radio-text">열글자로된배송지이름</span>
   </label>
 </div>
+            <!-- [전달사항] 라디오 checked 여부로 판단하시면 좋을 것 같아서, 라디오로 마크업했지만 button.btn-circle로 바꿔 사용하셔도 무방합니다. -->
+            <!-- <button class="btn-circle">주석을 해제해보세요.</button> -->
+            <!-- <button class="btn-circle -active">활성화 시 .-active 추가</button> -->
+            <button class="btn-circle btn-add-address">새로 입력</button>
           </div>
         </div>
-        <div class="form-container -medium">
-          <form>
-            <div class="form-item form-req">
+        <div class="page-layout">
+          <div class="form-container -medium">
+            <form>
+              <div class="form-item form-req">
   <label for="form-to" class="form-label">
     <span class="form-label-text">받는 사람</span>
     <span class="form-label-guide">(최대 20자)</span>
@@ -179,7 +184,7 @@
   <p class="form-error"></p>
   
 </div>
-            <div class="form-item form-req">
+              <div class="form-item form-req">
   <label for="form-tel" class="form-label">
     <span class="form-label-text">휴대전화 번호</span>
     <span class="form-label-guide">(숫자만 입력)</span>
@@ -193,9 +198,9 @@
   <p class="form-error"></p>
   
 </div>
-          </form>
-          <form>
-            <div class="form-address form-req">
+            </form>
+            <form>
+              <div class="form-address form-req">
   <label for="input-temp-id-1" class="form-label">
     <span class="form-label-text">배송 주소</span>
     <span class="form-label-guide"></span>
@@ -214,7 +219,7 @@
     class="form-input -error" value="" />
   <p class="form-error">aa</p>
 </div>
-            <div class="form-item ">
+              <div class="form-item ">
   <label for="temp-id-msg" class="form-label">
     <span class="form-label-text">배송 요청사항 </span>
     <span class="form-label-guide">(최대 50자)</span>
@@ -227,7 +232,8 @@
     value="" ></textarea>
   <p class="form-error">만약 에러가 있을 경우 메시지를 표시합니다.</p>
 </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </div>
