@@ -5,8 +5,17 @@
   </label>
   @@if (context.error==='error' ) {
   <!-- [전달사항] 오류 발생 시 .form-input에 .-error 클래스를 붙여주세요. -->}
+  @@if (context.type==='number' ) {
+  <div class="number-control -down">수량 줄이기</div>
+  }
   <input id="@@inputID" name="@@inputID" type="@@type" minlength="@@length.min" maxlength="@@length.max"
     placeholder="@@placeholder" class="form-input @@if (context.error==='error' ) {-error}" value="@@value"
     @@required />
+  @@if (context.type==='number' ) {
+  <div class="number-control -up">수량 늘리기</div>
+  }
   <p class="form-error">@@errorMsg</p>
+  @@if (context.type==='number' ) {
+  <small class="form-number-info">한 번에 최대 999개까지 구매할 수 있어요.</small>
+  }
 </div>

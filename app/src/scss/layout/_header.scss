@@ -27,7 +27,7 @@
   &-container {
     position: relative;
     width: 100%;
-    max-width: 1920px;
+    max-width: $max-width;
     @include flexbox;
     @include justify-content(space-between);
     @include align-items(center);
@@ -148,7 +148,7 @@
     // width: calc(100% - 170px);
     left: 0;
     width: 100%;
-    max-width: 1920px;
+    max-width: $max-width;
     display: block;
     opacity: 1;
     height: 80px;

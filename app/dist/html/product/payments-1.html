@@ -61,7 +61,7 @@
 
 
   -->
-<header class="header ">
+<header class="header -login">
   <div class="header-container">
     <h1 class="logo header-logo">
       <a href="/" class="logo-link"><span class="blind">효두</span></a>
@@ -121,13 +121,13 @@
     <!--
       [전달사항]
       페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
-      (로그인 화면일 때 ⇒ .page-login)
+      (결제 진행 화면일 때 ⇒ .page-payments)
     -->
-    <div class="page-body page-login">
+    <div class="page-body page-payments">
       <div class="page-top"></div>
       <div class="page-title">
-  <h2 class="title">로그인</h2>
-  <small class="title-small">다시 만나서 정말 반가워요!</small>
+  <h2 class="title">옵션 선택</h2>
+  <small class="title-small">상품의 옵션과 수량을 선택해 주세요.</small>
   <div class="button-page-wrap">
     
     
@@ -136,52 +136,66 @@
 </div>
       <div class="page-content">
         <form>
-          <div class="form-container">
-            <div class="form-item ">
-  <label for="form-email" class="form-label">
-    <span class="form-label-text">이메일</span>
-    <span class="form-label-guide"></span>
+          <div class="form-container -large">
+            <div class="form-item form-req">
+              <label class="form-label">
+                <span class="form-label-text">옵션 선택</span>
+                <span class="form-label-guide"></span>
+              </label>
+              <div class="form-radio-wrap">
+                <div class="form-radio ">
+  <input type="radio" id="id1" name="radioname" value="radio1" class="radio-input">
+  <label for="id1" class="radio-item">
+    <span class="radio-text">2020년 3월 16일 월요일 오전 10시 (라라 강사)</span>
   </label>
-  
-  
-  <input id="form-email" name="form-email" type="email" minlength="" maxlength=""
-    placeholder="이메일을 입력하세요." class="form-input " value="hyodu@hyodu.com"
-     />
-  
-  <p class="form-error"></p>
-  
-</div>
-            <div class="form-item ">
-  <label for="form-password" class="form-label">
-    <span class="form-label-text">비밀번호</span>
-    <span class="form-label-guide"></span>
+</div><div class="form-radio ">
+  <input type="radio" id="id2" name="radioname" value="radio2" class="radio-input">
+  <label for="id2" class="radio-item">
+    <span class="radio-text">2020년 3월 17일 화요일 오전 11시 (조이 강사)</span>
   </label>
-  
-  
-  <input id="form-password" name="form-password" type="password" minlength="" maxlength=""
-    placeholder="비밀번호를 입력하세요." class="form-input " value="asdfasdf"
-     />
-  
-  <p class="form-error"></p>
-  
+</div><div class="form-radio ">
+  <input type="radio" id="id3" name="radioname" value="radio3" class="radio-input">
+  <label for="id3" class="radio-item">
+    <span class="radio-text">2020년 3월 18일 수요일 오후 12시 (비토 강사)</span>
+  </label>
+</div><div class="form-radio ">
+  <input type="radio" id="id4" name="radioname" value="radio4" class="radio-input">
+  <label for="id4" class="radio-item">
+    <span class="radio-text">2020년 3월 19일 목요일 오후 1시 (키키 강사)</span>
+  </label>
+</div><div class="form-radio ">
+  <input type="radio" id="id5" name="radioname" value="radio5" class="radio-input">
+  <label for="id5" class="radio-item">
+    <span class="radio-text">2020년 3월 20일 금요일 오후 2시 (하하 강사)</span>
+  </label>
 </div>
-            <button class="btn-full">로그인</button>
-            <div class="login-link">
-              <a href="#" class="login-link-item" id="ui-testor-open-modal">이메일 찾기</a>
-              <!-- [전달사항] 이메일 찾기는 안내 모달을 띄웁니다. (modal.js 참고) -->
-              <a href="#" class="login-link-item">비밀번호 찾기</a>
+              </div>
             </div>
+            <div class="form-number-item">
+  <label for="tempID" class="form-label">
+    <span class="form-label-text">수량 선택</span>
+    <span class="form-label-guide"></span>
+  </label>
+  <!-- [전달사항] 여기에서도 .form-input에 .-error를 붙일 수 있습니다. 필요하신 경우 사용하시면 될 것 같습니다. -->
+  <div class="number-control">
+    <button class="btn-number-control -down"><span class="blind">수량 줄이기</span></button>
+    <input id="tempID" name="tempID" type="number" minlength="1" maxlength="999"
+      placeholder="@@placeholder" class="form-input " value="1"
+      readonly />
+    <button class="btn-number-control -up"><span class="blind">수량 늘리기</span></button>
+  </div>
+  <p class="form-error"></p>
+  <small class="form-number-info">한 번에 최대 999개까지 구매할 수 있어요.</small>
+</div>
           </div>
         </form>
-        <div class="page-sub">
-          <hr class="page-sub-line">
-          <p class="page-sub-text">아직 계정을 만들기 전이라면 바로 회원가입 하세요!
-            <br /> 효두에 가입하자마자 쿠폰이 슝 날아옵니다 =3
-          </p>
-          <button class="btn-line page-sub-btn">회원가입</button>
-        </div>
       </div>
     </div>
+    <div class="fixed-bar">
+  <div class="fixed-bar-container">
+    <button class="btn-purchase-next">다음</button>
+  </div>
+</div>
     <footer class="footer">
   <div class="footer-container">
     <strong class="logo footer-logo">

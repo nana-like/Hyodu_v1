@@ -329,5 +329,17 @@
   @include res--laptop {
     font-size: 15px;
   }
+}
 
+
+.btn-purchase-next {
+  // 👆 구매하기 전용 버튼!!
+  @extend .btn-purchase;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+
+  @include res--laptop {
+    font-size: 15px;
+  }
 }

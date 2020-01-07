@@ -176,6 +176,10 @@ input {
   }
 }
 
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 textarea {
   @include font-main;
   width: 100%;

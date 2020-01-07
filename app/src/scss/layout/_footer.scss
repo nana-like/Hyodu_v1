@@ -121,3 +121,13 @@
   }
 
 }
+
+
+.fixed-bar+.footer {
+  // 👆 바가 붙는 경우 푸터 아래에 여백 주기
+  margin-bottom: 56px;
+
+  @include res--laptop {
+    margin-bottom: 66px;
+  }
+}
