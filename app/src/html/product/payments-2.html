@@ -15,62 +15,89 @@
     <div class="page-body page-payments">
       @@include('../common/page-top.html')
       @@include('../common/page-title.html', {
-      "title": "옵션 선택",
-      "small": "상품의 옵션과 수량을 선택해 주세요.",
+      "title": "배송 정보",
+      "small": "어떤 분이 상품을 받아보시나요?",
       "btnPage": "canBackCancle"
       })
       <div class="page-content">
-        <form>
-          <div class="form-container -large">
-            <div class="form-item form-req">
-              <label class="form-label">
-                <span class="form-label-text">옵션 선택</span>
-                <span class="form-label-guide"></span>
-              </label>
-              <div class="form-radio-wrap">
-                @@loop('../common/form-radio-item.html', [{
-                "inputId" : "id1",
-                "value" : "radio1",
-                "radioName" : "radioname",
-                "radioText" : "2020년 3월 16일 월요일 오전 10시 (라라 강사)"
-                },{
-                "inputId" : "id2",
-                "value" : "radio2",
-                "radioName" : "radioname",
-                "radioText" : "2020년 3월 17일 화요일 오전 11시 (조이 강사)"
-                },{
-                "inputId" : "id3",
-                "value" : "radio3",
-                "radioName" : "radioname",
-                "radioText" : "2020년 3월 18일 수요일 오후 12시 (비토 강사)"
-                },{
-                "inputId" : "id4",
-                "value" : "radio4",
-                "radioName" : "radioname",
-                "radioText" : "2020년 3월 19일 목요일 오후 1시 (키키 강사)"
-                },{
-                "inputId" : "id5",
-                "value" : "radio5",
-                "radioName" : "radioname",
-                "radioText" : "2020년 3월 20일 금요일 오후 2시 (하하 강사)"
-                }])
-              </div>
-            </div>
-            @@include("../common/form-number-item.html", {
-            "label" : "수량 선택",
-            "guide" : "",
-            "inputID" : "tempID",
-            "type" : "number",
-            "value" : "1",
+        <div class="address-list">
+          <strong class="address-list-title">배송지 선택</strong>
+          <div class="radio-circle-wrap">
+            @@loop('../common/radio-circle-item.html', [{
+            "inputId" : "id1",
+            "value" : "radio1",
+            "type" : "circle",
+            "radioName" : "radioname",
+            "radioText" : "집"
+            },{
+            "label": "취소/환불 신청",
+            "inputId" : "id2",
+            "value" : "radio2",
+            "radioName" : "radioname",
+            "radioText" : "효두 사용자가 아니라 관리자가 되고 싶어요!"
+            },{
+            "label": "취소/환불 신청",
+            "inputId" : "id3",
+            "value" : "radio3",
+            "radioName" : "radioname",
+            "radioText" : "일신 상의 사유로 인해 탈퇴를 희망하고 있으니 자세한 건 묻지 말아주세요. 일신 상의 사유로 인해 탈퇴를 희망하고 있으니 자세한 건 묻지 말아주세요."
+            }])
+          </div>
+        </div>
+        <div class="form-container -medium">
+          <form>
+            @@include("../common/form-item.html", {
+            "label" : "받는 사람",
+            "guide" : "(최대 20자)",
+            "required" : "required",
+            "inputID" : "form-to",
+            "type" : "text",
+            "value" : "",
+            "placeholder" : "받는 사람 이름을 입력해주세요.",
             "length" : {
-            "min": "1",
-            "max": "999"
+            "min": "",
+            "max": ""
             },
             "error" : "",
             "errorMsg" : ""
             })
-          </div>
-        </form>
+            @@include("../common/form-item.html", {
+            "label" : "휴대전화 번호",
+            "guide" : "(숫자만 입력)",
+            "required" : "required",
+            "inputID" : "form-tel",
+            "type" : "tel",
+            "value" : "",
+            "placeholder" : "하이픈(-) 없이 번호 전체를 입력해 주세요.",
+            "length" : {
+            "min": "",
+            "max": ""
+            },
+            "error" : "",
+            "errorMsg" : ""
+            })
+          </form>
+          <form>
+            @@include("../common/form-address.html", {
+            "error" : "error",
+            "errorMsg" : "aa"
+            })
+            @@include("../common/form-textarea-item.html", {
+            "type" : "short",
+            "label" : "배송 요청사항 ",
+            "guide" : "(최대 50자)",
+            "inputID" : "temp-id-msg",
+            "value" : "",
+            "placeholder" : "상품 배송 시 신경써야 할 점이 있으면 적어주세요.",
+            "length" : {
+            "min": "",
+            "max": "50"
+            },
+            "error" : "error",
+            "errorMsg" : "만약 에러가 있을 경우 메시지를 표시합니다."
+            })
+          </form>
+        </div>
       </div>
     </div>
     @@include('../common/fixed-bar-2.html')

@@ -107,8 +107,7 @@
   // border: 2px solid transparent;
   @include horizontal-gradient(#f48d6c, #f47271);
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: $c-pink;
     border: 2px solid $c-pink;
     background: #fff;
@@ -341,5 +340,13 @@
 
   @include res--laptop {
     font-size: 15px;
+  }
+
+
+  &:disabled {
+    background: #d6d6d6;
+    color: #fff;
+    border-color: #d6d6d6;
+    cursor: default;
   }
 }
