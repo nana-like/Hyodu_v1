@@ -118,7 +118,12 @@
   </nav>
   <div class="dim header-dim"></div>
 </header>
-    <div class="page-body">
+    <!--
+      [전달사항]
+      페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
+      (배송지 선택 화면일 때 ⇒ .page-address)
+    -->
+    <div class="page-body page-address">
       <div class="page-top"></div>
       <div class="page-title">
   <h2 class="title">배송 정보</h2>
@@ -138,17 +143,13 @@
 </div>
       <div class="page-content">
         <div class="address-list">
-          <strong class="address-list-title">배송지 선택</strong>
-          <div class="radio-circle-wrap">
-            <div class="radio-circle">
+          <div class="address-list-container">
+            <strong class="address-list-title">배송지 선택</strong>
+            <div class="radio-circle-wrap">
+              <div class="radio-circle">
   <input type="radio" id="id1" name="radioname" value="radio1" class="radio-input">
   <label for="id1" class="radio-item">
     <span class="radio-text">집</span>
-  </label>
-</div><div class="radio-circle">
-  <input type="radio" id="id2" name="radioname" value="radio2" class="radio-input">
-  <label for="id2" class="radio-item">
-    <span class="radio-text">회사</span>
   </label>
 </div><div class="radio-circle">
   <input type="radio" id="id3" name="radioname" value="radio3" class="radio-input">
@@ -161,10 +162,11 @@
     <span class="radio-text">열글자로된배송지이름</span>
   </label>
 </div>
-            <!-- [전달사항] 라디오 checked 여부로 판단하시면 좋을 것 같아서, 라디오로 마크업했지만 button.btn-circle로 바꿔 사용하셔도 무방합니다. -->
-            <!-- <button class="btn-circle">주석을 해제해보세요.</button> -->
-            <!-- <button class="btn-circle -active">활성화 시 .-active 추가</button> -->
-            <button class="btn-circle btn-add-address">새로 입력</button>
+              <!-- [전달사항] 라디오 checked 여부로 판단하시면 좋을 것 같아서, 라디오로 마크업했지만 button.btn-circle로 바꿔 사용하셔도 무방합니다. -->
+              <!-- <button class="btn-circle">주석을 해제해보세요.</button> -->
+              <!-- <button class="btn-circle -active">활성화 시 .-active 추가</button> -->
+              <button class="btn-circle btn-add-address">새로 입력</button>
+            </div>
           </div>
         </div>
         <div class="page-layout">
