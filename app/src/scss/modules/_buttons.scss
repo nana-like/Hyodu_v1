@@ -369,7 +369,7 @@
   cursor: pointer;
   @include ellipsis();
   margin-right: 10px;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 
   &:last-child {
     margin-left: 0;
@@ -388,6 +388,7 @@
     padding: 6px 20px 7px 20px;
     font-size: 14px;
     border-radius: 18px;
+    margin-bottom: 10px;
   }
 
   &.-active {

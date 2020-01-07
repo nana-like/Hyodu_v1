@@ -24,28 +24,6 @@
           <div class="address-list-container">
             <strong class="address-list-title">배송지 선택</strong>
             <div class="radio-circle-wrap">
-              @@loop('../common/radio-circle-item.html', [{
-              "inputId" : "id1",
-              "value" : "radio1",
-              "type" : "circle",
-              "radioName" : "radioname",
-              "radioText" : "집"
-              },{
-              "inputId" : "id3",
-              "value" : "radio3",
-              "radioName" : "radioname",
-              "radioText" : "16층 비토랩스"
-              },{
-              "inputId" : "id4",
-              "value" : "radio4",
-              "radioName" : "radioname",
-              "radioText" : "열글자로된배송지이름"
-              }])
-              <!-- [전달사항] 라디오의 checked 여부로 판단하시면 좋을 것 같아서 라디오로 마크업했지만, 아래와 같이 button.btn-circle로 바꿔 사용하셔도 무방합니다. 편하신 쪽으로 사용해주세요. -->
-              <!-- 
-              <button class="btn-circle">주석을 해제해보세요.</button>
-              <button class="btn-circle -active">활성화 시 .-active 추가</button> 
-              -->
               <button class="btn-circle btn-add-address">새로 입력</button>
             </div>
           </div>
@@ -59,7 +37,7 @@
               "required" : "required",
               "inputID" : "form-to",
               "type" : "text",
-              "value" : "",
+              "value" : "비토랩스",
               "placeholder" : "받는 사람 이름을 입력해주세요.",
               "length" : {
               "min": "",
@@ -74,7 +52,7 @@
               "required" : "required",
               "inputID" : "form-tel",
               "type" : "tel",
-              "value" : "",
+              "value" : "01012345678",
               "placeholder" : "하이픈(-) 없이 번호 전체를 입력해 주세요.",
               "length" : {
               "min": "",
@@ -100,8 +78,8 @@
               "min": "",
               "max": "50"
               },
-              "error" : "",
-              "errorMsg" : ""
+              "error" : "error",
+              "errorMsg" : "만약 에러가 있을 경우 메시지를 표시합니다."
               })
             </form>
           </div>

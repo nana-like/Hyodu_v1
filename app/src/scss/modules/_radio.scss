@@ -101,7 +101,15 @@
 .radio-circle {
   //👆 둥근 모양의 라디오 (주소 선택 등에 사용)
   margin-right: 10px;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  height: 32px;
+
+  //laptop
+  @include res--laptop {
+    height: 34px;
+    margin-bottom: 10px;
+  }
+
 
   &:last-child {
     margin-left: 0;

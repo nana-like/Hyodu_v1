@@ -35,8 +35,10 @@ var preventScroll = function (type) {
 var allowScroll = function () {
   wrap.style.paddingRight = 0;
   headerContainer.style.paddingRight = 0;
-  fixedBar.style.paddingRight = 0;
   navScrollCont.style.right = 0;
+  if (fixedBar != null) {
+    fixedBar.style.paddingRight = 0;
+  }
   document.body.classList.remove("-scroll-disabled");
 }
 var headerDim = header.querySelector(".header-dim"),
