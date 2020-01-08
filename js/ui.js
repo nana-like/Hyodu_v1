@@ -6,6 +6,7 @@ var header = document.querySelector(".header"),
 var nav = header.querySelector(".nav"),
   navBtns = nav.querySelector(".nav-btn-wrap");
 var fixedBar = document.querySelector(".fixed-bar");
+var footer = document.querySelector(".footer");
 
 // 해당 브라우저의 스크롤바 너비를 구합니다.
 var getScrollBarWidth = function () {
