@@ -64,9 +64,8 @@
   }
 
   &:after {
-    display: block;
     background-size: contain;
-    @include bgi("deco/title-deco-top");
+    @include bgi("deco/title-dexco-top");
     content: "";
     margin: 40px auto 0;
     width: 45px;
@@ -74,30 +73,29 @@
     background-image: icon(title-deco-bottom, "d4d4d4");
   }
 
-  .button-page-wrap {
+  .page-control {
     // 👆 뒤로가기나 결제취소 등의 버튼
     position: absolute;
     top: 0;
     left: 0px;
-    padding: 0 20px;
     width: 100%;
-    max-width: calc(100% - 40px);
-    @include flexbox();
-    @include justify-content(space-between);
+    padding: 0 20px;
+
+    &-container {
+      width: 100%;
+      max-width: 1600px;
+      margin: 0 auto;
+      @include flexbox();
+      @include justify-content(space-between);
+    }
 
     @include res--laptop {
-      //TODO:이거처리하기!!!
-      // padding: 0 40px;
-      // width: calc(100% - 80px);
-      // left: 50%;
-      // transform: translateX(-50%);
-      // max-width: $max-width;
+      padding: 0 40px;
     }
 
     .button-page {
       position: relative;
       background-repeat: no-repeat;
-      background-position: 50% 0;
       width: 20px;
       height: 20px;
       margin-top: 25px;
@@ -109,20 +107,30 @@
       }
 
       &.page-back {
+        background-position: 0 0;
         background-size: 22px 20px;
         background-image: icon(arrow-back, "909090");
 
         @include res--laptop {
           background-size: 28px 26px;
         }
+
+        .button-page-text {
+          left: -8px;
+        }
       }
 
       &.page-cancle {
+        background-position: 100% 100%;
         background-size: 20px 20px;
         background-image: icon(cancle, "909090");
 
         @include res--laptop {
           background-size: 26px 26px;
+        }
+
+        .button-page-text {
+          left: 8px;
         }
       }
 
@@ -139,12 +147,11 @@
       display: none;
       position: absolute;
       top: 0;
-      left: 0;
       opacity: 0;
+      width: 100%;
       margin-top: 22px;
       padding-top: 10px;
       font-size: 11px;
-      // transform: translateY(-20px);
       transition: opacity 0.2s;
 
       @include res--laptop {

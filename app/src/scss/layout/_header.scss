@@ -27,14 +27,16 @@
   &-container {
     position: relative;
     width: 100%;
-    max-width: $max-width;
     @include flexbox;
     @include justify-content(space-between);
     @include align-items(center);
 
     //laptop
     @include res--laptop {
-      width: auto;
+      width: 72px;
+      // width: auto;
+      @include justify-content(flex-end);
+
       // position: absolute;
       // left: 50%;
       // transform: translateX(-50%);
@@ -52,9 +54,12 @@
 
     //laptop
     @include res--laptop {
-      width: 72px;
+      display: inline-block;
+      width: 100%;
       height: 57px;
+      background-size: cover;
       margin: 0;
+      left: 0;
     }
 
     .logo-link {
@@ -78,6 +83,7 @@
 
 .burger {
   z-index: $z-burger;
+  display: block;
   position: relative;
   // top: 6px;
   @include center;
@@ -93,6 +99,7 @@
   @include res--laptop {
     opacity: 0;
     visibility: hidden;
+    display: none;
   }
 
   .burger-line-wrap {
@@ -144,11 +151,10 @@
   //laptop
   @include res--laptop {
     position: relative;
-    // left: 170px;
-    // width: calc(100% - 170px);
     left: 0;
     width: 100%;
-    max-width: $max-width;
+    margin-left: 10px;
+    max-width: calc(1600px - 72px - 10px);
     display: block;
     opacity: 1;
     height: 80px;
