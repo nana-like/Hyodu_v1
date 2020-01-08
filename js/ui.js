@@ -179,3 +179,22 @@ if (listCardContainer != null) {
   })
 
 }
+
+
+/* TODO:지우기 */
+var selectStarIcon = document.querySelectorAll(".select-star-icon");
+selectStarIcon.forEach(function (el) {
+  el.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    for (var i = 0; i < selectStarIcon.length; i++) {
+      selectStarIcon[i].classList.remove("-active");
+    }
+    var score = e.target.dataset.score;
+    for (var i = 0; i < score; i++) {
+      selectStarIcon[i].classList.add("-active");
+    }
+
+    // e.target.classList.add("-active");
+  });
+})
