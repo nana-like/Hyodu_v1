@@ -423,3 +423,34 @@
     }
   }
 }
+
+
+.select-star {
+  &-container {
+    outline: 2px solid red;
+  }
+
+  &-icon {
+    width: 40px;
+    height: 40px;
+    background: #999;
+
+    // &:hover {
+    //   background: #999;
+    // }
+  }
+
+  &-icon:first-child:checked {
+    // background: red;
+  }
+
+  &-icon:checked~.select-star-icon {
+    background: #999;
+
+    background: $c-pink;
+  }
+
+  &-icon.-active {
+    background: $c-pink;
+  }
+}
