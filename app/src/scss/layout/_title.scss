@@ -78,14 +78,20 @@
     // 👆 뒤로가기나 결제취소 등의 버튼
     position: absolute;
     top: 0;
-    left: 20px;
-    width: calc(100% - 40px);
+    left: 0px;
+    padding: 0 20px;
+    width: 100%;
+    max-width: calc(100% - 40px);
     @include flexbox();
     @include justify-content(space-between);
 
     @include res--laptop {
-      left: 40px;
-      width: calc(100% - 80px);
+      //TODO:이거처리하기!!!
+      // padding: 0 40px;
+      // width: calc(100% - 80px);
+      // left: 50%;
+      // transform: translateX(-50%);
+      // max-width: $max-width;
     }
 
     .button-page {

@@ -374,7 +374,11 @@
 
 
   .page-back {
-    background-image: icon(arrow-back, "ffffff");
+    background-image: icon(arrow-back, "ffffff") !important;
+  }
+
+  .button-page-text {
+    color: #fff;
   }
 
   .page-content {
