@@ -382,4 +382,10 @@
     }
   }
 
+  &-datetime {
+    @include res--laptop {
+      font-size: 12px;
+    }
+  }
+
 }

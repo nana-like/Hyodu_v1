@@ -20,15 +20,24 @@ var getScrollBarWidth = function () {
 
 // 스크롤 막는 이벤트
 var preventScroll = function (type) {
-  var paddingR = getScrollBarWidth();
-  wrap.style.paddingRight = paddingR + "px"; //상위 부모요소에게 사라진 스크롤바 너비만큼 패딩값을 부여합니다.
-  headerContainer.style.paddingRight = paddingR + "px"; //헤더 컨테이너에게 사라진 스크롤바 너비만큼 패딩값을 부여합니다.
-  fixedBar.style.paddingRight = paddingR + "px";
-  document.body.classList.add("-scroll-disabled"); //스크롤을 막는 클래스네임을 추가합니다.
 
+  if (window.scrollY <= 0) {
+    return false;
+  }
+
+  /*
+   */
+  var paddingR = getScrollBarWidth();
+  wrap.style.paddingRight = paddingR + "px";
+  headerContainer.style.paddingRight = paddingR + "px";
+  if (fixedBar != null) { //단, 모달창을 연 경우에만
+    fixedBar.style.paddingRight = paddingR + "px";
+  }
   if (type === "modal") { //단, 모달창을 연 경우에만
     navScrollCont.style.right = paddingR + "px"; //네비게이션에도 패딩값을 부여합니다.
   }
+
+  document.body.classList.add("-scroll-disabled"); //스크롤을 막는 클래스네임을 추가합니다.
 }
 
 // 스크롤 허용하는 이벤트
