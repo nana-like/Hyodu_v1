@@ -5,6 +5,12 @@
 .review {
   // 👆 리뷰 전체를 감싸는 부모
 
+  &-container {
+    max-width: $max-width-mobile;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
   .product-image {
     // 👆 배경으로 보여줄 상품 이미지
     position: absolute;
@@ -21,7 +27,7 @@
       top: 0;
       left: 0;
       display: block;
-      content: '';
+      content: "";
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.7);
@@ -31,11 +37,13 @@
   .product-info {
     // 👆 상품에 대한 이름/전체별점/리뷰 수 등
     width: 100%;
-    padding: 0 20px;
     z-index: 1;
     position: relative;
-    top: -50px;
-    margin-bottom: -50px;
+    top: -40px;
+    margin-bottom: -40px;
+    // max-width: $max-width-mobile;
+    // margin-left: auto;
+    // margin-right: auto;
 
     &-container {
       padding: 30px;
@@ -47,55 +55,282 @@
 
     &-title {
       display: block;
-      margin-bottom: 14px;
-      font-size: 17px;
+      margin-bottom: 18px;
+      font-size: 18px;
       color: $c-black;
       font-weight: $fw-m;
     }
 
     &-count {
       margin-top: 5px;
-      font-size: 12px;
+      font-size: 13px;
       line-height: 1.67;
-      color: $c-gray-normal;
+      color: $c-black;
     }
 
     .rating-num {
       display: inline-block;
       margin-left: 3px;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: $fw-m;
       color: $c-gray-dark;
+      line-height: 1.4;
+    }
+  }
+}
+
+.rating-big {
+  @include flexbox();
+  @include align-items(center);
+
+
+  //TODO:
+  // @for $i from 1 through 5 {
+  //   &.-star-#{$i} {
+
+  //     .rating-star-icon:nth-child(#{$i}) {
+  //       outline: 3px solid red;
+  //     }
+  //   }
+  // }
+
+  &.-star-5 {
+
+    .rating-star-icon:before,
+    .rating-star-icon:after {
+      display: block;
     }
   }
 
+  &.-star-45 {
+
+    .rating-star-icon:nth-child(-n+4):before,
+    .rating-star-icon:nth-child(-n+4):after,
+    .rating-star-icon:nth-child(5):before {
+      display: block;
+    }
+  }
+
+  &.-star-4 {
+
+    .rating-star-icon:nth-child(-n+4):before,
+    .rating-star-icon:nth-child(-n+4):after {
+      display: block;
+    }
+  }
+
+  &.-star-35 {
+
+    .rating-star-icon:nth-child(-n+3):before,
+    .rating-star-icon:nth-child(-n+3):after,
+    .rating-star-icon:nth-child(4):before {
+      display: block;
+    }
+  }
+
+  &.-star-3 {
+
+    .rating-star-icon:nth-child(-n+3):before,
+    .rating-star-icon:nth-child(-n+3):after {
+      display: block;
+    }
+  }
+
+  &.-star-25 {
+
+    .rating-star-icon:nth-child(-n+2):before,
+    .rating-star-icon:nth-child(-n+2):after,
+    .rating-star-icon:nth-child(3):before {
+      display: block;
+    }
+  }
+
+  &.-star-2 {
+
+    .rating-star-icon:nth-child(-n+2):before,
+    .rating-star-icon:nth-child(-n+2):after {
+      display: block;
+    }
+  }
+
+  &.-star-15 {
+
+    .rating-star-icon:nth-child(-n+1):before,
+    .rating-star-icon:nth-child(-n+1):after,
+    .rating-star-icon:nth-child(2):before {
+      display: block;
+    }
+  }
+
+
+  &.-star-1 {
+
+    .rating-star-icon:first-child:before,
+    .rating-star-icon:first-child:after {
+      display: block;
+    }
+  }
 }
 
-.rating {
-  @include flexbox();
-  @include align-items(center);
-}
-
-.rating-star {
+.rating-big .rating-star {
   @include flexbox();
 
   &-icon {
+    position: relative;
     display: block;
-    margin-right: 4px;
-    width: 16px;
-    height: 16px;
-    background: #ff5461;
-    border-radius: 50%;
+    margin-right: 2px;
+    width: 18px;
+    height: 18px;
+    // background: #ff5461;
+    // border-radius: 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: icon(star, "dbdbdb");
+
+    &:before,
+    &:after {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+
+    &:before {
+      background-image: icon(star-left, "ff5461");
+    }
+
+    &:after {
+      background-image: icon(star-right, "ff5461");
+    }
+  }
+}
+
+.rating {
+  margin-top: 4px;
+  @include flexbox();
+  @include align-items(center);
+
+  .rating-star {
+    // @include flexbox();
+
+    position: relative;
+    display: block;
+    // width: 18px;
+    // height: 18px;
+    width: 100%;
+    height: 14px;
+    max-width: 70px;
+    background-repeat: repeat-x;
+    background-image: icon(star, "dbdbdb");
+
+    &:before {
+      top: 0;
+      left: 0;
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-repeat: repeat-x;
+      background-image: icon(star, "404040");
+      content: '';
+    }
+  }
+
+  .rating-num {
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: $fw-m;
+    color: #101010;
+  }
+
+  &.-star-1 {
+    .rating-star:before {
+      max-width: 14px;
+    }
+  }
+
+  &.-star-2 {
+    .rating-star:before {
+      max-width: 28px;
+    }
+  }
+
+  &.-star-3 {
+    .rating-star:before {
+      max-width: 42px;
+    }
+  }
+
+  &.-star-4 {
+    .rating-star:before {
+      max-width: 56px;
+    }
+  }
+
+  &.-star-5 {
+    .rating-star:before {
+      max-width: 70px;
+    }
   }
 }
 
 .review-filter {
+  margin-top: 24px;
   padding: 0 20px;
-  @include flexbox();
-  @include align-items(center);
-  @include justify-content(center);
+
+  .radio-circle-wrap {
+    @include align-items(center);
+    @include justify-content(center);
+    @include flex-wrap(nowrap);
+    width: 100%;
+    height: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .radio-circle,
+  .btn-circle {
+    min-width: 98px;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .review-list {
-  padding: 0 20px;
+  margin-top: 32px;
+  border-top: 1px solid #e6e6e6;
+
+  .btn-load-more {
+    margin: 55px auto 0;
+  }
+}
+
+.review-item {
+  padding: 35px 0;
+  color: $c-black;
+  font-weight: $fw-r;
+  border-bottom: 1px solid #e6e6e6;
+
+  &-name {
+    font-size: 15px;
+    font-weight: $fw-m;
+    letter-spacing: -0.26px;
+  }
+
+  &-content {
+    margin: 12px auto 8px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #454545;
+    min-height: 40px;
+  }
+
 }

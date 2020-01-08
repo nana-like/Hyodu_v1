@@ -84,6 +84,10 @@
     border: 1px solid #909090;
     border-radius: 3px;
 
+    &:hover {
+      background-color: #fafafa;
+    }
+
     @include res--laptop {
       font-size: 14px;
       max-width: 220px;
@@ -119,6 +123,10 @@
       background-repeat: no-repeat;
       background-image: icon(creditcard, "ffffff");
       transform: translate(-50%, -50%);
+    }
+
+    &:hover {
+      background-color: #FF5461;
     }
 
     @include res--laptop {

@@ -259,6 +259,7 @@ body {
 
 .wrap {
   position: relative;
+  min-width: $min-width;
 }
 
 a:focus {

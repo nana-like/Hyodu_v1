@@ -325,6 +325,10 @@
   border-radius: 3px;
   background-color: $c-pink;
 
+  &:hover {
+    background-color: #FF5461;
+  }
+
   @include res--laptop {
     font-size: 15px;
   }
@@ -342,6 +346,9 @@
     font-size: 15px;
   }
 
+  &:hover {
+    background-color: #FF5461;
+  }
 
   &:disabled {
     background: #d6d6d6;

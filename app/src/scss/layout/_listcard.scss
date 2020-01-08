@@ -112,9 +112,8 @@
   &-text {
     position: relative;
     display: inline-block;
-    // max-height: 80px;
-    font-size: 13px;
-    line-height: 1.54;
+    font-size: 14px;
+    line-height: 1.6;
     font-weight: $fw-r;
     @include ellipsis(4);
 

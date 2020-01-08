@@ -36,7 +36,13 @@
     // 아이콘 - 플러스
     plus : '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 14 13" xml:space="preserve"><style>.st0{fill:none;stroke:%23#{$color};stroke-width:.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}</style><path class="st0" d="M1.5 6.5h11M7 12V1"/></svg>',
     // 아이콘 - 카드
-    creditcard : '<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 64 64" xml:space="preserve"><style>.st0{fill:none;stroke:%23#{$color};stroke-width:3;stroke-miterlimit:10}</style><path class="st0" d="M60 52H4c-1.1 0-2-.9-2-2V14c0-1.1.9-2 2-2h56c1.1 0 2 .9 2 2v36c0 1.1-.9 2-2 2zM2 24h60"/><path fill="none" stroke="%23#{$color}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M31 38h22"/><path class="st0" d="M21 42h-9.6c-.6 0-1-.5-1-1v-6c0-.5.4-1 1-1H21c.5 0 1 .5 1 1v6c0 .5-.5 1-1 1z"/></svg>'
+    creditcard : '<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 64 64" xml:space="preserve"><style>.st0{fill:none;stroke:%23#{$color};stroke-width:3;stroke-miterlimit:10}</style><path class="st0" d="M60 52H4c-1.1 0-2-.9-2-2V14c0-1.1.9-2 2-2h56c1.1 0 2 .9 2 2v36c0 1.1-.9 2-2 2zM2 24h60"/><path fill="none" stroke="%23#{$color}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M31 38h22"/><path class="st0" d="M21 42h-9.6c-.6 0-1-.5-1-1v-6c0-.5.4-1 1-1H21c.5 0 1 .5 1 1v6c0 .5-.5 1-1 1z"/></svg>',
+    // 아이콘 - 별
+    star : '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M32 3.5l9.3 18.8 20.7 3-15 14.6 3.5 20.6L32 50.8l-18.5 9.7L17 39.9 2 25.3l20.7-3L32 3.5z" fill="%23#{$color}"/></svg>',
+    // 아이콘 - 별 반쪽 (왼쪽)
+    star-left : '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path fill="%23#{$color}" d="M32 3.5v47.3l-18.5 9.7L17 39.9 2 25.3l20.7-3.1z"/></svg>',
+    // 아이콘 - 별 반쪽 (오른쪽)
+    star-right : '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path fill="%23#{$color}" d="M32 3.5v47.3l18.5 9.7L47 39.9l15-14.6-20.7-3.1z"/></svg>'
 
   );
   $icon: _buildIcon(map-get($icons, $icon-name));

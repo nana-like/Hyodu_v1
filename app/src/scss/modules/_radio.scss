@@ -101,6 +101,7 @@
 .radio-circle {
   //👆 둥근 모양의 라디오 (주소 선택 등에 사용)
   margin-right: 10px;
+  min-width: 80px;
   margin-bottom: 8px;
   height: 32px;
 
@@ -127,7 +128,7 @@
   .radio-item {
     // 👆 실질적인 라디오 UI
     display: inline-block;
-    min-width: 80px;
+    width: 100%;
     height: 32px;
     padding: 6px 16px 7px 16px;
     text-align: center;
