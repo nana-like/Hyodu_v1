@@ -103,4 +103,8 @@
   line-height: 1.6;
   font-weight: $fw-r;
   color: #5f5f5f;
+
+  @include res--laptop {
+    font-size: 14px;
+  }
 }

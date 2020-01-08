@@ -21,30 +21,42 @@
     }
   }
 
-  .product-image {
+  .product-background {
     // 👆 배경으로 보여줄 상품 이미지
     position: absolute;
     top: 54px;
     left: 0;
+    // background-color: rgba(0, 0, 0, 0.1);
     width: 100%;
-    height: 241px;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
+    height: 250px;
 
-    @include res--laptop {
-      height: 350px;
-    }
-
-    &:before {
+    &-image {
       position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      content: "";
+      top: 0px;
+      left: 50%;
+      transform: translateX(-50%);
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      max-width: 1920px;
+
+      @include res--laptop {
+        height: 350px;
+      }
+
+
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
     }
   }
 
@@ -53,8 +65,8 @@
     width: 100%;
     z-index: 1;
     position: relative;
-    top: -40px;
-    margin-bottom: -40px;
+    // top: -40px;
+    // margin-bottom: -40px;
 
     // max-width: $max-width-mobile;
     // margin-left: auto;
@@ -388,4 +400,26 @@
     }
   }
 
+}
+
+
+.review .list-empty {
+  padding-bottom: 20px;
+
+  &:before {
+    // 👆 아들 이미지
+    opacity: 0.85;
+    display: block;
+    content: '';
+    width: 270px;
+    height: 255px;
+    @include bgi("char/char-boy");
+    background-size: 100%;
+    margin: 60px auto 35px;
+
+    @include res--laptop {
+      width: 320px;
+      height: 302px;
+    }
+  }
 }
