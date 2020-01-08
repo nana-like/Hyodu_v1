@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include("../common/document-head.html")
+
+<body>
+  <div class="wrap">
+    @@include('../common/header.html', {
+    "status": "login"
+    })
+    <!--
+      [전달사항]
+      //페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
+      //TODO:(배송지 선택 화면일 때 ⇒ .page-address)
+    -->
+    <div class="page-body">
+      @@include('../common/page-top.html')
+      @@include('../common/page-title.html', {
+      "title": "결제 금액",
+      "small": "마지막으로 결제 금액을 확인해 주세요.",
+      "btnPage": "canBackCancle"
+      })
+      <div class="page-content">
+        asdf
+      </div>
+    </div>
+  </div>
+  @@include('../common/fixed-bar-2.html')
+  @@include('../common/footer.html')
+  </div>
+</body>
+
+</html>
