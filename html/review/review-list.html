@@ -130,6 +130,10 @@
   <small class="title-small">다른 효두러들이 남긴 리뷰를 살펴보세요.</small>
   <div class="button-page-wrap">
     
+    <button class="button-page page-back">
+      <span class="button-page-text">뒤로가기</span>
+    </button>
+    
     
     
   </div>
@@ -137,44 +141,105 @@
       <div class="page-content">
         <div class="review">
           <!-- [전달사항] 해당 상품의 이미지를 아래와 같이 배경이미지로 넣어주세요. -->
-          <div class="product-image" style="background-image:url('../../images/temp-img1.jpg')"></div>
-          <div class="product-info">
-            <div class="product-info-container">
-              <strong class="product-info-title">소곤소곤 모녀의 밤</strong>
-              <!-- TODO: 클래스별로 별 개수 다르게 보여주기 -->
-              <div class="product-info-rating">
-                <div class="rating">
-                  <div class="rating-star">
-                    <span class="rating-star-icon"></span>
-                    <span class="rating-star-icon"></span>
-                    <span class="rating-star-icon"></span>
-                    <span class="rating-star-icon"></span>
-                    <span class="rating-star-icon"></span>
+          <div class="review-container">
+            <div class="product-image" style="background-image:url('../../images/temp/temp-img2.jpg')"></div>
+            <div class="product-info">
+              <div class="product-info-container">
+                <strong class="product-info-title">소곤소곤 모녀의 밤</strong>
+                <!-- TODO: 클래스별로 별 개수 다르게 보여주기 -->
+                <div class="product-info-rating">
+                  <div class="rating-big -star-45">
+                    <div class="rating-star">
+                      <span class="rating-star-icon"></span>
+                      <span class="rating-star-icon"></span>
+                      <span class="rating-star-icon"></span>
+                      <span class="rating-star-icon"></span>
+                      <span class="rating-star-icon"></span>
+                    </div>
+                    <p class="rating-num"><span>4.7</span> / 5</p>
                   </div>
-                  <p class="rating-num"><span>4.7</span> / 5</p>
                 </div>
+                <p class="product-info-count">
+                  3명의 효두러가 구매 후 평가했습니다.
+                </p>
               </div>
-              <p class="product-info-count">
-                123,456명의 효두러가 구매 후 평가했습니다.
-              </p>
             </div>
-          </div>
-          <div class="review-filter">
-            <div class="radio-box radio-box-filter">
-              <input type="radio" id="@@inputId" name="@@radioName" value="@@value" class="radio-input">
-              <label for="@@inputId" class="radio-item">
-                <span class="radio-text">최근등록순</span>
-              </label>
+            <div class="review-filter">
+              <div class="radio-circle-wrap">
+                <div class="radio-circle">
+  <input type="radio" id="id1" name="radioname" value="radio1" class="radio-input">
+  <label for="id1" class="radio-item">
+    <span class="radio-text">최근등록순</span>
+  </label>
+</div><div class="radio-circle">
+  <input type="radio" id="id3" name="radioname" value="radio3" class="radio-input">
+  <label for="id3" class="radio-item">
+    <span class="radio-text">좋은평점순</span>
+  </label>
+</div><div class="radio-circle">
+  <input type="radio" id="id4" name="radioname" value="radio4" class="radio-input">
+  <label for="id4" class="radio-item">
+    <span class="radio-text">베스트</span>
+  </label>
+</div>
+                <!-- [전달사항] 라디오의 checked 여부로 판단하시면 좋을 것 같아서 라디오로 마크업했지만, 아래와 같이 button.btn-circle로 바꿔 사용하셔도 무방합니다. 편하신 쪽으로 사용해주세요. -->
+                <!-- 
+              <button class="btn-circle">주석을 해제해보세요.</button>
+              <button class="btn-circle -active">활성화 시 .-active 추가</button> 
+              -->
+              </div>
             </div>
-            <div class="radio-box radio-box-filter">
-              <input type="radio" id="@@inputId" name="@@radioName" value="@@value" class="radio-input">
-              <label for="@@inputId" class="radio-item">
-                <span class="radio-text">최근등록순</span>
-              </label>
+            <div class="review-list">
+              <div class="review-item">
+                <div class="review-item-name">라라 (lal*@th*********.com)</div>
+                <div class="review-item-rating">
+                  <div class="rating -star-5">
+                    <div class="rating-star"></div>
+                    <p class="rating-num"><span>5</span></p>
+                  </div>
+                </div>
+                <div class="review-item-content">
+                  <p class="review-item-text">너무너무 좋았어요~~~~!!!<br />
+                    숙소도 좋았고 음식도 좋았고.. 이벤트할 때 엄마가 너무 감동받으셨더라구요ㅠㅠ 코끝이 찡했어요 진짜ㅠㅠ</p>
+                </div>
+                <p class="review-item-datetime datetime">2020.03.16 11:23</p>
+              </div>
+              <div class="review-item">
+                <div class="review-item-name">다다 (dad*@na***.com)</div>
+                <div class="review-item-rating">
+                  <div class="rating -star-3">
+                    <div class="rating-star"></div>
+                    <p class="rating-num"><span>3</span></p>
+                  </div>
+                </div>
+                <div class="review-item-content">
+                  <p class="review-item-text">몇번째 재방문인지를 몰라서 세어보고 왔습니다~ 6번째인 것 같아요!ㅎㅎ 신중한 소비를 하는 성격이라서 일회권씩 끊어서 방문하고
+                    관리받고 있는데 올때마다 원장님 관리사님들 모두 꼼꼼하고 친절하게 해주세요.<br />
+                    전 어느 한 곳을 이렇게 재방문하는 경우가 많지는 않은데 이렇게 계속 방문하는건 관리받고 얼굴 라인정리, 피부트러블 감소 등 효과가 눈에 보여서인 것 같아요.<br />
+                    제 피부는 아주 안좋은 피부는 아니고 가끔 트러블이 올라오는 피부인데 여기 다니면서 눈에 띄었던 트러블은 많이 줄어들었어요! <br />
+                    그리고 얼굴은 왜이렇게 말랐냐는 소리도 듣고있네요ㅎㅎ 붓기제거뿐 아니라 윤곽 정리에도 효과보고 있어서 저번 후기에도 작성했지만 또 다음주에 갈 거 같아요~
+                    상담이나 구매 강요 같은 게 없는 것도 좋아요. 효두 에스테틱에 늘 감사합니다.</p>
+                </div>
+                <p class="review-item-datetime datetime">2020.03.16 11:23</p>
+              </div>
+              <div class="review-item">
+                <div class="review-item-name">나나 (nan*@da**.net)</div>
+                <div class="review-item-rating">
+                  <div class="rating -star-1">
+                    <div class="rating-star"></div>
+                    <p class="rating-num"><span>1</span></p>
+                  </div>
+                </div>
+                <div class="review-item-content">
+                  <p class="review-item-text">아주 짧은 리뷰</p>
+                </div>
+                <p class="review-item-datetime datetime">2020.03.16 11:23</p>
+              </div>
+              <!-- [전달사항] 더 로드할 데이터가 없을 경우, .btn-load.more에 .-load-all 클래스를 추가해주세요. -->
+              <!-- <button class="btn-load-more btn-text-bottom">
+                <span class="btn-load-text">더 불러오기</span>
+              </button> -->
             </div>
-          </div>
-          <div class="review-list">
-            asdf
           </div>
         </div>
       </div>
