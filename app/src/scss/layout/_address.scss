@@ -14,7 +14,7 @@
   }
 
   &-container {
-    max-width: 460px;
+    max-width: $max-width-mobile;
     margin: 0 auto;
 
     @include res--laptop {

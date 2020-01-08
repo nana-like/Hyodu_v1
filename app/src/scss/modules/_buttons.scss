@@ -71,7 +71,7 @@
   min-width: 85px;
   height: 30px;
   font-size: 11px;
-  padding: 0 10px;
+  padding: 4px 10px 6px;
   cursor: pointer;
 
   //laptop
@@ -128,7 +128,7 @@
 
   //laptop
   @include res--laptop {
-    width: 460px;
+    width: $max-width-mobile;
     height: 54px;
     font-size: 17px;
   }
@@ -419,4 +419,21 @@
       background-image: icon(plus, "4b4b4b");
     }
   }
+}
+
+
+.btn-tiny {
+  // 👆 결제 화면의 쿠폰 사용 취소처럼 아주아주 작은 버튼
+  padding: 1px 9px;
+  font-size: 11px;
+  font-weight: $fw-m;
+  letter-spacing: -0.1px;
+  color: $c-gray-normal;
+  border-radius: 2px;
+  border: 1px solid $c-gray-light;
+
+  @include res--laptop {
+    padding: 2px 10px;
+  }
+
 }

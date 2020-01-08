@@ -4,7 +4,7 @@
 
 .form-container {
   // 👆 내부 폼의 크기를 결정하는 요소
-  max-width: 460px;
+  max-width: $max-width-mobile;
   margin: 0 auto;
 
   //laptop
@@ -15,13 +15,13 @@
 
     //laptop
     @include res--laptop {
-      max-width: 640px;
+      max-width: $max-width-laptop-md;
     }
   }
 
   &.-large {
     // 👆 .-large 클래스가 추가로 붙는 경우 max-width 값 변경
-    max-width: 640px;
+    max-width: $max-width-laptop-md;
 
     //laptop
     @include res--laptop {
@@ -128,7 +128,7 @@
   }
 
   &:hover,
-  &:active {
+  &:focus {
     border-color: #898989;
   }
 }

@@ -18,7 +18,7 @@
   &-container {
     // 👆 질문과 답변을 묶는 요소
     margin: 34px auto 0;
-    max-width: 640px;
+    max-width: $max-width-laptop-md;
 
     //laptop
     @include res--laptop {
@@ -75,20 +75,10 @@
         display: block;
         font-size: 14px;
         content: "";
-        background-image: icon(check, "FF5461");
-        width: 17px;
-        height: 17px;
-        background-size: 9px;
-        background-position: 49.5% 50%;
-        background-repeat: no-repeat;
-        border: 1px solid $_pink;
-        border-radius: 50%;
+        @include checkIcon("FA6B76", #FA6B76);
 
         //laptop
         @include res--laptop {
-          width: 18px;
-          height: 18px;
-          background-size: 10px;
           top: 4px;
           right: -24px;
         }

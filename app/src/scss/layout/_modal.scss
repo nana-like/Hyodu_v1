@@ -150,7 +150,7 @@
 
     //laptop
     @include res--laptop {
-      max-width: 640px;
+      max-width: $max-width-laptop-md;
       // padding: 60px 35px 25px;
     }
 

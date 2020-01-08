@@ -92,7 +92,7 @@
   line-height: 1.57;
   color: $c-gray-normal;
   font-weight: $fw-r;
-  max-width: 460px;
+  max-width: $max-width-mobile;
   margin: 0 auto;
 
   //laptop
@@ -258,7 +258,7 @@
 // 🤟 내역 전용
 // ----
 .page-history {
-  max-width: 640px;
+  max-width: $max-width-laptop-md;
   margin: 0 auto;
 
   .page-content {
@@ -299,11 +299,11 @@
 
   .btn-full {
     width: calc(100% - 40px);
-    max-width: 640px;
+    max-width: $max-width-laptop-md;
 
     //laptop
     @include res--laptop {
-      max-width: 460px;
+      max-width: $max-width-mobile;
     }
   }
 
