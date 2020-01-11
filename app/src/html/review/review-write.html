@@ -18,45 +18,66 @@
           구매 금액의 0.1%가 경험치로 쌓이고,<br />
           다른 효두러들의 효도에도 큰 도움이 됩니다.</p>
       </div>
+      <div class="jumbotron">
+        <div class="jumbotron-title">구매한 상품</div>
+        <div class="jumbotron-container">
+          <div class="product-info">
+            <div class="product-info-thumbnail">
+              <a href="https://nykim.work"><img src="../../images/temp/temp-img4.jpg" alt="상품 썸네일"
+                  class="product-info-image" /></a>
+            </div>
+            <div class="product-info-details">
+              <strong class="product-info-title">[티켓] 세상 아래 같은 핑크는 없다 세상 아래 같은 핑크는 없다</strong>
+              <div class="product-info-content">
+                <p>옵션: PANTONE691 / 55,000원 / 2개</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="page-content">
-        <form>
-          <div class="form-item form-req">
-            <label class="form-label">
-              <span class="form-label-text">평점</span>
-              <span class="form-label-guide"></span>
-            </label>
-            <div class="select-star">
-              <div class="select-star-container">
-                <button class="select-star-icon" aria-label="1점" data-score="1"></button>
-                <button class="select-star-icon" aria-label="2점" data-score="2"></button>
-                <button class="select-star-icon" aria-label="3점" data-score="3"></button>
-                <button class="select-star-icon" aria-label="4점" data-score="4"></button>
-                <button class="select-star-icon" aria-label="5점" data-score="5"></button>
-                <!-- <input type="checkbox" class="select-star-icon" aria-label="1점" />
+        <div class="review-form">
+          <form>
+            <div class="form-container -large">
+              <div class="form-item form-req">
+                <label class="form-label">
+                  <span class="form-label-text">평점</span>
+                  <span class="form-label-guide"></span>
+                </label>
+                <div class="select-star">
+                  <div class="select-star-container">
+                    <button class="select-star-icon" aria-label="1점" data-score="1"></button>
+                    <button class="select-star-icon" aria-label="2점" data-score="2"></button>
+                    <button class="select-star-icon" aria-label="3점" data-score="3"></button>
+                    <button class="select-star-icon" aria-label="4점" data-score="4"></button>
+                    <button class="select-star-icon" aria-label="5점" data-score="5"></button>
+                    <!-- <input type="checkbox" class="select-star-icon" aria-label="1점" />
                 <input type="checkbox" class="select-star-icon" aria-label="2점" />
                 <input type="checkbox" class="select-star-icon" aria-label="3점" />
                 <input type="checkbox" class="select-star-icon" aria-label="4점" />
                 <input type="checkbox" class="select-star-icon" aria-label="5점" /> -->
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="form-container -large">
-            @@include("../common/form-textarea-item.html", {
-            "label" : "리뷰내용",
-            "guide" : "(최소 10자 ~ 최대 2000자)",
-            "required" : "required",
-            "inputID" : "form-inquiry",
-            "value" : "",
-            "placeholder" : "이 상품을 구입해 본 경험이 어떠셨나요? 다른 사람에게 추천한다면 그 이유는 무엇인가요?",
-            "length" : {
-            "max": "1000"
-            },
-            "error" : "",
-            "errorMsg" : ""
-            })
-            <button class="btn-full btn-page-request" disabled>리뷰 등록</button>
-          </div>
-        </form>
+            <div class="form-container -large">
+              @@include("../common/form-textarea-item.html", {
+              "label" : "리뷰내용",
+              "guide" : "(최소 10자 ~ 최대 2000자)",
+              "required" : "required",
+              "inputID" : "form-inquiry",
+              "value" : "",
+              "placeholder" : "이 상품을 구입해 본 경험이 어떠셨나요? 다른 사람에게 추천한다면 그 이유는 무엇인가요?",
+              "length" : {
+              "max": "1000"
+              },
+              "error" : "",
+              "errorMsg" : ""
+              })
+              <button class="btn-full btn-page-request" disabled>리뷰 등록</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
     @@include('../common/footer.html')

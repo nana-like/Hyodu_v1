@@ -35,7 +35,7 @@ if (listCardContainer != null) {
 }
 
 
-/* TODO:지우기 */
+/* TODO:수정하기 */
 var selectStarIcon = document.querySelectorAll(".select-star-icon");
 selectStarIcon.forEach(function (el) {
   el.addEventListener("click", function (e) {

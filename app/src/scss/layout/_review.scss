@@ -426,31 +426,35 @@
 
 
 .select-star {
+  width: 100%;
+  margin: 0 auto 40px;
+  // max-width: 640px;
+
   &-container {
-    outline: 2px solid red;
+    @include flexbox();
+    @include align-items(center);
   }
 
   &-icon {
     width: 40px;
     height: 40px;
-    background: #999;
-
-    // &:hover {
-    //   background: #999;
-    // }
+    background-image: icon(star, "e0e0e0");
   }
 
-  &-icon:first-child:checked {
-    // background: red;
-  }
-
-  &-icon:checked~.select-star-icon {
-    background: #999;
-
-    background: $c-pink;
-  }
 
   &-icon.-active {
-    background: $c-pink;
+    background-image: icon(star, "FA6B76");
   }
+}
+
+
+.review-form {
+  // 👆 리뷰 작성(수정) 폼 전체
+
+  margin-top: 35px;
+
+  @include res--laptop {
+    margin-top: 40px;
+  }
+
 }
