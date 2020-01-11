@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include("../common/document-head.html")
+
+<body>
+  <div class="wrap">
+    @@include('../common/header.html', {
+    "status": "login"
+    })
+    <div class="page-body">
+      @@include('../common/page-top.html')
+      @@include('../common/page-title.html', {
+      "title": "배송지 관리",
+      "small": "배송지를 손쉽게 관리하세요."
+      })
+      <div class="address-list">
+        <div class="address-list-container">
+          <strong class="address-list-title">배송지 선택</strong>
+          <div class="radio-circle-wrap">
+            @@loop('../common/radio-circle-item.html', [{
+            "inputId" : "id1",
+            "value" : "radio1",
+            "type" : "circle",
+            "radioName" : "radioname",
+            "radioText" : "집"
+            },{
+            "inputId" : "id3",
+            "value" : "radio3",
+            "radioName" : "radioname",
+            "radioText" : "16층 비토랩스"
+            },{
+            "inputId" : "id4",
+            "value" : "radio4",
+            "radioName" : "radioname",
+            "radioText" : "열글자로된배송지이름"
+            }])
+            <!-- [전달사항] 라디오의 checked 여부로 판단하시면 좋을 것 같아서 라디오로 마크업했지만, 아래와 같이 button.btn-circle로 바꿔 사용하셔도 무방합니다. 편하신 쪽으로 사용해주세요. -->
+            <!-- 
+            <button class="btn-circle">주석을 해제해보세요.</button>
+            <button class="btn-circle -active">활성화 시 .-active 추가</button> 
+            -->
+            <button class="btn-circle btn-add-address">새로 입력</button>
+          </div>
+        </div>
+      </div>
+      <div class="page-content">
+        <div class="form-container -medium">
+          <form>
+            @@include("../common/form-item.html", {
+            "label" : "배송지명",
+            "guide" : "(중복 불가)",
+            "required" : "required",
+            "inputID" : "form-name",
+            "type" : "text",
+            "value" : "",
+            "placeholder" : "배송지명을 입력해주세요.",
+            "length" : {
+            "min": "",
+            "max": ""
+            },
+            "error" : "",
+            "errorMsg" : ""
+            })
+            @@include("../common/form-item.html", {
+            "label" : "받는 사람",
+            "guide" : "(최대 20자)",
+            "required" : "required",
+            "inputID" : "form-to",
+            "type" : "text",
+            "value" : "",
+            "placeholder" : "받는 사람 이름을 입력해주세요.",
+            "length" : {
+            "min": "",
+            "max": ""
+            },
+            "error" : "",
+            "errorMsg" : ""
+            })
+            @@include("../common/form-item.html", {
+            "label" : "휴대전화 번호",
+            "guide" : "(숫자만 입력)",
+            "required" : "required",
+            "inputID" : "form-tel",
+            "type" : "tel",
+            "value" : "",
+            "placeholder" : "하이픈(-) 없이 번호 전체를 입력해 주세요.",
+            "length" : {
+            "min": "",
+            "max": ""
+            },
+            "error" : "",
+            "errorMsg" : ""
+            })
+          </form>
+          <form>
+            @@include("../common/form-address.html", {
+            "error" : "error",
+            "errorMsg" : "aa"
+            })
+            @@include("../common/form-textarea-item.html", {
+            "type" : "short",
+            "label" : "배송 요청사항 ",
+            "guide" : "(최대 50자)",
+            "inputID" : "temp-id-msg",
+            "value" : "",
+            "placeholder" : "상품 배송 시 신경써야 할 점이 있으면 적어주세요.",
+            "length" : {
+            "min": "",
+            "max": "50"
+            },
+            "error" : "",
+            "errorMsg" : ""
+            })
+            <button class="btn-full btn-page-request" disabled>등록 완료</button>
+            <button class="btn-delete-address" disabled>이 배송지 정보를 삭제할래요</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    @@include('../common/fixed-bar-2.html')
+    @@include('../common/footer.html')
+  </div>
+</body>
+
+</html>

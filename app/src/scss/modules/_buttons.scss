@@ -89,7 +89,6 @@
   }
 }
 
-
 .btn-full {
   // 👆 전체를 차지하는 그라데이션 버튼
   display: block;
@@ -134,7 +133,6 @@
   }
 }
 
-
 .btn-text {
   // 👆 텍스트에 > 가 붙은 버튼
   display: block;
@@ -168,7 +166,6 @@
 
   &:hover {
     background-image: icon(arrow-bottom, "101010");
-
   }
 }
 
@@ -201,7 +198,7 @@
         right: 10px;
         display: block;
         font-size: 14px;
-        content: '';
+        content: "";
         background-image: icon(check, "afafaf");
         width: 19px;
         height: 19px;
@@ -221,14 +218,13 @@
     }
 
     &:before {
-      content: '( 모든 정보를 다 불러왔어요';
+      content: "( 모든 정보를 다 불러왔어요";
     }
 
     &:after {
-      content: ')';
+      content: ")";
       margin-left: 28px;
     }
-
 
     //laptop
     @include res--laptop {
@@ -238,7 +234,6 @@
         font-size: 15px;
       }
     }
-
   }
 }
 
@@ -294,7 +289,6 @@
     &.-loveit {
       background-image: icon(heart, "ff5461", "ff5461");
     }
-
   }
 
   &.-share {
@@ -304,7 +298,6 @@
       background-image: icon(share, "101010");
     }
   }
-
 
   @include res--laptop {
     width: 34px;
@@ -326,14 +319,13 @@
   background-color: $c-pink;
 
   &:hover {
-    background-color: #FF5461;
+    background-color: #ff5461;
   }
 
   @include res--laptop {
     font-size: 15px;
   }
 }
-
 
 .btn-purchase-next {
   // 👆 구매하기 전용 버튼!!
@@ -347,7 +339,7 @@
   }
 
   &:hover {
-    background-color: #FF5461;
+    background-color: #ff5461;
   }
 
   &:disabled {
@@ -357,7 +349,6 @@
     cursor: default;
   }
 }
-
 
 .btn-circle {
   // 👆 radio-circle과 동일한 외양의 버튼
@@ -381,7 +372,6 @@
   &:last-child {
     margin-left: 0;
   }
-
 
   &:hover {
     color: $c-black;
@@ -428,7 +418,6 @@
   }
 }
 
-
 .btn-tiny {
   // 👆 결제 화면의 쿠폰 사용 취소처럼 아주아주 작은 버튼
   padding: 1px 9px;
@@ -442,5 +431,26 @@
   @include res--laptop {
     padding: 2px 10px;
   }
+}
 
+.btn-delete-address {
+  margin-top: 34px;
+  padding: 6px 11px;
+  font-size: 11px;
+  font-weight: $fw-m;
+  line-height: 1.82;
+  letter-spacing: -0.11px;
+  color: #909090;
+  border-radius: 2px;
+  border: solid 1px #909090;
+
+  &:disabled {
+    color: #d5d5d5;
+    border: solid 1px #d5d5d5;
+    cursor: default;
+  }
+
+  @include res--laptop {
+    margin: 70px auto 0;
+  }
 }
