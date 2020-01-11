@@ -118,138 +118,138 @@
   </nav>
   <div class="dim header-dim"></div>
 </header>
-    <!--
-      [전달사항]
-      페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
-      (리뷰 목록 화면일 때 ⇒ .page-review)
-    -->
-    <div class="page-body page-review">
+    <div class="page-body">
       <div class="page-top"></div>
       <div class="page-title">
-  <h2 class="title">리뷰 목록</h2>
-  <small class="title-small">다른 효두러들이 남긴 리뷰를 살펴보세요.</small>
+  <h2 class="title">배송지 관리</h2>
+  <small class="title-small">배송지를 손쉽게 관리하세요.</small>
   <div class="page-control">
     <div class="page-control-container">
-      
-      <button class="button-page page-back">
-        <span class="button-page-text">뒤로가기</span>
-      </button>
       
       
       
     </div>
   </div>
 </div>
-      <div class="page-content">
-        <div class="review">
-          <div class="review-container">
-            <div class="product-background">
-              <!-- [전달사항] 해당 상품의 이미지를 아래와 같이 배경이미지로 넣어주세요. -->
-              <div class="product-background-image" style="background-image:url('../../images/temp/temp-img2.jpg')">
-              </div>
-            </div>
-            <!-- TODO: 클래스네임 좀 더 명확하게 수정하기! (review-write 참고) -->
-            <div class="review-summary">
-              <div class="review-summary-container">
-                <strong class="review-summary-title">소곤소곤 모녀의 밤</strong>
-                <!-- TODO: 클래스별로 별 개수 다르게 보여주기 -->
-                <div class="review-summary-rating">
-                  <div class="rating-big -star-45">
-                    <div class="rating-star">
-                      <span class="rating-star-icon"></span>
-                      <span class="rating-star-icon"></span>
-                      <span class="rating-star-icon"></span>
-                      <span class="rating-star-icon"></span>
-                      <span class="rating-star-icon"></span>
-                    </div>
-                    <p class="rating-num" aria-label="평균 평점"><span>4.7</span> / 5</p>
-                  </div>
-                </div>
-                <p class="review-summary-count">
-                  3명의 효두러가 구매 후 평가했습니다.
-                </p>
-              </div>
-            </div>
-            <div class="review-filter">
-              <div class="radio-circle-wrap">
-                <div class="radio-circle">
+      <div class="address-list">
+        <div class="address-list-container">
+          <strong class="address-list-title">배송지 선택</strong>
+          <div class="radio-circle-wrap">
+            <div class="radio-circle">
   <input type="radio" id="id1" name="radioname" value="radio1" class="radio-input">
   <label for="id1" class="radio-item">
-    <span class="radio-text">최근등록순</span>
+    <span class="radio-text">집</span>
   </label>
 </div><div class="radio-circle">
   <input type="radio" id="id3" name="radioname" value="radio3" class="radio-input">
   <label for="id3" class="radio-item">
-    <span class="radio-text">좋은평점순</span>
+    <span class="radio-text">16층 비토랩스</span>
   </label>
 </div><div class="radio-circle">
   <input type="radio" id="id4" name="radioname" value="radio4" class="radio-input">
   <label for="id4" class="radio-item">
-    <span class="radio-text">베스트</span>
+    <span class="radio-text">열글자로된배송지이름</span>
   </label>
 </div>
-                <!-- [전달사항] 라디오의 checked 여부로 판단하시면 좋을 것 같아서 라디오로 마크업했지만, 아래와 같이 button.btn-circle로 바꿔 사용하셔도 무방합니다. 편하신 쪽으로 사용해주세요. -->
-                <!-- 
-              <button class="btn-circle">주석을 해제해보세요.</button>
-              <button class="btn-circle -active">활성화 시 .-active 추가</button> 
-              -->
-              </div>
-            </div>
-            <div class="review-list">
-              <div class="review-item">
-                <div class="review-item-name">라라 (lal*@th*********.com)</div>
-                <div class="review-item-rating">
-                  <div class="rating -star-5">
-                    <div class="rating-star"></div>
-                    <p class="rating-num" aria-label="평점"><span>5</span></p>
-                  </div>
-                </div>
-                <div class="review-item-content">
-                  <p class="review-item-text">너무너무 좋았어요~~~~!!!<br />
-                    숙소도 좋았고 음식도 좋았고.. 이벤트할 때 엄마가 너무 감동받으셨더라구요ㅠㅠ 코끝이 찡했어요 진짜ㅠㅠ</p>
-                </div>
-                <p class="review-item-datetime datetime">2020.03.16 11:23</p>
-              </div>
-              <div class="review-item">
-                <div class="review-item-name">다다 (dad*@na***.com)</div>
-                <div class="review-item-rating">
-                  <div class="rating -star-3">
-                    <div class="rating-star"></div>
-                    <p class="rating-num" aria-label="평점"><span>3</span></p>
-                  </div>
-                </div>
-                <div class="review-item-content">
-                  <p class="review-item-text">몇번째 재방문인지를 몰라서 세어보고 왔습니다~ 6번째인 것 같아요!ㅎㅎ 신중한 소비를 하는 성격이라서 일회권씩 끊어서 방문하고
-                    관리받고 있는데 올때마다 원장님 관리사님들 모두 꼼꼼하고 친절하게 해주세요.<br />
-                    전 어느 한 곳을 이렇게 재방문하는 경우가 많지는 않은데 이렇게 계속 방문하는건 관리받고 얼굴 라인정리, 피부트러블 감소 등 효과가 눈에 보여서인 것 같아요.<br />
-                    제 피부는 아주 안좋은 피부는 아니고 가끔 트러블이 올라오는 피부인데 여기 다니면서 눈에 띄었던 트러블은 많이 줄어들었어요! <br />
-                    그리고 얼굴은 왜이렇게 말랐냐는 소리도 듣고있네요ㅎㅎ 붓기제거뿐 아니라 윤곽 정리에도 효과보고 있어서 저번 후기에도 작성했지만 또 다음주에 갈 거 같아요~
-                    상담이나 구매 강요 같은 게 없는 것도 좋아요. 효두 에스테틱에 늘 감사합니다.</p>
-                </div>
-                <p class="review-item-datetime datetime">2020.03.16 11:23</p>
-              </div>
-              <div class="review-item">
-                <div class="review-item-name">나나 (nan*@da**.net)</div>
-                <div class="review-item-rating">
-                  <div class="rating -star-1">
-                    <div class="rating-star"></div>
-                    <p class="rating-num" aria-label="평점"><span>1</span></p>
-                  </div>
-                </div>
-                <div class="review-item-content">
-                  <p class="review-item-text">아주 짧은 리뷰</p>
-                </div>
-                <p class="review-item-datetime datetime">2020.03.16 11:23</p>
-              </div>
-              <!-- [전달사항] 더 로드할 데이터가 없을 경우, .btn-load.more에 .-load-all 클래스를 추가해주세요. -->
-              <!-- <button class="btn-load-more btn-text-bottom">
-                <span class="btn-load-text">더 불러오기</span>
-              </button> -->
-            </div>
+            <!-- [전달사항] 라디오의 checked 여부로 판단하시면 좋을 것 같아서 라디오로 마크업했지만, 아래와 같이 button.btn-circle로 바꿔 사용하셔도 무방합니다. 편하신 쪽으로 사용해주세요. -->
+            <!-- 
+            <button class="btn-circle">주석을 해제해보세요.</button>
+            <button class="btn-circle -active">활성화 시 .-active 추가</button> 
+            -->
+            <button class="btn-circle btn-add-address">새로 입력</button>
           </div>
         </div>
       </div>
+      <div class="page-content">
+        <div class="form-container -medium">
+          <form>
+            <div class="form-item form-req">
+  <label for="form-name" class="form-label">
+    <span class="form-label-text">배송지명</span>
+    <span class="form-label-guide">(중복 불가)</span>
+  </label>
+  
+  
+  <input id="form-name" name="form-name" type="text" minlength="" maxlength=""
+    placeholder="배송지명을 입력해주세요." class="form-input " value=""
+    required />
+  
+  <p class="form-error"></p>
+  
+</div>
+            <div class="form-item form-req">
+  <label for="form-to" class="form-label">
+    <span class="form-label-text">받는 사람</span>
+    <span class="form-label-guide">(최대 20자)</span>
+  </label>
+  
+  
+  <input id="form-to" name="form-to" type="text" minlength="" maxlength=""
+    placeholder="받는 사람 이름을 입력해주세요." class="form-input " value=""
+    required />
+  
+  <p class="form-error"></p>
+  
+</div>
+            <div class="form-item form-req">
+  <label for="form-tel" class="form-label">
+    <span class="form-label-text">휴대전화 번호</span>
+    <span class="form-label-guide">(숫자만 입력)</span>
+  </label>
+  
+  
+  <input id="form-tel" name="form-tel" type="tel" minlength="" maxlength=""
+    placeholder="하이픈(-) 없이 번호 전체를 입력해 주세요." class="form-input " value=""
+    required />
+  
+  <p class="form-error"></p>
+  
+</div>
+          </form>
+          <form>
+            <div class="form-address form-req">
+  <label for="input-temp-id-1" class="form-label">
+    <span class="form-label-text">배송 주소</span>
+    <span class="form-label-guide"></span>
+  </label>
+  <div class="address-search">
+    <input id="input-temp-id-1" name="input-temp-name-1" type="text" placeholder="우편번호"
+      class="form-input form-input-address-search" value="" aria-label="우측의 우편번호 찾기를 눌러주세요." readonly />
+    <button class="btn-address-search">우편번호 찾기</button>
+  </div>
+  <div class="address-popup">
+    <!-- [전달사항] 이 위치에 우편번호 찾기를 넣어주세요! -->
+  </div>
+  <input id="input-temp-id-2" name="input-temp-name-2" type="text" placeholder="주소"
+    class="form-input form-input-address-result" value="" readonly />
+  <!-- [전달사항] 필요 시 .form-input에 .-error를 추가하실 수 있습니다. -->
+  <input id="input-temp-id-3" name="input-temp-name-3" type="text" placeholder="상세 주소" class="form-input" value="" />
+  <p class="form-error"></p>
+</div>
+            <div class="form-item ">
+  <label for="temp-id-msg" class="form-label">
+    <span class="form-label-text">배송 요청사항 </span>
+    <span class="form-label-guide">(최대 50자)</span>
+  </label>
+  
+  <textarea id="temp-id-msg" name="temp-id-msg" minlength="" maxlength="50"
+    placeholder="상품 배송 시 신경써야 할 점이 있으면 적어주세요."
+    class="form-input input-textarea  -short-textarea"
+    value="" ></textarea>
+  <p class="form-error"></p>
+</div>
+            <button class="btn-full btn-page-request" disabled>등록 완료</button>
+            <button class="btn-delete-address" disabled>이 배송지 정보를 삭제할래요</button>
+          </form>
+        </div>
+      </div>
     </div>
+    <div class="fixed-bar">
+  <div class="fixed-bar-container">
+    <!-- [전달사항] 필수 폼 모두 입력 시 disabled 제거해 주세요.-->
+    <button class="btn-purchase-next" disabled>다음</button>
+  </div>
+</div>
     <footer class="footer">
   <div class="footer-container">
     <strong class="logo footer-logo">
