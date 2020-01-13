@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include("../common/document-head.html")
+
+<body>
+  <div class="wrap">
+    @@include('../common/header.html', {
+    "status": "login"
+    })
+    <div class="page-body">
+      @@include('../common/page-top.html')
+      @@include('../common/page-title.html', {
+      "title": "회원가입 완료",
+      "small": "#즐겁게_효도하자"
+      })
+      <div class="welcome">
+        <div class="welcome-message">
+          <div class="welcome-title">
+            <h2 class="welcome-title-text">
+              HaHa님, <br />
+              만나서 반가워요!
+            </h2>
+          </div>
+          <div class="welcome-guide">
+            <div class="welcome-text">
+              <p>감사의 의미를 담아
+                <br class="show-laptop" />
+                가입하신 메일로 쿠폰을 보내드렸어요.</p>
+              <p>
+                오늘부터 바로 효두를
+                <br class="show-laptop" />
+                두잇해보세요.</p>
+            </div>
+            <div class="welcome-image"></div>
+          </div>
+        </div>
+        <div class="page-sub">
+          <hr class="page-sub-line">
+          <p class="page-sub-text">
+            HaHa님의 즐거운 경험을 위해 <br class="hide-laptop"> 효두는 오늘도 열심히 연구 중!<br /><br class="hide-laptop">
+            홈 화면에서 효두의 추천 상품을 살펴보세요.
+          </p>
+          <button class="btn-line page-sub-btn">홈 화면으로</button>
+        </div>
+      </div>
+    </div>
+    @@include('../common/footer.html')
+  </div>
+</body>
+
+</html>

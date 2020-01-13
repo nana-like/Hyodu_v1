@@ -66,6 +66,16 @@
   }
 }
 
+.show-laptop {
+  // 👆 랩탑에서만 보여주는 요소
+  display: none;
+
+  //laptop
+  @include res--laptop {
+    display: block;
+  }
+}
+
 .get-exp {
   // 👆 리뷰 등록 완료 화면에서 경험치 보여줌
   color: $c-pink-hot;
@@ -253,4 +263,208 @@
 
   }
 
+}
+
+
+// ----
+// 404 NOT FOUND 
+// ----
+.not-found {
+  // 👆 404 코드 표시부
+
+  .not-found-code {
+    @include flexbox();
+    @include justify-content(center);
+    width: 100%;
+    padding-top: 98px;
+    text-align: center;
+    position: relative;
+    font-size: 112px;
+    font-weight: $fw-m;
+    color: #fa6b76;
+
+    @include res--laptop {
+      font-size: 128px;
+      padding-top: 150px;
+    }
+
+    i {
+      position: relative;
+      display: block;
+      line-height: 1.4;
+    }
+
+    i:last-child {
+      top: 8px;
+      transform: rotate(180deg);
+    }
+
+    &:before {
+      // 👆 효둥이 이미지
+      z-index: 1;
+      position: absolute;
+      top: 56px;
+      left: 50%;
+      display: block;
+      content: '';
+      width: 53px;
+      height: 107px;
+      transform: translateX(-50%);
+      margin-left: -6px;
+      @include bgi("char/char-dog-confused");
+      background-size: 100%;
+
+      @include res--laptop {
+        top: 80px;
+        width: 74px;
+        height: 150px;
+        margin-left: -8px;
+      }
+    }
+
+  }
+
+  .not-found-text {
+    font-size: 15px;
+    font-weight: $fw-r;
+    text-align: center;
+    color: $c-black;
+
+    @include res--laptop {
+      font-size: 17px;
+    }
+  }
+}
+
+
+.welcome {
+  // 👆 회원가입 환영해요오오오 부분
+
+  &-message {
+    max-width: $max-width-mobile;
+    margin: 0 auto;
+
+    @include res--laptop {
+      max-width: $max-width-laptop-md;
+    }
+
+  }
+
+  &-title {
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    width: 100%;
+    text-align: center;
+
+    @include res--laptop {
+      margin-top: 10px;
+      margin-bottom: 45px;
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      display: block;
+      width: 123px;
+      height: 65px;
+      background-size: 100%;
+      content: '';
+
+      @include res--laptop {
+        width: 182px;
+        height: 96px;
+      }
+    }
+
+    &:before {
+      top: -60px;
+      left: -2px;
+      @include bgi("deco/welcome-deco-left");
+
+      @include res--laptop {
+        top: -80px;
+      }
+    }
+
+    &:after {
+      bottom: -30px;
+      right: 0;
+      @include bgi("deco/welcome-deco-right");
+
+      @include res--laptop {
+        bottom: -20px;
+      }
+    }
+  }
+
+  &-title-text {
+    display: inline-block;
+    text-align: left;
+    font-size: 20px;
+    font-weight: $fw-m;
+    line-height: 1.5;
+    color: $c-black;
+    max-width: 250px;
+
+    @include res--laptop {
+      font-size: 22px;
+    }
+  }
+
+  &-guide {
+    @include flexbox();
+    @include justify-content(center);
+  }
+
+  &-text {
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: $fw-r;
+    line-height: 1.57;
+    color: #343434;
+    max-width: 160px;
+    word-break: keep-all;
+
+    p:not(:first-child) {
+      margin-top: 20px;
+    }
+
+    @include res--laptop {
+      font-size: 15px;
+      text-align: right;
+      max-width: 270px;
+      margin-right: 60px;
+      margin-top: 60px;
+    }
+  }
+
+  &-image {
+    width: 120px;
+    height: 262px;
+    background-size: 100%;
+    @include bgi("char/char-girl");
+
+    @include res--laptop {
+      width: 138px;
+      height: 300px;
+      margin-right: 40px;
+    }
+  }
+
+  .page-sub {
+    margin-top: 60px;
+    max-width: calc(100% - 80px);
+
+    @include res--laptop {}
+
+    .page-sub-line {
+      margin: 45px auto;
+
+      @include res--laptop {
+        margin: 50px auto;
+      }
+    }
+  }
 }

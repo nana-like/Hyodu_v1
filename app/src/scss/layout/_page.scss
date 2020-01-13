@@ -92,7 +92,8 @@
   line-height: 1.57;
   color: $c-gray-normal;
   font-weight: $fw-r;
-  max-width: $max-width-mobile;
+  width: calc(100% - 40px);
+  max-width: $max-width-laptop-md;
   margin: 0 auto;
 
   //laptop
@@ -159,11 +160,12 @@
   // 👆 작은 회색 글자
   margin: 80px auto 0;
 
-  .page-sub-mail {
+  &-mail {
     display: block;
     margin-top: 6px;
     font-weight: $fw-m;
   }
+
 
   .btn-sub-retry {
     // 👆 메일 다시받기 버튼 등
@@ -353,6 +355,8 @@
       background-size: 4px;
       background-position: 50%;
       background-image: icon(warning, "ff1515");
+      animation-name: shake;
+      animation-duration: 0.9s;
 
       @include res--laptop {
         width: 28px;
@@ -421,12 +425,3 @@
     margin-bottom: 40px;
   }
 }
-
-// ----
-// 배송지 선택 페이지 전용
-// ----
-// .page-address {
-//   .page-content {
-//     padding: 0;
-//   }
-// }

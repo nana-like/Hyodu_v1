@@ -118,136 +118,40 @@
   </nav>
   <div class="dim header-dim"></div>
 </header>
-    <div class="page-body">
+    <!--
+      [전달사항]
+      페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
+      (에러 화면일 때 ⇒ .page-error)
+    -->
+    <div class="page-body page-error">
       <div class="page-top"></div>
       <div class="page-title">
-  <h2 class="title">결제 금액</h2>
-  <small class="title-small">마지막으로 결제 금액을 확인해 주세요.</small>
+  <h2 class="title">결제오류 안내</h2>
+  <small class="title-small">결제가 이뤄지지 않았습니다.</small>
   <div class="page-control">
     <div class="page-control-container">
       
       
       
-      <button class="button-page page-back">
-        <span class="button-page-text">뒤로가기</span>
-      </button>
-      <button class="button-page page-cancle">
-        <span class="button-page-text">결제취소</span>
-      </button>
-      
     </div>
   </div>
 </div>
-      <div class="jumbotron checkout-info">
-        <div class="jumbotron-container">
-          <div class="checkout-info-top">
-            <div class="product-info">
-              <div class="product-info-thumbnail">
-                <a href="https://nykim.work"><img src="../../images/temp/temp-img4.jpg" alt="상품 썸네일"
-                    class="product-info-image" /></a>
-              </div>
-              <div class="product-info-details">
-                <strong class="product-info-title">[티켓] 세상 아래 같은 핑크는 없다 세상 아래 같은 핑크는 없다</strong>
-                <div class="product-info-content">
-                  <p>옵션: PANTONE691 / 55,000원 / 2개</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="checkout-info-bottom">
-            <ul class="checkout-info-bill">
-              <li class="checkout-info-bill-list">
-                <p class="bill-list-name">상품 금액</p>
-                <p class="bill-list-value">110,000<span class="unit">원</span></p>
-              </li>
-              <li class="checkout-info-bill-list">
-                <p class="bill-list-name">배송비</p>
-                <p class="bill-list-value">0<span class="unit">원</span></p>
-              </li>
-              <li class="checkout-info-bill-list -total">
-                <p class="bill-list-name">합계</p>
-                <p class="bill-list-value">105,000<span class="unit">원</span></p>
-              </li>
-            </ul>
-          </div>
-        </div>
+      <div class="page-guide">
+        <p>결제가 완료되지 않았습니다.<br />
+          잠시 후 다시 시도해 주세요.</p>
+        <button class="page-guide-btn btn-line">홈 화면으로</button>
       </div>
       <div class="page-content">
-        <!--
-          [전달사항] 쿠폰/포인트를 사용한 경우 .checkout-reduction에 .-reduction-used을 추가해주세요. 삭제한 경우 .-reduction-used를 제거해주세요.
-        -->
-        <div class="checkout-reduction">
-          <div class="checkout-reduction-guide">
-            최종결제 전 할인 받으세요!<br class="hide-laptop" />
-            쿠폰 또는 포인트 중 하나를 골라 쓸 수 있어요.
-          </div>
-          <div class="form-container -medium">
-            <form>
-              <div class="checkout-reduction-coupon">
-                <div class="form-item">
-                  <label for="form-password" class="form-label">
-                    <span class="form-label-text">쿠폰 등록</span>
-                    <span class="form-label-guide"></span>
-                  </label>
-                  <input id="form-coupon" name="form-coupon" type="text" placeholder="쿠폰 번호를 전체 입력하세요."
-                    value="HYODULOVE" class="form-input" />
-                  <p class="form-error"></p>
-                  <!-- 
-                [전달사항] 포인트를 사용한 경우 아래 쿠폰 버튼은 disabled 처리해주세요~!
-              -->
-                  <div class="form-btn-wrap">
-                    <button class="btn-use-cupon btn-line-small" id="ui-testor-open-modal">쿠폰번호 인증</button>
-                  </div>
-                </div>
-              </div>
-              <div class="checkout-reduction-point">
-                <div class="form-item">
-                  <label for="form-password" class="form-label">
-                    <span class="form-label-text">포인트 사용</span>
-                    <span class="form-label-guide">(사용 가능한 포인트: 0)</span>
-                  </label>
-                  <input id="form-point" name="form-point" type="number" placeholder="사용할 포인트를 입력하세요." value=""
-                    class="form-input" />
-                  <p class="form-error"></p>
-                  <!-- 
-                [전달사항] 쿠폰을 사용한 경우, 또는 사용할 포인트가 없는 경우 아래 포인트 버튼은 disabled 처리해주세요~!
-              -->
-                  <div class="form-btn-wrap">
-                    <button class="btn-use-point btn-line-small" disabled>포인트 사용</button>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
+        <div class="page-sub">
+          <p class="page-sub-text">계속해서 문제가 발생하는 경우,<br class="hide-laptop" />
+            문의 메뉴에서 문의를 등록해 주세요.<br />
+            바로 처리해 드리겠습니다.</p>
+          <button class="btn-sub-retry btn-text">문의 화면으로</button>
         </div>
+
       </div>
     </div>
   </div>
-  <!-- [전달사항] 이런 식으로 모달을 넣어주세요! 모달은 .fixed-bar보다 먼저 와야 합니다~ -->
-  <!-- [전달사항] 모달을 표사하려면 .modal에 .-modal-opened를 붙여주세요. -->
-<div class="modal modal-share">
-  <div class="modal-dim"></div>
-  <div class="modal-container">
-    <div class="modal-body">
-      <div class="modal-content">
-        <p class="modal-text">
-          앗, 뭔가 이상하군요. 쿠폰의 유효기간이나 번호를 다시 확인해 보시겠어요?
-        </p>
-      </div>
-      <button class="btn-modal-okay">확인</button>
-      <button class="btn-modal-close"><span class="blind">닫기</span></button>
-    </div>
-  </div>
-</div>
-  <div class="fixed-bar">
-  <div class="fixed-bar-container">
-    <!-- [전달사항] 필수 폼 모두 입력 시 disabled 제거해 주세요.-->
-    <div class="btn-purchase-checkout">
-      <button class="btn-purchase-secondary">계좌이체</button>
-      <button class="btn-purchase-primary">카드결제</button>
-    </div>
-  </div>
-</div>
   <footer class="footer">
   <div class="footer-container">
     <strong class="logo footer-logo">

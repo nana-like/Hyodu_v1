@@ -7,14 +7,14 @@
   position: relative;
   width: 100%;
   text-align: center;
-  padding-top: 66px;
+  padding-top: 65px;
   padding-bottom: 45px;
   padding-left: 20px;
   padding-right: 20px;
 
   //laptop
   @include res--laptop {
-    padding-top: 92px;
+    padding-top: 90px;
     padding-bottom: 64px;
     padding-left: 40px;
     padding-right: 40px;
@@ -64,13 +64,20 @@
   }
 
   &:after {
+    // 👆 타이틀 아래 삐죽삐죽 장식
+    display: block;
     background-size: contain;
-    @include bgi("deco/title-dexco-top");
     content: "";
     margin: 40px auto 0;
     width: 45px;
     height: 9px;
+    background-size: 100%;
     background-image: icon(title-deco-bottom, "d4d4d4");
+
+    @include res--laptop {
+      width: 54px;
+      height: 11px;
+    }
   }
 
   .page-control {

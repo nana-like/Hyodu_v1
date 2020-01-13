@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include("../common/document-head.html")
+
+<body>
+  <div class="wrap">
+    @@include('../common/header.html', {
+    "status": "login"
+    })
+    <div class="page-body">
+      @@include('../common/page-top.html')
+      @@include('../common/page-title.html', {
+      "title": "레벨 안내",
+      "small": "오늘도 효도 만렙을 향해!"
+      })
+      <!-- 
+        [전달사항] 
+        로그인 중이 아닐 경우 .user-level 부분은 보이지 않게 해주세요.
+      -->
+      <div class="jumbotron .user-level -large">
+        <div class="jumbotron-container">
+          <!-- 
+            [전달사항] 
+            레벨 관련 부분은 아직 미정인 부분이 많습니다. 최종적으로 달라지거나 삭제될 수도 있을 것 같습니다. 레벨별 수식어도 일단 임의입니다ㅎㅎ
+            - 1레벨 : 혜성같이 등장한 효두러
+            - 2레벨 : 효도를 두잇하는 중인
+            - 3레벨 : 효도에 슬슬 맛들린
+            - 4레벨 : 효두 마니아
+            - 5레벨 : 효두제왕
+          -->
+          <div class="level-info">
+            <div class="level-info-badge"></div>
+            <div class="level-info-details">
+              <p class="level-info-level">Lv. 2</p>
+              <p class="level-info-title">효도를 두잇하는 중인</p>
+              <strong class="level-info-name">Kiki</strong>
+            </div>
+          </div>
+          <div class="next-level">
+            <div class="next-level-bar"></div>
+            <p class="next-level-guide">360,000 경험치를 더 채우면 Lv. 4로 레벨업할 수 있어요.</p>
+          </div>
+        </div>
+      </div>
+      <div class="page-content">
+        <div class="review-form">
+          <form>
+            <div class="form-container -large">
+              <div class="form-item -required-form">
+                <label class="form-label">
+                  <span class="form-label-text">평점</span>
+                  <span class="form-label-guide"></span>
+                </label>
+                <!-- [전달사항] .select-star-icon에 .star-active 클래스가 붙으면 색이 바뀝니다. -->
+                <div class="select-star">
+                  <div class="select-star-container">
+                    <button class="select-star-icon" aria-label="1점" data-score="1"></button>
+                    <button class="select-star-icon" aria-label="2점" data-score="2"></button>
+                    <button class="select-star-icon" aria-label="3점" data-score="3"></button>
+                    <button class="select-star-icon" aria-label="4점" data-score="4"></button>
+                    <button class="select-star-icon" aria-label="5점" data-score="5"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-container -large">
+              @@include("../common/form-textarea-item.html", {
+              "label" : "리뷰내용",
+              "guide" : "(최소 10자 ~ 최대 2000자)",
+              "required" : "required",
+              "inputID" : "form-inquiry",
+              "value" : "",
+              "placeholder" : "이 상품을 구입해 본 경험이 어떠셨나요? 다른 사람에게 추천한다면 그 이유는 무엇인가요?",
+              "length" : {
+              "max": "1000"
+              },
+              "error" : "",
+              "errorMsg" : ""
+              })
+              <button class="btn-full btn-page-request" disabled>리뷰 등록</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    @@include('../common/footer.html')
+  </div>
+</body>
+
+</html>
