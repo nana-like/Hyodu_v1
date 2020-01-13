@@ -34,6 +34,7 @@
 }
 
 .btn-line-on {
+  // 👆 라인 버튼이지만 배경색이 있는 것
   @extend .btn-line;
   color: #fff;
   background-color: $c-pink;
@@ -307,7 +308,7 @@
 }
 
 .btn-purchase {
-  // 👆 구매하기 전용 버튼!!
+  // 👆 구매하기 버튼 (결제 화면 전용)
   font-size: 13px;
   width: 66%;
   height: 36px;
@@ -328,7 +329,7 @@
 }
 
 .btn-purchase-next {
-  // 👆 구매하기 전용 버튼!!
+  // 👆 다음 스텝으로 버튼 (결제 화면 전용)
   @extend .btn-purchase;
   width: 100%;
   max-width: 100%;
@@ -433,7 +434,8 @@
   }
 }
 
-.btn-delete-address {
+.btn-line-gray {
+  // 👆 라인 버튼이지만 작고 회색인 것 (배송지 관리에서 사용)
   margin-top: 34px;
   padding: 6px 11px;
   font-size: 11px;

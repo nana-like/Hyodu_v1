@@ -158,19 +158,14 @@
     <span class="radio-text">열글자로된배송지이름</span>
   </label>
 </div>
-            <!-- [전달사항] 라디오의 checked 여부로 판단하시면 좋을 것 같아서 라디오로 마크업했지만, 아래와 같이 button.btn-circle로 바꿔 사용하셔도 무방합니다. 편하신 쪽으로 사용해주세요. -->
-            <!-- 
-            <button class="btn-circle">주석을 해제해보세요.</button>
-            <button class="btn-circle -active">활성화 시 .-active 추가</button> 
-            -->
             <button class="btn-circle btn-add-address">새로 입력</button>
           </div>
         </div>
       </div>
       <div class="page-content">
-        <div class="form-container -medium">
-          <form>
-            <div class="form-item form-req">
+        <form>
+          <div class="form-container -medium">
+            <div class="form-item -required-form">
   <label for="form-to" class="form-label">
     <span class="form-label-text">받는 사람</span>
     <span class="form-label-guide">(최대 20자)</span>
@@ -184,7 +179,7 @@
   <p class="form-error"></p>
   
 </div>
-            <div class="form-item form-req">
+            <div class="form-item -required-form">
   <label for="form-tel" class="form-label">
     <span class="form-label-text">휴대전화 번호</span>
     <span class="form-label-guide">(숫자만 입력)</span>
@@ -198,9 +193,7 @@
   <p class="form-error"></p>
   
 </div>
-          </form>
-          <form>
-            <div class="form-address form-req">
+            <div class="form-address -required-form">
   <label for="input-temp-id-1" class="form-label">
     <span class="form-label-text">배송 주소</span>
     <span class="form-label-guide"></span>
@@ -231,8 +224,8 @@
     value="" ></textarea>
   <p class="form-error"></p>
 </div>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
     </div>
     <div class="fixed-bar">

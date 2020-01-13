@@ -178,6 +178,41 @@
   }
 }
 
+
+.login-link {
+  // 👆 이메일 찾기, 비밀번호 찾기 부분
+  text-align: right;
+  margin-top: 13px;
+
+  //laptop
+  @include res--laptop {
+    margin-top: 15px;
+  }
+
+  .login-link-item {
+    margin-left: 30px;
+    color: $c-gray-light;
+    font-weight: $fw-r;
+    font-size: 12px;
+
+    &:hover,
+    &:focus {
+      color: $c-black;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    //laptop
+    @include res--laptop {
+      margin-left: 25px;
+      font-size: 13px;
+    }
+
+  }
+}
+
 // ===================
 // >> 특정 페이지 <<
 // ===================
@@ -203,40 +238,6 @@
     //laptop
     @include res--laptop {
       margin-top: 25px;
-    }
-  }
-
-  .login-link {
-    // 👆 이메일 찾기, 비밀번호 찾기 부분
-    text-align: right;
-    margin-top: 13px;
-
-    //laptop
-    @include res--laptop {
-      margin-top: 15px;
-    }
-
-    .login-link-item {
-      margin-left: 30px;
-      color: $c-gray-light;
-      font-weight: $fw-r;
-      font-size: 12px;
-
-      &:hover,
-      &:focus {
-        color: $c-black;
-      }
-
-      &:first-child {
-        margin-left: 0;
-      }
-
-      //laptop
-      @include res--laptop {
-        margin-left: 25px;
-        font-size: 13px;
-      }
-
     }
   }
 

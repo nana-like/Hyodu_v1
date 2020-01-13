@@ -22,13 +22,17 @@ var getScrollBarWidth = function () {
 // 스크롤 막는 이벤트
 var preventScroll = function (type) {
 
-  if (window.scrollY <= 0) {
+
+  var body = document.body;
+  var paddingR = getScrollBarWidth();
+
+  if (body.scrollHeight <= body.clientHeight) {
+    //스크롤바가 생길 만큼 길지 않은 경우 이벤트 무시
     return false;
   }
 
-  /*
-   */
-  var paddingR = getScrollBarWidth();
+  document.body.classList.add("-scroll-disabled"); //스크롤을 막는 클래스네임을 추가합니다.
+
   wrap.style.paddingRight = paddingR + "px";
   headerContainer.style.paddingRight = paddingR + "px";
   if (fixedBar != null) { //단, 모달창을 연 경우에만
@@ -38,7 +42,6 @@ var preventScroll = function (type) {
     navScrollCont.style.right = paddingR + "px"; //네비게이션에도 패딩값을 부여합니다.
   }
 
-  document.body.classList.add("-scroll-disabled"); //스크롤을 막는 클래스네임을 추가합니다.
 }
 
 // 스크롤 허용하는 이벤트

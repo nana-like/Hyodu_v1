@@ -13,15 +13,6 @@
     margin: 0 auto 45px;
   }
 
-  &-container {
-    max-width: $max-width-mobile;
-    margin: 0 auto;
-
-    @include res--laptop {
-      max-width: 100%;
-    }
-  }
-
   &-title {
     display: block;
     margin-bottom: 18px;
@@ -33,6 +24,14 @@
       font-size: 17px;
       margin-bottom: 20px;
     }
+  }
 
+  &-container {
+    max-width: $max-width-mobile;
+    margin: 0 auto;
+
+    @include res--laptop {
+      max-width: 100%;
+    }
   }
 }
