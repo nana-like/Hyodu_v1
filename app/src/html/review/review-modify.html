@@ -10,7 +10,7 @@
     <div class="page-body">
       @@include('../common/page-top.html')
       @@include('../common/page-title.html', {
-      "title": "리뷰 등록",
+      "title": "리뷰 수정",
       "small": "구매한 상품이 어떠셨나요?",
       "btnPage": "canBack"
       })
@@ -49,8 +49,8 @@
                 <!-- [전달사항] .select-star-icon에 .star-active 클래스가 붙으면 색이 바뀝니다. -->
                 <div class="select-star">
                   <div class="select-star-container">
-                    <button class="select-star-icon" aria-label="1점" data-score="1"></button>
-                    <button class="select-star-icon" aria-label="2점" data-score="2"></button>
+                    <button class="select-star-icon -star-active" aria-label="1점" data-score="1"></button>
+                    <button class="select-star-icon -star-active" aria-label="2점" data-score="2"></button>
                     <button class="select-star-icon" aria-label="3점" data-score="3"></button>
                     <button class="select-star-icon" aria-label="4점" data-score="4"></button>
                     <button class="select-star-icon" aria-label="5점" data-score="5"></button>
@@ -64,15 +64,10 @@
               "guide" : "(최소 10자 ~ 최대 2000자)",
               "required" : "required",
               "inputID" : "form-inquiry",
-              "value" : "",
-              "placeholder" : "이 상품을 구입해 본 경험이 어떠셨나요? 다른 사람에게 추천한다면 그 이유는 무엇인가요?",
-              "length" : {
-              "max": "1000"
-              },
-              "error" : "",
-              "errorMsg" : ""
-              })
-              <button class="btn-full btn-page-request" disabled>리뷰 등록</button>
+              "value" : "엄청 꼼꼼하게 해주시고 편안한 분위기에 친절하게 해주셔서 좋았어요~! 다음에 또 방문하려구욤!!ㅎㅎ",
+              "placeholder"
+              : "이 상품을 구입해 본 경험이 어떠셨나요? 다른 사람에게 추천한다면 그 이유는 무엇인가요?" , "length" : { "max" : "1000" }, "error" : ""
+              , "errorMsg" : "" }) <button class="btn-full btn-page-request" disabled>리뷰 등록</button>
             </div>
           </form>
         </div>

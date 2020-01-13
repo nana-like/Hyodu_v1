@@ -1,5 +1,5 @@
-<!-- [전달사항] 공유하기 모달은 .modal에 .moda-share가 붙습니다. -->
-<div class="modal modal-share -opened">
+<!-- [전달사항] 모달을 표사하려면 .modal에 .-modal-opened를 붙여주세요. -->
+<div class="modal modal-share">
   <div class="modal-dim"></div>
   <div class="modal-container">
     <div class="modal-body">
@@ -10,6 +10,7 @@
           링크를 복사해서 여기저기 공유할 수 있어요.
         </p>
       </div>
+      <!-- [전달사항] .btn-copy-link를 클릭하면 .share-container에 .-copied 클래스를 붙였다가 약 2초 후 제거해 주세요 (animation.js 참고) -->
       <div class="share-container">
         <input type="text" class="share-link" value="https://hyodu.com/product/190123-mother-father-love-123456789"
           readonly />

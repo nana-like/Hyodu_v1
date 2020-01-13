@@ -118,96 +118,83 @@
   </nav>
   <div class="dim header-dim"></div>
 </header>
-    <!--
-      [전달사항]
-      페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
-      (내역 목록일 때 ⇒ .page-history)
-    -->
-    <div class="page-body page-history">
+    <div class="page-body">
       <div class="page-top"></div>
       <div class="page-title">
-  <h2 class="title">쿠폰 사용 내역</h2>
-  <small class="title-small">사용 내역을 확인하세요.</small>
+  <h2 class="title">리뷰 수정</h2>
+  <small class="title-small">구매한 상품이 어떠셨나요?</small>
   <div class="page-control">
     <div class="page-control-container">
+      
+      <button class="button-page page-back">
+        <span class="button-page-text">뒤로가기</span>
+      </button>
       
       
       
     </div>
   </div>
 </div>
+      <div class="page-guide">
+        <p>구매한 상품에 평점과 리뷰를 남겨주세요.<br />
+          구매 금액의 0.1%가 경험치로 쌓이고,<br />
+          다른 효두러들의 효도에도 큰 도움이 됩니다.</p>
+      </div>
+      <div class="jumbotron -large">
+        <div class="jumbotron-title">구매한 상품</div>
+        <div class="jumbotron-container">
+          <div class="product-info">
+            <div class="product-info-thumbnail">
+              <!-- [전달사항] 해당 상품의 이미지를 아래와 같이 넣어주세요. -->
+              <a href="https://nykim.work"><img src="../../images/temp/temp-img4.jpg" alt="상품 썸네일"
+                  class="product-info-image" /></a>
+            </div>
+            <div class="product-info-details">
+              <strong class="product-info-title">[티켓] 세상 아래 같은 핑크는 없다 세상 아래 같은 핑크는 없다</strong>
+              <div class="product-info-content">
+                <p>옵션: PANTONE691 / 55,000원 / 2개</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="page-content">
-        <ul class="history">
-          <li class="history-item">
-  <p class="datetime">2020.05.16 10:00</p>
-  <strong class="history-title">효두가 쏜다!<span class="history-small">(10% 할인)</span>
-  </strong>
+        <div class="review-form">
+          <form>
+            <div class="form-container -large">
+              <div class="form-item -required-form">
+                <label class="form-label">
+                  <span class="form-label-text">평점</span>
+                  <span class="form-label-guide"></span>
+                </label>
+                <!-- [전달사항] .select-star-icon에 .star-active 클래스가 붙으면 색이 바뀝니다. -->
+                <div class="select-star">
+                  <div class="select-star-container">
+                    <button class="select-star-icon -star-active" aria-label="1점" data-score="1"></button>
+                    <button class="select-star-icon -star-active" aria-label="2점" data-score="2"></button>
+                    <button class="select-star-icon" aria-label="3점" data-score="3"></button>
+                    <button class="select-star-icon" aria-label="4점" data-score="4"></button>
+                    <button class="select-star-icon" aria-label="5점" data-score="5"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-container -large">
+              <div class="form-item -required-form">
+  <label for="form-inquiry" class="form-label">
+    <span class="form-label-text">리뷰내용</span>
+    <span class="form-label-guide">(최소 10자 ~ 최대 2000자)</span>
+  </label>
   
-  <small class="history-cupon-number">12WELOVEHYODUSOMUCH34</small>
-  
-  <div class="history-bottom">
-    <p class="history-name">동글동글 미니도넛 만들기</p>
-    
-    
-    <p class="history-status -cupon -used">사용완료</p>
-    
-    
-
-  </div>
-</li><li class="history-item">
-  <p class="datetime">2020.04.16 11:00</p>
-  <strong class="history-title">세상의 모든 엄마를 응원하는 쿠폰이면서 이름이 무척이나 긴 쿠폰<span class="history-small">(1,000원 할인)</span>
-  </strong>
-  
-  <small class="history-cupon-number">12WELOVEHYODUSOMUCH34</small>
-  
-  <div class="history-bottom">
-    <p class="history-name">동글동글 미니도넛 만들기</p>
-    
-    <p class="history-status -cupon -cancled">취소</p>
-    
-    
-    
-
-  </div>
-</li><li class="history-item">
-  <p class="datetime">2020.03.16 23:03</p>
-  <strong class="history-title">회원가입을 환영해효두<span class="history-small">(30% 할인)</span>
-  </strong>
-  
-  <small class="history-cupon-number">12WELOVEHYODUSOMUCH3412WELOVEHYODUSOMUCH34</small>
-  
-  <div class="history-bottom">
-    <p class="history-name">우는 남자</p>
-    
-    
-    <p class="history-status -cupon -used">사용완료</p>
-    
-    
-
-  </div>
-</li><li class="history-item">
-  <p class="datetime">2020.03.16 16:41</p>
-  <strong class="history-title">세상의 모든 엄마를 응원하는 쿠폰이면서 이름이 무척이나 긴 쿠폰<span class="history-small">(1,234원 할인)</span>
-  </strong>
-  
-  <small class="history-cupon-number">12WELOVEHYODUSOMUCH34</small>
-  
-  <div class="history-bottom">
-    <p class="history-name">동글동글 미니도넛 만들기</p>
-    
-    <p class="history-status -cupon -cancled">취소</p>
-    
-    
-    
-
-  </div>
-</li>
-        </ul>
-        <!-- [전달사항] 상황에 따라 아래 버튼을 보여주세요. 더 로드할 데이터가 없을 경우, .btn-load.more에 .-load-all 클래스를 추가해주세요. (cupon-load-all.html 참고) -->
-        <button class="btn-load-more btn-text-bottom">
-          <span class="btn-load-text">더 불러오기</span>
-        </button>
+  <textarea id="form-inquiry" name="form-inquiry" minlength="@@length.min" maxlength="1000"
+    placeholder="이 상품을 구입해 본 경험이 어떠셨나요? 다른 사람에게 추천한다면 그 이유는 무엇인가요?"
+    class="form-input input-textarea  "
+    required>엄청 꼼꼼하게 해주시고 편안한 분위기에 친절하게 해주셔서 좋았어요~! 다음에 또 방문하려구욤!!ㅎㅎ</textarea>
+  <p class="form-error"></p>
+</div> <button class="btn-full btn-page-request" disabled>리뷰 등록</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
     <footer class="footer">

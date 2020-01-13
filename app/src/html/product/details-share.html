@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include("../common/document-head.html")
+
+<body>
+  <div class="wrap">
+    @@include('../common/header.html', {
+    "status": "login"
+    })
+    <div class="page-body page-details">
+      @@include('../common/page-top.html')
+      <div class="page-content">
+        <div class="temp">
+          <h2>상품 상세화면 (임시)</h2>
+          <img src="../../images/temp/temp-img3.jpg" />
+          <img src="../../images/temp/temp-img2.jpg" />
+          <p>와, 이건 아주 멋진
+            상품이군요.<br />
+            당장 구입해야겠어요!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  @@include('../common/modal-share.html')
+  @@include('../common/fixed-bar-1.html')
+  @@include('../common/footer.html')
+  </div>
+</body>
+
+</html>

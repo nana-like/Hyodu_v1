@@ -280,7 +280,7 @@
   background-size: 22px;
   background-position: 50%;
 
-  &.-heart {
+  &.-icon-heart {
     background-image: icon(heart, "555555", "ffffff");
 
     &:hover {
@@ -292,7 +292,7 @@
     }
   }
 
-  &.-share {
+  &.-icon-share {
     background-image: icon(share, "555555");
 
     &:hover {

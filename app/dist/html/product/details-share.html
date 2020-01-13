@@ -118,99 +118,54 @@
   </nav>
   <div class="dim header-dim"></div>
 </header>
-    <!--
-      [전달사항]
-      페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
-      (내역 목록일 때 ⇒ .page-history)
-    -->
-    <div class="page-body page-history">
+    <div class="page-body page-details">
       <div class="page-top"></div>
-      <div class="page-title">
-  <h2 class="title">쿠폰 사용 내역</h2>
-  <small class="title-small">사용 내역을 확인하세요.</small>
-  <div class="page-control">
-    <div class="page-control-container">
-      
-      
-      
+      <div class="page-content">
+        <div class="temp">
+          <h2>상품 상세화면 (임시)</h2>
+          <img src="../../images/temp/temp-img3.jpg" />
+          <img src="../../images/temp/temp-img2.jpg" />
+          <p>와, 이건 아주 멋진
+            상품이군요.<br />
+            당장 구입해야겠어요!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [전달사항] 모달을 표사하려면 .modal에 .-modal-opened를 붙여주세요. -->
+<div class="modal modal-share">
+  <div class="modal-dim"></div>
+  <div class="modal-container">
+    <div class="modal-body">
+      <div class="modal-title">공유하기</div>
+      <div class="modal-content">
+        <p class="modal-text-small">
+          이거 참 멋진 상품이군요!<br />
+          링크를 복사해서 여기저기 공유할 수 있어요.
+        </p>
+      </div>
+      <!-- [전달사항] .btn-copy-link를 클릭하면 .share-container에 .-copied 클래스를 붙였다가 약 2초 후 제거해 주세요 (animation.js 참고) -->
+      <div class="share-container">
+        <input type="text" class="share-link" value="https://hyodu.com/product/190123-mother-father-love-123456789"
+          readonly />
+        <p class="share-copied"><span class="text">복사 완료!</span></p>
+        <button class="btn-full btn-copy-link">링크 주소 복사</button>
+      </div>
+      <button class="btn-modal-close"><span class="blind">닫기</span></button>
     </div>
   </div>
 </div>
-      <div class="page-content">
-        <ul class="history">
-          <li class="history-item">
-  <p class="datetime">2020.05.16 10:00</p>
-  <strong class="history-title">효두가 쏜다!<span class="history-small">(10% 할인)</span>
-  </strong>
-  
-  <small class="history-cupon-number">12WELOVEHYODUSOMUCH34</small>
-  
-  <div class="history-bottom">
-    <p class="history-name">동글동글 미니도넛 만들기</p>
-    
-    
-    <p class="history-status -cupon -used">사용완료</p>
-    
-    
-
-  </div>
-</li><li class="history-item">
-  <p class="datetime">2020.04.16 11:00</p>
-  <strong class="history-title">세상의 모든 엄마를 응원하는 쿠폰이면서 이름이 무척이나 긴 쿠폰<span class="history-small">(1,000원 할인)</span>
-  </strong>
-  
-  <small class="history-cupon-number">12WELOVEHYODUSOMUCH34</small>
-  
-  <div class="history-bottom">
-    <p class="history-name">동글동글 미니도넛 만들기</p>
-    
-    <p class="history-status -cupon -cancled">취소</p>
-    
-    
-    
-
-  </div>
-</li><li class="history-item">
-  <p class="datetime">2020.03.16 23:03</p>
-  <strong class="history-title">회원가입을 환영해효두<span class="history-small">(30% 할인)</span>
-  </strong>
-  
-  <small class="history-cupon-number">12WELOVEHYODUSOMUCH3412WELOVEHYODUSOMUCH34</small>
-  
-  <div class="history-bottom">
-    <p class="history-name">우는 남자</p>
-    
-    
-    <p class="history-status -cupon -used">사용완료</p>
-    
-    
-
-  </div>
-</li><li class="history-item">
-  <p class="datetime">2020.03.16 16:41</p>
-  <strong class="history-title">세상의 모든 엄마를 응원하는 쿠폰이면서 이름이 무척이나 긴 쿠폰<span class="history-small">(1,234원 할인)</span>
-  </strong>
-  
-  <small class="history-cupon-number">12WELOVEHYODUSOMUCH34</small>
-  
-  <div class="history-bottom">
-    <p class="history-name">동글동글 미니도넛 만들기</p>
-    
-    <p class="history-status -cupon -cancled">취소</p>
-    
-    
-    
-
-  </div>
-</li>
-        </ul>
-        <!-- [전달사항] 상황에 따라 아래 버튼을 보여주세요. 더 로드할 데이터가 없을 경우, .btn-load.more에 .-load-all 클래스를 추가해주세요. (cupon-load-all.html 참고) -->
-        <button class="btn-load-more btn-text-bottom">
-          <span class="btn-load-text">더 불러오기</span>
-        </button>
-      </div>
+  <div class="fixed-bar">
+  <div class="fixed-bar-container">
+    <div class="fixed-bar-utils">
+      <!-- [전달사항] 클릭할 때마다 .-loveit 을 토글해주세요. -->
+      <button class="btn-icon -icon-heart -loveit"><span class="blind">좋아요</span></button>
+      <button class="btn-icon -icon-share" id="ui-testor-open-modal"><span class="blind">공유하기</span></button>
     </div>
-    <footer class="footer">
+    <button class="btn-purchase">구매하기</button>
+  </div>
+</div>
+  <footer class="footer">
   <div class="footer-container">
     <strong class="logo footer-logo">
       <span class="blind">Hyodu</span>

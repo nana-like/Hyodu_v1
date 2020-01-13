@@ -21,7 +21,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.45);
 }
 
 .modal-container {
@@ -137,7 +137,7 @@
 
 // >>> 일부 특정 모달에 대한 스타일링
 
-.modal.-opened {
+.modal.-modal-opened {
   // 👆 모달 열렸을 때
   opacity: 1;
   visibility: visible;

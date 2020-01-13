@@ -125,11 +125,11 @@ if (modal != null) {
   var modalEvt = {
     open: function (e) {
       e.preventDefault();
-      modal.classList.add("-opened");
+      modal.classList.add("-modal-opened");
       preventScroll("modal");
     },
     close: function () {
-      modal.classList.remove("-opened");
+      modal.classList.remove("-modal-opened");
       allowScroll();
     }
   }
@@ -183,21 +183,17 @@ if (listCardContainer != null) {
 
 }
 
-
-/* TODO:수정하기 */
 var selectStarIcon = document.querySelectorAll(".select-star-icon");
 selectStarIcon.forEach(function (el) {
   el.addEventListener("click", function (e) {
     e.preventDefault();
 
     for (var i = 0; i < selectStarIcon.length; i++) {
-      selectStarIcon[i].classList.remove("-active");
+      selectStarIcon[i].classList.remove("-star-active");
     }
     var score = e.target.dataset.score;
     for (var i = 0; i < score; i++) {
-      selectStarIcon[i].classList.add("-active");
+      selectStarIcon[i].classList.add("-star-active");
     }
-
-    // e.target.classList.add("-active");
   });
 })

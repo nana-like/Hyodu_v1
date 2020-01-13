@@ -12,12 +12,12 @@
 
     @include res--tablet {
       max-width: $max-width-laptop-md;
-      padding: 0 40px;
+      padding: 0 0px;
     }
 
     @include res--laptop {
       max-width: $max-width-laptop-lg;
-      padding: 0 40px;
+      // padding: 0 40px;
     }
   }
 }
@@ -289,10 +289,25 @@
   }
 }
 
+.review-form {
+  // 👆 리뷰 작성(수정) 폼 전체
+
+  margin-top: 35px;
+
+  @include res--laptop {
+    margin-top: 40px;
+  }
+
+  .select-star {
+    margin-left: -2px;
+  }
+}
+
 .select-star {
+  // 👆 리뷰 작성(수정) 화면에서 별 선택 영역
+
   width: 100%;
   margin: 0 auto 40px;
-  // max-width: 640px;
 
   &-container {
     @include flexbox();
@@ -305,17 +320,7 @@
     background-image: icon(star, "e0e0e0");
   }
 
-  &-icon.-active {
+  &-icon.-star-active {
     background-image: icon(star, "FA6B76");
-  }
-}
-
-.review-form {
-  // 👆 리뷰 작성(수정) 폼 전체
-
-  margin-top: 35px;
-
-  @include res--laptop {
-    margin-top: 40px;
   }
 }

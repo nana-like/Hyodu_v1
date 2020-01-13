@@ -7,11 +7,11 @@ if (modal != null) {
   var modalEvt = {
     open: function (e) {
       e.preventDefault();
-      modal.classList.add("-opened");
+      modal.classList.add("-modal-opened");
       preventScroll("modal");
     },
     close: function () {
-      modal.classList.remove("-opened");
+      modal.classList.remove("-modal-opened");
       allowScroll();
     }
   }

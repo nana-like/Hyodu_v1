@@ -8,6 +8,6 @@
   <textarea id="@@inputID" name="@@inputID" minlength="@@length.min" maxlength="@@length.max"
     placeholder="@@placeholder"
     class="form-input input-textarea @@if (context.error==='error' ) {-error} @@if (context.type==='short' ) {-short-textarea}"
-    value="@@value" @@required></textarea>
+    @@required>@@value</textarea>
   <p class="form-error">@@errorMsg</p>
 </div>

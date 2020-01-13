@@ -107,6 +107,10 @@
   @include res--laptop {
     font-size: 14px;
   }
+
+  .btn-line {
+    margin: 20px auto 0;
+  }
 }
 
 .jumbotron {
@@ -144,6 +148,26 @@
 
     @include res--laptop {
       max-width: $max-width-laptop-md;
+    }
+  }
+
+  &.-large {
+    .jumbotron-title {
+      max-width: $max-width-laptop-md;
+    }
+
+    .jumbotron-container {
+      max-width: $max-width-laptop-md;
+    }
+
+    @include res--laptop {
+      .jumbotron-title {
+        max-width: $max-width-laptop-lg;
+      }
+
+      .jumbotron-container {
+        max-width: $max-width-laptop-lg;
+      }
     }
   }
 

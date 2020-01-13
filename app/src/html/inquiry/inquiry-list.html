@@ -24,10 +24,7 @@
           <div class="listcard-container">
             <div class="listcard-item">
               <button class="btn-accordion"><span class="blind">카드 펼치기/접기</span></button>
-              @@if(context.status != "answered"){
               <div class="listcard-status">답변 대기</div>
-              }
-
               <strong class="listcard-title">[카테고리] 타이틀</strong>
               <div class="listcard-content">
                 <p class="listcard-text">
@@ -40,11 +37,11 @@
           </div>
           @@loop('../common/listcard-container.html', [{
           "category": "일반문의",
-          "title" : "타이틀입니당",
+          "title" : "효두 퐈이팅",
           "datetime" : "2020.06.16 10:00"
           },{
           "category": "계정문의",
-          "title" : "타이틀",
+          "title" : "키키님 하하님 최고에유",
           "datetime" : "2020.05.16 10:00"
           },{
           "status": "answered",
@@ -54,11 +51,11 @@
           },{
           "status": "answered",
           "category": "티켓문의",
-          "title" : "타이틀은 여기에 들어갑니다~! 부분 취소 가능한가요? 얼른 알려주시면 감사합니다.",
+          "title" : "부분 취소 가능한가요? 얼른 알려주시면 감사합니다.",
           "datetime" : "2020.03.16 10:00"
           }])
 
-          <!-- [전달사항] 더 로드할 데이터가 없을 경우, .btn-load.more에 .-load-all 클래스를 추가해주세요. -->
+          <!-- [전달사항] 상황에 따라 아래 버튼을 보여주세요. 더 로드할 데이터가 없을 경우, .btn-load.more에 .-load-all 클래스를 추가해주세요. -->
           <button class="btn-load-more btn-text-bottom">
             <span class="btn-load-text">더 불러오기</span>
           </button>

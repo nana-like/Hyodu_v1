@@ -136,7 +136,7 @@
   max-width: $max-width-mobile;
   margin: 40px auto 0;
 
-  &.-hidden {
+  &.-reduction-used {
     display: none;
   }
 
@@ -175,6 +175,7 @@
   &-coupon {
     margin-bottom: 25px;
   }
+
 
   .form-btn-wrap {
     text-align: right;
