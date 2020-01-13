@@ -143,9 +143,9 @@
       <div class="page-content">
         <div class="review">
           <div class="review-container">
-            <div class="product-background">
+            <div class="review-background">
               <!-- [전달사항] 해당 상품의 이미지를 아래와 같이 배경이미지로 넣어주세요. -->
-              <div class="product-background-image" style="background-image:url('../../images/temp/temp-img2.jpg')">
+              <div class="review-background-image" style="background-image:url('../../images/temp/temp-img2.jpg')">
               </div>
             </div>
             <!-- TODO: 클래스네임 좀 더 명확하게 수정하기! (review-write 참고) -->
@@ -153,19 +153,24 @@
               <div class="review-summary-container">
                 <strong class="review-summary-title">소곤소곤 모녀의 밤</strong>
                 <!-- TODO: 클래스별로 별 개수 다르게 보여주기 -->
-                <div class="review-summary-rating">
-                  <div class="rating-big -star-45">
-                    <div class="rating-star">
-                      <span class="rating-star-icon"></span>
-                      <span class="rating-star-icon"></span>
-                      <span class="rating-star-icon"></span>
-                      <span class="rating-star-icon"></span>
-                      <span class="rating-star-icon"></span>
+                <div class="review-summary-ratings">
+                  <div class="ratings">
+                    <div class="ratings-star">
+                      <!-- 
+                        [전달사항] 평균 별점에 따라 .ratings-star-icon의 width 값을 다르게 주세요. 10%씩 더하면 별이 0.5개씩 늘어납니다.
+                        - 10% = 별 0.5개
+                        - 20% = 별 1개
+                        - 30% = 별 1.5개
+                        - 40% = 별 2개
+                        - 50% = 별 2.5개
+                        ...
+                      -->
+                      <div class="ratings-star-icon" style="width:90%"></div>
                     </div>
-                    <p class="rating-num" aria-label="평균 평점"><span>4.7</span> / 5</p>
+                    <p class="ratings-number"><span aria-label="평균 평점">4.7</span> / 5</p>
                   </div>
                 </div>
-                <p class="review-summary-count">
+                <p class="review-summary-total">
                   3명의 효두러가 구매 후 평가했습니다.
                 </p>
               </div>
@@ -188,20 +193,18 @@
     <span class="radio-text">베스트</span>
   </label>
 </div>
-                <!-- [전달사항] 라디오의 checked 여부로 판단하시면 좋을 것 같아서 라디오로 마크업했지만, 아래와 같이 button.btn-circle로 바꿔 사용하셔도 무방합니다. 편하신 쪽으로 사용해주세요. -->
-                <!-- 
-              <button class="btn-circle">주석을 해제해보세요.</button>
-              <button class="btn-circle -active">활성화 시 .-active 추가</button> 
-              -->
               </div>
             </div>
             <div class="review-list">
               <div class="review-item">
                 <div class="review-item-name">라라 (lal*@th*********.com)</div>
-                <div class="review-item-rating">
-                  <div class="rating -star-5">
-                    <div class="rating-star"></div>
-                    <p class="rating-num" aria-label="평점"><span>5</span></p>
+                <div class="review-item-ratings">
+                  <div class="ratings">
+                    <div class="ratings-star">
+                      <!-- [전달사항] .ratings-star-icon에 사용자 평점 * 20%만큼 width 값을 지정해 주세요! (예. 5점이면 5*20% = 100%) -->
+                      <div class="ratings-star-icon" style="width:100%"></div>
+                    </div>
+                    <p class="ratings-number"><span aria-label="사용자 평점">5</p>
                   </div>
                 </div>
                 <div class="review-item-content">
@@ -212,10 +215,12 @@
               </div>
               <div class="review-item">
                 <div class="review-item-name">다다 (dad*@na***.com)</div>
-                <div class="review-item-rating">
-                  <div class="rating -star-3">
-                    <div class="rating-star"></div>
-                    <p class="rating-num" aria-label="평점"><span>3</span></p>
+                <div class="review-item-ratings">
+                  <div class="ratings">
+                    <div class="ratings-star">
+                      <div class="ratings-star-icon" style="width:80%"></div>
+                    </div>
+                    <p class="ratings-number"><span aria-label="사용자 평점">4</p>
                   </div>
                 </div>
                 <div class="review-item-content">
@@ -230,10 +235,12 @@
               </div>
               <div class="review-item">
                 <div class="review-item-name">나나 (nan*@da**.net)</div>
-                <div class="review-item-rating">
-                  <div class="rating -star-1">
-                    <div class="rating-star"></div>
-                    <p class="rating-num" aria-label="평점"><span>1</span></p>
+                <div class="review-item-ratings">
+                  <div class="ratings">
+                    <div class="ratings-star">
+                      <div class="ratings-star-icon" style="width:20%"></div>
+                    </div>
+                    <p class="ratings-number"><span aria-label="사용자 평점">1</p>
                   </div>
                 </div>
                 <div class="review-item-content">
