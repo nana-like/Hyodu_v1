@@ -1,0 +1,15 @@
+.user-next-level {
+  background-color: #f3f3f3;
+  padding-bottom: 20px;
+
+  &-container {
+    padding: 35px 20px;
+    background-color: #fff;
+  }
+
+  &-guide {
+    font-size: 13px;
+    font-weight: $fw-m;
+    text-align: center;
+  }
+}

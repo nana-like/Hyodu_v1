@@ -28,58 +28,37 @@
             - 4레벨 : 효두 마니아
             - 5레벨 : 효두제왕
           -->
-          <div class="level-info">
-            <div class="level-info-badge"></div>
-            <div class="level-info-details">
-              <p class="level-info-level">Lv. 2</p>
-              <p class="level-info-title">효도를 두잇하는 중인</p>
-              <strong class="level-info-name">Kiki</strong>
-            </div>
+          <div class="user-level-badge">
+            <img src="" alt="" class="level-info-badge-image">
           </div>
-          <div class="next-level">
-            <div class="next-level-bar"></div>
-            <p class="next-level-guide">360,000 경험치를 더 채우면 Lv. 4로 레벨업할 수 있어요.</p>
+          <div class="user-info-details">
+            <p class="user-info-level">Lv. 2</p>
+            <p class="user-info-title">효도를 두잇하는 중인</p>
+            <strong class="level-info-name">Kiki</strong>
           </div>
         </div>
       </div>
+      <div class="user-next-level">
+        <div class="user-next-level-container">
+          <div class="user-next-level-bar">
+            <div class="bar-background">
+              <div class="bar-background-color"></div>
+            </div>
+            <ul class="bar-level-list">
+              <li class="bar-level-list">Lv. 1</li>
+              <li class="bar-level-list">Lv. 2</li>
+              <li class="bar-level-list">Lv. 3</li>
+              <li class="bar-level-list">Lv. 4</li>
+              <li class="bar-level-list">Lv. 5</li>
+            </ul>
+          </div>
+          <p class="user-next-level-guide"><em class="emphasize">360,000 경험치</em>를 더 채우면 <em class="emphasize">Lv.
+              4</em>로 레벨업할 수 있어요.</p>
+        </div>
+      </div>
       <div class="page-content">
-        <div class="review-form">
-          <form>
-            <div class="form-container -large">
-              <div class="form-item -required-form">
-                <label class="form-label">
-                  <span class="form-label-text">평점</span>
-                  <span class="form-label-guide"></span>
-                </label>
-                <!-- [전달사항] .select-star-icon에 .star-active 클래스가 붙으면 색이 바뀝니다. -->
-                <div class="select-star">
-                  <div class="select-star-container">
-                    <button class="select-star-icon" aria-label="1점" data-score="1"></button>
-                    <button class="select-star-icon" aria-label="2점" data-score="2"></button>
-                    <button class="select-star-icon" aria-label="3점" data-score="3"></button>
-                    <button class="select-star-icon" aria-label="4점" data-score="4"></button>
-                    <button class="select-star-icon" aria-label="5점" data-score="5"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="form-container -large">
-              @@include("../common/form-textarea-item.html", {
-              "label" : "리뷰내용",
-              "guide" : "(최소 10자 ~ 최대 2000자)",
-              "required" : "required",
-              "inputID" : "form-inquiry",
-              "value" : "",
-              "placeholder" : "이 상품을 구입해 본 경험이 어떠셨나요? 다른 사람에게 추천한다면 그 이유는 무엇인가요?",
-              "length" : {
-              "max": "1000"
-              },
-              "error" : "",
-              "errorMsg" : ""
-              })
-              <button class="btn-full btn-page-request" disabled>리뷰 등록</button>
-            </div>
-          </form>
+        <div class="level-guide">
+          <strong class="level-guide-title">효두의 레벨 및 혜택 안내</strong>
         </div>
       </div>
     </div>
