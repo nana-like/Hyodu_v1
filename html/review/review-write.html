@@ -126,6 +126,10 @@
   <div class="page-control">
     <div class="page-control-container">
       
+      <button class="button-page page-back">
+        <span class="button-page-text">뒤로가기</span>
+      </button>
+      
       
       
     </div>
@@ -136,11 +140,12 @@
           구매 금액의 0.1%가 경험치로 쌓이고,<br />
           다른 효두러들의 효도에도 큰 도움이 됩니다.</p>
       </div>
-      <div class="jumbotron">
+      <div class="jumbotron -large">
         <div class="jumbotron-title">구매한 상품</div>
         <div class="jumbotron-container">
           <div class="product-info">
             <div class="product-info-thumbnail">
+              <!-- [전달사항] 해당 상품의 이미지를 아래와 같이 넣어주세요. -->
               <a href="https://nykim.work"><img src="../../images/temp/temp-img4.jpg" alt="상품 썸네일"
                   class="product-info-image" /></a>
             </div>
@@ -162,6 +167,7 @@
                   <span class="form-label-text">평점</span>
                   <span class="form-label-guide"></span>
                 </label>
+                <!-- [전달사항] .select-star-icon에 .star-active 클래스가 붙으면 색이 바뀝니다. -->
                 <div class="select-star">
                   <div class="select-star-container">
                     <button class="select-star-icon" aria-label="1점" data-score="1"></button>
@@ -169,11 +175,6 @@
                     <button class="select-star-icon" aria-label="3점" data-score="3"></button>
                     <button class="select-star-icon" aria-label="4점" data-score="4"></button>
                     <button class="select-star-icon" aria-label="5점" data-score="5"></button>
-                    <!-- <input type="checkbox" class="select-star-icon" aria-label="1점" />
-                <input type="checkbox" class="select-star-icon" aria-label="2점" />
-                <input type="checkbox" class="select-star-icon" aria-label="3점" />
-                <input type="checkbox" class="select-star-icon" aria-label="4점" />
-                <input type="checkbox" class="select-star-icon" aria-label="5점" /> -->
                   </div>
                 </div>
               </div>
@@ -188,7 +189,7 @@
   <textarea id="form-inquiry" name="form-inquiry" minlength="@@length.min" maxlength="1000"
     placeholder="이 상품을 구입해 본 경험이 어떠셨나요? 다른 사람에게 추천한다면 그 이유는 무엇인가요?"
     class="form-input input-textarea  "
-    value="" required></textarea>
+    required></textarea>
   <p class="form-error"></p>
 </div>
               <button class="btn-full btn-page-request" disabled>리뷰 등록</button>
