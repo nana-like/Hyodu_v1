@@ -2,18 +2,31 @@
 // footer
 // ---
 
-.footer-container {
+.footer {
   margin-top: 75px;
-  padding: 50px 20px 35px;
-  font-size: 11px;
-  color: #909090;
-  line-height: 1.64;
+  padding-top: 50px;
   border-top: 1px solid #ccc;
 
   //laptop
   @include res--laptop {
     margin-top: 100px;
-    padding: 50px 40px 40px;
+  }
+}
+
+.footer-container {
+
+  padding: 0px 20px 35px;
+  font-size: 11px;
+  color: #909090;
+  line-height: 1.64;
+
+  max-width: 640px;
+  margin: 0 auto;
+
+  //laptop
+  @include res--laptop {
+    max-width: 100%;
+    padding: 0 40px 40px;
     @include flexbox;
     @include justify-content(center);
     @include align-items(flex-start);

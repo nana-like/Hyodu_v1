@@ -35,6 +35,11 @@
   transform: translateY(-50%);
   background-color: $color;
   content: '';
+
+  //laptop
+  @include res--laptop {
+    top: 11px;
+  }
 }
 
 // 폰트
