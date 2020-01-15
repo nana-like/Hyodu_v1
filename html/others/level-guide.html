@@ -141,8 +141,8 @@
         - 4레벨 : .-user-lv-4
         - 5레벨 : .-user-lv-5
       -->
-      <div class="user-level -user-lv-1">
-        <div class="jumbotron user-summary -large">
+      <div class="user-level -user-lv-2">
+        <div class="jumbotron user-summary">
           <div class="jumbotron-container">
             <!-- 
             [전달사항] 
@@ -160,14 +160,15 @@
               <div class="user-status">
                 <p class="user-status-level">Lv. 3</p>
                 <p class="user-status-title">효도를 두잇하는 중인</p>
-                <strong class="user-status-name">열글자길이사용자이름</strong>
+                <strong class="user-status-name">닉네임이열글자인경우</strong>
               </div>
               <div class="user-exp">
                 <div class="user-exp-current">64%</div>
                 <div class="user-exp-progress">
-                  <!-- [전달사항] .user-exp-progress-bar에 경험치 비율만큼 너비 값을 넣어 주세요. -->
+                  <!-- [전달사항] .user-exp-progress-bar에 경험치 비율만큼 너비 값을 넣어 주세요. 5레벨일 경우 100%로 지정해주세요. -->
                   <div class="user-exp-progress-bar" style="width:64%"></div>
                 </div>
+                <!-- [전달사항] 5레벨일 경우 현재 경험치만 표시해주세요. (ex: 2,123,456) -->
                 <div class="user-exp-total">640,000 / 1,000,000</div>
               </div>
             </div>
@@ -246,7 +247,7 @@
                 <div class="level-guide-info-container">
                   <p class="guide-title">조건</p>
                   <ul class="guide-details">
-                    <li class="guide-details-item">회원가입 후, 1회 결제 완료 (금액 상관없이!)
+                    <li class="guide-details-item">회원가입 후, 1회 결제 완료 <br class="show-laptop" /> (금액 상관없이!)
                     </li>
                   </ul>
                 </div>
@@ -265,7 +266,7 @@
                 <div class="level-guide-info-container">
                   <p class="guide-title">조건</p>
                   <ul class="guide-details">
-                    <li class="guide-details-item"> 누적경험치 총 500,000 EXP 달성
+                    <li class="guide-details-item"> 누적경험치 <br class="show-laptop" /> 총 500,000 EXP 달성
                     </li>
                   </ul>
                 </div>
@@ -286,7 +287,7 @@
                 <div class="level-guide-info-container">
                   <p class="guide-title">조건</p>
                   <ul class="guide-details">
-                    <li class="guide-details-item"> 누적경험치 총 1,000,000 EXP 달성
+                    <li class="guide-details-item"> 누적경험치 <br class="show-laptop" /> 총 1,000,000 EXP 달성
                     </li>
                   </ul>
                 </div>
@@ -307,7 +308,7 @@
                 <div class="level-guide-info-container">
                   <p class="guide-title">조건</p>
                   <ul class="guide-details">
-                    <li class="guide-details-item"> 누적경험치 총 2,000,000 EXP 달성
+                    <li class="guide-details-item"> 누적경험치 <br class="show-laptop" />총 2,000,000 EXP 달성
                     </li>
                   </ul>
                 </div>
@@ -317,13 +318,15 @@
         </div>
       </div>
       <div class="small-notice">
-        <strong class="small-notice-title">안내사항</strong>
-        <ul class="small-notice-list">
-          <li class="small-notice-list-item">결제를 완료하면 결제 금액의 1%가 경험치로 쌓입니다.</li>
-          <li class="small-notice-list-item">리뷰를 남기면 결제 금액의 0.1%가 경험치로 쌓입니다.</li>
-          <li class="small-notice-list-item">경험치의 유효기간은 1년입니다.</li>
-          <li class="small-notice-list-item">결제 금액은 배송비, 제주/도서산간 추가 비용, 쿠폰할인, 포인트 사용을 제외한 금액입니다.</li>
-        </ul>
+        <div class="small-notice-container">
+          <strong class="small-notice-title">안내사항</strong>
+          <ul class="small-notice-list">
+            <li class="small-notice-list-item">결제를 완료하면 결제 금액의 1%가 경험치로 쌓입니다.</li>
+            <li class="small-notice-list-item">리뷰를 남기면 결제 금액의 0.1%가 경험치로 쌓입니다.</li>
+            <li class="small-notice-list-item">경험치의 유효기간은 1년입니다.</li>
+            <li class="small-notice-list-item">결제 금액은 배송비, 제주/도서산간 추가 비용, 쿠폰할인, 포인트 사용을 제외한 금액입니다.</li>
+          </ul>
+        </div>
       </div>
     </div>
     <footer class="footer">
