@@ -1,15 +1,349 @@
-.user-next-level {
-  background-color: #f3f3f3;
-  padding-bottom: 20px;
+.user-level {
+  //👆 유저 레벨 영역 전체
+  $_userLevelposition: (1: (width:1%, minM:10px, minL: 10px),
+      2: (width:26%, minM:76px, minL:102px),
+      3: (width:50%, minM:140px, minL:140px),
+      4: (width:74%, minM:250px, minL:250px),
+      5: (width:100%, minM:100%, minL:100%));
+
+  @each $key,
+  $value in $c-badge {
+    &.-user-lv-#{$key} {
+      // 🙌 레벨 별 뱃지 부분의 이미지와 배경색 변경
+
+      .user-badge {
+        background-image: url(#{$path-image}#{map-get($value, img)
+      }
+
+      );
+      background-size: 60px 60px;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-color: map-get($value, bg);
+    }
+  }
+
+}
+
+
+
+@each $key,
+$value in $_userLevelposition {
+  &.-user-lv-#{$key} {
+    // 🙌 레벨 별 progress bar 너비값 변경
+
+    .user-position-progress-bar {
+      width: map-get($value, width);
+      min-width: map-get($value, minM);
+
+      @include res--laptop {
+        min-width: map-get($value, minL);
+      }
+    }
+
+    .bar-level-list:nth-child(-n+#{$key}) {
+      color: #4b4b4b;
+    }
+  }
+}
+}
+
+
+@each $key,
+$value in $c-badge {
+  .level-guide .level-guide-list-item:nth-child(#{$key}) {
+    // 🙌 레벨 별 뱃지 부분의 이미지와 배경색 변경
+
+    .level-guide-badge {
+      background-image: url(#{$path-image}#{map-get($value, img)
+    }
+
+    );
+    background-size: 60px 60px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: map-get($value, bg);
+  }
+}
+}
+
+
+.user-summary {
+  // 👆 .user-level에서 유저 뱃지, 이름, 타이틀 정보부 (상단)
+
+  .jumbotron-container {
+    @include flexbox();
+    padding: 20px;
+  }
+
+  .user-badge {
+    // 👆 사용자 뱃지 (상위 클래스로 이미지와 배경색 변경)
+    @include flex-grow(1);
+    flex-basis: 110px;
+    min-width: 90px;
+    max-width: 210px;
+    height: 148px;
+    background: #4f8386;
+    margin-right: 20px;
+  }
+
+  .user-info {
+    // 👆 뱃지 옆의 정보 부분
+    @include flex-grow(1);
+    font-weight: $fw-m;
+    min-width: 120px;
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(space-between);
+  }
+
+  .user-status {
+    // 👆 유저 텍스트 정보
+
+    &-level {
+      font-weight: inherit;
+      font-size: 16px;
+      color: $c-pink-hot;
+    }
+
+    &-title {
+      margin: 2px 0 1px;
+      font-weight: inherit;
+      font-size: 13px;
+      color: $c-gray-normal;
+      letter-spacing: -0.2px;
+    }
+
+    &-name {
+      font-weight: inherit;
+      font-size: 19px;
+      color: $c-black;
+      letter-spacing: -0.3px;
+      line-height: 1.2;
+    }
+  }
+
+  .user-exp {
+    // 👆 유저 경험치 바 부분
+
+    &-current {
+      font-weight: $fw-m;
+      font-size: 13px;
+      color: $c-pink-hot;
+    }
+
+    &-progress {
+      margin: 4px 0 2px;
+      width: 100%;
+      height: 10px;
+      border-radius: 2px;
+      background-color: #efefef;
+    }
+
+    &-progress-bar {
+      width: 0%;
+      height: 100%;
+      background-image: linear-gradient(to right, #f48d6c, #ff5461);
+      border-radius: 2px;
+    }
+
+    &-total {
+      font-weight: $fw-r;
+      color: $c-gray-light;
+    }
+  }
+
+}
+
+
+.user-position {
+  // 👆 .user-level에서 다음 레벨까지의 경험치 보여주는 부분 (하단)
+  background-color: #fff;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 20px;
+    background-color: #f3f3f3;
+  }
 
   &-container {
-    padding: 35px 20px;
-    background-color: #fff;
+    padding: 55px 20px 35px;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  &-progress {
+    width: 100%;
+    height: 6px;
+    background-color: #e6e6e6;
+
+    &-bar {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: $c-gray-light;
+
+      &:before {
+        position: absolute;
+        top: -18px;
+        left: 100%;
+        display: block;
+        width: 14px;
+        height: 13px;
+        transform: translateX(-50%);
+        background-size: 100%;
+        background-image: icon(star, "343434");
+        content: '';
+      }
+    }
+  }
+
+  .bar-level {
+    @include flexbox();
+    @include justify-content(space-between);
+    @include align-items(center);
+    color: #cecece;
+    font-weight: $fw-r;
+    letter-spacing: -0.2px;
   }
 
   &-guide {
+    margin-top: 22px;
     font-size: 13px;
     font-weight: $fw-m;
     text-align: center;
+  }
+}
+
+
+
+.level-guide {
+  padding: 40px 0px;
+  background-color: #fff;
+
+  &-title {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    font-weight: $fw-m;
+    color: $c-black;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #d5d5d5;
+  }
+
+  &-list-item {
+    @include flexbox();
+    @include align-items(flex-start);
+    padding: 25px 8px;
+    border-bottom: 1px solid #d5d5d5;
+
+  }
+
+  &-badge {
+    flex-basis: 30%;
+    min-width: 90px;
+    max-width: 200px;
+    height: 106px;
+    background: #4f8386;
+    margin-right: 36px;
+
+    @include res--tablet {
+      margin-right: 45px;
+    }
+  }
+
+  &-info {
+    font-weight: $fw-m;
+    flex-basis: 70%;
+    min-width: 120px;
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(space-between);
+
+    @include res--tablet {
+      @include justify-content(flex-start);
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+    }
+  }
+
+  &-info-container {
+    margin-bottom: 20px;
+
+    @include res--tablet {
+      flex-basis: 50%;
+      max-width: 250px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+
+    .guide-title {
+      font-size: 14px;
+      font-weight: $fw-r;
+      color: #909090;
+      margin-bottom: 2px;
+      line-height: 1.43;
+    }
+
+    .guide-details {
+      font-size: 13px;
+      font-weight: $fw-m;
+      color: #4b4b4b;
+    }
+
+    .guide-details-item {
+      position: relative;
+      padding-left: 10px;
+      line-height: 1.55;
+      word-break: keep-all;
+
+      &:before {
+        @include listBullet();
+      }
+
+    }
+  }
+
+}
+
+
+.small-notice {
+  width: 100%;
+  padding: 35px 22px;
+  background-color: #f7f7f7;
+
+  &-title {
+    display: block;
+    margin-bottom: 18px;
+    font-size: 16px;
+    font-weight: $fw-m;
+    color: $c-black;
+  }
+
+  &-list {
+    font-size: 12px;
+    font-weight: $fw-r;
+    color: #4b4b4b;
+  }
+
+  &-list-item {
+    position: relative;
+    padding-left: 10px;
+    line-height: 1.6;
+    margin-top: 4px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:before {
+      @include listBullet;
+    }
+
   }
 }

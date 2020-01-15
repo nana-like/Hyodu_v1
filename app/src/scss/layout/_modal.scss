@@ -137,11 +137,6 @@
 
 // >>> 일부 특정 모달에 대한 스타일링
 
-.modal.-modal-opened {
-  // 👆 모달 열렸을 때
-  opacity: 1;
-  visibility: visible;
-}
 
 .modal-large {
 
@@ -216,8 +211,8 @@
     }
 
     &.-copied {
+      // 🙌 복사버튼을 누른 순간 애니메이션 보여줌
 
-      // 복사버튼을 누른 순간
       .share-copied {
         visibility: visible;
         animation: show-copied 1700ms;
@@ -234,4 +229,11 @@
   .modal-text-small {
     text-align: center;
   }
+}
+
+
+.modal.-modal-opened {
+  // 🙌 모달 열렸을 때
+  opacity: 1;
+  visibility: visible;
 }

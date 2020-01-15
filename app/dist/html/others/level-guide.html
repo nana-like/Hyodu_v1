@@ -133,11 +133,18 @@
 </div>
       <!-- 
         [전달사항] 
-        로그인 중이 아닐 경우 .user-level 부분은 보이지 않게 해주세요.
+        1. 로그인 중이 아닐 경우 .user-level 부분은 보이지 않게 해주세요.
+        2. 사용자 레벨에 따라 .user-level에 클래스 네임을 다르게 추가해주세요.
+        - 1레벨 : .-user-lv-1
+        - 2레벨 : .-user-lv-2
+        - 3레벨 : .-user-lv-3
+        - 4레벨 : .-user-lv-4
+        - 5레벨 : .-user-lv-5
       -->
-      <div class="jumbotron .user-level -large">
-        <div class="jumbotron-container">
-          <!-- 
+      <div class="user-level -user-lv-1">
+        <div class="jumbotron user-summary -large">
+          <div class="jumbotron-container">
+            <!-- 
             [전달사항] 
             레벨 관련 부분은 아직 미정인 부분이 많습니다. 최종적으로 달라지거나 삭제될 수도 있을 것 같습니다. 레벨별 수식어도 일단 임의입니다ㅎㅎ
             - 1레벨 : 혜성같이 등장한 효두러
@@ -146,38 +153,177 @@
             - 4레벨 : 효두 마니아
             - 5레벨 : 효두제왕
           -->
-          <div class="user-level-badge">
-            <img src="" alt="" class="level-info-badge-image">
-          </div>
-          <div class="user-info-details">
-            <p class="user-info-level">Lv. 2</p>
-            <p class="user-info-title">효도를 두잇하는 중인</p>
-            <strong class="level-info-name">Kiki</strong>
+            <div class="user-badge">
+              <img src="" alt="" class="level-info-badge-image">
+            </div>
+            <div class="user-info">
+              <div class="user-status">
+                <p class="user-status-level">Lv. 3</p>
+                <p class="user-status-title">효도를 두잇하는 중인</p>
+                <strong class="user-status-name">열글자길이사용자이름</strong>
+              </div>
+              <div class="user-exp">
+                <div class="user-exp-current">64%</div>
+                <div class="user-exp-progress">
+                  <!-- [전달사항] .user-exp-progress-bar에 경험치 비율만큼 너비 값을 넣어 주세요. -->
+                  <div class="user-exp-progress-bar" style="width:64%"></div>
+                </div>
+                <div class="user-exp-total">640,000 / 1,000,000</div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="user-next-level">
-        <div class="user-next-level-container">
-          <div class="user-next-level-bar">
-            <div class="bar-background">
-              <div class="bar-background-color"></div>
+        <div class="user-position">
+          <div class="user-position-container">
+            <div class="user-position-progress">
+              <div class="user-position-progress-bar"></div>
             </div>
-            <ul class="bar-level-list">
+            <ul class="bar-level">
               <li class="bar-level-list">Lv. 1</li>
               <li class="bar-level-list">Lv. 2</li>
               <li class="bar-level-list">Lv. 3</li>
               <li class="bar-level-list">Lv. 4</li>
               <li class="bar-level-list">Lv. 5</li>
             </ul>
+            <p class="user-position-guide">
+              <!-- 
+                [전달사항] 
+                1. 경험치 부분에 대한 정책은 아직 미정입니다! 결정되는 대로 알려드릴게요.
+                2. 여기 들어갈 문구는 아래와 같습니다. -->
+              <!-- [1레벨일 때]-->
+              <!-- 
+                <em class="emphasize">결제 1회</em>를 완료하면 <em class="emphasize">Lv.
+                2</em>로 레벨업할 수 있어요.
+              -->
+              <!-- [2~4레벨일 때]-->
+              <!-- 
+                <em class="emphasize">{목표 경험치 - 현재 경험치}</em>를 더 채우면 <em class="emphasize">Lv. {다음 레벨}</em>로 레벨업할 수 있어요. 
+              -->
+              <!-- [5레벨일 때]-->
+              <!--
+              우와, <em class="emphasize">Lv. 5</em>를 달성했어요! 만렙 효두러를 위한 혜택을 확인하세요.
+              -->
+              <!-- (3레벨 예시) -->
+              <em class="emphasize">360,000 경험치</em>를 더 채우면 <em class="emphasize">Lv.
+                4</em>로 레벨업할 수 있어요.
+            </p>
           </div>
-          <p class="user-next-level-guide"><em class="emphasize">360,000 경험치</em>를 더 채우면 <em class="emphasize">Lv.
-              4</em>로 레벨업할 수 있어요.</p>
         </div>
       </div>
       <div class="page-content">
         <div class="level-guide">
           <strong class="level-guide-title">효두의 레벨 및 혜택 안내</strong>
+          <ol class="level-guide-list">
+            <li class="level-guide-list-item">
+              <div class="level-guide-badge"></div>
+              <div class="level-guide-info">
+                <div class="level-guide-info-container">
+                  <p class="guide-title">혜택</p>
+                  <ul class="guide-details">
+                    <li class="guide-details-item">웰컴 쿠폰 (1,000원) 지급
+                    </li>
+                  </ul>
+                </div>
+                <div class="level-guide-info-container">
+                  <p class="guide-title">조건</p>
+                  <ul class="guide-details">
+                    <li class="guide-details-item">효두에 가입하자마자 바로!
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="level-guide-list-item">
+              <div class="level-guide-badge"></div>
+              <div class="level-guide-info">
+                <div class="level-guide-info-container">
+                  <p class="guide-title">혜택</p>
+                  <ul class="guide-details">
+                    <li class="guide-details-item">레벨업 쿠폰 (2,000원) 지급
+                    </li>
+                  </ul>
+                </div>
+                <div class="level-guide-info-container">
+                  <p class="guide-title">조건</p>
+                  <ul class="guide-details">
+                    <li class="guide-details-item">회원가입 후, 1회 결제 완료 (금액 상관없이!)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="level-guide-list-item">
+              <div class="level-guide-badge"></div>
+              <div class="level-guide-info">
+                <div class="level-guide-info-container">
+                  <p class="guide-title">혜택</p>
+                  <ul class="guide-details">
+                    <li class="guide-details-item">레벨업 쿠폰 (2,000원) 지급
+                    </li>
+                  </ul>
+                </div>
+                <div class="level-guide-info-container">
+                  <p class="guide-title">조건</p>
+                  <ul class="guide-details">
+                    <li class="guide-details-item"> 누적경험치 총 500,000 EXP 달성
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="level-guide-list-item">
+              <div class="level-guide-badge"></div>
+              <div class="level-guide-info">
+                <div class="level-guide-info-container">
+                  <p class="guide-title">혜택</p>
+                  <ul class="guide-details">
+                    <li class="guide-details-item">레벨업 쿠폰 (5,000원) 지급
+                    </li>
+                    <li class="guide-details-item">효남효녀 인증 뱃지 지급
+                    </li>
+                  </ul>
+                </div>
+                <div class="level-guide-info-container">
+                  <p class="guide-title">조건</p>
+                  <ul class="guide-details">
+                    <li class="guide-details-item"> 누적경험치 총 1,000,000 EXP 달성
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="level-guide-list-item">
+              <div class="level-guide-badge"></div>
+              <div class="level-guide-info">
+                <div class="level-guide-info-container">
+                  <p class="guide-title">혜택</p>
+                  <ul class="guide-details">
+                    <li class="guide-details-item">레벨업 쿠폰 (10,000원) 지급
+                    </li>
+                    <li class="guide-details-item">VIP 기념품 지급
+                    </li>
+                  </ul>
+                </div>
+                <div class="level-guide-info-container">
+                  <p class="guide-title">조건</p>
+                  <ul class="guide-details">
+                    <li class="guide-details-item"> 누적경험치 총 2,000,000 EXP 달성
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ol>
         </div>
+      </div>
+      <div class="small-notice">
+        <strong class="small-notice-title">안내사항</strong>
+        <ul class="small-notice-list">
+          <li class="small-notice-list-item">결제를 완료하면 결제 금액의 1%가 경험치로 쌓입니다.</li>
+          <li class="small-notice-list-item">리뷰를 남기면 결제 금액의 0.1%가 경험치로 쌓입니다.</li>
+          <li class="small-notice-list-item">경험치의 유효기간은 1년입니다.</li>
+          <li class="small-notice-list-item">결제 금액은 배송비, 제주/도서산간 추가 비용, 쿠폰할인, 포인트 사용을 제외한 금액입니다.</li>
+        </ul>
       </div>
     </div>
     <footer class="footer">
@@ -212,9 +358,13 @@
         <a href="" class="footer-social -instagram">
           <span class="blind">효두 인스타그램</span>
         </a>
-        <a href="" class="footer-social -notion">
-          <span class="blind">효두 노션</span>
+        <!-- [전달사항] 페이스북 추가했습니다~ (20.01.15) -->
+        <a href="" class="footer-social -facebook">
+          <span class="blind">효두 페이스북</span>
         </a>
+        <!-- <a href="" class="footer-social -notion">
+          <span class="blind">효두 노션</span>
+        </a> -->
       </div>
       <p class="copyright">© 2019 Hyodu, Inc. All Rights Reserved.</p>
     </div>
