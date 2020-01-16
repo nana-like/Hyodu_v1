@@ -114,10 +114,11 @@
       border-radius: 50%;
       background-color: #7d7d7d;
 
-      $_sns: instagram, notion;
+      $_sns: instagram, facebook;
 
       @each $value in $_sns {
         &.-#{$value} {
+          // 🙌 각 소셜별 이미지 삽입
           @include bgi("sns/sns-#{$value}");
           background-size: 16px;
           background-position: 50%;
@@ -135,7 +136,7 @@
 
 
 .fixed-bar+.footer {
-  // 👆 바가 붙는 경우 푸터 아래에 여백 주기
+  // 🙌 하단에 바가 붙을 때 푸터 아래에 여백 추가 (바 때문에 가려지는 것 방지)
   margin-bottom: 56px;
 
   @include res--laptop {

@@ -114,6 +114,7 @@
       }
 
       &.page-back {
+        // 👆 뒤로가기 버튼
         background-position: 0 0;
         background-size: 22px 20px;
         background-image: icon(arrow-back, "909090");
@@ -128,6 +129,7 @@
       }
 
       &.page-cancle {
+        // 👆 결제취소 버튼
         background-position: 100% 100%;
         background-size: 20px 20px;
         background-image: icon(cancle, "909090");
@@ -144,7 +146,6 @@
       &:hover {
         .button-page-text {
           opacity: 1;
-          // transform: translateY(0);
         }
       }
     }

@@ -12,7 +12,7 @@
   @include res--laptop {}
 
   &.-medium {
-    // 👆 .-medium 클래스가 추가로 붙는 경우 max-width 값 변경
+    // 🙌 .-medium 클래스가 추가로 붙는 경우 max-width 값 변경
 
     //laptop
     @include res--laptop {
@@ -21,7 +21,7 @@
   }
 
   &.-large {
-    // 👆 .-large 클래스가 추가로 붙는 경우 max-width 값 변경
+    // 🙌 .-large 클래스가 추가로 붙는 경우 max-width 값 변경
     max-width: $max-width-laptop-md;
 
     //laptop
@@ -371,7 +371,7 @@
 }
 
 .-required-form {
-  //👆 필수 폼일 때
+  //🙌 필수 폼일 때
 
   .form-label-guide:after {
     opacity: 1;

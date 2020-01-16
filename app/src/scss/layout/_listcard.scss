@@ -32,6 +32,7 @@
   }
 
   &-item {
+    // 👆 각 질문 카드
     position: relative;
     padding: 25px;
     margin: 0 auto;
@@ -49,6 +50,7 @@
   }
 
   &-status {
+    // 👆 답변 대기/완료 표시부
     display: inline-block;
     color: $c-gray-light;
     font-weight: $fw-m;
@@ -131,6 +133,7 @@
     }
 
     .ellipsis {
+      // 👆 ... 처리용
       display: none;
       width: 100%;
       position: absolute;
@@ -149,6 +152,7 @@
   }
 
   .btn-accordion {
+    // 👆 아코디언 버튼
     position: absolute;
     top: 24px;
     right: 20px;
@@ -163,6 +167,7 @@
 }
 
 .listcard-answer {
+  // 👆 답변용 리스트카드
   display: none;
   max-width: 980px;
   margin: 10px auto 0;
@@ -228,11 +233,6 @@
 
   .btn-accordion {
     transform: rotate(180deg);
-  }
-
-  .listcard-item {
-    // border-color: #bebebe;
-    // color: $c-black;
   }
 
   .listcard-title {

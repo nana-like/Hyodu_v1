@@ -266,13 +266,12 @@
 }
 
 
-// ----
-// 404 NOT FOUND 
-// ----
+
 .not-found {
-  // 👆 404 코드 표시부
+  // 👆 404 페이지용
 
   .not-found-code {
+    // 👆 코드 표시부
     @include flexbox();
     @include justify-content(center);
     width: 100%;
@@ -457,8 +456,6 @@
     margin-top: 60px;
     max-width: calc(100% - 80px);
 
-    @include res--laptop {}
-
     .page-sub-line {
       margin: 45px auto;
 
@@ -471,11 +468,13 @@
 
 
 .emphasize {
+  // 👆 붉은 색으로 강조하고 싶은 부분
   color: #ff5461;
 }
 
 
 .loading {
+  // 👆 로딩 화면
   z-index: $z-loading;
   position: fixed;
   top: 80px;
@@ -489,6 +488,7 @@
 }
 
 .loading-image {
+  // 👆 로딩 화면 내 이미지
   position: absolute;
   top: 50%;
   left: 50%;
@@ -510,10 +510,12 @@
 }
 
 .-need-loading {
+  // 👆 특정 영역 내에서 로딩을 보여주고 싶을 때 사용
   position: relative;
 }
 
 .loading-small {
+  // 👆 특정 영역 내에서만 자리 잡는 로딩 화면
   z-index: $z-loading;
   position: absolute;
   top: 0;

@@ -1,5 +1,10 @@
+// ---
+// modules - fixedbar
+// ---
+
 .fixed-bar {
-  $_btn_height: 38px;
+  // 👆 결제 화면 아래의 고정된 바
+  $_btn_height: 38px; //이 바 안에서 사용되는 버튼의 높이
 
   z-index: $z-fixed-bar;
   position: fixed;
@@ -103,26 +108,29 @@
     color: #fff;
     font-size: 13px;
     text-align: center;
-    padding-left: 20px;
     background-color: #fa6b76;
     border: 1px solid #fa6b76;
     border-radius: 3px;
 
-    &:before {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-top: 1px;
-      margin-left: -32px;
-      display: block;
-      content: "";
-      width: 20px;
-      height: 20px;
-      background-size: 100%;
-      background-position: 50%;
-      background-repeat: no-repeat;
-      background-image: icon(creditcard, "ffffff");
-      transform: translate(-50%, -50%);
+    &.-pay-credit {
+      padding-left: 20px;
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: 1px;
+        margin-left: -32px;
+        display: block;
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-size: 100%;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-image: icon(creditcard, "ffffff");
+        transform: translate(-50%, -50%);
+      }
     }
 
     &:hover {

@@ -6,14 +6,15 @@
 // -------
 // color
 // -------
-$c-black: #101010; //기본 검정
-$c-gray-dark: #343434; //어두운 회색
-$c-gray: #4b4b4b; //회색
+$c-black: #101010;
+$c-gray-dark: #343434;
+$c-gray: #4b4b4b;
 $c-gray-normal: #5f5f5f;
-
 $c-gray-light: #909090;
-
 $c-line: #e6e6e6;
+
+$c-white-dark: #f6f6f6;
+$c-white-light: #fcfcfc;
 
 $c-pink-hot: #FF5461;
 $c-pink: #FA6B76;
@@ -26,7 +27,7 @@ $c-lv: (1 : #909090,
     4: #ff8132,
     5: #FF5461);
 
-
+// 각 레벨별 뱃지 컬러 및 이미지
 $c-badge:(1: (bg: #9e9e9e, img: "badge/badge-lv-1.png"),
     2: (bg: #f9c34b, img: "badge/badge-lv-2.png"),
     3: (bg: #47787a, img: "badge/badge-lv-3.png"),
@@ -35,9 +36,6 @@ $c-badge:(1: (bg: #9e9e9e, img: "badge/badge-lv-1.png"),
 
 
 
-
-$c-white-dark: #f6f6f6;
-$c-white-light: #fcfcfc;
 
 
 // -------

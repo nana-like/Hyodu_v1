@@ -139,13 +139,8 @@
 
 
 .btn-page-request {
-  // 👆 신청 같이 한 페이지 내 유일한 버튼인 경우
+  // 👆 회원가입 버튼처럼, 한 페이지 내 유일한 버튼인 경우
   margin-top: 55px;
-
-  //laptop
-  @include res--laptop {
-    // margin-top: 60px; //TODO:미확정
-  }
 }
 
 .page-sub {

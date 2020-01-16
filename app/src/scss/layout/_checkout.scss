@@ -1,3 +1,7 @@
+// ---
+// layout - checkout
+// ---
+
 .checkout-info {
   // 👆 결제 전 상품 정보 확인부
   $_padding_m: 25px;
@@ -29,6 +33,7 @@
 
 
   &-bill {
+    // 👆 금액 확인 부분
     font-weight: $fw-r;
     padding-top: 20px;
     border-top: 1px solid #d5d5d5;
@@ -83,6 +88,7 @@
       }
 
       .unit {
+        // 👆 '원' 부분
         display: inline-block;
         margin-left: 2px;
         font-size: 13px;
@@ -98,9 +104,9 @@
 }
 
 .checkout-info-bill-list.-total {
+  // 👆 총 합계 금액 표시부
   margin-top: 12px;
   padding: 6px 25px;
-  // background-color: #fbfbfb;
 
   @include res--laptop {
     margin-top: 15px;
@@ -132,11 +138,13 @@
 
 
 .checkout-reduction {
+  // 👆 쿠폰이나 포인트를 통해 할인 받으세요! 영역
   display: block;
   max-width: $max-width-mobile;
   margin: 40px auto 0;
 
   &.-reduction-used {
+    // 🙌 사용했을 때 보이지 않게 처리
     display: none;
   }
 

@@ -281,6 +281,7 @@
   background-position: 50%;
 
   &.-icon-heart {
+    // 🙌 하트 아이콘
     background-image: icon(heart, "555555", "ffffff");
 
     &:hover {
@@ -293,6 +294,7 @@
   }
 
   &.-icon-share {
+    // 🙌 공유 아이콘
     background-image: icon(share, "555555");
 
     &:hover {

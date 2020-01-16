@@ -1,5 +1,12 @@
+// ---
+// layout - level
+// ---
+
+
 .user-level {
-  //👆 유저 레벨 영역 전체
+  // 👆 유저 레벨 영역 전체
+
+
   $_userLevelposition: (1: (width:1%, minM:10px, minL: 14px),
       2: (width:26%, minM:76px, minL:104px),
       3: (width:50%, minM:140px, minL:140px),
@@ -9,6 +16,7 @@
 
   &.-user-lv-5 {
 
+    // 🙌 만렙(레벨5)일 때 특별처리
     .user-exp-current {
       display: none;
     }
