@@ -65,7 +65,7 @@
   }
 }
 
-.page-content {
+.page-layout {
   // 👆 패딩 잡는 실질적 영역
   padding: 0 20px;
 
@@ -75,15 +75,7 @@
   }
 }
 
-.page-layout {
-  // 👆 패딩 영역 필요한 곳에 삽입
-  padding: 0 20px;
 
-  //laptop
-  @include res--laptop {
-    padding: 0 40px;
-  }
-}
 
 .page-sub {
   // 👆 작은 회색 글자
@@ -264,7 +256,7 @@
   max-width: $max-width-laptop-md;
   margin: 0 auto;
 
-  .page-content {
+  .page-layout {
     padding: 0;
   }
 
@@ -287,7 +279,7 @@
 .page-inquiry {
   margin-bottom: -75px;
 
-  .page-content {
+  .page-layout {
     padding: 0;
   }
 
@@ -386,7 +378,7 @@
     color: #fff;
   }
 
-  .page-content {
+  .page-layout {
     padding: 0;
   }
 
