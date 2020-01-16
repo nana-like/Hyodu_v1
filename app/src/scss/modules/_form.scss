@@ -4,6 +4,7 @@
 
 .form-container {
   // 👆 내부 폼의 크기를 결정하는 요소
+  position: relative;
   max-width: $max-width-mobile;
   margin: 0 auto;
 

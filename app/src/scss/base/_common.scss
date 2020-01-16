@@ -473,3 +473,66 @@
 .emphasize {
   color: #ff5461;
 }
+
+
+.loading {
+  z-index: $z-loading;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(250, 250, 250, 0.5);
+
+}
+
+.loading-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include bgi("logo/logo-circle");
+  background-size: 100%;
+  animation: pulsate 0.8s infinite;
+
+  width: 100px;
+  height: 104px;
+  margin-top: -50px;
+  margin-left: -52px;
+
+  @include res--laptop {
+    width: 120px;
+    height: 124px;
+    margin-top: -60px;
+    margin-left: -62px;
+  }
+}
+
+.-need-loading {
+  position: relative;
+}
+
+.loading-small {
+  z-index: $z-loading;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(250, 250, 250, 0.75);
+
+  .loading-image {
+    width: 86px;
+    height: 90px;
+    margin-top: -43px;
+    margin-left: -45px;
+
+    @include res--laptop {
+      width: 100px;
+      height: 104px;
+      margin-top: -50px;
+      margin-left: -52px;
+    }
+  }
+}

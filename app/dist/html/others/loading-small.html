@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>(작업 진행중) 효두 | 효두를 두잇하다</title>
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- 
+    [전달사항] 이 부분 작업 예정입니다.
+    
+  <meta name="description" content="효두 - 효도를 두잇하다." />
+  <meta name="keywords" content="효두, 효도, Hyodu, hyodu, hyo du, 비토랩스, 비토 랩스, vitolabs, vito labs" />
+  <meta name="Reply-To" content="contact@thevitolabs.com" />
+  <meta name="Location" content="서울특별시 중구 삼일대로 343, 16층" />
+
+  <meta property="og:title" content="효두" />
+  <meta property="og:description" content="효도를 두잇하다." />
+
+  <meta property="og:image" content="images/ogImage.png" />
+
+  <meta name="theme-color" content="#f6cef9" />
+  <meta name="msapplication-navbutton-color" content="#f6cef9" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#f6cef9" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./images/favicon/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png" />
+  <meta name="msapplication-TileImage" content="./images/favicon/ms-icon-144x144.png" /> -->
+
+  <link rel="stylesheet" href="./../../css/style.css" />
+
+  <!--[if lt IE 9]>
+      <script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"
+      ></script>
+    <![endif]-->
+</head>
+
+<body>
+  <div class="wrap">
+    <!-- 
+    [전달사항]
+
+    (1)
+    로그인했을 때는 .header에 .-login를 붙여주세요. 
+    로그인 전이거나 로그아웃 시에는 .-login을 제거해주세요.
+
+    (2)
+    모바일에서 .burger 클릭 이벤트로 버거메뉴를 여닫을 경우 .header에 .-opend를 토글해주세요.
+    모바일에서 버거메뉴를 여닫을 때, body에 .-scroll-disabled를 토글해주세요.
+
+    (3)
+    데스크탑에서 .btn-mail 클릭 이벤트로 작은 메뉴를 여닫을 경우 .header에 .-user-opened를 토글해주세요.
+
+    (4)
+    header와 관련된 임의 스크립트를 header.js에 작성했습니다.
+
+
+  -->
+<header class="header ">
+  <div class="header-container">
+    <h1 class="logo header-logo">
+      <a href="/" class="logo-link"><span class="blind">효두</span></a>
+    </h1>
+    <a aria-label="메뉴 여닫기 버튼" class="burger">
+      <div aria-label="hidden" class="burger-line-wrap">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </div>
+    </a>
+  </div>
+  <!-- [전달사항] 윈도너비가 1060 미만(=모바일 사이즈)일 때, nav에게 .-trans 클래스가 붙어야 합니다. 1060 이상이면 .-trans를 제거해 주세요. (header.js 참고) -->
+  <nav class="nav">
+    <h2 class="nav-title">
+      <div class="logo nav-logo" aria-label="hidden"></div>
+      <span class="blind">네비게이션</span>
+    </h2>
+    <!-- [전달사항] .scroll-container 값은 윈도너비가 1060 미만(=모바일 사이즈)일 때 유동적으로 값이 바뀝니다. (header.js 참고) -->
+    <div class="scroll-container">
+      <div class="nav-account">
+        <div class="nav-account-container">
+          <button class="btn-mail">nana@thevitolabs.com</button>
+          <!-- 
+            [전달사항]
+            사용자 레벨에 따라 .btn-level에 고유의 클래스 네임을 붙여주세요.
+            레벨 1 = .-lv1
+            레벨 2 = .-lv2
+            레벨 3 = .-lv3
+            레벨 4 = .-lv4
+            레벨 5 = .-lv5
+          -->
+          <button href="" class="btn-level -lv4">Lv.4</button>
+        </div>
+      </div>
+      <ul class="nav-menu">
+        <li class="menu-item"><a href="" class="menu-link">스토어</a></li>
+        <li class="menu-item"><a href="" class="menu-link">서비스 소개</a></li>
+      </ul>
+      <ul class="nav-user">
+        <li class="user-item"><a href="" class="user-link">회원정보 수정</a></li>
+        <li class="user-item"><a href="" class="user-link">배송지 관리</a></li>
+        <li class="user-item"><a href="" class="user-link">구매 내역</a></li>
+        <li class="user-item"><a href="" class="user-link">쿠폰 사용 내역</a></li>
+        <li class="user-item"><a href="" class="user-link">포인트 내역</a></li>
+        <li class="user-item"><a href="" class="user-link">문의하기</a></li>
+        <li class="user-item item-logout"><a href="" class="user-link">로그아웃</a></li>
+      </ul>
+      <div class="nav-btn-wrap">
+        <button class="nav-btn btn-line">회원가입</button>
+        <button class="nav-btn btn-line-on">로그인</button>
+      </div>
+    </div>
+  </nav>
+  <div class="dim header-dim"></div>
+</header>
+    <div class="page-body">
+      <div class="page-top"></div>
+      <div class="page-title">
+  <h2 class="title">회원정보 입력</h2>
+  <small class="title-small">회원가입이 거의 끝나가요! (쿠폰발사 대기 중)</small>
+  <div class="page-control">
+    <div class="page-control-container">
+      
+      
+      
+    </div>
+  </div>
+</div>
+      <div class="page-guide">
+        <p class="user-mail">vito@thevitolabs.com</p>
+        <p>위의 메일주소로 계정을 생성합니다.<br />
+          비밀번호와 간단한 정보를 입력해 주세요.</p>
+      </div>
+      <div class="page-content">
+        <form>
+          <!-- 
+            [전달사항] (혹시 필요한 경우에 사용해주세요.)
+            특정 영역에만 로딩 이미지를 보여줘야하는 경우 해당 영역에 .-need-loading 클래스를 주고, 그 아래에 <div class="loading-small">..</div>를 동적으로 넣어주세요!
+          -->
+          <div class="form-container -need-loading">
+            <div class="loading-small">
+              <div class="loading-image"><span class="blind">로딩 중</span></div>
+            </div>
+            <div class="form-item -required-form form-user-password">
+              <label for="form-password" class="form-label">
+                <span class="form-label-text">비밀번호</span>
+                <span class="form-label-guide">(알파벳과 숫자를 조합하여 8~20자)</span>
+              </label>
+              <input id="just-test-page000" name="form-password" type="password" minlength="" maxlength=""
+                placeholder="비밀번호를 입력해 주세요." value="testpage" class="form-input" />
+              <input id="just-test-page0000" name="form-password" type="password" minlength="" maxlength=""
+                placeholder="비밀번호를 한 번 더 입력해 주세요." value="testpage" class="form-input" />
+              <p class="form-error"></p>
+            </div>
+            <div class="form-item -required-form">
+  <label for="just-test-page111" class="form-label">
+    <span class="form-label-text">이름/닉네임</span>
+    <span class="form-label-guide">(띄어쓰기와 특수문자 없이 2~10자)</span>
+  </label>
+  
+  
+  <input id="just-test-page111" name="just-test-page111" type="text" minlength="2" maxlength="10"
+    placeholder="이름을 입력해 주세요." class="form-input " value="로딩화면 테스트"
+    required />
+  
+  <p class="form-error"></p>
+  
+</div>
+            <div class="form-item ">
+  <label for="just-test-page222" class="form-label">
+    <span class="form-label-text">휴대전화 번호</span>
+    <span class="form-label-guide">(숫자만 입력)</span>
+  </label>
+  
+  
+  <input id="just-test-page222" name="just-test-page222" type="tel" minlength="" maxlength=""
+    placeholder="하이픈(-) 없이 번호 전체를 입력해 주세요." class="form-input " value="01012345678"
+     />
+  
+  <p class="form-error"></p>
+  
+</div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="checkbox" class="checkbox-input" checked />
+              <label for="checkbox">효두의 알뜰살뜰 메일 서비스도 받아볼래요 (선택사항)</label>
+            </div>
+            <p class="text-small">
+              아래 완료 버튼을 누르면 효두의 <a href="" class="link">서비스 이용약관</a>과 <a href="" class="link">개인정보 처리방침</a>에 동의한 후 회원가입을
+              완료합니다.
+            </p>
+            <button class="btn-full btn-page-request">가입 완료</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer class="footer">
+  <div class="footer-container">
+    <strong class="logo footer-logo">
+      <span class="blind">Hyodu</span>
+    </strong>
+    <div class="footer-content">
+      <div class="footer-link-wrap">
+        <a href="" class="footer-link">이용약관</a>
+        <a href="" class="footer-link">개인정보처리방침</a>
+      </div>
+      <div class="footer-text-container">
+        <p>
+          대표이사: 손성우</br>
+          개인정보책임자: 손성우</br>
+          사업자등록번호 123-12-12345 <a href="">[사업자정보확인]</a></br>
+          통신판매업신고 1234-서울중구-12345
+        </p>
+      </div>
+      <div class="footer-mail-wrap">
+        <li class="footer-mail">
+          <span>일반문의 : </span><a href="" class="mail-link">customer@hyodu.com</a>
+        </li>
+        <li class="footer-mail">
+          <span>제휴문의 : </span><a href="" class="mail-link">mkt@hyodu.com</a>
+        </li>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-social-wrap">
+        <a href="" class="footer-social -instagram">
+          <span class="blind">효두 인스타그램</span>
+        </a>
+        <!-- [전달사항] 페이스북 추가했습니다~ (20.01.15) -->
+        <a href="" class="footer-social -facebook">
+          <span class="blind">효두 페이스북</span>
+        </a>
+        <!-- <a href="" class="footer-social -notion">
+          <span class="blind">효두 노션</span>
+        </a> -->
+      </div>
+      <p class="copyright">© 2019 Hyodu, Inc. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- TODO: 테스트용 -->
+<script src="./../../js/ui.js"></script>
+  </div>
+</body>
+
+</html>

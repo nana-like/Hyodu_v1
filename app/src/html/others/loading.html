@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include("../common/document-head.html")
+
+<body>
+  <div class="wrap">
+    @@include('../common/header.html')
+    <div class="page-body">
+      @@include('../common/page-top.html')
+      @@include('../common/page-title.html', {
+      "title": "회원정보 입력",
+      "small": "회원가입이 거의 끝나가요! (쿠폰발사 대기 중)"
+      })
+      <div class="page-guide">
+        <p class="user-mail">vito@thevitolabs.com</p>
+        <p>위의 메일주소로 계정을 생성합니다.<br />
+          비밀번호와 간단한 정보를 입력해 주세요.</p>
+      </div>
+      <div class="page-content">
+        <form>
+          <div class="form-container">
+            <div class="form-item -required-form form-user-password">
+              <label for="form-password" class="form-label">
+                <span class="form-label-text">비밀번호</span>
+                <span class="form-label-guide">(알파벳과 숫자를 조합하여 8~20자)</span>
+              </label>
+              <input id="just-test-page000" name="form-password" type="password" minlength="" maxlength=""
+                placeholder="비밀번호를 입력해 주세요." value="testpage" class="form-input" />
+              <input id="just-test-page0000" name="form-password" type="password" minlength="" maxlength=""
+                placeholder="비밀번호를 한 번 더 입력해 주세요." value="testpage" class="form-input" />
+              <p class="form-error"></p>
+            </div>
+            @@include("../common/form-item.html", {
+            "label" : "이름/닉네임",
+            "guide" : "(띄어쓰기와 특수문자 없이 2~10자)",
+            "required" : "required",
+            "inputID" : "just-test-page111",
+            "type" : "text",
+            "value" : "로딩화면 테스트",
+            "placeholder" : "이름을 입력해 주세요.",
+            "length" : {
+            "min": "2",
+            "max": "10"
+            },
+            "error" : "",
+            "errorMsg" : ""
+            })
+            @@include("../common/form-item.html", {
+            "label" : "휴대전화 번호",
+            "guide" : "(숫자만 입력)",
+            "required" : "",
+            "inputID" : "just-test-page222",
+            "type" : "tel",
+            "value" : "01012345678",
+            "placeholder" : "하이픈(-) 없이 번호 전체를 입력해 주세요.",
+            "length" : {
+            "min": "",
+            "max": ""
+            },
+            "error" : "",
+            "errorMsg" : ""
+            })
+            <div class="checkbox-item">
+              <input type="checkbox" id="checkbox" class="checkbox-input" checked />
+              <label for="checkbox">효두의 알뜰살뜰 메일 서비스도 받아볼래요 (선택사항)</label>
+            </div>
+            <p class="text-small">
+              아래 완료 버튼을 누르면 효두의 <a href="" class="link">서비스 이용약관</a>과 <a href="" class="link">개인정보 처리방침</a>에 동의한 후 회원가입을
+              완료합니다.
+            </p>
+            <button class="btn-full btn-page-request">가입 완료</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    @@include('../common/footer.html')
+  </div>
+  <!-- 
+    [전달사항] 전체 페이지를 덮는 로딩 화면입니다.
+    <div class="loading"></div>를 보여주시면 됩니다.
+    페이지를 덮지만 헤더와 모달보다는 아래에 있습니다. 따라서 로딩 중에도 헤더 클릭이 가능하고, 로딩 중 이탈에 대한 모달을 띄우는 것도 가능합니다.
+  -->
+  <div class="loading">
+    <div class="loading-image"><span class="blind">로딩 중</span></div>
+  </div>
+</body>
+
+</html>
