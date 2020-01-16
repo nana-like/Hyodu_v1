@@ -61,7 +61,7 @@
 
 
   -->
-<header class="header -login">
+<header class="header ">
   <div class="header-container">
     <h1 class="logo header-logo">
       <a href="/" class="logo-link"><span class="blind">효두</span></a>
@@ -132,85 +132,14 @@
   </div>
 </div>
       <!-- 
-        [전달사항] 
-        사용자 레벨에 따라 .user-level에 클래스 네임을 다르게 추가해주세요.
-        - 1레벨 : .-user-lv-1
-        - 2레벨 : .-user-lv-2
-        - 3레벨 : .-user-lv-3
-        - 4레벨 : .-user-lv-4
-        - 5레벨 : .-user-lv-5
+        [전달사항] 로그인 중이 아닐 경우의 모습입니다. .user-level 부분은 숨기고, .level-need-login 부분이 보입니다.
       -->
-      <div class="user-level -user-lv-3">
-        <div class="jumbotron user-summary">
-          <div class="jumbotron-container">
-            <!-- 
-            [전달사항] 
-            레벨 관련 부분은 아직 미정인 부분이 많습니다. 최종적으로 달라지거나 삭제될 수도 있을 것 같습니다. 레벨별 수식어도 일단 임의입니다ㅎㅎ
-            - 1레벨 : 혜성같이 등장한 효두러
-            - 2레벨 : 효도를 두잇하는 중인
-            - 3레벨 : 효도에 슬슬 맛들린
-            - 4레벨 : 효두 마니아
-            - 5레벨 : 효두제왕
-          -->
-            <div class="user-badge">
-              <img src="" alt="" class="level-info-badge-image">
-            </div>
-            <div class="user-info">
-              <div class="user-status">
-                <p class="user-status-level">Lv. 3</p>
-                <p class="user-status-title">효도를 두잇하는 중인</p>
-                <strong class="user-status-name">닉네임이열글자인경우</strong>
-              </div>
-              <div class="user-exp">
-                <div class="user-exp-current">64%</div>
-                <div class="user-exp-progress">
-                  <!-- [전달사항] .user-exp-progress-bar에 경험치 비율만큼 너비 값을 넣어 주세요. 5레벨일 경우 100%로 지정해주세요. -->
-                  <div class="user-exp-progress-bar" style="width:64%"></div>
-                </div>
-                <!-- [전달사항] 5레벨일 경우 현재 경험치만 표시해주세요. (ex: 2,123,456) -->
-                <div class="user-exp-total">640,000 / 1,000,000</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="user-position">
-          <div class="user-position-container">
-            <div class="user-position-progress">
-              <div class="user-position-progress-bar"></div>
-            </div>
-            <ul class="bar-level">
-              <li class="bar-level-list">Lv. 1</li>
-              <li class="bar-level-list">Lv. 2</li>
-              <li class="bar-level-list">Lv. 3</li>
-              <li class="bar-level-list">Lv. 4</li>
-              <li class="bar-level-list">Lv. 5</li>
-            </ul>
-            <p class="user-position-guide">
-              <!-- 
-                [전달사항] 
-                1. 경험치 부분에 대한 정책은 아직 미정입니다! 결정되는 대로 알려드릴게요.
-                2. 여기 들어갈 문구는 아래와 같습니다. -->
-              <!-- [1레벨일 때]-->
-              <!-- 
-                <em class="emphasize">결제 1회</em>를 완료하면 <em class="emphasize">Lv.
-                2</em>로 레벨업할 수 있어요.
-              -->
-              <!-- [2~4레벨일 때]-->
-              <!-- 
-                <em class="emphasize">{목표 경험치 - 현재 경험치}</em>를 더 채우면 <em class="emphasize">Lv. {다음 레벨}</em>로 레벨업할 수 있어요. 
-              -->
-              <!-- [5레벨일 때]-->
-              <!--
-              우와, <em class="emphasize">Lv. 5</em>를 달성했어요! 만렙 효두러를 위한 혜택을 확인하세요.
-              -->
-              <!-- (3레벨 예시) -->
-              <em class="emphasize">360,000 경험치</em>를 더 채우면 <em class="emphasize">Lv.
-                4</em>로 레벨업할 수 있어요.
-            </p>
-          </div>
-        </div>
-      </div>
       <div class="page-layout">
+        <div class="level-need-login">
+          <p>효두에 가입하면 레벨별 혜택을 받을 수 있어요. <br />다양한 활동으로 경험치를 쌓아 레벨업 해보세요.</p>
+          <button class="page-sub-btn btn-line">로그인</button>
+          <button class="page-sub-btn btn-line">회원가입</button>
+        </div>
         <div class="level-guide">
           <strong class="level-guide-title">효두의 레벨 및 혜택 안내</strong>
           <ol class="level-guide-list">
