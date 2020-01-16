@@ -2,42 +2,63 @@
 // layout - level
 // ---
 
-
 .user-level {
   // 👆 유저 레벨 영역 전체
 
-
-  $_userLevelposition: (1: (width:1%, minM:10px, minL: 14px),
-      2: (width:26%, minM:76px, minL:104px),
-      3: (width:50%, minM:140px, minL:140px),
-      4: (width:74%, minM:250px, minL:250px),
-      5: (width:100%, minM:100%, minL:100%));
-
+  $_userLevelposition: (
+    1: (
+      width: 1%,
+      minM: 10px,
+      minL: 14px
+    ),
+    2: (
+      width: 26%,
+      minM: 76px,
+      minL: 104px
+    ),
+    3: (
+      width: 50%,
+      minM: 140px,
+      minL: 140px
+    ),
+    4: (
+      width: 74%,
+      minM: 250px,
+      minL: 250px
+    ),
+    5: (
+      width: 100%,
+      minM: 100%,
+      minL: 100%
+    )
+  );
 
   &.-user-lv-5 {
-
     // 🙌 만렙(레벨5)일 때 특별처리
+
     .user-exp-current {
+      // 👆 현재 경험치 퍼센트 숨기기
       display: none;
     }
 
     .user-position-progress-bar {
+      // 👆 프로그레스 바 색상 변경
       background-color: #ff8393;
     }
 
     .user-position-progress-bar:before {
+      // 👆 별 색상 변경
       left: 98%;
       background-image: icon(star, "FF5461");
     }
 
     .bar-level .bar-level-list:last-child {
-      color: #FF5461;
+      // 👆 레벨 5 색상 변경
+      color: #ff5461;
     }
   }
 
-
-  @each $key,
-  $value in $_userLevelposition {
+  @each $key, $value in $_userLevelposition {
     &.-user-lv-#{$key} {
       // 🙌 레벨 별 progress bar 너비값 변경
 
@@ -50,56 +71,45 @@
         }
       }
 
-      .bar-level-list:nth-child(-n+#{$key}) {
+      .bar-level-list:nth-child(-n + #{$key}) {
         color: #4b4b4b;
       }
     }
   }
 }
 
-
-@each $key,
-$value in $c-badge {
-
+@each $key, $value in $c-badge {
   .user-level.-user-lv-#{$key} {
     // 🙌 레벨 별 뱃지 부분의 이미지와 배경색 변경
 
     .user-badge {
-      background-image: url(#{$path-image}#{map-get($value, img)
-    }
+      background-image: url(#{$path-image}#{map-get($value, img)});
+      background-size: 105px 105px;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-color: map-get($value, bg);
 
-    );
-    background-size: 105px 105px;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-color: map-get($value, bg);
-
-    @include res--laptop {
-      background-size: 145px 145px;
+      @include res--laptop {
+        background-size: 145px 145px;
+      }
     }
   }
-}
 
+  .level-guide .level-guide-list-item:nth-child(#{$key}) {
+    // 🙌 레벨 별 뱃지 부분의 이미지와 배경색 변경
 
-.level-guide .level-guide-list-item:nth-child(#{$key}) {
-  // 🙌 레벨 별 뱃지 부분의 이미지와 배경색 변경
+    .level-guide-badge {
+      background-image: url(#{$path-image}#{map-get($value, img)});
+      background-size: 85px 85px;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-color: map-get($value, bg);
 
-  .level-guide-badge {
-    background-image: url(#{$path-image}#{map-get($value, img)
+      @include res--laptop {
+        background-size: 135px 135px;
+      }
+    }
   }
-
-  );
-  background-size: 85px 85px;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-color: map-get($value, bg);
-
-  @include res--laptop {
-    background-size: 135px 135px;
-  }
-}
-}
-
 }
 
 .user-summary {
@@ -212,16 +222,14 @@ $value in $c-badge {
       color: $c-gray-light;
     }
   }
-
 }
-
 
 .user-position {
   // 👆 .user-level에서 다음 레벨까지의 경험치 보여주는 부분 (하단)
   background-color: #fff;
 
   &:after {
-    content: '';
+    content: "";
     display: block;
     width: 100%;
     height: 20px;
@@ -263,7 +271,7 @@ $value in $c-badge {
         transform: translateX(-50%);
         background-size: 100%;
         background-image: icon(star, "343434");
-        content: '';
+        content: "";
 
         @include res--laptop {
           width: 16px;
@@ -301,8 +309,6 @@ $value in $c-badge {
   }
 }
 
-
-
 .level-guide {
   // 👆 효두의 레벨 및 혜택 안내 부분
 
@@ -331,7 +337,6 @@ $value in $c-badge {
   }
 
   &-list {
-
     @include res--laptop {
       margin-top: 39px;
       @include flexbox();
@@ -357,7 +362,7 @@ $value in $c-badge {
         margin-right: 0;
       }
 
-      &:nth-child(-n+3) {
+      &:nth-child(-n + 3) {
         margin-bottom: 58px;
       }
     }
@@ -462,12 +467,9 @@ $value in $c-badge {
       &:before {
         @include listBullet();
       }
-
     }
   }
-
 }
-
 
 .small-notice {
   // 👆 레벨 안내사항처럼 작은 안내 표시부
@@ -516,6 +518,5 @@ $value in $c-badge {
     &:before {
       @include listBullet;
     }
-
   }
 }
