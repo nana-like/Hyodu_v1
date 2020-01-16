@@ -79,7 +79,7 @@ gulp.task("sass", function () {
       -----------------------------------------------
     `)
     )
-    .pipe(sourcemaps.write())
+    // .pipe(sourcemaps.write())
     .pipe(gulp.dest(dist + "/css"))
     .pipe(browserSync.stream());
 });
