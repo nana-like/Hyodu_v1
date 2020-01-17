@@ -534,3 +534,7 @@
   }
 
 }
+
+.form-input-number {
+  @include pointer-none();
+}

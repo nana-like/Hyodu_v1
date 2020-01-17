@@ -186,6 +186,9 @@ if (modal != null) {
     },
     close: function () {
       modal.classList.remove("-modal-opened");
+      if (fixedBar != null) {
+        document.body.querySelector(".share-container").classList.remove("-copied");
+      }
     }
   }
   if (btnModalOkay != null) {

@@ -15,6 +15,11 @@
   transition: all 0.3s ease;
   transition-property: opacity, visibility;
   transition-delay: 100ms;
+
+  .share-copied {
+    // 사파리, 파폭에서 메시지만 늦게 사라지는 현상 제거
+    display: none;
+  }
 }
 
 .modal-dim {
@@ -238,6 +243,10 @@
   opacity: 1;
   visibility: visible;
   transition-delay: 0s;
+
+  .share-copied {
+    display: block;
+  }
 
   .modal-body {
     animation: slideInUp 0.3s 50ms;
