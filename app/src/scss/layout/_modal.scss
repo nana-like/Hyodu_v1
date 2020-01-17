@@ -231,4 +231,9 @@
   // 🙌 모달 열렸을 때
   opacity: 1;
   visibility: visible;
+
+  .modal-body {
+    animation: slideInUp 0.4s;
+    animation-fill-mode: backwards;
+  }
 }

@@ -5,33 +5,21 @@
 .user-level {
   // 👆 유저 레벨 영역 전체
 
-  $_userLevelposition: (
-    1: (
-      width: 1%,
-      minM: 10px,
-      minL: 14px
-    ),
-    2: (
-      width: 26%,
-      minM: 76px,
-      minL: 104px
-    ),
-    3: (
-      width: 50%,
-      minM: 140px,
-      minL: 140px
-    ),
-    4: (
-      width: 74%,
-      minM: 250px,
-      minL: 250px
-    ),
-    5: (
-      width: 100%,
-      minM: 100%,
-      minL: 100%
-    )
-  );
+  $_userLevelposition: (1: (width: 1%,
+        minM: 10px,
+        minL: 14px),
+      2: (width: 26%,
+        minM: 76px,
+        minL: 104px),
+      3: (width: 50%,
+        minM: 140px,
+        minL: 140px),
+      4: (width: 74%,
+        minM: 250px,
+        minL: 250px),
+      5: (width: 100%,
+        minM: 100%,
+        minL: 100%));
 
   &.-user-lv-5 {
     // 🙌 만렙(레벨5)일 때 특별처리
@@ -48,7 +36,7 @@
 
     .user-position-progress-bar:before {
       // 👆 별 색상 변경
-      left: 98%;
+      left: 98.2%;
       background-image: icon(star, "FF5461");
     }
 
@@ -58,7 +46,8 @@
     }
   }
 
-  @each $key, $value in $_userLevelposition {
+  @each $key,
+  $value in $_userLevelposition {
     &.-user-lv-#{$key} {
       // 🙌 레벨 별 progress bar 너비값 변경
 
@@ -78,38 +67,48 @@
   }
 }
 
-@each $key, $value in $c-badge {
+@each $key,
+$value in $c-badge {
   .user-level.-user-lv-#{$key} {
     // 🙌 레벨 별 뱃지 부분의 이미지와 배경색 변경
 
     .user-badge {
-      background-image: url(#{$path-image}#{map-get($value, img)});
-      background-size: 105px 105px;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
       background-color: map-get($value, bg);
+    }
 
-      @include res--laptop {
-        background-size: 145px 145px;
-      }
+    .user-badge-image {
+      background-image: url(#{$path-image}#{map-get($value, img)
+    }
+
+    );
+    background-size: 105px 105px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    @include res--laptop {
+      background-size: 145px 145px;
     }
   }
+}
 
-  .level-guide .level-guide-list-item:nth-child(#{$key}) {
-    // 🙌 레벨 별 뱃지 부분의 이미지와 배경색 변경
+.level-guide .level-guide-list-item:nth-child(#{$key}) {
+  // 🙌 레벨 별 뱃지 부분의 이미지와 배경색 변경
 
-    .level-guide-badge {
-      background-image: url(#{$path-image}#{map-get($value, img)});
-      background-size: 85px 85px;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-color: map-get($value, bg);
-
-      @include res--laptop {
-        background-size: 135px 135px;
-      }
-    }
+  .level-guide-badge {
+    background-image: url(#{$path-image}#{map-get($value, img)
   }
+
+  );
+  background-size: 85px 85px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: map-get($value, bg);
+
+  @include res--laptop {
+    background-size: 135px 135px;
+  }
+}
+}
 }
 
 .user-summary {
@@ -133,6 +132,12 @@
     height: 148px;
     background-color: #f0f0f0;
     margin-right: 20px;
+
+    &-image {
+      width: 100%;
+      height: 100%;
+      animation: popIn 0.6s 0.1s;
+    }
 
     @include res--laptop {
       min-width: 236px;
@@ -199,6 +204,7 @@
     }
 
     &-progress {
+      overflow: hidden;
       margin: 4px 0 2px;
       width: 100%;
       height: 10px;
@@ -215,6 +221,7 @@
       height: 100%;
       background-image: linear-gradient(to right, #f48d6c, #ff5461);
       border-radius: 2px;
+      animation: progress 1s;
     }
 
     &-total {
@@ -237,8 +244,10 @@
   }
 
   &-container {
-    padding: 55px 20px 35px;
-    max-width: 680px;
+    overflow: hidden;
+    padding: 55px 0px 35px;
+    width: calc(100% - 40px);
+    max-width: 600px;
     margin: 0 auto;
 
     @include res--laptop {
@@ -247,6 +256,7 @@
   }
 
   &-progress {
+    // overflow: hidden;
     width: 100%;
     height: 6px;
     background-color: #e6e6e6;
@@ -260,23 +270,29 @@
       width: 100%;
       height: 100%;
       background-color: $c-gray-light;
+      animation: progress 1s 1s;
+      animation-fill-mode: backwards;
 
       &:before {
+        opacity: 0;
         position: absolute;
         top: -18px;
         left: 100%;
         display: block;
         width: 14px;
         height: 13px;
-        transform: translateX(-50%);
+        margin-left: -7px;
         background-size: 100%;
         background-image: icon(star, "343434");
         content: "";
+        animation: flip 2s 2.1s;
+        animation-fill-mode: forwards;
 
         @include res--laptop {
           width: 16px;
           height: 15px;
           top: -22px;
+          margin-left: -8px;
         }
       }
     }

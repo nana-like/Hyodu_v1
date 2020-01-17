@@ -4,9 +4,11 @@ var header = document.querySelector(".header"),
   burgerMenu = header.querySelector(".burger"),
   navScrollCont = header.querySelector(".scroll-container");
 var nav = header.querySelector(".nav"),
-  navBtns = nav.querySelector(".nav-btn-wrap");
+  navBtns = nav.querySelector(".nav-btn-wrap"),
+  navAccount = nav.querySelector(".nav-account");
 var fixedBar = document.querySelector(".fixed-bar");
 var footer = document.querySelector(".footer");
+var breakPoint = 1060; //미디어쿼리의 반응형 분기점. 1060이하면 모바일로 처리.
 
 // 💪 해당 브라우저의 스크롤바 너비를 구하는 함수
 var getScrollBarWidth = function () {
@@ -18,6 +20,16 @@ var getScrollBarWidth = function () {
   document.body.style.overflow = "";
   return width;
 };
+
+// 💪 반응형(모바일 사이즈인지) 체크
+var isMobileSize = function () {
+  var winW = window.innerWidth;
+  if (winW < breakPoint) { //breakPoint = 1060
+    return true;
+  } else {
+    return false;
+  }
+}
 
 // 💪 스크롤을 막는 함수
 var preventScroll = function (type) {
@@ -43,11 +55,15 @@ var preventScroll = function (type) {
     }
   }
 
-  getPadding(wrap, headerContainer);
+  getPadding(wrap);
 
   if (fixedBar != null) {
     // 👆 fixed bar가 있을 경우 fixed bar에도 패딩값 추가
     getPadding(fixedBar);
+  }
+  if (isMobileSize) {
+    // 👆 모달을 열었을 경우에는 네비게이션에도 패딩값 추가
+    getPadding(headerContainer);
   }
   if (type === "modal") {
     // 👆 모달을 열었을 경우에는 네비게이션에도 패딩값 추가
@@ -70,9 +86,50 @@ var allowScroll = function () {
   document.body.classList.remove("-scroll-disabled");
   // 👆 스크롤을 막는 클래스네임을 body에서 제거합니다.
 }
+
+
+// 💪 모바일에서 사용하는 함수
+var mobileEvt = function () {
+  var winW = window.innerWidth;
+
+
+  if (winW < breakPoint) {
+    // 🙌 윈도 너비가 breakPoint보다 작을 때 (=모바일 사이즈)
+    nav.classList.add("-trans");
+    // 👆 버거 메뉴를 여는 애니메이션을 보여도록 설정합니다.
+    headerSizeEvt();
+    // 👆 헤더 높이를 유동적으로 구합니다.
+  } else {
+    // 🙌 윈도 너비가 breakPoint보다 클 때 (=랩탑 이상 사이즈)
+    nav.classList.remove("-trans");
+    // 👆 버거 메뉴 애니메이션을 숨깁니다.
+    burgerEvt.close();
+    // 👆 버거 메뉴를 무조건 닫습니다.
+    navScrollCont.style.height = "80px";
+    // 👆 스크롤 가능 높이값은 80px로 고정합니다.
+  }
+};
+
+var resizeHandler = function () {
+  mobileEvt();
+  isMobileSize();
+  // 👆 윈도우 리사이즈 시, 이 이벤트가 발생하도록 처리해 주세요.
+}
+var loadHandler = function () {
+  mobileEvt();
+  isMobileSize();
+  // 👆 윈도우 최초 로드 시, 이 이벤트가 발생하도록 처리해 주세요.
+}
+
+
+
+window.addEventListener("resize", resizeHandler);
+// 👆 리사이즈 이벤트
+
+window.addEventListener("load", loadHandler);
+// 👆 로드 이벤트
 var headerDim = header.querySelector(".header-dim"),
   btnMail = document.querySelector(".btn-mail");
-var breakPoint = 1060; //미디어쿼리의 반응형 분기점. 1060이하면 모바일로 처리.
 
 // 💪 메뉴 여닫는 함수
 var burgerEvt = {
@@ -107,37 +164,6 @@ var headerSizeEvt = function () {
   // 👆 헤더 내 네비게이션 컨테이너의 높이값을 변경합니다.
 }
 
-// 💪 모바일에서 사용하는 함수
-var mobileEvt = function () {
-  var winW = window.innerWidth;
-
-
-  if (winW < breakPoint) {
-    // 🙌 윈도 너비가 breakPoint보다 작을 때 (=모바일 사이즈)
-    nav.classList.add("-trans");
-    // 👆 버거 메뉴를 여는 애니메이션을 보여도록 설정합니다.
-    headerSizeEvt();
-    // 👆 헤더 높이를 유동적으로 구합니다.
-  } else {
-    // 🙌 윈도 너비가 breakPoint보다 클 때 (=랩탑 이상 사이즈)
-    nav.classList.remove("-trans");
-    // 👆 버거 메뉴 애니메이션을 숨깁니다.
-    burgerEvt.close();
-    // 👆 버거 메뉴를 무조건 닫습니다.
-    navScrollCont.style.height = "80px";
-    // 👆 스크롤 가능 높이값은 80px로 고정합니다.
-  }
-};
-
-var resizeHandler = function () {
-  mobileEvt();
-  // 👆 윈도우 리사이즈 시, 이 이벤트가 발생하도록 처리해 주세요.
-}
-var loadHandler = function () {
-  mobileEvt();
-  // 👆 윈도우 최초 로드 시, 이 이벤트가 발생하도록 처리해 주세요.
-}
-
 
 // 💪 버거메뉴 클릭 시 메뉴 여닫는 함수 실행
 burgerMenu.addEventListener("click", function () {
@@ -154,12 +180,6 @@ headerDim.addEventListener("click", burgerEvt.close);
 
 btnMail.addEventListener("click", userMenuEvt.toggle);
 // 👆 메일 주소 클릭 시 사용자 메뉴를 열고 닫습니다. (모바일에서는 클릭 불가하도록 CSS로 처리했습니다.)
-
-window.addEventListener("resize", resizeHandler);
-// 👆 리사이즈 이벤트
-
-window.addEventListener("load", loadHandler);
-// 👆 로드 이벤트
 var modal = document.querySelector(".modal");
 
 if (modal != null) {
