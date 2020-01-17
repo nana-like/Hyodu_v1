@@ -1,24 +1,52 @@
-var shareContainer = document.querySelector(".share-container");
 var listCardContainer = document.querySelectorAll(".listcard-container")
 
 
-/* ** 공유하기 모달 ** */
-if (shareContainer != null) {
+/* ** fixed bar ** */
+
+
+
+if (fixedBar != null) {
+  /* * 좋아요 버튼 * */
+  var hartIcon = fixedBar.querySelector(".-icon-heart");
+  hartIcon.addEventListener("click", function (e) {
+    if (hartIcon.classList.contains("popIn")) {
+      return false;
+    }
+    if (hartIcon.classList.contains("-icon-loveit")) {
+      hartIcon.classList.remove("-icon-loveit");
+    } else {
+      e.target.classList.add("-icon-loveit");
+      e.target.classList.add("popIn");
+      hartIcon.addEventListener('animationend', function () {
+        e.target.classList.remove("popIn");
+      });
+      hartIcon.addEventListener('webkitAnimationEnd', function () {
+        e.target.classList.remove("popIn");
+      });
+    }
+  });
+
+
+  /* * 공유하기 모달 * */
+  var shareContainer = document.body.querySelector(".share-container");
   var btnCopy = shareContainer.querySelector(".btn-copy-link");
 
   // 💪 공유하기 모달에서 주소 복사 버튼 클릭 시, 복사 완료 문구를 보여주는 함수
   var showCopyAniEvt = function () {
-    if (shareContainer.classList.contains("-copied")) {
-      // 👆 아직 이벤트가 발생 중이라면 무시
-      return false;
-    }
-    shareContainer.classList.add("-copied");
-    // 👆 .share-container에게 .-copied 클래스가 붙으면 '복사 완료!' 문구가 나타나는 애니메이션이 실행됩니다.
 
-    setTimeout(function () {
+    var showText = function () {
+      shareContainer.classList.add("-copied");
+    }
+
+    var hideText = function () {
       shareContainer.classList.remove("-copied");
-    }, 1800);
-    // 👆 1.8초 후에 .-copied 클래스를 제거해 주세요.
+    }
+
+    showText();
+    shareContainer.addEventListener('animationend', hideText);
+    shareContainer.addEventListener('webkitAnimationEnd', hideText);
+    // 👆 애니메이션 종료 후 클래스 제거
+
   }
 
   btnCopy.addEventListener("click", showCopyAniEvt);

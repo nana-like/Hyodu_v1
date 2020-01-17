@@ -142,11 +142,23 @@
       max-width: 360px;
 
       &:before {
-        // background-size: 100%;
         width: 22px;
         height: 22px;
         margin-left: -35px;
       }
     }
+  }
+
+  .btn-icon.-icon-heart {
+
+
+    // -webkit-animation-name: buzz;
+    // animation-name: buzz;
+    // -webkit-animation-duration: 0.15s;
+    // animation-duration: 0.15s;
+    // -webkit-animation-timing-function: linear;
+    // animation-timing-function: linear;
+    // -webkit-animation-iteration-count: infinite;
+    // animation-iteration-count: infinite;
   }
 }

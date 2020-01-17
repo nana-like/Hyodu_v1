@@ -276,41 +276,88 @@
   // 👆 아이콘으로 된 버튼 (좋아요, 공유하기 등)
   width: 28px;
   height: 28px;
-  background-repeat: no-repeat;
-  background-size: 22px;
-  background-position: 50%;
+
+  @include res--laptop {
+    width: 34px;
+    height: 34px;
+  }
 
   &.-icon-heart {
     // 🙌 하트 아이콘
-    background-image: icon(heart, "555555", "ffffff");
+    position: relative;
 
-    &:hover {
-      background-image: icon(heart, "101010", "fafafa");
+    &:before,
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: 22px;
+      transition: opacity 0.3s;
     }
 
-    &.-loveit {
+    &:before {
+      opacity: 1;
+      background-image: icon(heart, "555555", "ffffff");
+    }
+
+    &:after {
+      opacity: 0;
       background-image: icon(heart, "ff5461", "ff5461");
+    }
+
+    &:hover {
+      &:before {
+        background-image: icon(heart, "101010", "fafafa");
+      }
+    }
+
+    &.-icon-loveit {
+
+      &:before {
+        opacity: 0;
+      }
+
+      &:after {
+        opacity: 1;
+      }
+    }
+
+    @include res--laptop {
+
+      &:before,
+      &:after {
+        background-size: 26px;
+      }
     }
   }
 
   &.-icon-share {
     // 🙌 공유 아이콘
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 22px;
     background-image: icon(share, "555555");
 
     &:hover {
       background-image: icon(share, "101010");
     }
+
+    @include res--laptop {
+      background-size: 26px;
+    }
   }
 
-  @include res--laptop {
-    width: 34px;
-    height: 34px;
-    background-size: 28px;
-  }
 }
 
 .btn-purchase {
   // 👆 구매하기 버튼 (결제 화면 전용)
+  position: relative;
   font-size: 13px;
   width: 66%;
   height: 36px;
@@ -320,9 +367,36 @@
   font-weight: $fw-m;
   border-radius: 3px;
   background-color: $c-pink;
+  transition: padding 0.3s, background 0.3s;
+
+  &:after {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    content: '';
+    width: 9px;
+    height: 9px;
+    margin-top: -4px;
+    margin-left: -6px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: icon(arrow-right, "ffffff");
+    transition: opacity 0.2s, margin 0.3s;
+  }
 
   &:hover {
     background-color: #ff5461;
+    padding-right: 15px;
+
+    &:after {
+      opacity: 1;
+      margin-left: 25px;
+      animation: bounceToRight 1s 500ms infinite;
+    }
+
   }
 
   @include res--laptop {
@@ -336,13 +410,20 @@
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
+  @include pointer-auto();
+
 
   @include res--laptop {
     font-size: 15px;
   }
 
   &:hover {
+    padding-right: 5px;
     background-color: #ff5461;
+
+    &:after {
+      margin-left: 20px;
+    }
   }
 
   &:disabled {
@@ -350,6 +431,7 @@
     color: #fff;
     border-color: #d6d6d6;
     cursor: default;
+    @include pointer-none();
   }
 }
 
