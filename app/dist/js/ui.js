@@ -210,32 +210,55 @@ var listCardContainer = document.querySelectorAll(".listcard-container")
 
 
 /* ** fixed bar ** */
-
-
-
 if (fixedBar != null) {
-  /* * 좋아요 버튼 * */
+  /* 1. 좋아요 버튼 */
   var hartIcon = fixedBar.querySelector(".-icon-heart");
-  hartIcon.addEventListener("click", function (e) {
-    if (hartIcon.classList.contains("popIn")) {
-      return false;
+  var heartIconMotion = {
+    add: function () {
+      hartIcon.classList.add("-popIn");
+      // 👆 이 클래스가 붙으면 하트가 튀어나오는 애니메이션이 보여집니다.
+    },
+    remove: function () {
+      hartIcon.classList.remove("-popIn");
     }
-    if (hartIcon.classList.contains("-icon-loveit")) {
+  };
+  var setHeartStatus = {
+    on: function (e) {
+      hartIcon.classList.add("-icon-loveit");
+      // 👆 이 클래스가 붙으면 하트가 붉은 색으로 바뀝니다.
+    },
+    off: function (e) {
       hartIcon.classList.remove("-icon-loveit");
+    }
+  }
+
+
+  hartIcon.addEventListener("click", function (e) {
+    // 👆 좋아요 버튼을 눌렀을 때
+
+    if (hartIcon.classList.contains("-popIn")) {
+      return false;
+      // 👆 아직 애니메이션이 재생중이라면 이벤트 무시
+    }
+
+
+    if (hartIcon.classList.contains("-icon-loveit")) {
+      setHeartStatus.off();
+      // 👆 좋아요가 on 상태라면 좋아요를 off (검정색으로 되돌림)
     } else {
-      e.target.classList.add("-icon-loveit");
-      e.target.classList.add("popIn");
-      hartIcon.addEventListener('animationend', function () {
-        e.target.classList.remove("popIn");
-      });
-      hartIcon.addEventListener('webkitAnimationEnd', function () {
-        e.target.classList.remove("popIn");
-      });
+      setHeartStatus.on();
+      // 👆 그게 아니라면 좋아요를 on (붉은 색으로 바꿈)
+      heartIconMotion.add();
+      // 👆 애니메이션을 보여주는 클래스 추가
+
+      hartIcon.addEventListener('animationend', heartIconMotion.remove);
+      hartIcon.addEventListener('webkitAnimationEnd', heartIconMotion.remove);
+      // 👆 애니메이션 종료 후 클래스 제거
     }
   });
 
 
-  /* * 공유하기 모달 * */
+  /* 2. 공유하기 모달 */
   var shareContainer = document.body.querySelector(".share-container");
   var btnCopy = shareContainer.querySelector(".btn-copy-link");
 

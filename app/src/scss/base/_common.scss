@@ -355,7 +355,6 @@
     margin-bottom: 50px;
     width: 100%;
     text-align: center;
-    // animation: expandInBounce 500ms;
 
     @include res--laptop {
       margin-top: 10px;
@@ -472,6 +471,14 @@
   // 👆 붉은 색으로 강조하고 싶은 부분
   color: #ff5461;
 }
+
+.-popIn {
+  // 👆 팝인!
+  -webkit-animation-name: popIn;
+  animation-name: popIn;
+  animation-duration: 1s;
+}
+
 
 
 .loading {

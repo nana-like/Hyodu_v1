@@ -222,7 +222,7 @@ $value in $c-badge {
       height: 100%;
       background-image: linear-gradient(to right, #f48d6c, #ff5461);
       border-radius: 2px;
-      animation: progress 1s;
+      animation: progress 1.3s;
       animation-fill-mode: backwards;
     }
 
@@ -258,7 +258,6 @@ $value in $c-badge {
   }
 
   &-progress {
-    // overflow: hidden;
     width: 100%;
     height: 6px;
     background-color: #e6e6e6;
@@ -272,7 +271,7 @@ $value in $c-badge {
       width: 100%;
       height: 100%;
       background-color: $c-gray-light;
-      animation: progress 1s 1s;
+      // animation: progress 1s 0.5s;
       animation-fill-mode: backwards;
 
       &:before {
@@ -287,7 +286,7 @@ $value in $c-badge {
         background-size: 100%;
         background-image: icon(star, "343434");
         content: "";
-        animation: flip 2s 2.1s;
+        animation: flip 2s 1s;
         animation-fill-mode: forwards;
 
         @include res--laptop {
