@@ -264,8 +264,8 @@
 
 @keyframes slideInUp {
   from {
-    -webkit-transform: translate3d(0, 10%, 0);
-    transform: translate3d(0, 10%, 0);
+    -webkit-transform: translate3d(0, 8%, 0);
+    transform: translate3d(0, 8%, 0);
     visibility: visible;
     -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
     animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -276,5 +276,40 @@
     transform: translate3d(0, 0, 0);
     -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
     animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+}
+
+
+@keyframes slideOutDown {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, 10%, 0);
+    transform: translate3d(0, 10%, 0);
+  }
+}
+
+@keyframes flipOutX {
+  from {
+    -webkit-transform: perspective(400px) rotateX(0deg) scale3d(1, 1, 1);
+    transform: perspective(400px) rotateX(0deg) scale3d(1, 1, 1)
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -webkit-transform: perspective(400px) rotateX(-30deg) scale3d(1, 1, 1);
+    transform: perspective(400px) rotateX(-30deg) scale3d(1, 1, 1)
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: perspective(400px) rotateX(90deg) scale3d(1.2, 1.2, 1.2);
+    transform: perspective(400px) rotateX(90deg) scale3d(1.2, 1.2, 1.2)
   }
 }

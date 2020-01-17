@@ -47,7 +47,7 @@ var preventScroll = function (type) {
 
 
   // 💪 사라진 스크롤바 만큼의 패딩값을 추가해 주는 함수
-  // .scroll-disabled가 추가되면 윈도우의 브라우저에서는 스크롤바가 사라지기 때문에 페이지 밀림 현상이 발생하는데, 이를 막아주기 위함입니다. (맥에서는 스크롤바가 보통 숨김 상태라 무관합니다)
+  // .scroll-disabled가 추가되면 윈도우의 브라우저에서는 스크롤바가 사라지기 때문에 페이지 밀림 현상이 발생하는데, 이를 막아주기 위함입니다. (모바일, 맥에서는 스크롤바가 보통 숨김 상태라 무관합니다)
 
   function getPadding() {
     for (var i = 0; i < arguments.length; i++) {
@@ -58,16 +58,8 @@ var preventScroll = function (type) {
   getPadding(wrap);
 
   if (fixedBar != null) {
-    // 👆 fixed bar가 있을 경우 fixed bar에도 패딩값 추가
     getPadding(fixedBar);
-  }
-  if (isMobileSize) {
-    // 👆 모달을 열었을 경우에는 네비게이션에도 패딩값 추가
-    getPadding(headerContainer);
-  }
-  if (type === "modal") {
-    // 👆 모달을 열었을 경우에는 네비게이션에도 패딩값 추가
-    getPadding(navScrollCont);
+    // 👆 fixed bar가 있을 경우 fixed bar에도 패딩값 추가
   }
 
 }

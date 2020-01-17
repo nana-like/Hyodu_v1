@@ -9,12 +9,9 @@ if (modal != null) {
       e.preventDefault();
       modal.classList.add("-modal-opened");
       // 👆 .modal에 .-modal-opened가 붙으면 화면에 보입니다.
-      preventScroll("modal");
-      // 👆 스크롤을 막습니다. 이때, 모달창을 연 경우와 헤더를 연 경우가 구분되어야 해서 매개변수를 넣었습니다. (common.js 참고)
     },
     close: function () {
       modal.classList.remove("-modal-opened");
-      allowScroll();
     }
   }
   if (btnModalOkay != null) {

@@ -151,7 +151,7 @@
     left: 0;
     width: 100%;
     margin-left: 10px;
-    max-width: calc(1600px - 72px - 10px);
+    max-width: calc(#{$max-width} - 72px - 10px);
     display: block;
     opacity: 1;
     height: 80px;
@@ -215,6 +215,7 @@
     font-weight: $fw-m;
     @include pointer-none;
     @include ellipsis();
+    max-width: 280px;
     width: 95%;
 
     &:after {

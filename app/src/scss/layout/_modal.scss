@@ -12,6 +12,9 @@
   height: 100vh;
   opacity: 0;
   visibility: hidden;
+  transition: all 0.3s ease;
+  transition-property: opacity, visibility;
+  transition-delay: 100ms;
 }
 
 .modal-dim {
@@ -42,6 +45,9 @@
   border-radius: 4px;
   box-shadow: 0 5px 20px 0 rgba(15, 15, 15, 0.2);
   border: 1px solid #c7c7c7;
+
+  animation: slideOutDown 0.3s;
+  animation-fill-mode: forwards;
 
   //laptop
   @include res--laptop {
@@ -231,9 +237,10 @@
   // 🙌 모달 열렸을 때
   opacity: 1;
   visibility: visible;
+  transition-delay: 0s;
 
   .modal-body {
-    animation: slideInUp 0.4s;
+    animation: slideInUp 0.3s 50ms;
     animation-fill-mode: backwards;
   }
 }
