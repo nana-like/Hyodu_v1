@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <title>효두 | 효두를 두잇하다</title>
 
@@ -58,31 +59,31 @@
 
 
   -->
-<header class="header ">
-  <div class="header-container">
-    <h1 class="logo header-logo">
-      <a href="/" class="logo-link"><span class="blind">효두</span></a>
-    </h1>
-    <a aria-label="메뉴 여닫기 버튼" class="burger">
-      <div aria-label="hidden" class="burger-line-wrap">
-        <span class="burger-line"></span>
-        <span class="burger-line"></span>
-        <span class="burger-line"></span>
+    <header class="header ">
+      <div class="header-container">
+        <h1 class="logo header-logo">
+          <a href="/" class="logo-link"><span class="blind">효두</span></a>
+        </h1>
+        <a aria-label="메뉴 여닫기 버튼" class="burger">
+          <div aria-label="hidden" class="burger-line-wrap">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+          </div>
+        </a>
       </div>
-    </a>
-  </div>
-  <!-- [전달사항] 윈도너비가 1060 미만(=모바일 사이즈)일 때, nav에게 .-trans 클래스가 붙어야 합니다. 1060 이상이면 .-trans를 제거해 주세요. (header.js 참고) -->
-  <nav class="nav">
-    <h2 class="nav-title">
-      <div class="logo nav-logo" aria-label="hidden"></div>
-      <span class="blind">네비게이션</span>
-    </h2>
-    <!-- [전달사항] .scroll-container 값은 윈도너비가 1060 미만(=모바일 사이즈)일 때 유동적으로 값이 바뀝니다. (header.js 참고) -->
-    <div class="scroll-container">
-      <div class="nav-account">
-        <div class="nav-account-container">
-          <button class="btn-mail">nana@thevitolabs.com</button>
-          <!-- 
+      <!-- [전달사항] 윈도너비가 1060 미만(=모바일 사이즈)일 때, nav에게 .-trans 클래스가 붙어야 합니다. 1060 이상이면 .-trans를 제거해 주세요. (header.js 참고) -->
+      <nav class="nav">
+        <h2 class="nav-title">
+          <div class="logo nav-logo" aria-label="hidden"></div>
+          <span class="blind">네비게이션</span>
+        </h2>
+        <!-- [전달사항] .scroll-container 값은 윈도너비가 1060 미만(=모바일 사이즈)일 때 유동적으로 값이 바뀝니다. (header.js 참고) -->
+        <div class="scroll-container">
+          <div class="nav-account">
+            <div class="nav-account-container">
+              <button class="btn-mail">nana@thevitolabs.com</button>
+              <!-- 
             [전달사항]
             사용자 레벨에 따라 .btn-level에 고유의 클래스 네임을 붙여주세요.
             레벨 1 = .-lv1
@@ -91,30 +92,30 @@
             레벨 4 = .-lv4
             레벨 5 = .-lv5
           -->
-          <button href="" class="btn-level -lv4">Lv.4</button>
+              <button href="" class="btn-level -lv4">Lv.4</button>
+            </div>
+          </div>
+          <ul class="nav-menu">
+            <li class="menu-item"><a href="" class="menu-link">스토어</a></li>
+            <li class="menu-item"><a href="" class="menu-link">서비스 소개</a></li>
+          </ul>
+          <ul class="nav-user">
+            <li class="user-item"><a href="" class="user-link">회원정보 수정</a></li>
+            <li class="user-item"><a href="" class="user-link">배송지 관리</a></li>
+            <li class="user-item"><a href="" class="user-link">구매 내역</a></li>
+            <li class="user-item"><a href="" class="user-link">쿠폰 사용 내역</a></li>
+            <li class="user-item"><a href="" class="user-link">포인트 내역</a></li>
+            <li class="user-item"><a href="" class="user-link">문의하기</a></li>
+            <li class="user-item item-logout"><a href="" class="user-link">로그아웃</a></li>
+          </ul>
+          <div class="nav-btn-wrap">
+            <button class="nav-btn btn-line">회원가입</button>
+            <button class="nav-btn btn-line-on">로그인</button>
+          </div>
         </div>
-      </div>
-      <ul class="nav-menu">
-        <li class="menu-item"><a href="" class="menu-link">스토어</a></li>
-        <li class="menu-item"><a href="" class="menu-link">서비스 소개</a></li>
-      </ul>
-      <ul class="nav-user">
-        <li class="user-item"><a href="" class="user-link">회원정보 수정</a></li>
-        <li class="user-item"><a href="" class="user-link">배송지 관리</a></li>
-        <li class="user-item"><a href="" class="user-link">구매 내역</a></li>
-        <li class="user-item"><a href="" class="user-link">쿠폰 사용 내역</a></li>
-        <li class="user-item"><a href="" class="user-link">포인트 내역</a></li>
-        <li class="user-item"><a href="" class="user-link">문의하기</a></li>
-        <li class="user-item item-logout"><a href="" class="user-link">로그아웃</a></li>
-      </ul>
-      <div class="nav-btn-wrap">
-        <button class="nav-btn btn-line">회원가입</button>
-        <button class="nav-btn btn-line-on">로그인</button>
-      </div>
-    </div>
-  </nav>
-  <div class="dim header-dim"></div>
-</header>
+      </nav>
+      <div class="dim header-dim"></div>
+    </header>
     <!--
       [전달사항]
       페이지에 따라 .page-body에 추가로 붙는 클래스가 있습니다.
@@ -123,47 +124,43 @@
     <div class="page-body page-login">
       <div class="page-top"></div>
       <div class="page-title">
-  <h2 class="title">로그인</h2>
-  <small class="title-small">다시 만나서 정말 반가워요!</small>
-  <div class="page-control">
-    <div class="page-control-container">
-      
-      
-      
-    </div>
-  </div>
-</div>
+        <h2 class="title">로그인</h2>
+        <small class="title-small">다시 만나서 정말 반가워요!</small>
+        <div class="page-control">
+          <div class="page-control-container">
+
+
+
+          </div>
+        </div>
+      </div>
       <div class="page-layout">
         <form>
           <div class="form-container">
             <div class="form-item ">
-  <label for="form-email" class="form-label">
-    <span class="form-label-text">이메일</span>
-    <span class="form-label-guide"></span>
-  </label>
-  
-  
-  <input id="form-email" name="form-email" type="email" minlength="" maxlength=""
-    placeholder="이메일을 입력하세요." class="form-input " value="hyodu@hyodu.com"
-     />
-  
-  <p class="form-error"></p>
-  
-</div>
+              <label for="form-email" class="form-label">
+                <span class="form-label-text">이메일</span>
+                <span class="form-label-guide"></span>
+              </label>
+
+
+              <input id="form-email" name="form-email" type="email" minlength="" maxlength="" placeholder="이메일을 입력하세요." class="form-input " value="hyodu@hyodu.com" />
+
+              <p class="form-error"></p>
+
+            </div>
             <div class="form-item ">
-  <label for="form-password" class="form-label">
-    <span class="form-label-text">비밀번호</span>
-    <span class="form-label-guide"></span>
-  </label>
-  
-  
-  <input id="form-password" name="form-password" type="password" minlength="" maxlength=""
-    placeholder="비밀번호를 입력하세요." class="form-input " value="asdfasdf"
-     />
-  
-  <p class="form-error"></p>
-  
-</div>
+              <label for="form-password" class="form-label">
+                <span class="form-label-text">비밀번호</span>
+                <span class="form-label-guide"></span>
+              </label>
+
+
+              <input id="form-password" name="form-password" type="password" minlength="" maxlength="" placeholder="비밀번호를 입력하세요." class="form-input " value="asdfasdf" />
+
+              <p class="form-error"></p>
+
+            </div>
             <button class="btn-full">로그인</button>
             <div class="login-link">
               <a href="#" class="login-link-item" id="ui-testor-open-modal">이메일 찾기</a>
@@ -182,68 +179,68 @@
       </div>
     </div>
     <!-- [전달사항] 모달을 표사하려면 .modal에 .-modal-opened를 붙여주세요. -->
-<div class="modal modal-share">
-  <div class="modal-dim"></div>
-  <div class="modal-container">
-    <div class="modal-body">
-      <div class="modal-content">
-        <p class="modal-text">
-          계정으로 등록했던 이메일을 잊어버리셨나요? hyodu@hyodu.com으로 문의하시면 확인 후 알려드리겠습니다.
-        </p>
+    <div class="modal modal-share">
+      <div class="modal-dim"></div>
+      <div class="modal-container">
+        <div class="modal-body">
+          <div class="modal-content">
+            <p class="modal-text">
+              계정으로 등록했던 이메일을 잊어버리셨나요? hyodu@hyodu.com으로 문의하시면 확인 후 알려드리겠습니다.
+            </p>
+          </div>
+          <button class="btn-modal-okay">확인</button>
+          <button class="btn-modal-close"><span class="blind">닫기</span></button>
+        </div>
       </div>
-      <button class="btn-modal-okay">확인</button>
-      <button class="btn-modal-close"><span class="blind">닫기</span></button>
     </div>
-  </div>
-</div>
     <footer class="footer">
-  <div class="footer-container">
-    <strong class="logo footer-logo">
-      <span class="blind">Hyodu</span>
-    </strong>
-    <div class="footer-content">
-      <div class="footer-link-wrap">
-        <a href="" class="footer-link">이용약관</a>
-        <a href="" class="footer-link">개인정보처리방침</a>
-      </div>
-      <div class="footer-text-container">
-        <p>
-          대표이사: 손성우</br>
-          개인정보책임자: 손성우</br>
-          사업자등록번호 123-12-12345 <a href="">[사업자정보확인]</a></br>
-          통신판매업신고 1234-서울중구-12345
-        </p>
-      </div>
-      <div class="footer-mail-wrap">
-        <li class="footer-mail">
-          <span>일반문의 : </span><a href="" class="mail-link">customer@hyodu.com</a>
-        </li>
-        <li class="footer-mail">
-          <span>제휴문의 : </span><a href="" class="mail-link">mkt@hyodu.com</a>
-        </li>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-social-wrap">
-        <a href="" class="footer-social -instagram">
-          <span class="blind">효두 인스타그램</span>
-        </a>
-        <!-- [전달사항] 페이스북 추가했습니다~ (20.01.15) -->
-        <a href="" class="footer-social -facebook">
-          <span class="blind">효두 페이스북</span>
-        </a>
-        <!-- <a href="" class="footer-social -notion">
+      <div class="footer-container">
+        <strong class="logo footer-logo">
+          <span class="blind">Hyodu</span>
+        </strong>
+        <div class="footer-content">
+          <div class="footer-link-wrap">
+            <a href="" class="footer-link">이용약관</a>
+            <a href="" class="footer-link">개인정보처리방침</a>
+          </div>
+          <div class="footer-text-container">
+            <p>
+              대표이사: 손성우</br>
+              개인정보책임자: 손성우</br>
+              사업자등록번호 123-12-12345 <a href="">[사업자정보확인]</a></br>
+              통신판매업신고 1234-서울중구-12345
+            </p>
+          </div>
+          <div class="footer-mail-wrap">
+            <li class="footer-mail">
+              <span>일반문의 : </span><a href="" class="mail-link">customer@hyodu.com</a>
+            </li>
+            <li class="footer-mail">
+              <span>제휴문의 : </span><a href="" class="mail-link">mkt@hyodu.com</a>
+            </li>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-social-wrap">
+            <a href="" class="footer-social -instagram">
+              <span class="blind">효두 인스타그램</span>
+            </a>
+            <!-- [전달사항] 페이스북 추가했습니다~ (20.01.15) -->
+            <a href="" class="footer-social -facebook">
+              <span class="blind">효두 페이스북</span>
+            </a>
+            <!-- <a href="" class="footer-social -notion">
           <span class="blind">효두 노션</span>
         </a> -->
+          </div>
+          <p class="copyright">© 2019 Hyodu, Inc. All Rights Reserved.</p>
+        </div>
       </div>
-      <p class="copyright">© 2019 Hyodu, Inc. All Rights Reserved.</p>
-    </div>
-  </div>
-</footer>
+    </footer>
 
 
-<!-- [전달사항] 스크립트 파일입니다. 개별 파일은 src/js/ 폴더 아래에 있습니다. -->
-<script src="./../../js/ui.min.js"></script>
+    <!-- [전달사항] 스크립트 파일입니다. 개별 파일은 src/js/ 폴더 아래에 있습니다. -->
+    <script src="./../../js/ui.min.js"></script>
   </div>
   <!-- TODO: 테스트용 -->
   <!-- <script src="./../../js/ui.js"></script> -->
